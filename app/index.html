@@ -7,17 +7,135 @@
     <title>MME: Projekte im SS 2022</title>
     <link rel="stylesheet" href="./resources/css/style.css">
 
+    <!-- Leaflet Plugin -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
         integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
         crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
         integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
         crossorigin=""></script>
+
+    <!-- PageManager Plugin -->
+    <script src="https://cdn.jsdelivr.net/gh/dlvdls18/Dage/src/dage.js"></script>
 </head>
 
 <body>
-    <div id="map"></div>
+    
+    <!-- PAGES -->
+
+
+    <!-- Landing Page -->
+    <div data-page="page_landing">
+
+        <div id="navigation-bar">
+            <button data-navigate="page_landing">Landing Page</button>
+            <button data-navigate="page_information">Über Uns</button>
+            <button data-navigate="page_donate">Spenden</button>
+            <button data-navigate="page_membership">Mitgliedschaft</button>
+            <button data-navigate="page_events">Events</button>
+            <button data-navigate="page_map">Karte</button>
+        </div>
+
+        "LandingPage"
+    </div>
+
+    
+    <!-- Information Page -->
+    <div data-page="page_information">
+
+        <div id="navigation-bar">
+            <button data-navigate="page_landing">Landing Page</button>
+            <button data-navigate="page_information">Über Uns</button>
+            <button data-navigate="page_donate">Spenden</button>
+            <button data-navigate="page_membership">Mitgliedschaft</button>
+            <button data-navigate="page_events">Events</button>
+            <button data-navigate="page_map">Karte</button>
+        </div>
+
+        "Über Uns"
+    </div>
+
+
+    <!-- Donation Page -->
+    <div data-page="page_donate">
+
+        <div id="navigation-bar">
+            <button data-navigate="page_landing">Landing Page</button>
+            <button data-navigate="page_information">Über Uns</button>
+            <button data-navigate="page_donate">Spenden</button>
+            <button data-navigate="page_membership">Mitgliedschaft</button>
+            <button data-navigate="page_events">Events</button>
+            <button data-navigate="page_map">Karte</button>
+        </div>
+
+        "Spenden"
+    </div>
+
+
+    <!-- Membership Page -->
+    <div data-page="page_membership">
+
+        <div id="navigation-bar">
+            <button data-navigate="page_landing">Landing Page</button>
+            <button data-navigate="page_information">Über Uns</button>
+            <button data-navigate="page_donate">Spenden</button>
+            <button data-navigate="page_membership">Mitgliedschaft</button>
+            <button data-navigate="page_events">Events</button>
+            <button data-navigate="page_map">Karte</button>
+        </div>
+
+        "Mitgliedschaft"
+    </div>
+
+
+    <!-- Events Page -->
+    <div data-page="page_events">
+
+        <div id="navigation-bar">
+            <button data-navigate="page_landing">Landing Page</button>
+            <button data-navigate="page_information">Über Uns</button>
+            <button data-navigate="page_donate">Spenden</button>
+            <button data-navigate="page_membership">Mitgliedschaft</button>
+            <button data-navigate="page_events">Events</button>
+            <button data-navigate="page_map">Karte</button>
+        </div>
+
+        "Events"
+    </div>
+
+
+    <!-- Map Page -->
+    <div data-page="page_map">
+
+        <div id="navigation-bar">
+            <button data-navigate="page_landing">Landing Page</button>
+            <button data-navigate="page_information">Über Uns</button>
+            <button data-navigate="page_donate">Spenden</button>
+            <button data-navigate="page_membership">Mitgliedschaft</button>
+            <button data-navigate="page_events">Events</button>
+            <button data-navigate="page_map">Karte</button>
+        </div>
+
+        "Karte"
+
+        <div id="map-container">
+            <div id="map">
+                
+            </div>
+        </div>
+        <script type="module" src="./resources/js/modules/MapManager.js"></script>
+    </div>
+
+
+    <!-- Error 404 Page -->
+    <div data-page="notfound">
+        <button data-navigate="page_landing">Back</button>
+        Error 404: This Page doesnt exist...
+    </div>
+
+    
     <script type="module" src="./src/index.js"></script>
+    <script type="module" src="./resources/js/modules/PageManager.js"></script>
 </body>
 
 </html>

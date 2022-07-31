@@ -1,12 +1,12 @@
-import MapManager from "../resources/js/modules/MapManager.js";
 
-var mapManager;
 
-var maxMapZoom = 19;
+var pageManager;
 
 function init() {
 
-    mapManager = new MapManager(maxMapZoom);
+    //mapManager = new MapManager(maxMapZoom);
+
+   // Dage.add("page_landing", main);
 
 }
 

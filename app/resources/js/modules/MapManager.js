@@ -1,25 +1,14 @@
+var maxMapZoom = 19;
 
+function initManager() {
+    var map = L.map('map').setView([43.624289, 11.884090], 17);
 
-function initManager(MapManager) {
-    var map = L.map('map').setView([0, 0], 1);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: MapManager.maxZoom,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
     }).addTo(map);
 
-    console.log("Finished Init Map Manager");
+    //console.log("Finished Init Map Manager");
 }
 
-
-class MapManager {
-
-    constructor(maxZoom) {
-
-        this.maxZoom = maxZoom;
-        initManager(this);
-    }
-}
-
-
-export default MapManager;
+initManager();
