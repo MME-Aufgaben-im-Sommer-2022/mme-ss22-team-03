@@ -1,5 +1,13 @@
+import MapManager from "../resources/js/modules/MapManager.js";
+
+var mapManager;
+
+var maxMapZoom = 19;
+
 function init() {
-    console.log("### Starting MME Project ###"); // eslint-disable-line no-console
+
+    mapManager = new MapManager(maxMapZoom);
+
 }
 
 init();
