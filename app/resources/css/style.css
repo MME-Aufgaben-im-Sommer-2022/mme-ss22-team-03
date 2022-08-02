@@ -43,17 +43,6 @@ body {
     color: var(--jet);
 }
 
-#navigation-bar2 {
-    background-color: cyan;
-
-    width: auto;
-    height: 30px;
-    padding: 10px;
-    margin-bottom: 50px;
-}
-
-
-
 #map-container {
     /* background-color: cyan;
     padding: 10px; */
@@ -75,21 +64,77 @@ body {
 
 /* CSS FOR NAVIGATION BAR */
 
-#navigation-bar {
+
+.navigation-bar {
+    background-color: grey;
+
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+
     width: 100%;
-    top: 54px;
-    left: 107px;
-    height: 24px;
+    height: 10%;
+
+
+    overflow: hidden;
+}
+
+.navigation-bar logo {
+    background-color: #04AA6D;
+    float: center;
+
+    width: 400px;
+    height: 100px;
+
+    position: fixed;
+
+    left: 50%;
+}
+
+.navigation-bar left {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: 100%;
+}  
+
+.navigation-bar left:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navigation-bar left.active {
+    background-color: #04AA6D;
+    color: white;
 }
 
 
-#group_569 {
-    top: 54px;
-    left: 107px;
-    width: 1484px;
-    height: 24px;
+.navigation-bar right {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+    height: 100%;
 }
 
+.navigation-bar right:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navigation-bar right.active {
+    background-color: #04AA6D;
+    color: white;
+}
 
 
 /* CSS FOR LANDING PAGE */
@@ -287,13 +332,6 @@ img {
     left: 0px;
     width: 1728px;
     height: 781px;
-}
-
-#logo_ek1 {
-    top: 40px;
-    left: 708px;
-    width: 311.58px;
-    height: 52px;
 }
 
 #vector_ek9 {
