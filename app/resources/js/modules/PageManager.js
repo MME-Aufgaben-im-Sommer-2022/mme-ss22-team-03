@@ -5,7 +5,7 @@ function init() {
 
     Dage.setPageActive("navigation-bar");
 
-    switchPage("page_landing")
+    switchPage("page_map")
 }
 
 function switchPage(page) {

@@ -1,5 +1,4 @@
 
-
 var pageManager;
 
 function init() {

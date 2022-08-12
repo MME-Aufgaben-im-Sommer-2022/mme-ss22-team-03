@@ -107,6 +107,7 @@ body {
 .navigation-bar left:hover {
     background-color: #ddd;
     color: black;
+    text-decoration-line: underline;
 }
 
 .navigation-bar left.active {
