@@ -5,16 +5,57 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mitgliedschaft</title>
-    <link rel="icon" type="image/x-icon" href="/app/resources/images/omnipresent/Pastina_Tab_Logo.png">
+    <link rel="icon" type="image/x-icon" href="/app/resources/images/navigation-bar/Pastina_Tab_Logo.png">
     <link rel="stylesheet" href="./resources/css/mitgliedschaft.css">
+    <link rel="stylesheet" href="./resources/css/navigation-bar.css">
     
-    <div id="navigation-bar">
-        <button onclick="window.location.href = 'Landing.html';">Landing Page</button>
-        <button onclick="window.location.href = 'Uber_uns.html';">Über Uns</button>
-        <button onclick="window.location.href = 'Spenden.html';">Spenden</button>
-        <button onclick="window.location.href = 'Mitgliedschaft.html';">Mitgliedschaft</button>
-        <button onclick="window.location.href = 'Events.html';">Mitmachen</button>
-        <button onclick="window.location.href = 'Map.html';">Karte</button>
+
+    <div class="navigation-bar">
+
+        <left>
+            <div id="uber_uns" onclick="window.location.href = 'uber_uns.html';">
+                Über uns
+            </div>
+        </left>
+
+        <left>
+            <div id="spenden" onclick="window.location.href = 'Spenden.html';">
+                Spenden
+            </div>
+        </left>
+
+
+        <left class="active">
+            <div id="mitglied_werden" onclick="window.location.href = 'Mitgliedschaft.html';">
+                Mitglied werden
+            </div>
+        </left>
+
+        <logo>
+            <div onclick="window.location.href = 'Landing.html';">
+                <img src="./resources/images/navigation-bar/logo.svg" />
+            </div>
+        </logo>
+
+
+        <right>
+            <div id="mitmachen" onclick="window.location.href = 'Events.html';">
+                Mitmachen
+            </div>
+        </right>
+
+        <right>
+            <div id="aktuelles" onclick="window.location.href = 'Aktuelles.html';">
+                Aktuelles
+            </div>
+        </right>
+
+        <right>
+            <div id="gallerie___map" onclick="window.location.href = 'Map.html';">
+                Gallerie | Map
+            </div>
+        </right>
+
     </div>
 </head>
 
@@ -22,7 +63,6 @@
 
     Mitgliedschaft
     
-    <script type="module" src="./src/index.js"></script>
 </body>
 
 </html>
