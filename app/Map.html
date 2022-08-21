@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktive Karte</title>
+    <link rel="icon" type="image/x-icon" href="/app/resources/images/omnipresent/Pastina_Tab_Logo.png">
+    <link rel="stylesheet" href="./resources/css/map.css">
+
+    <!-- Leaflet Plugin -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+    
+        <div id="navigation-bar">
+            <button onclick="window.location.href = 'Landing.html';">Landing Page</button>
+            <button onclick="window.location.href = 'Uber_uns.html';">Über Uns</button>
+            <button onclick="window.location.href = 'Spenden.html';">Spenden</button>
+            <button onclick="window.location.href = 'Mitgliedschaft.html';">Mitgliedschaft</button>
+            <button onclick="window.location.href = 'Events.html';">Mitmachen</button>
+            <button onclick="window.location.href = 'Map.html';">Karte</button>
+        </div>
+</head>
+
+<body>  <!-- PAGE: MAP -->
+
+    <div id="map-container">
+        <div id="map">
+
+        </div>
+    </div>
+    <script type="module" src="./resources/js/modules/MapManager.js"></script>
+    <script type="module" src="./src/index.js"></script>
+</body>
+
+</html>

@@ -43,10 +43,365 @@ body {
     color: var(--jet);
 }
 
+#map-container {
+    /* background-color: cyan;
+    padding: 10px; */
+    width: auto;
+    height: 500px;
+    border: 5px solid black;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 #map {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* CSS FOR NAVIGATION BAR */
+
+
+.navigation-bar {
+    background-color: grey;
+
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    width: 100%;
+    height: 10%;
+
+
+    overflow: hidden;
+}
+
+.navigation-bar logo {
+    background-color: #04AA6D;
+    float: center;
+
+    width: 400px;
+    height: 100px;
+
+    position: fixed;
+
+    left: 50%;
+}
+
+.navigation-bar left {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: 100%;
+}  
+
+.navigation-bar left:hover {
+    background-color: #ddd;
+    color: black;
+    text-decoration-line: underline;
+}
+
+.navigation-bar left.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+.navigation-bar right {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+    height: 100%;
+}
+
+.navigation-bar right:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navigation-bar right.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+/* CSS FOR LANDING PAGE */
+img {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    display: block;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+
+#div-landing {
+    position: absolute;
+}
+
+#content-container-landing {
+    display: block;
+    position: relative;
+    width: 1728px;
+    height: 1176px;
+    overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+}
+
+#logo-landing {
+
+    margin: 0 auto;
+
+    top: 164px;
+    left: 387.57px;
+    width: 952.42px;
+    height: 158.95px;
+}
+
+#vector {
+    top: 9.36px;
+    left: 15.24px;
+    width: 112.8px;
+    height: 139.27px;
+}
+
+
+#vector_ek1 {
+    top: 7.37px;
+    left: 283.95px;
+    width: 128.91px;
+    height: 143.3px;
+}
+
+
+#vector_ek2 {
+    top: 9.36px;
+    left: 426.17px;
+    width: 138.29px;
+    height: 139.27px;
+}
+
+
+#vector_ek3 {
+    top: 9.36px;
+    left: 589.14px;
+    width: 20.7px;
+    height: 139.27px;
+}
+
+
+#vector_ek4 {
+    top: 9.36px;
+    left: 647.43px;
+    width: 123.14px;
+    height: 139.27px;
+}
+
+
+#vector_ek5 {
+    top: 5.57px;
+    left: 190.1px;
+    width: 86.09px;
+    height: 143.06px;
+}
+
+
+#vector_ek6 {
+    top: 64.51px;
+    left: 111.88px;
+    width: 75.82px;
+    height: 86.51px;
+}
+
+
+#vector_ek7 {
+    top: 5.57px;
+    left: 792.37px;
+    width: 154.72px;
+    height: 143.26px;
+}
+
+
+#vector_ek8 {
+    top: 104.43px;
+    left: 819.26px;
+    width: 90.25px;
+    height: 8.97px;
+}
+
+#spenden {
+    top: 0px;
+    left: 121px;
+    width: 82px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+}
+
+
+#uber_uns {
+    top: 0px;
+    left: 0px;
+    width: 83px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+}
+
+
+#mitglied_werden {
+    top: 0px;
+    left: 240px;
+    width: 131px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+}
+
+
+#aktuelles {
+    top: 0px;
+    left: 1273px;
+    width: 87px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+}
+
+
+#mitmachen {
+    top: 0px;
+    left: 1134px;
+    width: 99px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+}
+
+
+#gallerie___map {
+    top: 0px;
+    left: 1392px;
+    width: 115px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+}
+
+
+#screenshot_2022_06_23_at_10_49_3 {
+    top: 395px;
+    left: 0px;
+    width: 1728px;
+    height: 781px;
+}
+
+#vector_ek9 {
+    top: 3.06px;
+    left: 4.98px;
+    width: 36.9px;
+    height: 45.56px;
+}
+
+
+#vector_ek10 {
+    top: 2.41px;
+    left: 92.89px;
+    width: 42.17px;
+    height: 46.88px;
+}
+
+
+#vector_ek11 {
+    top: 3.06px;
+    left: 139.42px;
+    width: 45.24px;
+    height: 45.56px;
+}
+
+
+#vector_ek12 {
+    top: 3.06px;
+    left: 192.73px;
+    width: 6.77px;
+    height: 45.56px;
+}
+
+
+#vector_ek13 {
+    top: 3.06px;
+    left: 211.8px;
+    width: 40.28px;
+    height: 45.56px;
+}
+
+
+#vector_ek14 {
+    top: 1.82px;
+    left: 62.19px;
+    width: 28.16px;
+    height: 46.8px;
+}
+
+
+#vector_ek15 {
+    top: 21.11px;
+    left: 36.6px;
+    width: 24.8px;
+    height: 28.3px;
+}
+
+
+#vector_ek16 {
+    top: 1.82px;
+    left: 259.22px;
+    width: 50.62px;
+    height: 46.87px;
+}
+
+
+#vector_ek17 {
+    top: 34.16px;
+    left: 268.01px;
+    width: 29.52px;
+    height: 2.93px;
 }
