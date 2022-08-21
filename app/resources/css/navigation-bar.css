@@ -1,0 +1,92 @@
+/* Beispiel für die Einbindung zusätzlicher Schriftarten via Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang&display=swap');
+
+/* Beispiel für die einfache Einbindung eines Farbschema, generiert auf coolors.co */
+
+head {
+    background-color: white;
+    font-family: 'Fahkwang', sans-serif;
+}
+
+
+/* CSS FOR NAVIGATION BAR */
+
+
+.navigation-bar {
+    display: flex;
+
+    width: 100%;
+    height: 10%;
+
+
+    overflow: hidden;
+}
+
+.navigation-bar logo {
+    width: 20%;
+    height: 5%;
+    left: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.navigation-bar logo:hover {
+    cursor: pointer;
+}
+
+.navigation-bar left {
+    float: left;
+
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: x-large;
+
+    padding: 2% 1%;
+
+    height: 100%;
+    width: 12.5%;
+    opacity: 50%;
+}  
+
+.navigation-bar left:hover {
+    opacity: 100%;
+    color: black;
+    cursor: pointer;
+}
+
+.navigation-bar left.active {
+    opacity: 100%;
+    text-decoration: underline;
+}
+
+
+.navigation-bar right {
+    float: right;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+
+    font-size: x-large;
+
+    padding: 2% 1%;
+
+    height: 100%;
+    width: 12.5%;
+    opacity: 50%;
+}
+
+.navigation-bar right:hover {
+    opacity: 100%;
+    color: black;
+    cursor: pointer;
+}
+
+.navigation-bar right.active {
+    opacity: 100%;
+    text-decoration: underline;
+}
+
