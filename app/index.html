@@ -7,18 +7,15 @@
     <title>Pastina</title>
     <link rel="icon" type="image/x-icon" href="/app/resources/images/omnipresent/Pastina_Tab_Logo.png">
     <link rel="stylesheet" href="./resources/css/style.css">
-
-    <!-- Leaflet Plugin -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-        crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-        crossorigin=""></script>
-
-    <!-- PageManager Plugin -->
-    <script src="https://cdn.jsdelivr.net/gh/dlvdls18/Dage/src/dage.js"></script>
-    <script type="module" src="./resources/js/modules/PageManager.js"></script>
+    
+    <div id="navigation-bar">
+        <button onclick="window.location.href = 'Landing.html';">Landing Page</button>
+        <button onclick="window.location.href = 'Landing.html';">Über Uns</button>
+        <button onclick="window.location.href = 'Landing.html';">Spenden</button>
+        <button onclick="window.location.href = 'Landing.html';">Mitgliedschaft</button>
+        <button onclick="window.location.href = 'Landing.html';">Events</button>
+        <button onclick="window.location.href = 'Landing.html';">Karte</button>
+    </div>
 
 <!-- 
     <div class="navigation-bar">
@@ -79,180 +76,6 @@
 </head>
 
 <body>
-
-
-
-
-    <!-- PAGES -->
-
-
-    <!-- Landing Page -->
-    <div data-page="page_landing">
-
-
-        <div id="navigation-bar">
-            <button data-navigate="page_landing">Landing Page</button>
-            <button data-navigate="page_information">Über Uns</button>
-            <button data-navigate="page_donate">Spenden</button>
-            <button data-navigate="page_membership">Mitgliedschaft</button>
-            <button data-navigate="page_events">Events</button>
-            <button data-navigate="page_map">Karte</button>
-        </div>
-
-        <div id="content-container-landing">
-
-            <div id="logo-landing">
-                <img src="./resources/images/landing_page_img/vector.png" id="vector" />
-                <img src="./resources/images/landing_page_img//vector_ek1.png" id="vector_ek1" />
-                <img src="./resources/images/landing_page_img//vector_ek2.png" id="vector_ek2" />
-                <img src="./resources/images/landing_page_img//vector_ek3.png" id="vector_ek3" />
-                <img src="./resources/images/landing_page_img//vector_ek4.png" id="vector_ek4" />
-                <img src="./resources/images/landing_page_img//vector_ek5.png" id="vector_ek5" />
-                <img src="./resources/images/landing_page_img//vector_ek6.png" id="vector_ek6" />
-                <img src="./resources/images/landing_page_img//vector_ek7.png" id="vector_ek7" />
-                <img src="./resources/images/landing_page_img//vector_ek8.png" id="vector_ek8" />
-
-            </div>
-            <img src="./resources/images/landing_page_img//screenshot_2022_06_23_at_10_49_3.png"
-                id="screenshot_2022_06_23_at_10_49_3" />
-
-        </div>
-    </div>
-
-
-    <!-- Information Page -->
-    <div data-page="page_information">
-
-        <div id="navigation-bar">
-            <button data-navigate="page_landing">Landing Page</button>
-            <button data-navigate="page_information">Über Uns</button>
-            <button data-navigate="page_donate">Spenden</button>
-            <button data-navigate="page_membership">Mitgliedschaft</button>
-            <button data-navigate="page_events">Events</button>
-            <button data-navigate="page_map">Karte</button>
-        </div>
-
-        "Über Uns"
-    </div>
-
-
-    <!-- Donation Page -->
-    <div data-page="page_donate">
-
-        <div id="navigation-bar">
-            <button data-navigate="page_landing">Landing Page</button>
-            <button data-navigate="page_information">Über Uns</button>
-            <button data-navigate="page_donate">Spenden</button>
-            <button data-navigate="page_membership">Mitgliedschaft</button>
-            <button data-navigate="page_events">Events</button>
-            <button data-navigate="page_map">Karte</button>
-        </div>
-
-        "Spenden"
-    </div>
-
-
-    <!-- Membership Page -->
-    <div data-page="page_membership">
-
-        <div id="navigation-bar">
-            <button data-navigate="page_landing">Landing Page</button>
-            <button data-navigate="page_information">Über Uns</button>
-            <button data-navigate="page_donate">Spenden</button>
-            <button data-navigate="page_membership">Mitgliedschaft</button>
-            <button data-navigate="page_events">Events</button>
-            <button data-navigate="page_map">Karte</button>
-        </div>
-
-        "Mitgliedschaft"
-    </div>
-
-
-    <!-- Events Page -->
-    <div data-page="page_events">
-
-        <div id="navigation-bar">
-            <button data-navigate="page_landing">Landing Page</button>
-            <button data-navigate="page_information">Über Uns</button>
-            <button data-navigate="page_donate">Spenden</button>
-            <button data-navigate="page_membership">Mitgliedschaft</button>
-            <button data-navigate="page_events">Events</button>
-            <button data-navigate="page_map">Karte</button>
-        </div>
-
-        "Events"
-    </div>
-
-
-    <!-- Map Page -->
-    <div data-page="page_map">
-
-        <div id="navigation-bar">
-            <button data-navigate="page_landing">Landing Page</button>
-            <button data-navigate="page_information">Über Uns</button>
-            <button data-navigate="page_donate">Spenden</button>
-            <button data-navigate="page_membership">Mitgliedschaft</button>
-            <button data-navigate="page_events">Events</button>
-            <button data-navigate="page_map">Karte</button>
-        </div>
-
-        "Karte"
-
-        <div id="map-container">
-            <div id="map">
-
-            </div>
-        </div>
-        <script type="module" src="./resources/js/modules/MapManager.js"></script>
-    </div>
-
-
-    <!-- Error 404 Page -->
-    <div data-page="notfound">
-        <button data-navigate="page_landing">Back</button>
-        Error 404: This Page doesnt exist...
-    </div>
-
-
-    <template class="navigation">
-
-        <div id="navigation-bar">
-            <div id="spenden">
-                Spenden
-            </div>
-            <div id="uber_uns">
-                Über uns
-            </div>
-            <div id="mitglied_werden">
-                Mitglied werden
-            </div>
-            <div id="aktuelles">
-                Aktuelles
-            </div>
-            <div id="mitmachen">
-                Mitmachen
-            </div>
-            <div id="gallerie___map">
-                Gallerie | Map
-            </div>
-
-            <div id="logo_ek1">
-                <img src="./resources/images/landing_page_img//vector_ek9.png" id="vector_ek9" />
-                <img src="./resources/images/landing_page_img//vector_ek10.png" id="vector_ek10" />
-                <img src="./resources/images/landing_page_img//vector_ek11.png" id="vector_ek11" />
-                <img src="./resources/images/landing_page_img//vector_ek12.png" id="vector_ek12" />
-                <img src="./resources/images/landing_page_img//vector_ek13.png" id="vector_ek13" />
-                <img src="./resources/images/landing_page_img//vector_ek14.png" id="vector_ek14" />
-                <img src="./resources/images/landing_page_img//vector_ek15.png" id="vector_ek15" />
-                <img src="./resources/images/landing_page_img//vector_ek16.png" id="vector_ek16" />
-                <img src="./resources/images/landing_page_img//vector_ek17.png" id="vector_ek17" />
-
-            </div>
-        </div>
-
-    </template>
-
-
     <script type="module" src="./src/index.js"></script>
 </body>
 
