@@ -4,15 +4,16 @@
 
 /* Beispiel für die einfache Einbindung eines Farbschema, generiert auf coolors.co */
 :root {
-    --turquoise-green: #b9e3c6ff;
-    --ocean-green: #59c9a5ff;
-    --ruby: #d81e5bff;
-    --prussian-blue: #23395bff;
-    --canary: #fffd98ff;
-    --snow: #f7f2f4ff;
-    --jet: #343434ff;
+    --mint: #D6E5CB;
+    --green: #3D7245;
+    --dark-grey: #313131;
+    --orange: #EE6C4D;
+    --red: #BC2E19;
 }
 
+/* example of color use {
+    background-color: var(--snow);
+} */
 .attachment-full {
     position: fixed;
     top: 0;
