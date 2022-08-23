@@ -59,12 +59,17 @@
 <body>
         <!-- PAGE: MAP -->
 
-        <div id="map-container">
+        <div class="map-container">
+                <div class="zoomButton" id="button_zoomIn" onclick = "setZoomState(18)"  style="cursor: pointer;">Pastina</div>
+                <div class="zoomButton" id="button_zoomOut" onclick = "setZoomState(10)"  style="cursor: pointer;">Sehenswertes in der Nähe</div>
                 <div id="map">
-
                 </div>
         </div>
-        <script type="module" src="./resources/js/modules/MapManager.js"></script>
+
+        <button> Jetzt Spenden</button>
+
+        <script type = "text/javascript" src="./resources/js/modules/MapManager.js"></script>
+        <!-- <script type="module" src="./resources/js/modules/MapManager.js"></script> -->
 </body>
 
 </html>
