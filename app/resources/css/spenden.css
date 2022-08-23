@@ -269,7 +269,7 @@ body {
   height: 160px;
   padding: 20px;
   font-family: 'Abel';
-  
+  font-weight: 500;
 }
 #goal {
   font-size: 25px;
