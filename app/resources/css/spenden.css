@@ -1,22 +1,13 @@
-/* Beispiel für die Einbindung zusätzlicher Schriftarten via Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
-
-/* Beispiel für die einfache Einbindung eines Farbschema, generiert auf coolors.co */
 :root {
-    --turquoise-green: #b9e3c6ff;
-    --ocean-green: #59c9a5ff;
-    --ruby: #d81e5bff;
-    --prussian-blue: #23395bff;
-    --canary: #fffd98ff;
-    --snow: #f7f2f4ff;
-    --jet: #343434ff;
-}
 
-.attachment-full {
-    position: fixed;
-    top: 0;
-    left: 0;
+    --mint: #D6E5CB;
+    --green: #3D7245;
+    --dark-grey: #313131;
+    --orange: #EE6C4D;
+    --red: #BC2E19;
 }
 
 .hidden {
@@ -24,21 +15,319 @@
 }
 
 body {
-    background-color: var(--snow);
-    font-family: 'Space Grotesk', sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: white;
+    font-family: 'Fahkwang', sans-serif;
 }
 
-.ui {
-    display: flex;
-    flex-direction: column;
-    width: 90vw;
-    margin: 0 auto;
-    padding: 0;
-}
-
-.ui h1 {
+.group {
+    background-color: white;
     text-align: center;
-    color: var(--jet);
+/* 
+    border-style: dashed;
+    border-width: 10px; */
+
+    width: 100%;
+    height: auto;
+}
+
+#_01 {
+    /* background-image: url(https://dreaminginyellow.com/diy-custom-design-yellow-strips/); */
+    background-image: url(../images/spenden_page/spenden_IMG-001.svg);
+
+    padding-top: 120px;
+    padding-bottom: 511px;
+
+    width: 100%;
+    height: auto;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    overflow: hidden;
+ }
+
+ #donationBtn {
+    
+    position: absolute;
+    width: 150.53px;
+    height: 154.99px;
+    left: 1388.39px;
+    top: 460px;
+    border-radius: 50px;
+    
+    background-color: var(--red) ;
+    border-radius: 50%;
+ }
+
+ 
+
+#_02 {
+    background-color: var(--mint);
+    height: auto;
+
+    text-align: center;
+    color: var(--dark-grey);
+}
+
+#_02h {
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-size: 18px;
+
+    padding-top: 120px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+#_02text {
+
+    font-size: 40px;
+
+    padding-bottom: 10%;
+    padding-top: 120px;
+    padding-left: 6.9%;
+    padding-right: 6.9%;
+}
+
+.article {
+    background-color: white;
+
+    /* border-style: dashed;
+    border-width: 10px; */
+
+    width: auto;
+    height: auto;
+
+    position: relative;
+}
+
+#_03 {
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 200px;
+}
+
+#_03h {
+
+    font-family: 'Fahkwang';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 90px;
+
+    padding-right: 40%;
+
+    left: 0px;
+    top: 0px;
+}
+
+#_03text {
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    left: 0px;
+
+    padding-bottom: 400px;
+    padding-right: 71%;
+}
+
+#_03img {
+    background-color: #313131;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    height: 100%;
+    width: auto;
+}
+
+
+#_04 {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+#_04h {
+
+    font-family: 'Fahkwang';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 90px;
+
+    padding-left: 60%;
+    padding-right: 1%;
+    padding-top: 5%;
+
+    right: 0px;
+    top: 0px;
+}
+
+#_04text {
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    right: 0px;
+
+    padding-left: 60%;
+    padding-right: 3%;
+}
+
+#_04img {
+    background-color: #313131;
+    position: absolute;
+    top: -150px;
+    left: 0px;
+
+    height: 120%;
+    width: auto;
+}
+
+
+
+#_05 {
+    margin-top: 400px;
+/* 
+    border-style: dashed;
+    border-width: 10px; */
+}
+
+#_05h {
+
+    font-family: 'Fahkwang';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 90px;
+
+    padding-top: 40%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#_05text {
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    left: 0px;
+
+    padding-left: 3%;
+    padding-right: 67%;
+    padding-bottom: 10%;
+}
+
+#_05img {
+    background-color: #313131;
+    position: absolute;
+    top: 0px;
+
+    margin-bottom: 20%;
+
+    height: auto;
+    width: 100%;
+}
+
+#_06 {
+    height: 500px;
+    width: auto;
+    background-color: var(--green);
+
+    text-align: center;
+}
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+  
+#progress {
+  /*STEP 1 |||||||||||||||||||||||*/
+  /*||||||||||||CHANGE||||||||||||*/
+
+             width: 37.5%; 
+
+  /*||||||||||PERCENTAGE||||||||||*/
+  /*||||||||||||||||||||||||||||||*/
+  /*Next step is at the bottom! Scroll down!*/
+
+  float: left;
+  border-radius: 6px;
+  height: 20px;
+  background: #36B8E9; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(-90deg, #71F7F2, #36B8E9); /* For Safari 5.1 to 6.0 */
+  background: -moz-linear-gradient(-90deg, #71F7F2, #36B8E9); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, #71F7F2, #36B8E9); /* Standard syntax */
+  z-index: 333;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+#countdown-wrap {
+  width: 120%;
+  height: 160px;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif, Arial;
+  font-weight: 500;
+}
+#goal {
+  font-size: 35px;
+  text-align: right;
+  width:80%;
+}
+@media only screen and (max-width: 540px) {
+  #goal {
+    text-align: center;
+  }
+}
+
+
+#glass {
+  width: 80%;
+  height: 20px;
+  border-radius: 6px;
+  background: #ee0e0;
+  float: left;
+  overflow: hidden;
+  background-color: #dee0e0;
+  box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+}
+.goal-stat {
+  width: 20%;
+  height: 30px;
+  padding: 10px;
+  float: left;
+  margin: 0;
+}
+@media only screen and (max-width: 540px) {
+  .goal-stat {
+    width: 40%;
+    text-align: center;
+  }
+}
+.goal-number,
+.goal-label {
+  display: block;
+  font-size: 20px;
+}
+.goal-number {
+  font-weight: bold;
+}
+#goal-words {
+  float: right;
+  width: 26%;
+  font-size: 25px;
 }
