@@ -57,9 +57,10 @@ body {
     
     background-color: var(--red) ;
     border-radius: 50%;
- }
 
- 
+   
+    
+ }
 
 #_02 {
     background-color: var(--mint);
@@ -249,42 +250,29 @@ body {
 }
 
 
-
-
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
   
 #progress {
-  /*STEP 1 |||||||||||||||||||||||*/
-  /*||||||||||||CHANGE||||||||||||*/
-
-             width: 37.5%; 
-
-  /*||||||||||PERCENTAGE||||||||||*/
-  /*||||||||||||||||||||||||||||||*/
-  /*Next step is at the bottom! Scroll down!*/
+  /* shows donated money on bar */
+  width: 50%; 
 
   float: left;
-  border-radius: 6px;
   height: 20px;
-  background: #36B8E9; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(-90deg, #71F7F2, #36B8E9); /* For Safari 5.1 to 6.0 */
-  background: -moz-linear-gradient(-90deg, #71F7F2, #36B8E9); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(-90deg, #71F7F2, #36B8E9); /* Standard syntax */
+  background: #FFFFFF; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(-90deg, #FFFFFF, #FFFFFF); /* For Safari 5.1 to 6.0 */
+  background: -moz-linear-gradient(-90deg, #FFFFFF, #FFFFFF); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, #FFFFFF, #FFFFFF); /* Standard syntax */
   z-index: 333;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
 #countdown-wrap {
   width: 120%;
   height: 160px;
   padding: 20px;
-  font-family: 'Roboto', sans-serif, Arial;
-  font-weight: 500;
+  font-family: 'Abel';
+  
 }
 #goal {
-  font-size: 35px;
+  font-size: 25px;
   text-align: right;
   width:80%;
 }
@@ -302,8 +290,7 @@ body {
   background: #ee0e0;
   float: left;
   overflow: hidden;
-  background-color: #dee0e0;
-  box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+  background-color: ;
 }
 .goal-stat {
   width: 20%;
@@ -318,16 +305,10 @@ body {
     text-align: center;
   }
 }
-.goal-number,
-.goal-label {
+.goal-number {
   display: block;
   font-size: 20px;
 }
 .goal-number {
   font-weight: bold;
-}
-#goal-words {
-  float: right;
-  width: 26%;
-  font-size: 25px;
 }
