@@ -242,6 +242,7 @@ body {
 }
 
 #_06 {
+
     height: 500px;
     width: auto;
     background-color: var(--green);
@@ -249,6 +250,21 @@ body {
     text-align: center;
 }
 
+#_06shareText {
+
+    
+    margin-bottom: 20%;
+
+
+}
+
+#_06mailBtn{
+    position: absolute;
+    width: 27.26px;
+    height: 27.26px;
+    left: 817px;
+    top: 5785px;
+}
 
   
 #progress {
@@ -290,7 +306,7 @@ body {
   background: #ee0e0;
   float: left;
   overflow: hidden;
-  background-color: ;
+  background-color: #FFFFF ;
 }
 .goal-stat {
   width: 20%;
@@ -312,3 +328,4 @@ body {
 .goal-number {
   font-weight: bold;
 }
+*/
