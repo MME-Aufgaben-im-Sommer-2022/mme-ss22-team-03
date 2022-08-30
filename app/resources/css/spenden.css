@@ -255,18 +255,20 @@ body {
     height: 500px;
     width: auto;
     background-color: var(--green);
+    position: relative;
+    
 
 }
 
 #_06shareText {
 
 
-    position: relative;
+    position: absolute;
     /* width: 161px;
     height: 24px; */
 
-    bottom: 25%;
-    left: 25%;
+    bottom: 20%;
+    left: 50%;
 
     font-family: 'Gotham';
     font-style: normal;
@@ -282,11 +284,14 @@ body {
 
 #_06Btn {
 
-    background-color: #313131;
+   
     position: absolute;
-    bottom: 20%;
+    bottom: 10%;
+    left: 50%;
+
+
     width: auto;
-    height: 200px;
+    height: auto;
 
 }
 
