@@ -252,11 +252,11 @@ body {
 
 #_06 {
 
-    height: 500px;
+    height: 900px;
     width: auto;
     background-color: var(--green);
     position: relative;
-
+    padding-top: 4%;
 
 }
 
@@ -270,7 +270,7 @@ body {
     bottom: 20%;
     left: 50%;
 
-    font-family: 'Gotham';
+    font-family: 'Abel';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -304,66 +304,107 @@ body {
 
 #progress {
 
-    width: 37.5%;
+    width: 50%;
 
     float: left;
-    height: 20px;
-    background: #FFFFFF;/ background: -webkit-linear-gradient(-90deg, #FFFFFF, #FFFFFF);
+    height: 31px;
+    background: #FFFFFF;
+    /* deleted "/"*/
+    background: -webkit-linear-gradient(-90deg, #FFFFFF, #FFFFFF);
     /* For Safari 5.1 to 6.0 */
     background: -moz-linear-gradient(-90deg, #FFFFFF, #FFFFFF);
     /* For Firefox 3.6 to 15 */
     background: linear-gradient(-90deg, #FFFFFF, #FFFFFF);
     /* Standard syntax */
-    z-index: 333;
-    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+   /* z-index: 333;*/
+   
+  
 }
 
 #countdown-wrap {
     width: 120%;
     height: 160px;
     padding: 20px;
-    font-family: 'Gotham';
-    font-weight: 500;
+    font-family: 'Abel';
+    font-weight: 400;
+    color:#FFFFFF;
+    
 }
 
+
+#_06text1{
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 24px;
+}
+
+#_06text2{
+
+    font-family: 'Fahkwang';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    color: #FFFFFF;
+    line-height: 50px;
+}
+
+
 #goal {
-    font-size: 35px;
-    text-align: right;
+
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+
+    color: #FFFFFF;
+
     right: 0%;
-    bottom: 0%;
+    margin: 2%;
 }
 
 #goal-status {
-    font-size: 35px;
-    text-align: left;
+    
+    position: absolute;
+    
+    color: #FFFFFF;
+    line-height: 18px;
+    font-family: 'Abel';
+    font-size: 18px;
+    text-align: center;
+
     left: 0%;
-    bottom: 0%;
+    margin: 2%;
+    
 }
 
 
 @media only screen and (max-width: 540px) {
     #goal {
         text-align: center;
+    
     }
 }
 
-
+/* deleted background: #ee0e00;
+changed float from left to none */
 #glass {
     width: 80%;
-    height: 20px;
-    border-radius: 6px;
-    background: #ee0e0;
-    float: left;
+    height: 31px;
+    float: none;
     overflow: hidden;
-    background-color: #dee0e0;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, .5) inset;
+    background-color: transparent;
+    border: thin solid white;
+    
 }
 
 .goal-status {
 
     left: 0%;
     bottom: -10%;
+    
 }
 
 @media only screen and (max-width: 540px) {
