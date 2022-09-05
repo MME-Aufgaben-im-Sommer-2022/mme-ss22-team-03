@@ -147,27 +147,26 @@
         </div>
         <!-- three steps   -->
 
+        <script type="module" src="./resources/js/modules/PageSpenden.js"></script>
+
         <div class="group" id="_07">
 
                 <div data-page="step1" data-active="">
-                        Step 1
-                        <button data-navigate="step2">Go to page 2</button>
-
                         <div id="_bg__schritt_1"></div>
 
                         <div id="spenden_group_007_spendenmodul">
 
-                                <div id="button_backtotop">
-                                        <img src="resources/images/buttons/button_IMG-Back-To-Top.svg"
-                                                id="vector_172" />
-
-                                </div>
-                                <div id="nach_oben">
-                                        Nach oben
-                                </div>
+                                
                                 <div id="in_nur_drei_schritten_die_welt_un_po__verbessern">
                                         in nur drei Schritten die Welt un po' verbessern
                                 </div>
+
+                                <div id="button_next" data-navigate="step2" style="cursor: pointer;">
+                                        <img src="resources/images/buttons/button_IMG-Next-Right.svg" id="vector_172_ek1" />
+
+                                </div>
+
+
 
                                 <div id="spenden_text_schritt1">
                                         <div id="schritt_1">
@@ -198,8 +197,15 @@
                                         </div>
 
                                 </div>
-                                <img src="skins/line.png" id="line" />
+
+
+                                <div id="betrag_ek1">
+                                        20
+                                </div>
+
+                                <!-- <img src="skins/line.png" id="line" /> -->
                                 <div id="spenden_input_field"></div>
+
                                 <div id="betrag">
                                         Betrag
                                 </div>
@@ -241,13 +247,15 @@
                                         </div>
 
                                 </div>
-                                <div id="betrag_ek1">
-                                        20
+
+                                
+                                <div id="button_backtotop">
+                                        <img src="resources/images/buttons/button_IMG-Back-To-Top.svg"
+                                                id="vector_172" />
+
                                 </div>
-
-                                <div id="button_next">
-                                        <img src="resources/images/buttons/button_IMG-Next-Right.svg" id="vector_172_ek1" />
-
+                                <div id="nach_oben">
+                                        Nach oben
                                 </div>
 
                         </div>
@@ -268,11 +276,5 @@
 
         </div>
 
-
-
-        <!-- step 1 -->
-
-
-        <script type="module" src="./resources/js/modules/PageSpenden.js"></script>
 
 </body>
