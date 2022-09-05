@@ -385,8 +385,6 @@ body {
 /* step 1 css */
 
 #_07 {
-    background-color: blue;
-
     position: relative;
     height: 1432px;
 
@@ -397,24 +395,11 @@ body {
 /* Only edit this if you know what you are doing! */
 /* div { position: absolute; } */
 
-#content-container {
-    display: block;
-    position: relative;
-    width: 1728px;
-    width: 1728px;
-    height: 1432px;
-    overflow: hidden;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#_bg__schritt_1 {
-    top: 0px;
-    left: 0px;
+#background_group {
+    top: 190px;
+    left: 167px;
     width: 1728px;
     height: 1432px;
-    background: rgba(255, 255, 255, 1);
 
     position: absolute;
 }
@@ -426,6 +411,37 @@ body {
     height: 1051.68px;
 
     position: absolute;
+}
+
+
+
+#spenden_thank_you {
+    top: 190px;
+    left: 167px;
+    width: 1393px;
+    height: 1051.68px;
+
+    background-color: white;
+    position: absolute;
+}
+
+#thank_you_text {
+    position: absolute;
+    width: 1109px;
+    height: 84px;
+    left: 310px;
+    top: 674px;
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 62.6824px;
+    line-height: 84px;
+    /* identical to box height, or 133% */
+
+    text-align: center;
+
+    color: #313131;
 }
 
 #button_backtotop {
@@ -457,7 +473,7 @@ body {
 
 #nach_oben {
     top: 1028px;
-    left: 1208px;
+    left: 1315px;
     width: 95px;
     height: 37px;
     overflow: hidden;
@@ -833,5 +849,335 @@ body {
     left: 26px;
     width: 35.65px;
     height: 22.23px;
+    position: absolute;
+}
+
+/* Step 2 */
+
+
+#vorname {
+    top: 521px;
+    left: 167px;
+    width: 82px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#nachname {
+    top: 640px;
+    left: 167px;
+    width: 95px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#stra_e__nr_ {
+    top: 759px;
+    left: 167px;
+    width: 96px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#plz__ort {
+    top: 878px;
+    left: 167px;
+    width: 78px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#e_mail {
+    top: 997px;
+    left: 167px;
+    width: 66px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#rectangle_368 {
+    top: 563px;
+    left: 167px;
+    width: 936px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#rectangle_408 {
+    top: 682px;
+    left: 167px;
+    width: 936px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#rectangle_409 {
+    top: 801px;
+    left: 167px;
+    width: 936px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#rectangle_410 {
+    top: 920px;
+    left: 167px;
+    width: 936px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#rectangle_412 {
+    top: 920px;
+    left: 167px;
+    width: 282px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#rectangle_411 {
+    top: 1039px;
+    left: 167px;
+    width: 936px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+/* Step 3 */
+
+#paypal {
+    top: 603px;
+    left: 271px;
+    width: 68px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#kreditkarte {
+    top: 705px;
+    left: 271px;
+    width: 101px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#applepay {
+    top: 807px;
+    left: 271px;
+    width: 85px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#bankeinzug {
+    top: 909px;
+    left: 271px;
+    width: 101px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#vector_320 {
+    top: 767px;
+    left: 167px;
+    width: 1392px;
+    height: auto;
+    position: absolute;
+}
+
+
+#vector_323 {
+    top: 869px;
+    left: 167px;
+    width: 1392px;
+    height: auto;
+    position: absolute;
+}
+
+
+#vector_324 {
+    top: 971px;
+    left: 167px;
+    width: 1392px;
+    height: auto;
+    position: absolute;
+}
+
+
+#vector_321 {
+    top: 563px;
+    left: 168px;
+    width: 1392px;
+    height: auto;
+    position: absolute;
+}
+
+
+#vector_322 {
+    top: 665px;
+    left: 168px;
+    width: 1392px;
+    height: auto;
+    position: absolute;
+}
+
+
+#vector {
+    top: 794px;
+    left: 1361px;
+    width: 119px;
+    height: 49px;
+    position: absolute;
+}
+
+#vector_999 {
+    top: 250px;
+    left: 0px;
+    width: 1393px;
+    height: auto;
+    position: absolute;
+}
+
+#ellipse_497 {
+    top: 605px;
+    left: 218px;
+    width: 22px;
+    height: 22px;
+    -ms-border-radius: 10px / 10px;
+    -o-border-radius: 10px / 10px;
+    -moz-border-radius: 10px / 10px;
+    -webkit-border-radius: 10px / 10px;
+    border-radius: 10px / 10px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#ellipse_498 {
+    top: 707px;
+    left: 218px;
+    width: 22px;
+    height: 22px;
+    -ms-border-radius: 10px / 10px;
+    -o-border-radius: 10px / 10px;
+    -moz-border-radius: 10px / 10px;
+    -webkit-border-radius: 10px / 10px;
+    border-radius: 10px / 10px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#ellipse_499 {
+    top: 809px;
+    left: 218px;
+    width: 22px;
+    height: 22px;
+    -ms-border-radius: 10px / 10px;
+    -o-border-radius: 10px / 10px;
+    -moz-border-radius: 10px / 10px;
+    -webkit-border-radius: 10px / 10px;
+    border-radius: 10px / 10px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#ellipse_500 {
+    top: 911px;
+    left: 218px;
+    width: 22px;
+    height: 22px;
+    -ms-border-radius: 10px / 10px;
+    -o-border-radius: 10px / 10px;
+    -moz-border-radius: 10px / 10px;
+    -webkit-border-radius: 10px / 10px;
+    border-radius: 10px / 10px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
     position: absolute;
 }

@@ -1,15 +1,11 @@
+import SpendenHelper from "../modules/SpendenHelper.js"
 
+let mySpendenHelper;
 
-
-function init() {
-
-
-    // Different Steps Manager
-    Dage.update();
-
-    Dage.setPageActive("page1");
-
-    // switchPage("page_map")
+function init()
+{
+    //mySpendenHelper = new SpendenHelper();
+    console.log("created: " + mySpendenHelper)
 }
 
 // Switch between Steps
@@ -17,5 +13,6 @@ function switchPage(page) {
     Dage.navigate(page)
     //console.log(Dage.a);
 }
+
 
 init();
