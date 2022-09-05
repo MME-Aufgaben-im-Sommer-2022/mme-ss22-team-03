@@ -615,15 +615,15 @@ body {
     position: absolute;
 }
 
-
-#line {
-    top: 263px;
-    left: 0px;
-    width: 1393px;
-    height: 0px;
+#button_next {
+    top: 130px;
+    left: 1216px;
+    width: 88.97px;
+    height: 91.5px;
     position: absolute;
 }
 
+/* Step 1 */
 
 #spenden_input_field {
     top: 458px;
@@ -826,23 +826,6 @@ body {
     color: #303030;
     position: absolute;
 }
-
-#button_next {
-    top: 122px;
-    left: 1216px;
-    width: 88.97px;
-    height: 91.5px;
-    position: absolute;
-}
-
-#vector_172_ek1 {
-    top: 92px;
-    left: 0px;
-    width: 88.97px;
-    height: 91.5px;
-    position: absolute;
-}
-
 
 #vector_314_ek1 {
     top: 35px;
