@@ -109,7 +109,7 @@
         </div>
 
         <div class="group" id="_06">
-                
+
                 <div id="_06text1">Wir freuen uns auf deine Unterstützung!</div>
 
                 <div id="_06text2">50% unseres Ziels erreicht</div>
@@ -192,50 +192,54 @@
 
                 <div id="steps_content">
                         <!-- Step 1 -->
-                        <div data-page="step1">
+                        <div data-page="step1" id="step1">
 
-                                <!-- <img src="skins/line.png" id="line" /> -->
-                                <div id="spenden_input_field">
-                                        <input type="number" class="AmountInput" name="AmountInput"
-                                                placeholder="Wähle deinen Beitrag..." min="1">
-                                </div>
 
                                 <div id="betrag">
                                         Betrag
                                 </div>
 
+                                <div id="spenden_input_field">
+                                        <!-- <div id="euro">
+                                                Euro
+                                        </div> -->
+                                        <input type="number" class="AmountInput" name="AmountInput"
+                                                placeholder="Wähle deinen Beitrag..." min="1">
+                                </div>
+
                                 <div id="frequenz">
                                         Frequenz
                                 </div>
-                                <div id="euro">
-                                        Euro
-                                </div>
 
-                                <div id="spenden_button_monatlich" style="cursor: pointer;">
-                                        <div id="frequencyText">
-                                                monatlich
+                                <div id="frequency_buttons">
+
+                                        <div id="button_frequency" class="active" style="cursor: pointer;">
+                                                <div id="frequencyText">
+                                                        monatlich
+                                                </div>
                                         </div>
-                                </div>
 
-
-                                <div id="spenden_button_halbj_hrlich" style="cursor: pointer;">
-                                        <div id="frequencyText">
-                                                halbjährlich
+                                        <div id="button_frequency" style="cursor: pointer;">
+                                                <div id="frequencyText">
+                                                        halbjährlich
+                                                </div>
                                         </div>
-                                </div>
 
-
-                                <div id="spenden_button_j_hrlich" style="cursor: pointer;">
-                                        <div id="frequencyText">
-                                                jährlich
+                                        <div id="button_frequency" style="cursor: pointer;">
+                                                <div id="frequencyText">
+                                                        jährlich
+                                                </div>
                                         </div>
+
+                                        <div id="button_frequency" style="cursor: pointer;">
+                                                <div id="frequencyText">
+                                                        einmalig
+                                                </div>
+                                        </div>
+
                                 </div>
 
-                                <div id="spenden_button_einmalig" style="cursor: pointer;">
-                                        <div id="frequencyText">
-                                                einmalig
-                                        </div>
-                                </div>
+
                         </div>
 
 
@@ -322,7 +326,8 @@
                         <!-- TODO: Seperate from background div -->
 
                         <div id="button_backtotop" style="cursor: pointer;" class="buttonGoUp">
-                                <img src="resources/images/buttons/button_IMG-Back-To-Top.svg" id="button_backtotop_img"/>
+                                <img src="resources/images/buttons/button_IMG-Back-To-Top.svg"
+                                        id="button_backtotop_img" />
                                 <p style="font-size:18px;">Nach oben</p>
 
                         </div>

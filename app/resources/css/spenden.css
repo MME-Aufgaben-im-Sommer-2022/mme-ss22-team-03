@@ -405,7 +405,7 @@ changed float from left to none */
 
 #_07 {
     position: relative;
-    height: 1032px;
+    height: 1000px;
 
     margin: auto;
     width: 50%;
@@ -453,7 +453,7 @@ changed float from left to none */
     text-align: center;
     line-height: 24px;
     color: #303030;
-    position: absolute;
+    position: relative;
 }
 
 #spenden_text_schritt1 {
@@ -544,7 +544,8 @@ changed float from left to none */
     text-align: left;
     line-height: 45px;
     color: #303030;
-    position: absolute;
+    position: absolute
+    ;
 }
 
 #spenden_text_schritt3 {
@@ -603,14 +604,11 @@ changed float from left to none */
 
 /* Step 1 */
 
-#spenden_input_field {
-    top: 458px;
-    left: 0px;
-    width: 936px;
-    height: 39px;
-    border: 1px solid #313131;
-    background: rgba(255, 255, 255, 0);
-    position: absolute;
+#step1 {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
 }
 
 .AmountInput {
@@ -631,49 +629,33 @@ changed float from left to none */
 }
 
 #betrag {
-    top: 363px;
-    left: 0px;
-    width: 132px;
-    height: 70px;
     overflow: hidden;
     font-family: Abel;
     font-size: 36px;
     text-align: left;
     line-height: 45px;
     color: #303030;
-    position: absolute;
+    position: relative;
+
+    
+    top: 25%;
+    
+    width: 100%;
+    height: 10%;
 }
 
 
-#frequenz {
-    top: 595px;
-    left: 0px;
-    width: 166px;
-    height: 70px;
-    overflow: hidden;
-    font-family: Abel;
-    font-size: 36px;
-    text-align: left;
-    line-height: 45px;
-    color: #303030;
-    position: absolute;
+#spenden_input_field {
+    top: 30%;
+    
+    width: 100%;
+    height: 10%;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: relative;
+    
+    display: inline-block;
 }
-
-
-#euro {
-    top: 466px;
-    left: 26px;
-    width: 54px;
-    height: 37px;
-    overflow: hidden;
-    font-family: Abel;
-    font-size: 18px;
-    text-align: left;
-    line-height: 24px;
-    color: #303030;
-    position: absolute;
-}
-
 
 #frequencyText {
     text-align: center;
@@ -687,45 +669,89 @@ changed float from left to none */
 
 }
 
-#spenden_button_monatlich {
-    top: 690px;
-    left: 0px;
-    width: 174px;
-    height: 37px;
+#frequenz {
+    top: 55%;
+    
+    width: 100%;
+    height: 10%;
 
-    border: 1px solid #313131;
+    position: relative;
 
-    float: center;
-    position: absolute;
+
+    font-family: Abel;
+    font-size: 36px;
+    text-align: left;
+    line-height: 45px;
+    color: #303030;
 }
 
+#frequency_buttons {
+    height: 10%;
+    width: 100%;
 
-#spenden_button_halbj_hrlich {
-    top: 690px;
-    left: 254px;
-    width: 173px;
-    height: 37px;
-    position: absolute;
+    top: 60%;
+    position: relative;
+
+    text-align: left;
+}
+
+#button_frequency {
+    margin-right: 5%;
+    width: 174px;
+    height: 70%;
+
+    opacity: 50%;
+    border: 1px solid #31313180;
+    display: inline-block;
+    float: center;
+}
+
+#button_frequency:hover {
+    opacity: 100%;
+    color: #303030;
+}
+
+#button_frequency.active {
+    opacity: 100%;
+    color: black;
+}
+
+#spenden_button_monatlich {
+  
+    margin-right: 5%;
+    width: 174px;
+    height: 70%;
 
     border: 1px solid #313131;
+    display: inline-block;
+}
+
+#spenden_button_halbj_hrlich {
+    
+    margin-right: 5%;
+    width: 174px;
+    height: 70%;
+
+    border: 1px solid #313131;
+    display: inline-block;
 }
 
 #spenden_button_j_hrlich {
-    top: 690px;
-    left: 507px;
-    width: 173px;
-    height: 37px;
-    position: absolute;
+    margin-right: 5%;
+    width: 174px;
+    height: 70%;
+
     border: 1px solid #313131;
+    display: inline-block;
 }
 
 #spenden_button_einmalig {
-    top: 690px;
-    left: 760px;
+    margin-right: 5%;
     width: 174px;
-    height: 37px;
-    position: absolute;
+    height: 70%;
+
     border: 1px solid #313131;
+    display: inline-block;
 }
 
 /* Step 2 */
@@ -877,8 +903,8 @@ changed float from left to none */
 }
 
 
-/* Step 3 */
 
+/* Step 3 */
 
 #kreditkarte {
     top: 705px;
@@ -911,102 +937,4 @@ changed float from left to none */
 li {
     border-top: 1px solid #313131;
     font-size: 18px;
-}
-
-
-#vector_321 {
-    top: 563px;
-    left: 168px;
-    width: 1392px;
-    height: auto;
-    position: absolute;
-}
-
-
-#vector_322 {
-    top: 665px;
-    left: 168px;
-    width: 1392px;
-    height: auto;
-    position: absolute;
-}
-
-
-#vector {
-    top: 794px;
-    left: 1361px;
-    width: 119px;
-    height: 49px;
-    position: absolute;
-}
-
-#vector_999 {
-    top: 250px;
-    left: 0px;
-    width: 1393px;
-    height: auto;
-    position: absolute;
-}
-
-#ellipse_497 {
-    top: 605px;
-    left: 218px;
-    width: 22px;
-    height: 22px;
-    -ms-border-radius: 10px / 10px;
-    -o-border-radius: 10px / 10px;
-    -moz-border-radius: 10px / 10px;
-    -webkit-border-radius: 10px / 10px;
-    border-radius: 10px / 10px;
-    border: 1px solid #313131;
-    background: rgba(255, 255, 255, 0);
-    position: absolute;
-}
-
-
-#ellipse_498 {
-    top: 707px;
-    left: 218px;
-    width: 22px;
-    height: 22px;
-    -ms-border-radius: 10px / 10px;
-    -o-border-radius: 10px / 10px;
-    -moz-border-radius: 10px / 10px;
-    -webkit-border-radius: 10px / 10px;
-    border-radius: 10px / 10px;
-    border: 1px solid #313131;
-    background: rgba(255, 255, 255, 0);
-    position: absolute;
-}
-
-
-#ellipse_499 {
-    top: 809px;
-    left: 218px;
-    width: 22px;
-    height: 22px;
-    -ms-border-radius: 10px / 10px;
-    -o-border-radius: 10px / 10px;
-    -moz-border-radius: 10px / 10px;
-    -webkit-border-radius: 10px / 10px;
-    border-radius: 10px / 10px;
-    border: 1px solid #313131;
-    background: rgba(255, 255, 255, 0);
-    position: absolute;
-}
-
-
-#ellipse_500 {
-    top: 911px;
-    left: 218px;
-    width: 22px;
-    height: 22px;
-    -ms-border-radius: 10px / 10px;
-    -o-border-radius: 10px / 10px;
-    -moz-border-radius: 10px / 10px;
-    -webkit-border-radius: 10px / 10px;
-    border-radius: 10px / 10px;
-    border: 1px solid #313131;
-    background: rgba(255, 255, 255, 0);
-    position: absolute;
 }
