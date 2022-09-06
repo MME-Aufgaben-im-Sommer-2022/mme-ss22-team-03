@@ -252,11 +252,11 @@ body {
 
 #_06 {
 
-    height: 500px;
+    height: 900px;
     width: auto;
     background-color: var(--green);
     position: relative;
-
+    padding-top: 4%;
 
 }
 
@@ -270,7 +270,7 @@ body {
     bottom: 20%;
     left: 50%;
 
-    font-family: 'Gotham';
+    font-family: 'Abel';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -304,19 +304,21 @@ body {
 
 #progress {
 
-    width: 37.5%;
+    width: 50%;
 
     float: left;
-    height: 20px;
-    background: #FFFFFF;/ background: -webkit-linear-gradient(-90deg, #FFFFFF, #FFFFFF);
+    height: 31px;
+    background: #FFFFFF;
+    /* deleted "/"*/
+    background: -webkit-linear-gradient(-90deg, #FFFFFF, #FFFFFF);
     /* For Safari 5.1 to 6.0 */
     background: -moz-linear-gradient(-90deg, #FFFFFF, #FFFFFF);
     /* For Firefox 3.6 to 15 */
     background: linear-gradient(-90deg, #FFFFFF, #FFFFFF);
     /* Standard syntax */
-    z-index: 333;
-    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    /* z-index: 333;*/
+
+
 }
 
 #countdown-wrap {
@@ -328,42 +330,59 @@ body {
 }
 
 #goal {
-    font-size: 35px;
-    text-align: right;
+
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+
+    color: #FFFFFF;
+
     right: 0%;
-    bottom: 0%;
+    margin: 2%;
 }
 
 #goal-status {
-    font-size: 35px;
-    text-align: left;
+
+    position: absolute;
+
+    color: #FFFFFF;
+    line-height: 18px;
+    font-family: 'Abel';
+    font-size: 18px;
+    text-align: center;
+
     left: 0%;
-    bottom: 0%;
+    margin: 2%;
+
 }
 
 
 @media only screen and (max-width: 540px) {
     #goal {
         text-align: center;
+
     }
 }
 
-
+/* deleted background: #ee0e00;
+changed float from left to none */
 #glass {
     width: 80%;
     height: 20px;
     border-radius: 6px;
-    background: #ee0e0;
-    float: none;
+    background: #white;
+    float: left;
     overflow: hidden;
-    background-color: #dee0e0;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, .5) inset;
+    background-color: transparent;
+    border: thin solid white;
+
 }
 
 .goal-status {
 
     left: 0%;
     bottom: -10%;
+
 }
 
 @media only screen and (max-width: 540px) {
@@ -861,10 +880,29 @@ body {
 /* Step 3 */
 
 
-.OptionList {
+#kreditkarte {
+    top: 705px;
+    left: 271px;
+    width: 101px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
 
-    margin-top: 350px;
 
+#applepay {
+    top: 807px;
+    left: 271px;
+    width: 85px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
     text-align: left;
     line-height: 100px;
     padding-left: 0%;
@@ -873,41 +911,102 @@ body {
 li {
     border-top: 1px solid #313131;
     font-size: 18px;
-
 }
 
-#lastElement {
-    border-bottom: 1px solid #313131;
-}
 
-/* step 4 */
-
-#spenden_thank_you {
-
-    height: 100%;
-    width: 100%;
-
-    align-content: center;
-
-    background-color: white;
+#vector_321 {
+    top: 563px;
+    left: 168px;
+    width: 1392px;
+    height: auto;
     position: absolute;
 }
 
-#thank_you_text {
+
+#vector_322 {
+    top: 665px;
+    left: 168px;
+    width: 1392px;
+    height: auto;
     position: absolute;
-    width: 1109px;
-    height: 84px;
-    left: 310px;
-    top: 674px;
+}
 
-    font-family: 'Abel';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 62.6824px;
-    line-height: 84px;
-    /* identical to box height, or 133% */
 
-    text-align: center;
+#vector {
+    top: 794px;
+    left: 1361px;
+    width: 119px;
+    height: 49px;
+    position: absolute;
+}
 
-    color: #313131;
+#vector_999 {
+    top: 250px;
+    left: 0px;
+    width: 1393px;
+    height: auto;
+    position: absolute;
+}
+
+#ellipse_497 {
+    top: 605px;
+    left: 218px;
+    width: 22px;
+    height: 22px;
+    -ms-border-radius: 10px / 10px;
+    -o-border-radius: 10px / 10px;
+    -moz-border-radius: 10px / 10px;
+    -webkit-border-radius: 10px / 10px;
+    border-radius: 10px / 10px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#ellipse_498 {
+    top: 707px;
+    left: 218px;
+    width: 22px;
+    height: 22px;
+    -ms-border-radius: 10px / 10px;
+    -o-border-radius: 10px / 10px;
+    -moz-border-radius: 10px / 10px;
+    -webkit-border-radius: 10px / 10px;
+    border-radius: 10px / 10px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#ellipse_499 {
+    top: 809px;
+    left: 218px;
+    width: 22px;
+    height: 22px;
+    -ms-border-radius: 10px / 10px;
+    -o-border-radius: 10px / 10px;
+    -moz-border-radius: 10px / 10px;
+    -webkit-border-radius: 10px / 10px;
+    border-radius: 10px / 10px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#ellipse_500 {
+    top: 911px;
+    left: 218px;
+    width: 22px;
+    height: 22px;
+    -ms-border-radius: 10px / 10px;
+    -o-border-radius: 10px / 10px;
+    -moz-border-radius: 10px / 10px;
+    -webkit-border-radius: 10px / 10px;
+    border-radius: 10px / 10px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
 }
