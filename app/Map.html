@@ -59,17 +59,45 @@
 <body>
         <!-- PAGE: MAP -->
 
+        <div class="zoomButton" id="button_zoomIn" onclick="setZoomState(18)" style="cursor: pointer;">Pastina
+        </div>
+        <div class="zoomButton" id="button_zoomOut" onclick="setZoomState(10)" style="cursor: pointer;">
+                Sehenswertes in der Nähe</div>
         <div class="map-container">
-                <div class="zoomButton" id="button_zoomIn" onclick = "setZoomState(18)"  style="cursor: pointer;">Pastina</div>
-                <div class="zoomButton" id="button_zoomOut" onclick = "setZoomState(10)"  style="cursor: pointer;">Sehenswertes in der Nähe</div>
                 <div id="map">
                 </div>
         </div>
 
-        <button> Jetzt Spenden</button>
+        <div id="PlacesOverview">
 
-        <script type = "text/javascript" src="./resources/js/modules/MapManager.js"></script>
-        <!-- <script type="module" src="./resources/js/modules/MapManager.js"></script> -->
+                <ul>
+                        <li id="active">
+                                Obergeschoss - Matratzenlager
+                        </li>
+                        <li>
+                                Erdgeschoss - Zimmer, Küche, Bad
+                        </li>
+                        <li>
+                                Obstwiese
+                        </li>
+                        <li>
+                                Olivenplantagen
+                        </li>
+                        <li>
+                                Yoga Raum
+                        </li>
+                        <li>
+                                Hütte
+                        </li>
+                </ul>
+
+        </div>
+
+        <div class="SelectedElement">
+                div Container für Bildergalerie
+        </div>
+
+        <script type="text/javascript" src="./resources/js/modules/index.js"></script>
 </body>
 
 </html>
