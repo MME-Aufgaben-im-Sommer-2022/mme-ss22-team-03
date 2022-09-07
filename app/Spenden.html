@@ -203,7 +203,7 @@
                                         <!-- <div id="euro">
                                                 Euro
                                         </div> -->
-                                        <input type="number" class="AmountInput" name="AmountInput"
+                                        <input type="number" class="AmountInput" name="amountInput"
                                                 placeholder="Wähle deinen Beitrag..." min="1">
                                 </div>
 
@@ -213,25 +213,25 @@
 
                                 <div id="frequency_buttons">
 
-                                        <div id="button_frequency" class="active" style="cursor: pointer;">
+                                        <div id="button_frequency" style="cursor: pointer;" name="monatlich">
                                                 <div id="frequencyText">
                                                         monatlich
                                                 </div>
                                         </div>
 
-                                        <div id="button_frequency" style="cursor: pointer;">
+                                        <div id="button_frequency" style="cursor: pointer;" name="halbjährlich">
                                                 <div id="frequencyText">
                                                         halbjährlich
                                                 </div>
                                         </div>
 
-                                        <div id="button_frequency" style="cursor: pointer;">
+                                        <div id="button_frequency" style="cursor: pointer;" name="jährlich">
                                                 <div id="frequencyText">
                                                         jährlich
                                                 </div>
                                         </div>
 
-                                        <div id="button_frequency" style="cursor: pointer;">
+                                        <div id="button_frequency" style="cursor: pointer;" name="einmalig">
                                                 <div id="frequencyText">
                                                         einmalig
                                                 </div>
@@ -285,28 +285,28 @@
 
 
                         <!-- Step 3 -->
-                        <!-- TODO: Elements have to be selectable / Images of OPtions on the right /  -->
-
                         <div data-page="step3">
 
-                                <ul class="OptionList" type="none">
-                                        <li style="cursor: pointer;">
-                                                <input type="radio" id="paypal" name="type" value="PayPal">
+                                <!-- TODO: Implement Online Payment Plugin -->
+
+                                <!-- <ul class="OptionList" type="none">
+                                        <li style="cursor: pointer;" name="paypal">
+                                                <input type="radio" id="paypal" name="paypalRadio" value="PayPal">
                                                 PayPal
                                         </li>
-                                        <li style="cursor: pointer;">
-                                                <input type="radio" id="creditcard" name="type" value="Kreditkarte">
+                                        <li style="cursor: pointer;" name="creditcard">
+                                                <input type="radio" id="creditcard" name="creditcardRadio" value="Kreditkarte">
                                                 Kreditkarte
-                                        </li style="cursor: pointer;">
+                                        </li style="cursor: pointer;" name="applepay">
                                         <li>
-                                                <input type="radio" id="applepay" name="type" value="ApplePay">
+                                                <input type="radio" id="applepay" name="applepayRadio" value="ApplePay">
                                                 ApplePay
-                                        </li style="cursor: pointer;">
+                                        </li style="cursor: pointer;" name="bankeinzug">
                                         <li id="lastElement">
-                                                <input type="radio" id="bankeinzug" name="type" value="Bankeinzug">
+                                                <input type="radio" id="bankeinzug" name="bankeinzugRadio" value="Bankeinzug">
                                                 Bankeinzug
                                         </li>
-                                </ul>
+                                </ul> -->
                         </div>
 
 
@@ -329,7 +329,7 @@
                                 <img src="resources/images/buttons/button_IMG-Back-To-Top.svg"
                                         id="button_backtotop_img" />
                                 <p style="font-size:18px;">Nach oben</p>
-
+  
                         </div>
                 </div>
 

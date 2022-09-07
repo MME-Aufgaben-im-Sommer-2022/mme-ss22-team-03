@@ -1,10 +1,10 @@
-import SpendenHelper from "../modules/SpendenHelper.js"
+import SpendenFormManager from "./SpendenFormManager.js"
 
 let mySpendenHelper;
 
 function init()
 {
-    mySpendenHelper = new SpendenHelper();
+    mySpendenHelper = new SpendenFormManager();
 }
 
 
