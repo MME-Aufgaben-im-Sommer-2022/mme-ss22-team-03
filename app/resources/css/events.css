@@ -15,32 +15,100 @@
     background-color: var(--snow);
 } */
 
-.attachment-full {
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.hidden {
-    display: none !important;
-}
 
 body {
     background-color: var(--snow);
     font-family: 'Space Grotesk', sans-serif;
-    margin: 0;
-    padding: 0;
+
+    width: 100%;
 }
 
-.ui {
-    display: flex;
-    flex-direction: column;
-    width: 90vw;
-    margin: 0 auto;
-    padding: 0;
+.group {
+    width: 100%;
+    height: 1000px;
+    padding: 5%;
 }
 
-.ui h1 {
-    text-align: center;
-    color: var(--jet);
+.group_event_01 {
+
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 50% 5% 20% 20% 5%;
+    grid-template-rows: 0.5fr 0.5fr 0.1fr 1fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Image . . . ."
+        "Image . Header Header ."
+        "Image . Subheader Subheader ."
+        "Image . Content Content ."
+        "Image . Button Share .";
+}
+
+.Image {
+    grid-area: Image;
+    overflow: hidden;
+}
+
+#Img {
+
+
+    width: 100%;
+    height: auto;
+}
+
+.Header {
+    grid-area: Header;
+    background-color: #2200ff;
+
+    font-family: Fahkwang;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 90px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.Subheader {
+    grid-area: Subheader;
+    background-color: #5cfff7;
+
+    font-family: Fahkwang;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.Content {
+
+    margin-top: 10%;
+    margin-right: 30%;
+    margin-bottom: 10%;
+
+    grid-area: Content;
+    background-color: #BC2E19;
+
+    font-family: Abel;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.Share {
+    grid-area: Share;
+    background-color: #cf6b5b;
+}
+
+.Button {
+    grid-area: Button;
+    background-color: #eeb1a7;
 }
