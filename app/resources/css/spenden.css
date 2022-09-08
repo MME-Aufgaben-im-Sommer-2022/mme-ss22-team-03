@@ -284,11 +284,9 @@ body {
 
 #_06Btn {
 
-
     position: absolute;
     bottom: 10%;
     left: 50%;
-
 
     width: auto;
     height: auto;
@@ -302,12 +300,36 @@ body {
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
 
+#countdown-wrap {
+    width: 100%;
+    height: 160px;
+    padding: 2%;
+    font-family: 'Gotham';
+    font-weight: 500;
+
+    box-sizing: border-box;
+}
+
+/* deleted background: #ee0e00;
+changed float from left to none */
+#glass {
+
+    width: 100%;
+    height: 18%;
+    border-radius: 6px;
+    background: #FFFFFF;
+    float: none;
+    overflow: hidden;
+    background-color: transparent;
+    border: thin solid white;
+
+}
+
 #progress {
 
     width: 50%;
-
+    height: 100%;
     float: left;
-    height: 31px;
     background: #FFFFFF;
     /* deleted "/"*/
     background: -webkit-linear-gradient(-90deg, #FFFFFF, #FFFFFF);
@@ -321,41 +343,44 @@ body {
 
 }
 
-#countdown-wrap {
-    width: 120%;
-    height: 160px;
-    padding: 20px;
-    font-family: 'Gotham';
-    font-weight: 500;
+#test{
+   
+    width: 100%;
+    height: auto;
+    margin-top: 2%;
 }
 
-#goal {
-
-    position: absolute;
-    font-size: 18px;
-    text-align: center;
-
-    color: #FFFFFF;
-
-    right: 0%;
-    margin: 2%;
-}
-
+/* TODO: Position muss noch relativ werden*/
 #goal-status {
 
-    position: absolute;
+    position: relative;
+    left: 0%;
+    margin-right: 30%;
+
 
     color: #FFFFFF;
     line-height: 18px;
-    font-family: 'Abel';
     font-size: 18px;
-    text-align: center;
-
-    left: 0%;
-    margin: 2%;
-
+    font-family: 'Abel';
+    text-align:center;
+   
 }
 
+
+#goal {
+
+    position: relative;
+    right: 0%;
+    margin-left: 30%;
+
+    font-size: 18px;
+    line-height: 18px;
+    font-family: 'Abel';
+    text-align: center;
+
+    color: #FFFFFF;
+   
+}
 
 @media only screen and (max-width: 540px) {
     #goal {
@@ -364,19 +389,6 @@ body {
     }
 }
 
-/* deleted background: #ee0e00;
-changed float from left to none */
-#glass {
-    width: 80%;
-    height: 20px;
-    border-radius: 6px;
-    background: #white;
-    float: left;
-    overflow: hidden;
-    background-color: transparent;
-    border: thin solid white;
-
-}
 
 .goal-status {
 
@@ -406,8 +418,7 @@ changed float from left to none */
 #_07 {
     position: relative;
     height: 1000px;
-
-    margin: auto;
+    margin-left: 5%;
     width: 50%;
 }
 
@@ -443,25 +454,31 @@ changed float from left to none */
 
 
 #in_nur_drei_schritten_die_welt_un_po__verbessern {
-    top: 0px;
-    left: 534px;
-    width: 334px;
-    height: 37px;
+
+    position: relative;
+    top: 10%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    display: table-cell;
+
     overflow: hidden;
     font-family: Abel;
     font-size: 18px;
     text-align: center;
     line-height: 24px;
     color: #303030;
-    position: relative;
+
 }
 
 #spenden_text_schritt1 {
+
+    position: absolute;
     top: 135px;
     left: 0px;
     width: 141px;
     height: 75.45px;
-    position: absolute;
+    
 }
 
 #schritt_1 {
@@ -605,10 +622,12 @@ changed float from left to none */
 /* Step 1 */
 
 #step1 {
+
+    position: relative;
+
     width: 100%;
     height: 100%;
 
-    position: relative;
 }
 
 .AmountInput {
@@ -758,17 +777,17 @@ changed float from left to none */
 
 
 #vorname {
-    top: 521px;
-    left: 167px;
-    width: 82px;
-    height: 37px;
+
+    position: relative;
+    
+    top: 20%;
     overflow: hidden;
     font-family: Abel;
     font-size: 18px;
     text-align: left;
     line-height: 24px;
     color: #303030;
-    position: absolute;
+
 }
 
 
