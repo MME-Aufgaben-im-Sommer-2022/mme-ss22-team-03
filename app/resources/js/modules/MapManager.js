@@ -1,23 +1,23 @@
-var maxMapZoom = 19,
-    currentCoordinateX = 43.624289,
-    currentCoordinateY = 11.884090;
 
-var map;
+function initManager(manager) {
 
-function initManager(map) {
-    map = L.map('map').setView([43.624289, 11.884090], 17);
+    manager.map = L.map('map').setView([manager.currentCoordinateX, manager.currentCoordinateY], manager.currentZoom);
 
     L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
-        maxZoom: 20,
+        maxZoom: manager.maxMapZoom,
         subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-    }).addTo(map);
+    }).addTo(manager.map);
 
-    //console.log("Finished Init Map Manager");
+    console.log("Finished Init Map Manager");
 }
 
-function initMarkers(map)
+function initMarkers(manager)
 {
-    var marker = L.marker([43.624289, 11.884090]).addTo(map);
+
+
+    for (var i = 0; i < manager.markers.length; i+=2) {
+        var marker = L.marker([manager.markers[i], manager.markers[i+1]]).addTo(manager.map);
+    } 
 }
 
 function setZoomState(zoom)
@@ -25,25 +25,25 @@ function setZoomState(zoom)
     map.setZoom(zoom);
 }
 
-initManager();
-initMarkers();
+
+class MapManager {
+
+    constructor(coords, maxZoom, startZoom, startCoordX, startCoordY) {
+
+        this.markers = coords;
 
 
-class MapManager extends Observable {
+        this.maxMapZoom = maxZoom,
+        this.currentZoom = startZoom;
+        this.currentCoordinateX = startCoordX,
+        this.currentCoordinateY = startCoordY;
 
-    constructor() {
-        super();
+        //this.map = L.map('map').setView([43.624289, 11.884090], 17);
 
-        this.maxMapZoom = 19,
-        this.currentCoordinateX = 43.624289,
-        this.currentCoordinateY = 11.884090;
-
-        this.map = L.map('map').setView([43.624289, 11.884090], 17);
-        initManager(this.map);
-        initMarkers(this.map);
+        initManager(this);
+        initMarkers(this);
     }
 
 }
-
 
 export default MapManager;

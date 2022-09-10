@@ -1,11 +1,15 @@
-import { MapManager } from "../js/modules/MapManager.js";
+import PageManager_Map from "../js/pages/PageManager_Map.js";
 
-let myMapManager;
 
+let myPageManager_Map;
 
 function init()
 {
-    let myMapManager = new MapManager();
+    initMapPage();
+}
+
+function initMapPage() {
+    myPageManager_Map = new PageManager_Map();
 }
 
 init();
