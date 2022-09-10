@@ -1,5 +1,6 @@
 import MapManager from "../modules/MapManager.js";
-import { Event, Observable} from "../utils/Obervable.js"
+import { Event, Observable} from "../utils/Obervable.js";
+//import DataPageManager from "../utils/DataPageManager.js";
 
 
 let myMapManager;
@@ -45,6 +46,11 @@ class PageManager_Map extends Observable {
         this.startCoordY = 11.884090;
 
         initMapManager(this);
+    }
+
+    switchPage(page)
+    {
+       // DataPageManager.switchPage(page);
     }
 
 }

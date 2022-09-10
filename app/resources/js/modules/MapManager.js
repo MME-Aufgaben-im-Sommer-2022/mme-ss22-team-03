@@ -14,9 +14,17 @@ function initManager(manager) {
 function initMarkers(manager)
 {
 
+    var Icon = L.icon({
+        iconUrl: './resources/images/map_page/marker.png',
+    
+        iconSize:     [45, 60], // size of the icon
+        iconAnchor:   [22, 60], // point of the icon which will correspond to marker's location
+        popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    });
+
 
     for (var i = 0; i < manager.markers.length; i+=2) {
-        var marker = L.marker([manager.markers[i], manager.markers[i+1]]).addTo(manager.map);
+        var marker = L.marker([manager.markers[i], manager.markers[i+1]], {icon: Icon}).addTo(manager.map);
     } 
 }
 
