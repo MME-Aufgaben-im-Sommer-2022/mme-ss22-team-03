@@ -66,11 +66,12 @@
 <body>
         <!-- PAGE: MAP -->
 
-        <div class="zoomButton" id="button_zoomIn" onclick="setZoomState(18)" style="cursor: pointer;">Pastina
-        </div>
-        <div class="zoomButton" id="button_zoomOut" onclick="setZoomState(10)" style="cursor: pointer;">
-                Sehenswertes in der Nähe</div>
         <div class="map-container">
+                <div class="zoomButton" id="button_zoomPastina" onclick="setZoomState(18)" style="cursor: pointer;">Pastina
+                </div>
+                <div class="zoomButton" id="button_zoomSurrounding" onclick="setZoomState(18)" style="cursor: pointer;">
+                        Umgebung
+                </div>
                 <div id="map">
                 </div>
         </div>
@@ -78,22 +79,22 @@
         <div id="PlacesOverview">
 
                 <ul>
-                        <li id="active">
+                        <li id="active" style="cursor: pointer;">
                                 Obergeschoss - Matratzenlager
                         </li>
-                        <li>
+                        <li style="cursor: pointer;">
                                 Erdgeschoss - Zimmer, Küche, Bad
                         </li>
-                        <li>
+                        <li style="cursor: pointer;">
                                 Obstwiese
                         </li>
-                        <li>
+                        <li style="cursor: pointer;">
                                 Olivenplantagen
                         </li>
-                        <li>
+                        <li style="cursor: pointer;">
                                 Yoga Raum
                         </li>
-                        <li>
+                        <li style="cursor: pointer;">
                                 Hütte
                         </li>
                 </ul>

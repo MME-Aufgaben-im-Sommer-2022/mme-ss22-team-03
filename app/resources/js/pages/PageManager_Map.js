@@ -35,6 +35,18 @@ function initMapManager(manager)
     myMapManager = new MapManager(coords, manager.maxMapZoom, manager.startZoom, manager.startCoordX, manager.startCoordY);
 }
 
+function initButtons(pageManager) {
+    pageManager.controls = {
+        zoomButtonPastina: document.getElementById('button_zoomPastina'),
+        zoomButtonSurroundings: document.getElementById('button_zoomSurrounding'),
+    }
+
+}
+
+function initListeners(pageManager) {
+
+}
+
 class PageManager_Map extends Observable {
 
     constructor() {
@@ -46,6 +58,8 @@ class PageManager_Map extends Observable {
         this.startCoordY = 11.884090;
 
         initMapManager(this);
+        initButtons(this);
+        initListeners(this);
     }
 
     switchPage(page)

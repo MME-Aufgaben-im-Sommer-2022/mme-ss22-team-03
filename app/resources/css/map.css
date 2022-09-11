@@ -48,19 +48,21 @@ li {
 
 #active {
     opacity: 100%;
-
 }
 
 /* CSS FOR MAP */
 
 .map-container {
-    height: 500px;
+    height: 600px;
+
+    margin-left: 5%;
+    margin-right: 5%;
 
     /* margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 10%;
     margin-right: 10%; */
-    overflow: auto;
+    overflow: hidden;
 }
 
 #map {
@@ -73,18 +75,22 @@ li {
     height: 50px;
 
     text-align: center;
+    padding-top: 20px;
     opacity: 50%;
+
+    display: inline-block;
+
+    font-size: x-large;
 }
 
-#button_zoomIn {
-    top: 0;
+#button_zoomPastina {
 }
 
-#button_zoomIn:hover {
+#button_zoomPastina:hover {
     opacity: 100%;
 }
 
-#button_zoomOut:hover {
+#button_zoomSurrounding:hover {
     opacity: 100%;
 }
 

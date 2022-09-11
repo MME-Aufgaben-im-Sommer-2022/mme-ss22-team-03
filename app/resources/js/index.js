@@ -12,4 +12,9 @@ function initMapPage() {
     myPageManager_Map = new PageManager_Map();
 }
 
+function test()
+{
+    console.log("click");
+}
+
 init();
