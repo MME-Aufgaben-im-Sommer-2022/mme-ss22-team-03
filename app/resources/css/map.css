@@ -46,7 +46,11 @@ li {
 
 }
 
-#active {
+#zoomButton.active {
+    opacity: 100%;
+}
+
+.active {
     opacity: 100%;
 }
 
@@ -57,6 +61,7 @@ li {
 
     margin-left: 5%;
     margin-right: 5%;
+    margin-bottom: 100px;
 
     /* margin-top: 50px;
     margin-bottom: 50px;
@@ -70,8 +75,9 @@ li {
     width: auto;
 }
 
-.zoomButton {
-    width: 200px;
+#zoomButton {
+    margin-left: 5%;
+    width: 100px;
     height: 50px;
 
     text-align: center;
@@ -81,16 +87,10 @@ li {
     display: inline-block;
 
     font-size: x-large;
+    text-align: left;
 }
 
-#button_zoomPastina {
-}
-
-#button_zoomPastina:hover {
-    opacity: 100%;
-}
-
-#button_zoomSurrounding:hover {
+#zoomButton:hover {
     opacity: 100%;
 }
 
