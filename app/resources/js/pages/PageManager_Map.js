@@ -1,71 +1,101 @@
 import MapManager from "../modules/MapManager.js";
-import { Event, Observable} from "../utils/Obervable.js";
+import { Event, Observable } from "../utils/Obervable.js";
 //import DataPageManager from "../utils/DataPageManager.js";
 
 
 let myMapManager;
 
 
-function initMapManager(manager)
-{
-    var coords = [];
+function initMapManager(manager) {
 
-    // TODO: Fetch Coordinates for Markers from SQL
-    // MARKER: Sammelgebäude
-    coords.push(43.624433);
-    coords.push(11.884508);
-    
-    // MARKER: Yoga Raum
-    coords.push(43.624621);
-    coords.push(11.884387);
-    
-    // MARKER: Olivenfeld
-    coords.push(43.623950);
-    coords.push(11.884178);
-    
-    // MARKER: Party Hütte
-    coords.push(43.624572);
-    coords.push(11.884070);
-    
-    // MARKER: Willos Hütte
-    coords.push(43.624171);
-    coords.push(11.884773);
+    var pastinaCoordList = [],
+        surroundingCoordList = [];
 
-    // Initializing MapManager
-    myMapManager = new MapManager(coords, manager.maxMapZoom, manager.startZoom, manager.startCoordX, manager.startCoordY);
+  // TODO: Fetch Coordinates for Markers from SQL
+  // MARKER: Sammelgebäude
+  pastinaCoordList.push(43.624433);
+  pastinaCoordList.push(11.884508);
+
+  // MARKER: Yoga Raum
+  pastinaCoordList.push(43.624621);
+  pastinaCoordList.push(11.884387);
+
+  // MARKER: Olivenfeld
+  pastinaCoordList.push(43.623950);
+  pastinaCoordList.push(11.884178);
+
+  // MARKER: Party Hütte
+  pastinaCoordList.push(43.624572);
+  pastinaCoordList.push(11.884070);
+
+  // MARKER: Willos Hütte
+  pastinaCoordList.push(43.624171);
+  pastinaCoordList.push(11.884773);
+
+  // Initializing MapManager
+  myMapManager = new MapManager(pastinaCoordList, surroundingCoordList, manager.maxMapZoom, manager.startZoom,
+    manager.startCoordX, manager.startCoordY);
 }
 
 function initButtons(pageManager) {
-    pageManager.controls = {
-        zoomButtonPastina: document.getElementById('button_zoomPastina'),
-        zoomButtonSurroundings: document.getElementById('button_zoomSurrounding'),
-    }
+  pageManager.controls = {
+    zoomButtonPastina: document.getElementById('button_zoomPastina'),
+    zoomButtonSurroundings: document.getElementById('button_zoomSurrounding'),
+  }
 
 }
 
-function initListeners(pageManager) {
-
+function initEvents(pageManager) {
+  pageManager.controls.zoomButtonPastina.addEventListener("click", pageManager
+    .toggleMapState
+    .bind(pageManager));
+  pageManager.controls.zoomButtonSurroundings.addEventListener("click", pageManager
+    .toggleMapState
+    .bind(pageManager));
 }
 
 class PageManager_Map extends Observable {
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.maxMapZoom = 20,
-        this.startZoom = 19;
-        this.startCoordX = 43.624289,
-        this.startCoordY = 11.884090;
+    this.maxMapZoom = 20,
+    this.startZoom = 18;
+    this.zoomState = 0;
+    this.startCoordX = 43.624416,
+    this.startCoordY = 11.884388;
+    
 
-        initMapManager(this);
-        initButtons(this);
-        initListeners(this);
+    initMapManager(this);
+    initButtons(this);
+    initEvents(this);
+
+    this.toggleMapState();
+  }
+
+  switchPage(page) {
+    // DataPageManager.switchPage(page);
+  }
+
+  toggleMapState() // 0 = pastina, 1 = surroundings
+  {
+    console.log("Toggle ZoomState");
+
+    switch (this.zoomState) {
+      case 0:
+        this.zoomState = 1;
+        this.controls.zoomButtonPastina.setAttribute('id','active');
+        this.controls.zoomButtonSurroundings.setAttribute('id','');
+        myMapManager.flyTo(this.startCoordX, this.startCoordY, 18);
+        break;
+      case 1:
+        this.zoomState = 0;
+        this.controls.zoomButtonSurroundings.setAttribute('id','active');
+        this.controls.zoomButtonPastina.setAttribute('id','');
+        myMapManager.flyTo(this.startCoordX, this.startCoordY, 12);
+        break;
     }
-
-    switchPage(page)
-    {
-       // DataPageManager.switchPage(page);
-    }
+  }
 
 }
 
