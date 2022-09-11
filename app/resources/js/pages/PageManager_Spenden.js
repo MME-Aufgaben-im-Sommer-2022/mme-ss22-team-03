@@ -1,4 +1,4 @@
-import SpendenFormManager from "./SpendenFormManager.js"
+import SpendenFormManager from "../modules/SpendenFormManager.js"
 
 let mySpendenHelper;
 
