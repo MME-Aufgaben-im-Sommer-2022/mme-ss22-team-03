@@ -4,74 +4,88 @@ import { Event, Observable } from "../utils/Obervable.js";
 
 let myMapManager;
 
-function initPlaceList(manager) {
+function initManager(manager) {
 
-    //TODO: Connect Places to SQL
-
-    var placeOG = {
-        id: "OG",
-        zoomLevel: "Pastina",
-        coords: [43.624433, 11.884508],
-        zoomVal: 20,  
-    }
-    manager.placeList.push(placeOG);
-    
-    var placeEG = {
-        id: "EG",
-        zoomLevel: "Pastina",
-        coords: [43.624433, 11.884508],
-        zoomVal: 20,
-    }
-    manager.placeList.push(placeEG);
-    
-    var placeOW = {
-        id: "OW",
-        zoomLevel: "Pastina",
-        coords: [43.623883, 11.884969],
-        zoomVal: 20,
-    }
-    manager.placeList.push(placeOW);
-    
-    var placeOP = {
-        id: "OP",
-        zoomLevel: "Pastina",
-        coords: [43.623950, 11.884178],
-        zoomVal: 18,
-    }
-    manager.placeList.push(placeOP);
-
-    var placeYR = {
-        id: "YR",
-        zoomLevel: "Pastina",
-        coords: [43.624621, 11.884387],
-        zoomVal: 20,
-    }
-    manager.placeList.push(placeYR);
-
-    var placeH = {
-        id: "H",
-        zoomLevel: "Pastina",
-        coords: [43.624171, 11.884773],
-        zoomVal: 20,
-    }
-    manager.placeList.push(placeH);
-}
-
-function initMapManager(manager) {
+  initPlaceList(manager);
+  initControls(manager);
+  
   // Initializing MapManager
   myMapManager = new MapManager(manager.placeList, manager
     .maxMapZoom, manager.startZoom,
     manager.startCoords);
+
+    
+  initPlaceOverview(manager);
 }
 
-function initButtons(pageManager) {
+function initPlaceList(manager) {
+
+    manager.overViewList = document.getElementsByName("overViewEL");
+
+    manager.placeList = [];
+
+  //TODO: Connect Places to SQL
+
+  var placeOG = {
+    id: "OG",
+    zoomLevel: "Pastina",
+    coords: [43.624433, 11.884508],
+    zoomVal: 20,
+  }
+  manager.placeList.push(placeOG);
+
+  var placeEG = {
+    id: "EG",
+    zoomLevel: "Pastina",
+    coords: [43.624433, 11.884508],
+    zoomVal: 20,
+  }
+  manager.placeList.push(placeEG);
+
+  var placeOW = {
+    id: "OW",
+    zoomLevel: "Pastina",
+    coords: [43.623883, 11.884969],
+    zoomVal: 20,
+  }
+  manager.placeList.push(placeOW);
+
+  var placeOP = {
+    id: "OP",
+    zoomLevel: "Pastina",
+    coords: [43.623950, 11.884178],
+    zoomVal: 18,
+  }
+  manager.placeList.push(placeOP);
+
+  var placeYR = {
+    id: "YR",
+    zoomLevel: "Pastina",
+    coords: [43.624621, 11.884387],
+    zoomVal: 20,
+  }
+  manager.placeList.push(placeYR);
+
+  var placeH = {
+    id: "H",
+    zoomLevel: "Pastina",
+    coords: [43.624171, 11.884773],
+    zoomVal: 20,
+  }
+  manager.placeList.push(placeH);
+}
+
+
+function initControls(pageManager) {
+
   pageManager.controls = {
     zoomButtonPastina: document.getElementsByName('button_zoomPastina')[0],
-    zoomButtonSurroundings: document.getElementsByName('button_zoomSurrounding')[0],
+    zoomButtonSurroundings: document.getElementsByName(
+      'button_zoomSurrounding')[0],
   }
-}
 
-function initEvents(pageManager) {
+  console.log()
+
   pageManager.controls.zoomButtonPastina.addEventListener("click", pageManager
     .toggleMapState
     .bind(pageManager));
@@ -86,25 +100,30 @@ function initEvents(pageManager) {
   });
 }
 
+function initPlaceOverview(pageManager) {
+
+  // Set first Place of List to active Place
+  Dage.update();
+
+  var firstPlaceID = pageManager.placeList[0].id;
+  pageManager.setActiveElement(firstPlaceID);
+}
+
+
 class PageManager_Map extends Observable {
 
   constructor() {
     super();
 
+    // TODO: Hardcoded Values have to be connected to SQL
     this.maxMapZoom = 20,
-    this.startZoom = 18;
-    this.zoomState = 0;
+      this.startZoom = 18;
     this.startCoords = [43.624416, 11.884388];
 
-    this.overViewList = document.getElementsByName("overViewEL");
+    initManager(this);
 
-    this.placeList = [];
-
-    initPlaceList(this);
-    initMapManager(this);
-    initButtons(this);
-    initEvents(this);
-
+    // Set Zoom State to "Pastina"
+    this.zoomState = 0;
     this.toggleMapState();
   }
 
@@ -118,10 +137,7 @@ class PageManager_Map extends Observable {
     myMapManager.flyTo(newPlace.coords, newPlace.zoomVal);
 
     //TODO: Set correct Marker color when active
-  }
-
-  switchPage(page) {
-    // DataPageManager.switchPage(page);
+    Dage.navigate(id);
   }
 
   toggleMapState() // 0 = pastina, 1 = surroundings
