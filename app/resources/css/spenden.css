@@ -775,150 +775,56 @@ changed float from left to none */
 
 /* Step 2 */
 
+.step2{
 
-#vorname {
+    width: 100%;
+   
+    padding: 5%;
+
+    
+
+}
+
+.step2 from .user-details-step2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 20px 0 12px 0;
+}
+
+from .user-details-step2 .user-details-input{
+    width: 100;
+    margin-bottom: 2%;
+ 
+}
+.user-details-step2 .user-details-input .details-step2{
 
     position: relative;
+    margin: 5%;
+    display: block;
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
     
-    top: 20%;
-    overflow: hidden;
-    font-family: Abel;
-    font-size: 18px;
-    text-align: left;
-    line-height: 24px;
-    color: #303030;
+    color: #313131;
+
 
 }
 
-
-#nachname {
-    top: 640px;
-    left: 167px;
-    width: 95px;
-    height: 37px;
-    overflow: hidden;
-    font-family: Abel;
-    font-size: 18px;
-    text-align: left;
-    line-height: 24px;
-    color: #303030;
-    position: absolute;
-}
-
-
-#stra_e__nr_ {
-    top: 759px;
-    left: 167px;
-    width: 96px;
-    height: 37px;
-    overflow: hidden;
-    font-family: Abel;
-    font-size: 18px;
-    text-align: left;
-    line-height: 24px;
-    color: #303030;
-    position: absolute;
-}
-
-
-#plz__ort {
-    top: 878px;
-    left: 167px;
-    width: 78px;
-    height: 37px;
-    overflow: hidden;
-    font-family: Abel;
-    font-size: 18px;
-    text-align: left;
-    line-height: 24px;
-    color: #303030;
-    position: absolute;
-}
-
-
-#e_mail {
-    top: 997px;
-    left: 167px;
-    width: 66px;
-    height: 37px;
-    overflow: hidden;
-    font-family: Abel;
-    font-size: 18px;
-    text-align: left;
-    line-height: 24px;
-    color: #303030;
-    position: absolute;
-}
-
-.TextInput {
-    overflow: hidden;
-    font-family: Abel;
-    font-size: 18px;
-    text-align: left;
-    line-height: 24px;
-
-    height: 100%;
+.user-details-step2 .user-details-input input {
+    height: 10%;
     width: 100%;
-}
 
+    
+    padding-left: 5%;
 
-#inputPrename {
-    top: 563px;
-    left: 167px;
-    width: 936px;
-    height: 39px;
-    background: rgba(255, 255, 255, 0);
-    position: absolute;
-}
-
-
-#inputLastname {
-    top: 682px;
-    left: 167px;
-    width: 936px;
-    height: 39px;
-    background: rgba(255, 255, 255, 0);
-    position: absolute;
-}
-
-
-#inputStreet {
-    top: 801px;
-    left: 167px;
-    width: 936px;
-    height: 39px;
-    background: rgba(255, 255, 255, 0);
-    position: absolute;
-}
-
-
-#inputCity {
-    top: 920px;
-    left: 367px;
-    width: 734px;
-    height: 39px;
-    background: rgba(255, 255, 255, 0);
-    position: absolute;
-}
-
-
-#inputPlz {
-    top: 920px;
-    left: 167px;
-    width: 282px;
-    height: 39px;
-    background: rgba(255, 255, 255, 0);
-    position: absolute;
-}
-
-
-#inputMail {
-    top: 1039px;
-    left: 167px;
-    width: 936px;
-    height: 39px;
-    background: rgba(255, 255, 255, 0);
-    position: absolute;
+    font-family:'Abel' ;
+    font-size: 18px;
+    
 }
 
 
