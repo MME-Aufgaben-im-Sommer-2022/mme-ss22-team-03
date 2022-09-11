@@ -66,12 +66,12 @@
 <body>
         <!-- PAGE: MAP -->
 
+        <div id="zoomButton" name="button_zoomPastina" style="cursor: pointer;">Pastina
+        </div>
+        <div id="zoomButton" name="button_zoomSurrounding" style="cursor: pointer;">
+                Umgebung
+        </div>
         <div class="map-container">
-                <div class="zoomButton" id="button_zoomPastina" style="cursor: pointer;">Pastina
-                </div>
-                <div class="zoomButton" id="button_zoomSurrounding" style="cursor: pointer;">
-                        Umgebung
-                </div>
                 <div id="map">
                 </div>
         </div>
@@ -79,22 +79,22 @@
         <div id="PlacesOverview">
 
                 <ul>
-                        <li id="active" style="cursor: pointer;">
+                        <li id="OG" name="overViewEL" class="active" style="cursor: pointer;">
                                 Obergeschoss - Matratzenlager
                         </li>
-                        <li style="cursor: pointer;">
+                        <li id="EG" name="overViewEL" style="cursor: pointer;">
                                 Erdgeschoss - Zimmer, Küche, Bad
                         </li>
-                        <li style="cursor: pointer;">
+                        <li id="OW" name="overViewEL" style="cursor: pointer;">
                                 Obstwiese
                         </li>
-                        <li style="cursor: pointer;">
+                        <li id="OP" name="overViewEL" style="cursor: pointer;">
                                 Olivenplantagen
                         </li>
-                        <li style="cursor: pointer;">
+                        <li id="YR" name="overViewEL" style="cursor: pointer;">
                                 Yoga Raum
                         </li>
-                        <li style="cursor: pointer;">
+                        <li id="H" name="overViewEL" style="cursor: pointer;">
                                 Hütte
                         </li>
                 </ul>
@@ -102,7 +102,24 @@
         </div>
 
         <div class="SelectedElement">
-                div Container für Bildergalerie
+                <div data-page="OG" id="placeContent">
+                        Obergeschoss - Content
+                </div>
+                <div data-page="EG" id="placeContent">
+                        Erdgeschoss - Content
+                </div>
+                <div data-page="OW" id="placeContent">
+                        Obstwiese - Content
+                </div>
+                <div data-page="OP" id="placeContent">
+                        Olivenplantagen - Content
+                </div>
+                <div data-page="YR" id="placeContent">
+                        Yoga Raum - Content
+                </div>
+                <div data-page="H" id="placeContent">
+                        Hütte - Content
+                </div>
         </div>
 </body>
 
