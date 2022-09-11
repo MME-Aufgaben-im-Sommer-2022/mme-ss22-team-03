@@ -26,42 +26,70 @@ body {
 .group {
     width: 100%;
     height: 1000px;
-    padding: 5%;
+
+    margin-bottom: 5%;
 }
 
 .group_event_01 {
 
+    background-color: #5cfff700;
+
     height: 100%;
     width: 100%;
 
-    display: grid;
-    grid-template-columns: 50% 5% 20% 20% 5%;
-    grid-template-rows: 0.5fr 0.5fr 0.1fr 1fr 0.5fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "Image . . . ."
-        "Image . Header Header ."
-        "Image . Subheader Subheader ."
-        "Image . Content Content ."
-        "Image . Button Share .";
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 0.25fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "Image Image . ."
+      "Image Image Header Header"
+      "Image Image Subheader Subheader"
+      "Image Image Content Content"
+      "Image Image Button Share"; 
+}
+
+.group_event_02 {
+    background-color: #00615c00;
+
+    height: 100%;
+    width: 100%;
+
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 0.25fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . Image Image"
+      "Header Header Image Image"
+      "Subheader Subheader Image Image"
+      "Content Content Image Image"
+      "Button Share Image Image"; 
 }
 
 .Image {
     grid-area: Image;
+
+    height: 100%;
+    width: auto;
+    padding: 5%;
     overflow: hidden;
 }
 
 #Img {
-
-
-    width: 100%;
+    width: auto;
     height: auto;
+    
+    overflow: hidden;
 }
 
 .Header {
     grid-area: Header;
-    background-color: #2200ff;
+    background-color: #2200ff00;
+
+    margin-left: 5%;
+
+    padding-top: 50px;
 
     font-family: Fahkwang;
     font-size: 100px;
@@ -69,12 +97,13 @@ body {
     line-height: 90px;
     letter-spacing: 0em;
     text-align: left;
-
 }
 
 .Subheader {
     grid-area: Subheader;
-    background-color: #5cfff7;
+    background-color: #5cfff700;
+
+    margin-left: 5%;
 
     font-family: Fahkwang;
     font-size: 40px;
@@ -88,11 +117,13 @@ body {
 .Content {
 
     margin-top: 10%;
-    margin-right: 30%;
     margin-bottom: 10%;
+    margin-left: 5%;
+
+    padding-right: 50%;
 
     grid-area: Content;
-    background-color: #BC2E19;
+    background-color: #bc2f1900;
 
     font-family: Abel;
     font-size: 18px;
@@ -105,10 +136,11 @@ body {
 
 .Share {
     grid-area: Share;
-    background-color: #cf6b5b;
+    background-color: #cf6b5b00;
 }
 
 .Button {
     grid-area: Button;
-    background-color: #eeb1a7;
+    background-color: #eeb0a700;
+    margin-left: 10%;
 }
