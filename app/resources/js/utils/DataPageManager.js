@@ -5,11 +5,10 @@ function init() {
 }
 
 function switchPage(page) {
-    Dage.navigate(page)
+    Dage.navigate(page);
     console.log("Switched to DataPage: " + page);
 }
 
 init();
-
 
 //export default DataPageManager;

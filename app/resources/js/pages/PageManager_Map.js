@@ -14,7 +14,6 @@ function initManager(manager) {
     .maxMapZoom, manager.startZoom,
     manager.startCoords);
 
-    
   initPlaceOverview(manager);
 }
 

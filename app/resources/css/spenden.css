@@ -259,16 +259,25 @@ body {
 
 }
 
-#_06shareText {
 
+#_06Btn {
+    
+    background-color: --green;
+    position: relative;
+    
+    left: 0%;
+    top: 80%;
 
-    position: absolute;
-    /* width: 161px;
-    height: 24px; */
+    width: 100%;
+    height: auto;
 
-    bottom: 20%;
-    left: 50%;
+}
 
+#_06Btn::before{
+    content:'Jetzt aktiv werden';
+
+    padding-bottom: 2%;
+    display: block;
     font-family: 'Abel';
     font-style: normal;
     font-weight: 400;
@@ -277,19 +286,6 @@ body {
 
     text-align: center;
     color: white;
-
-}
-
-
-#_06Btn {
-
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-
-    width: auto;
-    height: auto;
-
 }
 
 #_06whatsAppBtn {
@@ -417,8 +413,7 @@ changed float from left to none */
 #_07 {
     position: relative;
     height: 1000px;
-    margin-left: 5%;
-    width: 50%;
+    width: auto;
 }
 
 /* BOTTOM */
@@ -441,14 +436,13 @@ changed float from left to none */
 }
 
 
-/* HEADER */
+/* HEADER  border-bottom: 2px solid #313131;*/
 
 #steps_header {
     height: 20%;
     width: 100%;
-    border-bottom: 1px solid #313131;
+    padding-bottom: 10px;
 
-    padding-bottom: 20px;
 }
 
 
@@ -470,15 +464,23 @@ changed float from left to none */
 
 }
 
+#steps_header_container{
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #313131;
+}
+
 #spenden_text_schritt1 {
 
     position: absolute;
     top: 135px;
     left: 0px;
-    width: 141px;
+    width: auto;
     height: 75.45px;
     
 }
+
+
 
 #schritt_1 {
     top: 0px;
@@ -494,20 +496,19 @@ changed float from left to none */
     position: absolute;
 }
 
+#schritt_1::after{
 
-#betrag_und_frequenz {
-    top: 51px;
-    left: 0px;
-    width: 164px;
-    height: 37px;
+    content: 'Betrag und Frequenz';
+    display: block;
     overflow: hidden;
     font-family: Abel;
     font-size: 18px;
     text-align: left;
     line-height: 24px;
     color: #303030;
-    position: absolute;
+    position: absolute
 }
+
 
 #spenden_text_schritt {
     top: 135px;
@@ -519,10 +520,12 @@ changed float from left to none */
     position: absolute;
 }
 
+
 #spenden_text_schritt:active {
     opacity: 100%;
     position: absolute;
 }
+
 
 #spenden_text_schritt2 {
     top: 135px;
@@ -534,19 +537,6 @@ changed float from left to none */
     position: absolute;
 }
 
-#pers_nliche_angaben {
-    top: 51px;
-    left: 0px;
-    width: 165px;
-    height: 37px;
-    overflow: hidden;
-    font-family: Abel;
-    font-size: 18px;
-    text-align: left;
-    line-height: 24px;
-    color: #303030;
-    position: absolute;
-}
 
 
 #schritt_2 {
@@ -560,8 +550,20 @@ changed float from left to none */
     text-align: left;
     line-height: 45px;
     color: #303030;
-    position: absolute
-    ;
+    position: absolute;
+    
+}
+
+#schritt_2::after{
+    content:'Persönliche Angaben';
+    display: block;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+
 }
 
 #spenden_text_schritt3 {
@@ -573,21 +575,6 @@ changed float from left to none */
     opacity: 50%;
     position: absolute;
 }
-
-#zahlungsart {
-    top: 51px;
-    left: 0px;
-    width: 105px;
-    height: 37px;
-    overflow: hidden;
-    font-family: Abel;
-    font-size: 18px;
-    text-align: left;
-    line-height: 24px;
-    color: #303030;
-    position: absolute;
-}
-
 
 #schritt_3 {
     top: 0px;
@@ -603,6 +590,18 @@ changed float from left to none */
     position: absolute;
 }
 
+#schritt_3::after{
+    content:'Zahlungsart';
+    display: block;
+   
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+
+}
+
 #button_next {
     top: 130px;
     left: 1216px;
@@ -610,6 +609,7 @@ changed float from left to none */
     height: 91.5px;
     position: absolute;
 }
+
 
 /* CONTENT */
 
