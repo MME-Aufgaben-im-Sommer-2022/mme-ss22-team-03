@@ -9,41 +9,24 @@ function initManager(manager) {
 }
 
 //TODO: Differate between Pastina Markes and Surrounding Markers
-function initMarkers(manager, placeList) {
+function initMarkers(manager) {
 
-  var Icon = L.icon({
-    iconUrl: './resources/images/map_page/marker.png',
-
-    iconSize: [35, 50], // size of the icon
-    iconAnchor: [17.5,
-      50
-    ], // point of the icon which will correspond to marker's location
-    popupAnchor: [-3, -
-      76
-    ] // point from which the popup should open relative to the iconAnchor
-  });
-
-  for (var i = 0; i < placeList.length; i += 1) {
-    var marker = L.marker(placeList[i].coords, { icon: Icon }).addTo(manager.map);
-    manager.PastinaMarkerList.push(marker);
+  for (var i = 0; i < manager.MarkerList.length; i += 1) {
+    manager.MarkerList[i].marker.addTo(manager.map);
   }
 }
 
 
 class MapManager {
 
-  constructor(placeList, maxZoom, startZoom,
+  constructor(MarkerList, maxZoom, startZoom,
     startCoords) {
 
-    this.placeList = placeList;
+    this.maxMapZoom = maxZoom;
+    this.currentZoom = startZoom;
+    this.startCoords = startCoords;
 
-    this.maxMapZoom = maxZoom,
-      this.currentZoom = startZoom;
-    this.startCoords = startCoords,
-
-    this.PastinaMarkerList = [];
-
-    //this.map = L.map('map').setView([43.624289, 11.884090], 17);
+    this.MarkerList = MarkerList;
 
     initManager(this);
     initMarkers(this, this.placeList);
@@ -55,6 +38,27 @@ class MapManager {
 
   flyTo(coords, zoom) {
     this.map.flyTo(coords, zoom);
+  }
+
+  hideMarkers() {
+
+    this.MarkerList.forEach(marker => {
+        this.map.removeLayer(marker.marker);
+    });
+    console.log("Hide all Markers");
+  }
+
+  showMarkers(zoomLevel) {
+
+    this.MarkerList.forEach(marker => {
+      if (marker.zoomLevel == zoomLevel) {
+        // this.map.addLayer(marker.marker);
+        console.log(marker.marker);
+        marker.marker.addTo(this.map);
+      }
+    });
+    console.log("Show all " + zoomLevel + " Markers");
+
   }
 
 }

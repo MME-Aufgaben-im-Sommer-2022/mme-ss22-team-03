@@ -8,73 +8,106 @@ function initManager(manager) {
 
   initPlaceList(manager);
   initControls(manager);
-  
+
+  console.log(manager.MarkerList);
   // Initializing MapManager
-  myMapManager = new MapManager(manager.placeList, manager
+  myMapManager = new MapManager(manager.MarkerList, manager
     .maxMapZoom, manager.startZoom,
     manager.startCoords);
 
-    
   initPlaceOverview(manager);
 }
 
 function initPlaceList(manager) {
 
-    manager.overViewList = document.getElementsByName("overViewEL");
+  manager.overViewList = document.getElementsByName("overViewEL");
 
-    manager.placeList = [];
+  var Icon = L.icon({
+    iconUrl: './resources/images/map_page/marker.png',
+
+    iconSize: [35, 50], // size of the icon
+    iconAnchor: [17.5,
+      50
+    ], // point of the icon which will correspond to marker's location
+    popupAnchor: [-3, -
+      76
+    ] // point from which the popup should open relative to the iconAnchor
+  });
 
   //TODO: Connect Places to SQL
 
   var placeOG = {
     id: "OG",
-    zoomLevel: "Pastina",
+    zoomLevel: "pastina",
     coords: [43.624433, 11.884508],
     zoomVal: 20,
+    marker: L.marker([43.624433, 11.884508], { icon: Icon }),
   }
-  manager.placeList.push(placeOG);
+  manager.MarkerList.push(placeOG);
 
   var placeEG = {
     id: "EG",
-    zoomLevel: "Pastina",
+    zoomLevel: "pastina",
     coords: [43.624433, 11.884508],
     zoomVal: 20,
+    marker: L.marker([43.624433, 11.884508], { icon: Icon }),
   }
-  manager.placeList.push(placeEG);
+  manager.MarkerList.push(placeEG);
 
   var placeOW = {
     id: "OW",
-    zoomLevel: "Pastina",
+    zoomLevel: "pastina",
     coords: [43.623883, 11.884969],
     zoomVal: 20,
+    marker: L.marker([43.623883, 11.884969], { icon: Icon }),
   }
-  manager.placeList.push(placeOW);
+  manager.MarkerList.push(placeOW);
 
   var placeOP = {
     id: "OP",
-    zoomLevel: "Pastina",
+    zoomLevel: "pastina",
     coords: [43.623950, 11.884178],
     zoomVal: 18,
+    marker: L.marker([43.623950, 11.884178], { icon: Icon }),
   }
-  manager.placeList.push(placeOP);
+  manager.MarkerList.push(placeOP);
 
   var placeYR = {
     id: "YR",
-    zoomLevel: "Pastina",
+    zoomLevel: "pastina",
     coords: [43.624621, 11.884387],
     zoomVal: 20,
+    marker: L.marker([43.624621, 11.884387], { icon: Icon }),
   }
-  manager.placeList.push(placeYR);
+  manager.MarkerList.push(placeYR);
 
   var placeH = {
     id: "H",
-    zoomLevel: "Pastina",
+    zoomLevel: "pastina",
     coords: [43.624171, 11.884773],
     zoomVal: 20,
+    marker: L.marker([43.624171, 11.884773], { icon: Icon }),
   }
-  manager.placeList.push(placeH);
-}
+  manager.MarkerList.push(placeH);
 
+  var placeCA = {
+    id: "CA",
+    zoomLevel: "surrounding",
+    coords: [43.614091, 11.865069],
+    zoomVal: 12,
+    marker: L.marker([43.614091, 11.865069], { icon: Icon }),
+  }
+  manager.MarkerList.push(placeCA);
+
+  var placePA = {
+    id: "PA",
+    zoomLevel: "surrounding",
+    coords: [43.624416, 11.884388],
+    zoomVal: 12,
+    marker: L.marker([43.624416, 11.884388], { icon: Icon }),
+  }
+  manager.MarkerList.push(placePA);
+}
 
 function initControls(pageManager) {
 
@@ -84,29 +117,33 @@ function initControls(pageManager) {
       'button_zoomSurrounding')[0],
   }
 
-  console.log()
+  pageManager.controls.zoomButtonPastina.addEventListener("click", function (
+    e) {
+    pageManager.setMapState("pastina");
+  });
 
-  pageManager.controls.zoomButtonPastina.addEventListener("click", pageManager
-    .toggleMapState
-    .bind(pageManager));
-  pageManager.controls.zoomButtonSurroundings.addEventListener("click",
-    pageManager
-    .toggleMapState
-    .bind(pageManager));
+  pageManager.controls.zoomButtonSurroundings.addEventListener("click", function (
+    e) {
+    pageManager.setMapState("surrounding");
+  });
 
-  document.getElementById("PlacesOverview").addEventListener("click", function(
+  document.getElementById("PlacesOverview").addEventListener("click", function (
     e) {
     pageManager.setActiveElement(e.target.id);
+  });
+
+  pageManager.MarkerList.forEach(element => {
+    element.marker.addEventListener("click", function (
+      e) {
+        pageManager.setActiveElement(element.id);
+    });
   });
 }
 
 function initPlaceOverview(pageManager) {
-
   // Set first Place of List to active Place
   Dage.update();
-
-  var firstPlaceID = pageManager.placeList[0].id;
-  pageManager.setActiveElement(firstPlaceID);
+  pageManager.setMapState("pastina");
 }
 
 
@@ -120,11 +157,9 @@ class PageManager_Map extends Observable {
       this.startZoom = 18;
     this.startCoords = [43.624416, 11.884388];
 
-    initManager(this);
+    this.MarkerList = [];
 
-    // Set Zoom State to "Pastina"
-    this.zoomState = 0;
-    this.toggleMapState();
+    initManager(this);
   }
 
   setActiveElement(id) {
@@ -133,30 +168,35 @@ class PageManager_Map extends Observable {
       document.getElementById(id).classList.add('active');
     });
 
-    var newPlace = this.placeList.find(x => x.id === id);
+    var newPlace = this.MarkerList.find(x => x.id === id);
     myMapManager.flyTo(newPlace.coords, newPlace.zoomVal);
 
     //TODO: Set correct Marker color when active
     Dage.navigate(id);
   }
 
-  toggleMapState() // 0 = pastina, 1 = surroundings
+  setMapState(newZoomState) // pastina / surroundings
   {
-    switch (this.zoomState) {
-      case 0:
-        this.zoomState = 1;
+
+    myMapManager.hideMarkers();
+    myMapManager.showMarkers(newZoomState);
+
+
+    switch (newZoomState) {
+      case "pastina":
         this.controls.zoomButtonPastina.classList.add('active');
         this.controls.zoomButtonSurroundings.classList.remove('active');
         myMapManager.flyTo(this.startCoords, 18);
         break;
-      case 1:
-        this.zoomState = 0;
+      case "surrounding":
         this.controls.zoomButtonSurroundings.classList.add('active');
         this.controls.zoomButtonPastina.classList.remove('active');
         myMapManager.flyTo(this.startCoords, 12);
         break;
     }
   }
+
+
 
 }
 
