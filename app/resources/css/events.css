@@ -15,32 +15,213 @@
     background-color: var(--snow);
 } */
 
-.attachment-full {
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.hidden {
-    display: none !important;
-}
 
 body {
     background-color: var(--snow);
     font-family: 'Space Grotesk', sans-serif;
-    margin: 0;
-    padding: 0;
+
+    width: 100%;
 }
 
-.ui {
-    display: flex;
-    flex-direction: column;
-    width: 90vw;
-    margin: 0 auto;
-    padding: 0;
+.group {
+    width: 100%;
+    height: 800px;
+
+    margin-bottom: 5%;
 }
 
-.ui h1 {
+.group_event_01 {
+
+    background-color: #5cfff700;
+
+    padding: 5%;
+
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.25fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "Image Image . ."
+        "Image Image Header Header"
+        "Image Image Subheader Subheader"
+        "Image Image Content Content"
+        "Image Image Button Share";
+}
+
+.group_event_02 {
+    background-color: #00615c00;
+
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.25fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . Image Image"
+        "Header Header Image Image"
+        "Subheader Subheader Image Image"
+        "Content Content Image Image"
+        "Button Share Image Image";
+}
+
+.Image {
+    grid-area: Image;
+
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    overflow: hidden;
+
+    object-fit: cover;
+}
+
+#Img {
+    width: auto;
+    height: auto;
+
+    overflow: hidden;
+}
+
+.Header {
+    grid-area: Header;
+    background-color: #2200ff00;
+
+    height: auto;
+    
+    padding-top: 50px;
+
+    font-family: Fahkwang;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 90px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.Subheader {
+    grid-area: Subheader;
+    background-color: #5cfff700;
+
+    font-family: Fahkwang;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.Content {
+
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    padding-right: 50%;
+
+    grid-area: Content;
+    background-color: #bc2f1900;
+
+    font-family: Abel;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.Share {
+    grid-area: Share;
+    background-color: #cf6b5b00;
+}
+
+.Button {
+    grid-area: Button;
+    background-color: #eeb0a700;
+    margin-left: 10%;
+}
+
+#titleDiv {
+    background-image: url("../images/event_page/IMG_Event_Title.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    width: 100%;
+    height: 780px;
+
     text-align: center;
-    color: var(--jet);
+
+    padding-top: 40%;
+    padding-bottom: 40%;
+
+    font-family: Fahkwang;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+.eventOverview {
+    background-color: #3D7245;
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+ul {
+    list-style-type: none;
+
+    padding-left: 0%;
+    margin: 0%;
+}
+
+li {
+    width: 100%;
+    height: auto;
+
+}
+
+.titleItem {
+    height: auto;
+
+    background-image: url("../images/event_page/IMG_Event_Title.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    text-align: center;
+
+}
+
+.titleText {
+
+    display: flexbox;
+
+    width: 100%;
+    height: 100%;
+
+    padding-top: 241px;
+    padding-bottom: 390px;
+
+    font-family: Fahkwang;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+li.overView {
+    height: 400px;
+    text-align: center;
 }
