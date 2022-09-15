@@ -1,5 +1,6 @@
 /* Beispiel für die Einbindung zusätzlicher Schriftarten via Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fahkwang&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang&display=swap');
 
 
 /* Beispiel für die einfache Einbindung eines Farbschema, generiert auf coolors.co */
@@ -26,34 +27,117 @@ body {
     padding: 0;
 }
 
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+
+    margin-bottom: 100px;
+}
+
+li {
+    font-family: Fahkwang;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    opacity: 50%;
+    margin-bottom: 15px;
+}
+
+li:hover {
+    opacity: 100%;
+}
+
+#zoomButton.active {
+    opacity: 100%;
+}
+
+.active {
+    opacity: 100%;
+}
+
 /* CSS FOR MAP */
 
 .map-container {
-    height: 500px;
+    height: 900px;
 
-    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 100px;
+
+    /* margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 10%;
-    margin-right: 10%;
+    margin-right: 10%; */
+    overflow: hidden;
 }
 
 #map {
     height: 100%;
-    width: 100%;
+    width: auto;
 }
 
-.zoomButton {
-    width: 200px;
+#zoomButton {
+    margin-left: 5%;
+    width: 100px;
     height: 50px;
 
     text-align: center;
+    padding-top: 20px;
     opacity: 50%;
+
+    display: inline-block;
+
+    font-size: x-large;
+    text-align: left;
 }
 
-#button_zoomIn:hover {
+#zoomButton:hover {
     opacity: 100%;
 }
 
-#button_zoomOut:hover {
-    opacity: 100%;
+.placeContentHolder {
+    background-color: #c9c9c985;
+
+    margin: 5%;
+
+    width: 100%;
+    height: auto;
+}
+
+#placesPage {
+    height: 100%;
+}
+
+.placeContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5% 5%;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . ."
+        ". . .";
+
+    height: 100%;
+    width: 100%;
+
+
+    overflow: hidden;
+}
+
+#contentImage {
+    width: 100%;
+
+    overflow: hidden;
+
+    background-color: #ff0000;
+}
+
+#PlacesOverview {
+
+    margin-left: 5%;
 }
