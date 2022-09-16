@@ -1,0 +1,143 @@
+/* Beispiel für die Einbindung zusätzlicher Schriftarten via Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang&display=swap');
+
+
+/* Beispiel für die einfache Einbindung eines Farbschema, generiert auf coolors.co */
+:root {
+    --mint: #D6E5CB;
+    --green: #3D7245;
+    --dark-grey: #313131;
+    --orange: #EE6C4D;
+    --red: #BC2E19;
+}
+
+/* example of color use {
+    background-color: var(--snow);
+} */
+
+.hidden {
+    display: none !important;
+}
+
+body {
+    background-color: var(--snow);
+    font-family: 'Fahkwang', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+
+    margin-bottom: 100px;
+}
+
+li {
+    font-family: Fahkwang;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    opacity: 50%;
+    margin-bottom: 15px;
+}
+
+li:hover {
+    opacity: 100%;
+}
+
+#zoomButton.active {
+    opacity: 100%;
+}
+
+.active {
+    opacity: 100%;
+}
+
+/* CSS FOR MAP */
+
+.map-container {
+    height: 900px;
+
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 100px;
+
+    /* margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 10%;
+    margin-right: 10%; */
+    overflow: hidden;
+}
+
+#map {
+    height: 100%;
+    width: auto;
+}
+
+#zoomButton {
+    margin-left: 5%;
+    width: 100px;
+    height: 50px;
+
+    text-align: center;
+    padding-top: 20px;
+    opacity: 50%;
+
+    display: inline-block;
+
+    font-size: x-large;
+    text-align: left;
+}
+
+#zoomButton:hover {
+    opacity: 100%;
+}
+
+.placeContentHolder {
+    background-color: #c9c9c985;
+
+    margin: 5%;
+
+    width: 100%;
+    height: auto;
+}
+
+#placesPage {
+    height: 100%;
+}
+
+.placeContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5% 5%;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . ."
+        ". . .";
+
+    height: 100%;
+    width: 100%;
+
+
+    overflow: hidden;
+}
+
+#contentImage {
+    width: 100%;
+
+    overflow: hidden;
+
+    background-color: #ff0000;
+}
+
+#PlacesOverview {
+
+    margin-left: 5%;
+}

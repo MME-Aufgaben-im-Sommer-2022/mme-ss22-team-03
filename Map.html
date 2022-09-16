@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interaktive Karte</title>
+        <link rel="icon" type="image/x-icon" href="/app/resources/images/navigation-bar/Pastina_Tab_Logo.png">
+        <link rel="stylesheet" href="./resources/css/map.css">
+        <link rel="stylesheet" href="./resources/css/navigation-bar.css">
+
+        <!-- Leaflet Plugin -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+                integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+                crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+                integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+                crossorigin=""></script>
+
+        <!-- Dage Plugin -->
+        <script src="https://cdn.jsdelivr.net/gh/dlvdls18/Dage/src/dage.js"></script>
+
+        <!-- index  -->
+        <script type="module" src="./resources/js/index.js"></script>
+
+
+        <div class="navigation-bar">
+
+                <!-- Über Uns  -->
+                <left onclick="window.location.href = 'uber_uns.html';" style="cursor: pointer;">
+                        Über uns
+                </left>
+
+                <!-- Spenden -->
+                <left onclick="window.location.href = 'Spenden.html';" style="cursor: pointer;">
+                        Spenden
+                </left>
+
+                <!-- Mitgliedschaft -->
+                <left onclick="window.location.href = 'Mitgliedschaft.html';" style="cursor: pointer;">
+                        Mitglied werden
+                </left>
+
+                <!-- Logo -->
+                <logo onclick="window.location.href = 'Landing.html';" style="cursor: pointer;">
+                        <img src="./resources/images/navigation-bar/logo.svg" />
+                </logo>
+
+                <!-- Mitmachen -->
+                <right onclick="window.location.href = 'Events.html';" style="cursor: pointer;">
+                        Mitmachen
+                </right>
+
+                <!-- Aktuelles -->
+                <right id="active" onclick="window.location.href = 'Aktuelles.html';" style="cursor: pointer;">
+                        Aktuelles
+                </right>
+
+                <!-- Gallerie | Map  -->
+                <right class="active" onclick="window.location.href = 'Map.html';" style="cursor: pointer;">
+                        Gallerie | Map
+                </right>
+        </div>
+</head>
+
+<body>
+        <!-- PAGE: MAP -->
+
+        <div id="zoomButton" name="button_zoomPastina" style="cursor: pointer;">Pastina
+        </div>
+        <div id="zoomButton" name="button_zoomSurrounding" style="cursor: pointer;">
+                Umgebung
+        </div>
+        <div class="map-container">
+                <div id="map">
+                </div>
+        </div>
+
+        <div id="PlacesOverview">
+
+                <!-- TODO: Implement data-page for pastina // surrounding -->
+                <ul id="pastina">
+                        <li id="OG" name="overViewEL" class="active" style="cursor: pointer;">
+                                Obergeschoss - Matratzenlager
+                        </li>
+                        <li id="EG" name="overViewEL" style="cursor: pointer;">
+                                Erdgeschoss - Zimmer, Küche, Bad
+                        </li>
+                        <li id="OW" name="overViewEL" style="cursor: pointer;">
+                                Obstwiese
+                        </li>
+                        <li id="OP" name="overViewEL" style="cursor: pointer;">
+                                Olivenplantagen
+                        </li>
+                        <li id="YR" name="overViewEL" style="cursor: pointer;">
+                                Yoga Raum
+                        </li>
+                        <li id="H" name="overViewEL" style="cursor: pointer;">
+                                Hütte
+                        </li>
+                </ul>
+        </div>
+
+
+        <div class="placeContentHolder">
+                <div data-page="OG" id="placesPage">
+                        <div class="placeContent">
+                                <img id="contentImage" src="./resources/images/map_page/IMG_4667.png">
+                                <img id="contentImage" src="./resources/images/map_page/IMG_5786.png">
+                                <img id="contentImage" src="./resources/images/map_page/IMG_5788.png">
+                        </div>
+                </div>
+                <div data-page="EG" class="placeContent">
+                        <div class="placeContent">
+                                <img id="contentImage" src="./resources/images/example.png">
+                                <img id="contentImage" src="./resources/images/example.png">
+                                <img id="contentImage" src="./resources/images/example.png">
+                                <img id="contentImage" src="./resources/images/example.png">
+                        </div>
+                </div>
+                <div data-page="OW" class="placeContent">
+                        <div class="placeContent">
+                                <img id="contentImage" src="./resources/images/example.png">
+                                <img id="contentImage" src="./resources/images/example.png">
+                        </div>
+                </div>
+                <div data-page="OP" class="placeContent">
+                        <div class="placeContent">
+                                <img id="contentImage" src="./resources/images/example.png">
+                                <img id="contentImage" src="./resources/images/example.png">
+                                <img id="contentImage" src="./resources/images/example.png">
+                        </div>
+                </div>
+                <div data-page="YR" class="placeContent">
+                        <div class="placeContent">
+                                <img id="contentImage" src="./resources/images/example.png">
+                                <img id="contentImage" src="./resources/images/example.png">
+                                <img id="contentImage" src="./resources/images/example.png">
+                                <img id="contentImage" src="./resources/images/example.png">
+                                <img id="contentImage" src="./resources/images/example.png">
+                                <img id="contentImage" src="./resources/images/example.png">
+                        </div>
+                </div>
+                <div data-page="H" class="placeContent">
+                        <div class="placeContent">
+                                <img src="./resources/images/map_page/IMG_1099_jpg.png">
+                        </div>
+                </div>
+        </div>
+</body>
+
+</html>
