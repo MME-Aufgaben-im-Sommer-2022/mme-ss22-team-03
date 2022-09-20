@@ -12,4 +12,4 @@ function switchPage(page) {
 init();
 
 
-//export default DataPageManager;
+//export default DivViewManager;

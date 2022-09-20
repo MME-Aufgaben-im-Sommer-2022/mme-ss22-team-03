@@ -195,9 +195,6 @@ class PageManager_Map extends Observable {
         break;
     }
   }
-
-
-
 }
 
 export default PageManager_Map;
