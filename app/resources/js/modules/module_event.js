@@ -1,10 +1,10 @@
 function InitHappening(happening) {
     // TODO: create Template from html template
-    //var newHappening = document.getElementById("TemplateID");
+    // var newHappening = document.getElementById("happeningItem");
 
     // Fill Template with Information -> happening.data.EXAMPLEDATA
-    //newHappening.getAttribute("HeaderID") = happening.data.header;
-    //newHappening.getAttribute("SubheaderID") = happening.data.subheader;
+    // newHappening.get("HeaderID") = happening.data.header;
+    // newHappening.getAttribute("SubheaderID") = happening.data.subheader;
 
     // Get All Buttons from created Template
     // happening.controls = {

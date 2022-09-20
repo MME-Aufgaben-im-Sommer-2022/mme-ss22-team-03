@@ -26,15 +26,14 @@ function initControls(manager) {
 function initEventList(manager) {
     //TODO: Fetch Event Data from SQL -> Hardcoded first
 
-    var ExampleHappeningData = {
+    var OlivenErnteData = {
         header: "Oliven Ernte",
         subheader: "Test Subheader",
         content: "Test Content",
         image: "Test Image URL",
     }
-    var ExampleHappening = new Happening("Event", ExampleHappeningData);
-    manager.eventList.push(ExampleHappening);
-
+    var OlivenErnteEvent = new Happening("Event", OlivenErnteData);
+    manager.eventList.push(OlivenErnteEvent);
 
 
     var ExampleHappeningData2 = {
