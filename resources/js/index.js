@@ -1,6 +1,5 @@
 import PageManager_Map from "../js/pages/PageManager_Map.js";
 
-
 let myPageManager_Map;
 
 function init()
