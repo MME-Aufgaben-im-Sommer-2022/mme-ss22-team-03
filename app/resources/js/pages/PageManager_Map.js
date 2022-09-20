@@ -1,4 +1,4 @@
-import MapManager from "../modules/MapManager.js";
+import module_MapManager from "../modules/module_MapManager.js";
 import { Event, Observable } from "../utils/Obervable.js";
 //import DataPageManager from "../utils/DataPageManager.js";
 
@@ -147,7 +147,7 @@ function initPlaceOverview(pageManager) {
 }
 
 
-class PageManager_Map extends Observable {
+export default class PageManager_Map extends Observable {
 
   constructor() {
     super();
@@ -196,5 +196,3 @@ class PageManager_Map extends Observable {
     }
   }
 }
-
-export default PageManager_Map;
