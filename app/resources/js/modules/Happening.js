@@ -29,13 +29,13 @@ class Happening {
 
     initRequest() {
         //TODO: Instantiate Request Popup -> 
-        var Popup = new event_request(this.data.header, this.data.subheader);
+        var Popup = new Happening_Request(this.data.header, this.data.subheader);
 
         // Add Request Popup to Happening HTML
     }
 }
 
-class event_request {
+class Happening_Request {
     constructor(header, subheader) {
 
         this.header = header;

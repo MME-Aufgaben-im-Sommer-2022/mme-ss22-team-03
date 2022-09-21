@@ -1,4 +1,4 @@
-import module_MapManager from "../modules/module_MapManager.js";
+import MapManager from "../modules/MapManager.js";
 import { Event, Observable } from "../utils/Obervable.js";
 //import DataPageManager from "../utils/DataPageManager.js";
 

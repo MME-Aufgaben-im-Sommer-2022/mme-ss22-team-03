@@ -17,7 +17,7 @@ function initMarkers(manager) {
 }
 
 
-class module_MapManager {
+class MapManager {
 
   constructor(MarkerList, maxZoom, startZoom,
     startCoords) {
@@ -63,4 +63,4 @@ class module_MapManager {
 
 }
 
-export default module_MapManager;
+export default MapManager;

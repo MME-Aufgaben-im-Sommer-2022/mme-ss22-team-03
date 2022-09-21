@@ -1,4 +1,4 @@
-import Happening from "../modules/module_event.js"
+import Happening from "../modules/Happening.js"
 import { Event, Observable } from "../utils/Obervable.js";
 
 

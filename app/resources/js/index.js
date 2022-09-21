@@ -10,7 +10,7 @@ function init()
 }
 
 function initPageManagers() {
-   // myPageManager_Map = new PageManager_Map();
+    myPageManager_Map = new PageManager_Map();
     myPageManager_Events = new PageManager_Events();
 }
 
