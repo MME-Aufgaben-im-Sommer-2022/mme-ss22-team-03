@@ -9,44 +9,46 @@
         <link rel="stylesheet" href="./resources/css/events.css">
         <link rel="stylesheet" href="./resources/css/navigation-bar.css">
 
-        
+
+
         <!-- index  -->
         <script type="module" src="./resources/js/index.js"></script>
+
 
         <div class="navigation-bar">
 
                 <!-- Über Uns  -->
-                <left onclick="window.location.href = 'uber_uns.html';" style="cursor: pointer;">
+                <left name="navBarPage" id="uber_uns" style="cursor: pointer;">
                         Über uns
                 </left>
 
                 <!-- Spenden -->
-                <left onclick="window.location.href = 'Spenden.html';" style="cursor: pointer;">
+                <left name="navBarPage" id="Spenden" style="cursor: pointer;">
                         Spenden
                 </left>
 
                 <!-- Mitgliedschaft -->
-                <left onclick="window.location.href = 'Mitgliedschaft.html';" style="cursor: pointer;">
+                <left name="navBarPage" id="Mitgliedschaft" style="cursor: pointer;">
                         Mitglied werden
                 </left>
 
                 <!-- Logo -->
-                <logo onclick="window.location.href = 'index.html';" style="cursor: pointer;">
+                <logo name="navBarPage" id="index" style="cursor: pointer;">
                         <img src="./resources/images/navigation-bar/logo.svg" />
                 </logo>
 
                 <!-- Mitmachen -->
-                <right class="active" onclick="window.location.href = 'Events.html';" style="cursor: pointer;">
+                <right name="navBarPage" id="Events" style="cursor: pointer;">
                         Mitmachen
                 </right>
 
                 <!-- Aktuelles -->
-                <right onclick="window.location.href = 'Aktuelles.html';" style="cursor: pointer;">
+                <right name="navBarPage" id="Aktuelles" id="active" style="cursor: pointer;">
                         Aktuelles
                 </right>
 
                 <!-- Gallerie | Map  -->
-                <right onclick="window.location.href = 'Map.html';" style="cursor: pointer;">
+                <right name="navBarPage" id="Map" style="cursor: pointer;">
                         Gallerie | Map
                 </right>
         </div>

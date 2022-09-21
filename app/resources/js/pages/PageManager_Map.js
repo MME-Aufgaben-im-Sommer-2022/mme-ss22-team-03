@@ -10,6 +10,7 @@ function initManager(manager) {
   initControls(manager);
 
   console.log(manager.MarkerList);
+  
   // Initializing MapManager
   myMapManager = new MapManager(manager.MarkerList, manager
     .maxMapZoom, manager.startZoom,
