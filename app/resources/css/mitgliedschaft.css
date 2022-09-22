@@ -44,16 +44,3 @@ body {
     text-align: center;
     color: var(--jet);
 }
-
-
-.group {
-    background-color: white;
-    text-align: center;
-    /* 
-    border-style: dashed;
-    border-width: 10px; */
-
-    width: 100%;
-    height: auto;
-}
-

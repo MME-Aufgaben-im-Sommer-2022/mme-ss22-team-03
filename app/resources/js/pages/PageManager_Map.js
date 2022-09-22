@@ -9,8 +9,10 @@ function initManager(manager) {
   initPlaceList(manager);
   initControls(manager);
 
+  //console.log("Marker List: " + manager.MarkerList);
+
   // Initializing MapManager
-  myMapManager = new MapManager(manager.placeList, manager
+  myMapManager = new MapManager(manager.MarkerList, manager
     .maxMapZoom, manager.startZoom,
     manager.startCoords);
 
@@ -19,6 +21,7 @@ function initManager(manager) {
 
 function initPlaceList(manager) {
 
+  manager.overViewList = document.getElementsByName("overViewEL");
 
   var Icon = L.icon({
     iconUrl: './resources/images/map_page/marker.png',
@@ -32,90 +35,141 @@ function initPlaceList(manager) {
     ] // point from which the popup should open relative to the iconAnchor
   });
 
-  manager.placeList.forEach(placeData => {
-    placeData.marker = L.marker(placeData.coords, { icon: Icon })
-  });
+  //TODO: Connect Places to SQL
+
+  var placeOG = {
+    id: "OG",
+    zoomLevel: "pastina",
+    coords: [43.624433, 11.884508],
+    zoomVal: 20,
+    marker: L.marker([43.624433, 11.884508], { icon: Icon }),
+  }
+  manager.MarkerList.push(placeOG);
+
+  var placeEG = {
+    id: "EG",
+    zoomLevel: "pastina",
+    coords: [43.624433, 11.884508],
+    zoomVal: 20,
+    marker: L.marker([43.624433, 11.884508], { icon: Icon }),
+  }
+  manager.MarkerList.push(placeEG);
+
+  var placeOW = {
+    id: "OW",
+    zoomLevel: "pastina",
+    coords: [43.623883, 11.884969],
+    zoomVal: 20,
+    marker: L.marker([43.623883, 11.884969], { icon: Icon }),
+  }
+  manager.MarkerList.push(placeOW);
+
+  var placeOP = {
+    id: "OP",
+    zoomLevel: "pastina",
+    coords: [43.623950, 11.884178],
+    zoomVal: 18,
+    marker: L.marker([43.623950, 11.884178], { icon: Icon }),
+  }
+  manager.MarkerList.push(placeOP);
+
+  var placeYR = {
+    id: "YR",
+    zoomLevel: "pastina",
+    coords: [43.624621, 11.884387],
+    zoomVal: 20,
+    marker: L.marker([43.624621, 11.884387], { icon: Icon }),
+  }
+  manager.MarkerList.push(placeYR);
+
+  var placeH = {
+    id: "H",
+    zoomLevel: "pastina",
+    coords: [43.624171, 11.884773],
+    zoomVal: 20,
+    marker: L.marker([43.624171, 11.884773], { icon: Icon }),
+  }
+  manager.MarkerList.push(placeH);
+
+  var placeCA = {
+    id: "CA",
+    zoomLevel: "surrounding",
+    coords: [43.614091, 11.865069],
+    zoomVal: 12,
+    marker: L.marker([43.614091, 11.865069], { icon: Icon }),
+  }
+  manager.MarkerList.push(placeCA);
+
+  var placePA = {
+    id: "PA",
+    zoomLevel: "surrounding",
+    coords: [43.624416, 11.884388],
+    zoomVal: 12,
+    marker: L.marker([43.624416, 11.884388], { icon: Icon }),
+  }
+  manager.MarkerList.push(placePA);
 }
 
-function initControls(manager) {
+function initControls(pageManager) {
 
-  manager.controls = {
+  pageManager.controls = {
     zoomButtonPastina: document.getElementsByName('button_zoomPastina')[0],
     zoomButtonSurroundings: document.getElementsByName(
       'button_zoomSurrounding')[0],
-    overViewList: document.querySelector(".pastinaOverViewList"),
   }
 
-  manager.controls.zoomButtonPastina.addEventListener("click", function (
+  pageManager.controls.zoomButtonPastina.addEventListener("click", function (
     e) {
-    manager.setMapState("pastina");
+    pageManager.setMapState("pastina");
   });
 
-  manager.controls.zoomButtonSurroundings.addEventListener("click", function (
+  pageManager.controls.zoomButtonSurroundings.addEventListener("click", function (
     e) {
-    manager.setMapState("surrounding");
+    pageManager.setMapState("surrounding");
   });
 
   document.getElementById("PlacesOverview").addEventListener("click", function (
     e) {
-    manager.setActiveElement(e.target.id);
+    pageManager.setActiveElement(e.target.id);
   });
 
-  manager.placeList.forEach(place => {
-    place.marker.addEventListener("click", function (
+  pageManager.MarkerList.forEach(element => {
+    element.marker.addEventListener("click", function (
       e) {
-      manager.setActiveElement(place.id);
+      pageManager.setActiveElement(element.id);
     });
   });
 }
 
-function initPlaceOverview(manager) {
-  
-  const template = document.querySelector('#placeTemplate');
-  manager.clone = template.content.cloneNode(true);
-  manager.overViewElement = manager.clone.querySelector('.placeOverViewElement')
-
-
-  manager.placeList.forEach(place => {
-    let overViewClone = manager.overViewElement.cloneNode(true);
-    overViewClone.textContent = place.name;
-    overViewClone.id = place.id;
-
-    manager.controls.overViewList.append(overViewClone);
-  });
-
+function initPlaceOverview(pageManager) {
   // Set first Place of List to active Place
   Dage.update();
-  manager.setMapState("pastina");
+  pageManager.setMapState("pastina");
 }
 
 
 export default class PageManager_Map extends Observable {
 
-  constructor(placeDataList) {
+  constructor() {
     super();
 
+    // TODO: Hardcoded Values have to be connected to SQL
     this.maxMapZoom = 20,
       this.startZoom = 18;
     this.startCoords = [43.624416, 11.884388];
 
-    this.placeList = placeDataList;
+    this.MarkerList = [];
 
     initManager(this);
   }
 
   setActiveElement(id) {
-
-    var tempOverViewList = this.controls.overViewList.getElementsByTagName('li');
-
-    Array.from(tempOverViewList).forEach(place => {
-      place.classList.remove('active');
-      var newActivePlace = document.getElementById(id);
-      if(newActivePlace != null)
-      newActivePlace.classList.add('active');
+    this.overViewList.forEach(element => {
+      element.classList.remove('active');
+      document.getElementById(id).classList.add('active');
     });
 
-    var newPlace = this.placeList.find(x => x.id === id);
+    var newPlace = this.MarkerList.find(x => x.id === id);
     if (newPlace != undefined)
       myMapManager.flyTo(newPlace.coords, newPlace.zoomVal);
 
@@ -125,6 +179,7 @@ export default class PageManager_Map extends Observable {
 
   setMapState(newZoomState) // pastina / surroundings
   {
+
     myMapManager.hideMarkers();
     myMapManager.showMarkers(newZoomState);
 
@@ -142,6 +197,4 @@ export default class PageManager_Map extends Observable {
         break;
     }
   }
-
-
 }
