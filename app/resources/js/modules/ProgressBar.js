@@ -11,23 +11,22 @@ function init(manager) {
 
 function initHTML(manager) {
 
-    //  
     const template = document.querySelector('#progressBarTemplate');
     manager.clone = template.content.cloneNode(true);
     manager.ProgressBarElement = manager.clone.querySelector('#ProgressBar')
 
     //  Fill Template Information with data
     let ProgressBarClone = manager.ProgressBarElement.cloneNode(true);
-    ProgressBarClone.querySelector('#_06text2').textContent = manager.percentage + "% unseres Ziels erreicht";
-    ProgressBarClone.querySelector('#goal').textContent = manager.currentValue + " EUR gespendet";
-    ProgressBarClone.querySelector('#goal-status').textContent = "Ziel: " + manager.goal + " EUR";
+    ProgressBarClone.querySelector('#progressBarHeader').textContent = manager.percentage + "% unseres Ziels erreicht";
+    ProgressBarClone.querySelector('#progressCurrentValue').textContent = manager.currentValue + " EUR gespendet";
+    ProgressBarClone.querySelector('#progressGoal').textContent = "Ziel: " + manager.goal + " EUR";
 
     //  Calculate the width based on the percentage
     var width = "width:" + (manager.currentValue / manager.goal) * 100 + "%";
     ProgressBarClone.querySelector('#progress').setAttribute("style", width);
 
     //  Give ProgressGroup the Template HTML
-    document.getElementById("_06").append(ProgressBarClone);
+    document.getElementById("ProgressBarHolder").append(ProgressBarClone);
 }
 
 
@@ -36,15 +35,18 @@ function initHTML(manager) {
    */
 class ProgressBar extends Observable {
 
-    constructor(goal, currentValue) {
+    constructor() {
         super();
 
-        this.goal = goal;
-        this.currentValue = currentValue;
+        //TODO: Fetch Values from SQL
+        this.goal = 500.000;
+        this.currentValue = 200.000;
         this.percentage = (this.currentValue / this.goal) * 100;
 
         init(this);
     }
 }
+
+let manager = new ProgressBar();
 
 export default ProgressBar;
