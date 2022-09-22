@@ -83,7 +83,7 @@ body {
 
 .Image2 {
     grid-area: Image;
-    margin-top: 6%;
+    margin-top: 16%;
     max-width: 100%;
     max-height: 100%;
     display: block;
@@ -130,7 +130,7 @@ body {
 
 .Header2 {
     background-color: #2200ff00;
-    padding-top: 30%;
+    padding-top: 50%;
     padding-left: 70%;
 
     font-family: Fahkwang;
@@ -285,12 +285,21 @@ ul {
     padding-left: 0%;
     margin: 0%;
 }
-
+/*
 li {
     width: 100%;
     height: auto;
+}
+*/
+
+li {
+    list-style-type: none;
+
+    padding-left: 0%;
+    margin: 0%;
 
 }
+
 
 .titleItem {
     height: auto;
@@ -325,4 +334,14 @@ li {
 li.overView {
     height: 400px;
     text-align: center;
+}
+
+.happeningElement01 {
+    height: 1400px;
+    overflow: hidden;
+}
+
+.happeningElement02 {
+    height: 1400px;
+    overflow: hidden;
 }
