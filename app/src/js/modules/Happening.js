@@ -34,7 +34,7 @@ function InitHappening(happening) {
     //   });
 }
 
-class Happening extends Observable{
+class Happening extends Observable {
     constructor(type, data, index, htmlClone) {       //type: 0 = Event, 1 = Project // data = { .header, .time, .content, .image}
 
         super();

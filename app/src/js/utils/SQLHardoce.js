@@ -115,7 +115,7 @@ function initEventList() {
         imageSrc: "./src/images/event_page/IMG_event_permakultur.png",
     }
     happeningDataList.push(PermakulturKursData);
-    
+
     var PermakulturKursData2 = {
         header: "Permakultur Kurs",
         subheader: "25.11. - 02.12.2022",

@@ -30,12 +30,12 @@ function initEventList(manager) {
     //TODO: Fetch Event Data from SQL -> Hardcoded first
 
     var OlivenErnteData = {
-        header: "Oliven Ernte", 
+        header: "Oliven Ernte",
         subheader: "24.10. - 06.11.2022",
         content: "Thema Olivenernte. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         imageSrc: "./src/images/event_page/IMG_event_olivenernte.png",
     }
-    var OlivenErnteEvent = new Happening("Event", OlivenErnteData, manager.happeningList.length,  manager.clone);
+    var OlivenErnteEvent = new Happening("Event", OlivenErnteData, manager.happeningList.length, manager.clone);
     manager.happeningList.push(OlivenErnteEvent);
 
     var TraumWorkshopData = {

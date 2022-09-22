@@ -43,7 +43,7 @@ class MapManager {
   hideMarkers() {
 
     this.MarkerList.forEach(marker => {
-        this.map.removeLayer(marker.marker);
+      this.map.removeLayer(marker.marker);
     });
     //console.log("Hide all Markers");
   }
