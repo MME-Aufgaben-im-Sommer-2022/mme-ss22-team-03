@@ -1,10 +1,22 @@
 function InitHappening(happening) {
-    // TODO: create Template from html template
-    // var newHappening = document.getElementById("happeningItem");
 
-    // Fill Template with Information -> happening.data.EXAMPLEDATA
-    // newHappening.get("HeaderID") = happening.data.header;
-    // newHappening.getAttribute("SubheaderID") = happening.data.subheader;
+    const happeningElement01 = happening.clone.querySelector('.happeningElement01');
+    const happeningElement02 = happening.clone.querySelector('.happeningElement02');
+
+    let htmlClone;
+
+    if (happening.index % 2 == 0) {
+        htmlClone = happeningElement01.cloneNode(true)
+    } else {
+        htmlClone = happeningElement02.cloneNode(true)
+    }
+
+    htmlClone.querySelector('.Header').textContent = happening.data.header;
+    htmlClone.querySelector('.Subheader').textContent = happening.data.subheader;
+    htmlClone.querySelector('.Content').textContent = happening.data.content;
+    htmlClone.querySelector('.Image').src = happening.data.imageSrc;
+
+    happening.htmlData = htmlClone;
 
     // Get All Buttons from created Template
     // happening.controls = {
@@ -19,10 +31,14 @@ function InitHappening(happening) {
 }
 
 class Happening {
-    constructor(type, data) {       //type: 0 = Event, 1 = Project // data = { .header, .time, .content, .image}
+    constructor(type, data, index, htmlClone) {       //type: 0 = Event, 1 = Project // data = { .header, .time, .content, .image}
 
         this.type = type;
         this.data = data;
+        this.index = index;
+        this.clone = htmlClone;
+
+        this.htmlData = null;
 
         InitHappening(this);
     }
