@@ -43,7 +43,7 @@ function initControls(manager) {
     zoomButtonPastina: document.getElementsByName('button_zoomPastina')[0],
     zoomButtonSurroundings: document.getElementsByName(
       'button_zoomSurrounding')[0],
-    overViewList: document.getElementsByName("overViewEL"),
+    overViewList: document.querySelector(".pastinaOverViewList"),
   }
 
   manager.controls.zoomButtonPastina.addEventListener("click", function (
@@ -70,6 +70,20 @@ function initControls(manager) {
 }
 
 function initPlaceOverview(manager) {
+  
+  const template = document.querySelector('#placeTemplate');
+  manager.clone = template.content.cloneNode(true);
+  manager.overViewElement = manager.clone.querySelector('.placeOverViewElement')
+
+
+  manager.placeList.forEach(place => {
+    let overViewClone = manager.overViewElement.cloneNode(true);
+    overViewClone.textContent = place.name;
+    overViewClone.id = place.id;
+
+    manager.controls.overViewList.append(overViewClone);
+  });
+
   // Set first Place of List to active Place
   Dage.update();
   manager.setMapState("pastina");
@@ -92,9 +106,13 @@ export default class PageManager_Map extends Observable {
 
   setActiveElement(id) {
 
-    this.controls.overViewList.forEach(element => {
-      element.classList.remove('active');
-      document.getElementById(id).classList.add('active');
+    var tempOverViewList = this.controls.overViewList.getElementsByTagName('li');
+
+    Array.from(tempOverViewList).forEach(place => {
+      place.classList.remove('active');
+      var newActivePlace = document.getElementById(id);
+      if(newActivePlace != null)
+      newActivePlace.classList.add('active');
     });
 
     var newPlace = this.placeList.find(x => x.id === id);
@@ -107,7 +125,6 @@ export default class PageManager_Map extends Observable {
 
   setMapState(newZoomState) // pastina / surroundings
   {
-
     myMapManager.hideMarkers();
     myMapManager.showMarkers(newZoomState);
 
@@ -125,4 +142,6 @@ export default class PageManager_Map extends Observable {
         break;
     }
   }
+
+
 }

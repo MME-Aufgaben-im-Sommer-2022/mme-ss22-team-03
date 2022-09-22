@@ -15,6 +15,7 @@ function initPlaceList() {
 
     var placeOG = {
         id: "OG",
+        name: "Obergeschoss - Matratzenlager",
         zoomLevel: "pastina",
         coords: [43.624433, 11.884508],
         zoomVal: 20,
@@ -23,6 +24,7 @@ function initPlaceList() {
 
     var placeEG = {
         id: "EG",
+        name: "Erdgeschoss - Zimmer, Küche, Bad",
         zoomLevel: "pastina",
         coords: [43.624433, 11.884508],
         zoomVal: 20,
@@ -31,6 +33,7 @@ function initPlaceList() {
 
     var placeOW = {
         id: "OW",
+        name: "Obstwiese",
         zoomLevel: "pastina",
         coords: [43.623883, 11.884969],
         zoomVal: 20,
@@ -39,6 +42,7 @@ function initPlaceList() {
 
     var placeOP = {
         id: "OP",
+        name: "Olivenplantagen",
         zoomLevel: "pastina",
         coords: [43.623950, 11.884178],
         zoomVal: 18,
@@ -47,6 +51,7 @@ function initPlaceList() {
 
     var placeYR = {
         id: "YR",
+        name: "Yoga Raum",
         zoomLevel: "pastina",
         coords: [43.624621, 11.884387],
         zoomVal: 20,
@@ -55,6 +60,7 @@ function initPlaceList() {
 
     var placeH = {
         id: "H",
+        name: "Hütte",
         zoomLevel: "pastina",
         coords: [43.624171, 11.884773],
         zoomVal: 20,
@@ -63,6 +69,7 @@ function initPlaceList() {
 
     var placeCA = {
         id: "CA",
+        name: "Calbenzano",
         zoomLevel: "surrounding",
         coords: [43.614091, 11.865069],
         zoomVal: 12,
@@ -71,6 +78,7 @@ function initPlaceList() {
 
     var placePA = {
         id: "PA",
+        name: "Pastina",
         zoomLevel: "surrounding",
         coords: [43.624416, 11.884388],
         zoomVal: 12,
