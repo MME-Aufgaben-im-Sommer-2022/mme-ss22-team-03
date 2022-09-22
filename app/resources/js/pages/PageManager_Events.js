@@ -30,33 +30,32 @@ function initEventList(manager) {
     //TODO: Fetch Event Data from SQL -> Hardcoded first
 
     var OlivenErnteData = {
-        header: "Oliven Ernte",
-        subheader: "xx.xx.xxxx - xx.xx.xxxx",
-        content: "Hallo das ist ein Test Content",
+        header: "Oliven Ernte", 
+        subheader: "24.10. - 06.11.2022",
+        content: "Thema Olivenernte. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         imageSrc: "./resources/images/event_page/IMG_event_olivenernte.png",
     }
     var OlivenErnteEvent = new Happening("Event", OlivenErnteData, manager.happeningList.length,  manager.clone);
     manager.happeningList.push(OlivenErnteEvent);
 
+    var TraumWorkshopData = {
+        header: "Trauma Workshop",
+        subheader: "16.11. - 18.11.2022",
+        content: "Thema Traum Workshop. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        imageSrc: "./resources/images/event_page/IMG_event_traumaworkshop.png",
+    }
+    var TraumWorkshopEvent = new Happening("Event", TraumWorkshopData, manager.happeningList.length, manager.clone);
+    manager.happeningList.push(TraumWorkshopEvent);
 
-    var ExampleHappeningData2 = {
-        header: "Test Header2",
-        subheader: "Test Subheader2",
-        content: "Test Content2",
+
+    var PermakulturKursData = {
+        header: "Permakultur Kurs",
+        subheader: "25.11. - 02.12.2022",
+        content: "Thema Landwirtschaft und Permakultur von Volker. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         imageSrc: "./resources/images/event_page/IMG_event_permakultur.png",
     }
-    var ExampleHappening2 = new Happening("Event", ExampleHappeningData2, manager.happeningList.length, manager.clone);
-    manager.happeningList.push(ExampleHappening2);
-
-
-    var ExampleHappeningData2 = {
-        header: "Test Header2",
-        subheader: "Test Subheader2",
-        content: "Test Content2",
-        imageSrc: "./resources/images/event_page/IMG_event_permakultur.png",
-    }
-    var ExampleHappening3 = new Happening("Event", ExampleHappeningData2, manager.happeningList.length, manager.clone);
-    manager.happeningList.push(ExampleHappening3);
+    var PermakulturKursEvent = new Happening("Event", PermakulturKursData, manager.happeningList.length, manager.clone);
+    manager.happeningList.push(PermakulturKursEvent);
 }
 
 function UpdateHappeningList(manager) {
