@@ -46,7 +46,7 @@ function initEventList(manager) {
     var ExampleHappening2 = new Happening("Event", ExampleHappeningData2);
     manager.eventList.push(ExampleHappening2);
 
-    console.log(manager.eventList);
+    //console.log(manager.eventList);
 }
 
 class PageManager_Events extends Observable {

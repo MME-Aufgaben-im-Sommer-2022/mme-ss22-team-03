@@ -1,3 +1,5 @@
+import { Event, Observable } from "../utils/Obervable.js";
+
 
 function initManager(manager) {
 
@@ -6,14 +8,14 @@ function initManager(manager) {
 
 function initControls(manager) {
 
-    manager.controls = {
-        jetztSpenden: document.getElementsByName('jetztSpendenID')[0],
-    }
+    // manager.controls = {
+    //     jetztSpenden: document.getElementsByName('jetztSpendenID')[0],
+    // }
 
-    manager.controls.jetztSpenden.addEventListener("click", function (
-        e) {
-            manager.exampleFunction("value"); // -> call index.jetztSpenden();
-      });
+    // manager.controls.jetztSpenden.addEventListener("click", function (
+    //     e) {
+    //     manager.exampleFunction("value"); // -> call index.jetztSpenden();
+    // });
 }
 
 class PageManager_Spenden extends Observable {
