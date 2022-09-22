@@ -25,7 +25,6 @@
     display: none !important;
 }
 
-<<<<<<< HEAD
 #_01 {
     /* background-image: url(https://dreaminginyellow.com/diy-custom-design-yellow-strips/); */
     background-image: url(../images/spenden_page/spenden_IMG-001.png);
@@ -39,13 +38,6 @@
     background-repeat: no-repeat;
     background-position: center;
 
-=======
-body {
-    background-color: var(--snow);
-    font-family: 'Space Grotesk', sans-serif;
-    margin: 0;
-    padding: 0;
->>>>>>> parent of 2c5b506 (Merge branch 'Spenden-Page-Import' into dev)
 }
 
 .ui {

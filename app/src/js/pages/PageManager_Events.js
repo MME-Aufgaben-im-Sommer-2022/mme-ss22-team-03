@@ -33,7 +33,7 @@ function initEventList(manager) {
         header: "Oliven Ernte", 
         subheader: "24.10. - 06.11.2022",
         content: "Thema Olivenernte. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-        imageSrc: "./resources/images/event_page/IMG_event_olivenernte.png",
+        imageSrc: "./src/images/event_page/IMG_event_olivenernte.png",
     }
     var OlivenErnteEvent = new Happening("Event", OlivenErnteData, manager.happeningList.length,  manager.clone);
     manager.happeningList.push(OlivenErnteEvent);
@@ -42,7 +42,7 @@ function initEventList(manager) {
         header: "Trauma Workshop",
         subheader: "16.11. - 18.11.2022",
         content: "Thema Traum Workshop. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-        imageSrc: "./resources/images/event_page/IMG_event_traumaworkshop.png",
+        imageSrc: "./src/images/event_page/IMG_event_traumaworkshop.png",
     }
     var TraumWorkshopEvent = new Happening("Event", TraumWorkshopData, manager.happeningList.length, manager.clone);
     manager.happeningList.push(TraumWorkshopEvent);
@@ -52,7 +52,7 @@ function initEventList(manager) {
         header: "Permakultur Kurs",
         subheader: "25.11. - 02.12.2022",
         content: "Thema Landwirtschaft und Permakultur von Volker. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-        imageSrc: "./resources/images/event_page/IMG_event_permakultur.png",
+        imageSrc: "./src/images/event_page/IMG_event_permakultur.png",
     }
     var PermakulturKursEvent = new Happening("Event", PermakulturKursData, manager.happeningList.length, manager.clone);
     manager.happeningList.push(PermakulturKursEvent);

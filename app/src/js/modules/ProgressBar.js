@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Event, Observable } from "../utils/Observable.js";
 
 /**
@@ -51,5 +50,3 @@ class ProgressBar extends Observable {
 let manager = new ProgressBar();
 
 export default ProgressBar;
-=======
->>>>>>> parent of 2c5b506 (Merge branch 'Spenden-Page-Import' into dev)
