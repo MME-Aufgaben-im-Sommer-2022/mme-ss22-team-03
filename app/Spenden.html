@@ -12,40 +12,45 @@
         <!-- Dage Plugin Script -->
         <script src="https://cdn.jsdelivr.net/gh/dlvdls18/Dage/src/dage.js"></script>
 
+
+        <!-- index  -->
+        <script type="module" src="./resources/js/index.js"></script>
+
+
         <div class="navigation-bar">
 
                 <!-- Über Uns  -->
-                <left onclick="window.location.href = 'uber_uns.html';" style="cursor: pointer;">
+                <left name="navBarPage" id="uber_uns" style="cursor: pointer;">
                         Über uns
                 </left>
 
                 <!-- Spenden -->
-                <left class="active" onclick="window.location.href = 'Spenden.html';" style="cursor: pointer;">
+                <left class="active" name="navBarPage" id="Spenden" style="cursor: pointer;">
                         Spenden
                 </left>
 
                 <!-- Mitgliedschaft -->
-                <left onclick="window.location.href = 'Mitgliedschaft.html';" style="cursor: pointer;">
+                <left name="navBarPage" id="Mitgliedschaft" style="cursor: pointer;">
                         Mitglied werden
                 </left>
 
                 <!-- Logo -->
-                <logo onclick="window.location.href = 'Landing.html';" style="cursor: pointer;">
+                <logo name="navBarPage" id="index" style="cursor: pointer;">
                         <img src="./resources/images/navigation-bar/logo.svg" />
                 </logo>
 
                 <!-- Mitmachen -->
-                <right onclick="window.location.href = 'Events.html';" style="cursor: pointer;">
+                <right name="navBarPage" id="Events" style="cursor: pointer;">
                         Mitmachen
                 </right>
 
                 <!-- Aktuelles -->
-                <right id="active" onclick="window.location.href = 'Aktuelles.html';" style="cursor: pointer;">
+                <right name="navBarPage" id="Aktuelles" id="active" style="cursor: pointer;">
                         Aktuelles
                 </right>
 
                 <!-- Gallerie | Map  -->
-                <right onclick="window.location.href = 'Map.html';" style="cursor: pointer;">
+                <right name="navBarPage" id="Map" style="cursor: pointer;">
                         Gallerie | Map
                 </right>
         </div>
@@ -109,39 +114,9 @@
         </div>
 
         <div class="group" id="_06">
-                
-                <div id="_06text1">Wir freuen uns auf deine Unterstützung!</div>
-
-                <div id="_06text2">50% unseres Ziels erreicht</div>
-
-                <!-- Share Button & text   -->
-                <h1 id="_06shareText"> Jetzt aktiv werden </h1>
-
-                <!-- Share Button images  -->
-                <div id="_06Btn">
-                        <img id="_06linkedInBtn" src="./resources/images/share-buttons/LinkedIn.svg">
-                        <img id="_06mailBtn " src="./resources/images/share-buttons/Mail.svg">
-                        <img id="_06whatsAppBtn" src="./resources/images/share-buttons/WhatsApp.svg">
-                        <img id="_06instagramBtn" src="./resources/images/share-buttons/Instagram.svg">
-                        <img id="_06facebookBtn" src="./resources/images/share-buttons/Facebook.svg">
-                </div>
-
-                <div>
-                        <div id=countdown-wrap>
-                                <div id="glass">
-                                        <div id="progress"></div>
-                                </div>
-
-                                <div id="test">
-                                        <span id="goal-status">300.000 EUR gespendet</span>
-                                        <span id="goal">Ziel: 600.000 EUR</span>
-                                </div>
-
-                        </div>
-
-                </div>
-
         </div>
+
+
         <!-- three steps   -->
 
         <div class="group" id="_07">
@@ -329,6 +304,39 @@
 
         </div>
 
+
+        <template id="progressBarTemplate">
+                <div id="ProgressBar">
+                        <div id="_06text1">Wir freuen uns auf deine Unterstützung!</div>
+
+                        <div id="_06text2"></div>
+
+                        <!-- Share Button & text   -->
+                        <h1 id="_06shareText"> Jetzt aktiv werden </h1>
+
+                        <!-- Share Button images  -->
+                        <div id="_06Btn">
+                                <img id="_06linkedInBtn" src="./resources/images/share-buttons/LinkedIn.svg">
+                                <img id="_06mailBtn " src="./resources/images/share-buttons/Mail.svg">
+                                <img id="_06whatsAppBtn" src="./resources/images/share-buttons/WhatsApp.svg">
+                                <img id="_06instagramBtn" src="./resources/images/share-buttons/Instagram.svg">
+                                <img id="_06facebookBtn" src="./resources/images/share-buttons/Facebook.svg">
+                        </div>
+
+                        <div id=countdown-wrap>
+                                <div id="glass">
+                                        <div id="progress"></div>
+                                </div>
+
+                                <div id="test">
+                                        <span id="goal-status"></span>
+                                        <span id="goal"></span>
+                                </div>
+
+                        </div>
+
+                </div>
+        </template>
 
 
         <script type="module" src="./resources/js/modules/PageSpenden.js"></script>

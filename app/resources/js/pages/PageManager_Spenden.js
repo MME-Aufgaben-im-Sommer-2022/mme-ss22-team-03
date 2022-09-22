@@ -1,16 +1,15 @@
 import { Event, Observable } from "../utils/Obervable.js";
+import ProgressBar from "../modules/ProgressBar.js";
 
 
 function initManager(manager) {
 
     initControls(manager);
+    initProgressBar(manager);
 }
 
 function initControls(manager) {
 
-    // manager.controls = {
-    //     jetztSpenden: document.getElementsByName('jetztSpendenID')[0],
-    // }
 
     // manager.controls.jetztSpenden.addEventListener("click", function (
     //     e) {
@@ -18,10 +17,16 @@ function initControls(manager) {
     // });
 }
 
+function initProgressBar(manager) {
+    manager.ProgressBar = new ProgressBar(500, 100);
+}
+
 class PageManager_Spenden extends Observable {
 
     constructor() {
         super();
+
+
 
         initManager(this);
     }
