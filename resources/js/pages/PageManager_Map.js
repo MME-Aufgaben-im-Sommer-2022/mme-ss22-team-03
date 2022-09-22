@@ -1,5 +1,5 @@
-import module_MapManager from "../modules/module_MapManager.js";
-import { Event, Observable } from "../utils/Obervable.js";
+import MapManager from "../modules/MapManager.js";
+import { Event, Observable } from "../utils/Observable.js"
 //import DataPageManager from "../utils/DataPageManager.js";
 
 let myMapManager;
@@ -9,7 +9,8 @@ function initManager(manager) {
   initPlaceList(manager);
   initControls(manager);
 
-  console.log(manager.MarkerList);
+  //console.log("Marker List: " + manager.MarkerList);
+
   // Initializing MapManager
   myMapManager = new MapManager(manager.MarkerList, manager
     .maxMapZoom, manager.startZoom,
@@ -135,7 +136,7 @@ function initControls(pageManager) {
   pageManager.MarkerList.forEach(element => {
     element.marker.addEventListener("click", function (
       e) {
-        pageManager.setActiveElement(element.id);
+      pageManager.setActiveElement(element.id);
     });
   });
 }
@@ -169,7 +170,8 @@ export default class PageManager_Map extends Observable {
     });
 
     var newPlace = this.MarkerList.find(x => x.id === id);
-    myMapManager.flyTo(newPlace.coords, newPlace.zoomVal);
+    if (newPlace != undefined)
+      myMapManager.flyTo(newPlace.coords, newPlace.zoomVal);
 
     //TODO: Set correct Marker color when active
     Dage.navigate(id);

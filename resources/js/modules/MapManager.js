@@ -17,7 +17,7 @@ function initMarkers(manager) {
 }
 
 
-class module_MapManager {
+class MapManager {
 
   constructor(MarkerList, maxZoom, startZoom,
     startCoords) {
@@ -45,7 +45,7 @@ class module_MapManager {
     this.MarkerList.forEach(marker => {
         this.map.removeLayer(marker.marker);
     });
-    console.log("Hide all Markers");
+    //console.log("Hide all Markers");
   }
 
   showMarkers(zoomLevel) {
@@ -53,14 +53,13 @@ class module_MapManager {
     this.MarkerList.forEach(marker => {
       if (marker.zoomLevel == zoomLevel) {
         // this.map.addLayer(marker.marker);
-        console.log(marker.marker);
+        //console.log(marker.marker);
         marker.marker.addTo(this.map);
       }
     });
-    console.log("Show all " + zoomLevel + " Markers");
-
+    //console.log("Show all " + zoomLevel + " Markers");
   }
 
 }
 
-export default module_MapManager;
+export default MapManager;
