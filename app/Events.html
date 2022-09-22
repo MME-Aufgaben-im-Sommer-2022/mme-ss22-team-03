@@ -10,45 +10,43 @@
         <link rel="stylesheet" href="./resources/css/navigation-bar.css">
 
 
-
         <!-- index  -->
         <script type="module" src="./resources/js/index.js"></script>
-
 
         <div class="navigation-bar">
 
                 <!-- Über Uns  -->
-                <left name="navBarPage" id="uber_uns" style="cursor: pointer;">
+                <left onclick="window.location.href = 'uber_uns.html';" style="cursor: pointer;">
                         Über uns
                 </left>
 
                 <!-- Spenden -->
-                <left name="navBarPage" id="Spenden" style="cursor: pointer;">
+                <left onclick="window.location.href = 'Spenden.html';" style="cursor: pointer;">
                         Spenden
                 </left>
 
                 <!-- Mitgliedschaft -->
-                <left name="navBarPage" id="Mitgliedschaft" style="cursor: pointer;">
+                <left onclick="window.location.href = 'Mitgliedschaft.html';" style="cursor: pointer;">
                         Mitglied werden
                 </left>
 
                 <!-- Logo -->
-                <logo name="navBarPage" id="index" style="cursor: pointer;">
+                <logo onclick="window.location.href = 'index.html';" style="cursor: pointer;">
                         <img src="./resources/images/navigation-bar/logo.svg" />
                 </logo>
 
                 <!-- Mitmachen -->
-                <right class="active"  name="navBarPage" id="Events" style="cursor: pointer;">
+                <right class="active" onclick="window.location.href = 'Events.html';" style="cursor: pointer;">
                         Mitmachen
                 </right>
 
                 <!-- Aktuelles -->
-                <right name="navBarPage" id="Aktuelles" id="active" style="cursor: pointer;">
+                <right onclick="window.location.href = 'Aktuelles.html';" style="cursor: pointer;">
                         Aktuelles
                 </right>
 
                 <!-- Gallerie | Map  -->
-                <right name="navBarPage" id="Map" style="cursor: pointer;">
+                <right onclick="window.location.href = 'Map.html';" style="cursor: pointer;">
                         Gallerie | Map
                 </right>
         </div>
@@ -64,98 +62,43 @@
                 </div>
         </div>
 
-        <!-- TODO: Create clickable overViewList
-        <ul class="overViewList">
-                <li>
-                        Permakulturkurs
-                </li>
-                <li>
-                        Feigenernte
-                </li>
-                <li>
-                        Olivenernte
-                </li>
-                <li>
-                        Traumweiterbildung
-                </li>
-        </ul> -->
+        <!-- TODO: Create clickable overViewList -->
 
-        <ul class="eventList">
-                <li class="eventItem">
+        <ul class="overViewList" id="overViewList">
+        </ul>
+
+        <ul class="happeningList" id="happeningList">
+        </ul>
+
+
+        <template id="happeningTemplate">
+                <li class="happeningElement01">
                         <div class="group_event_01">
-                                <div class="Image"> <img src="./resources/images/event_page/IMG_event_permakultur.png"
-                                                id="Img">
-                                </div>
-                                <div class="Header"></div>
+                                <img class="Image" src="">
+                                <div class=" Header" id="1"></div>
                                 <div class="Subheader"></div>
                                 <div class="Content"></div>
                                 <div class="Share"></div>
                                 <div class="Button"></div>
                         </div>
+                </li>
 
-                </li>
-                <li class="eventItem">
+                <li class="happeningElement02">
                         <div class="group_event_02">
-                                <div class="Image"> <img src="./resources/images/event_page/IMG_event_feigenernte.png"
-                                                id="Img">
-                                </div>
-                                <div class="Header">Feigen Ernte</div>
-                                <div class="Subheader">20.09. - 06.11.2022</div>
-                                <div class="Content">Thema Landwirtschaft und Permakultur von VOlker. Lorem ipsum dolor
-                                        sit
-                                        amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                                        labore et
-                                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-                                        duo
-                                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-                                        Lorem ipsum
-                                        dolor sit amet.</div>
+                                <img class="Image2" src="">
+                                <div class="Header" id="2"></div>
+                                <div class="Subheader"></div>
+                                <div class="Content"></div>
                                 <div class="Share"></div>
                                 <div class="Button"></div>
                         </div>
                 </li>
-                <li class="eventItem">
-                        <div class="group_event_01">
-                                <div class="Image"> <img src="./resources/images/event_page/IMG_event_olivenernte.png"
-                                                id="Img">
-                                </div>
-                                <div class="Header">Oliven Ernte</div>
-                                <div class="Subheader">24.10. - 06.11.2022</div>
-                                <div class="Content">Thema Landwirtschaft und Permakultur von VOlker. Lorem ipsum dolor
-                                        sit
-                                        amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                                        labore et
-                                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-                                        duo
-                                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-                                        Lorem ipsum
-                                        dolor sit amet.</div>
-                                <div class="Share"></div>
-                                <div class="Button"></div>
-                        </div>
-                </li>
-                <li class="eventItem">
-                        <div class="group_event_02">
-                                <div class="Image"> <img
-                                                src="./resources/images/event_page/IMG_event_traumaworkshop.png"
-                                                id="Img"></div>
-                                <div class="Header">Trauma Workshop</div>
-                                <div class="Subheader">16.11. - 18.11.2022</div>
-                                <div class="Content">Thema Landwirtschaft und Permakultur von VOlker. Lorem ipsum dolor
-                                        sit
-                                        amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                                        labore et
-                                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-                                        duo
-                                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-                                        Lorem ipsum
-                                        dolor sit amet.</div>
-                                <div class="Share"></div>
-                                <div class="Button"></div>
-                        </div>
-                </li>
-        </ul>
 
+                <li class="overViewElement">
+                        <div class="overViewSubheader"></div>
+                        <div class="overViewHeader"></div>
+                </li>
+        </template>
 </body>
 
 </html>
