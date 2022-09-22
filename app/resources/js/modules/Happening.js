@@ -1,3 +1,5 @@
+import Observable from "../utils/Observable.js";
+
 function InitHappening(happening) {
 
     const happeningElement01 = happening.clone.querySelector('.happeningElement01');
@@ -32,9 +34,10 @@ function InitHappening(happening) {
     //   });
 }
 
-class Happening {
+class Happening extends Observable{
     constructor(type, data, index, htmlClone) {       //type: 0 = Event, 1 = Project // data = { .header, .time, .content, .image}
 
+        super();
         this.type = type;
         this.data = data;
         this.index = index;

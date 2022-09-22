@@ -1,4 +1,4 @@
-import { Event, Observable } from "../utils/Obervable.js";
+import { Event, Observable } from "../utils/Observable.js";
 
 
 //TODO: 

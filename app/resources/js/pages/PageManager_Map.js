@@ -1,5 +1,5 @@
 import MapManager from "../modules/MapManager.js";
-import { Event, Observable } from "../utils/"
+import { Event, Observable } from "../utils/Observable.js"
 //import DataPageManager from "../utils/DataPageManager.js";
 
 let myMapManager;
