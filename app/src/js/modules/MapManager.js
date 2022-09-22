@@ -51,7 +51,7 @@ class MapManager {
   showMarkers(zoomLevel) {
 
     this.MarkerList.forEach(marker => {
-      if (marker.zoomLevel == zoomLevel) {
+      if (marker.zoomLevel === zoomLevel) {
         // this.map.addLayer(marker.marker);
         //console.log(marker.marker);
         marker.marker.addTo(this.map);

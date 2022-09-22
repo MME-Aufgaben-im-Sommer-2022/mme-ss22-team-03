@@ -1,11 +1,12 @@
+/* eslint-disable default-case */
 import PageManager_Map from "../js/pages/PageManager_Map.js";
 import PageManager_Events from "../js/pages/PageManager_Events.js";
 import PageManager_Mitgliedschaft from "../js/pages/PageManager_Mitgliedschaft.js";
 import PageManager_Spenden from "../js/pages/PageManager_Spenden.js";
 import NavBar from "../js/modules/NavBar.js";
 
-let currentPage;
-let myNavBar;
+let currentPage,
+    myNavBar;
 
 function init() {
     initNavBar();
@@ -59,9 +60,10 @@ function initPage() {
             break;
         case "notfound":
             break;
+        default:
+            break;
     }
 }
-
 
 /**
    * This function switches the current shown .HTML to the new Page

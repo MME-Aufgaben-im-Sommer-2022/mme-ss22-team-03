@@ -1,5 +1,5 @@
 import MapManager from "../modules/MapManager.js";
-import { Event, Observable } from "../utils/Observable.js"
+import { Observable } from "../utils/Observable.js"
 //import DataPageManager from "../utils/DataPageManager.js";
 
 let myMapManager;
@@ -118,13 +118,11 @@ function initControls(pageManager) {
       'button_zoomSurrounding')[0],
   }
 
-  pageManager.controls.zoomButtonPastina.addEventListener("click", function (
-    e) {
+  pageManager.controls.zoomButtonPastina.addEventListener("click", function () {
     pageManager.setMapState("pastina");
   });
 
-  pageManager.controls.zoomButtonSurroundings.addEventListener("click", function (
-    e) {
+  pageManager.controls.zoomButtonSurroundings.addEventListener("click", function () {
     pageManager.setMapState("surrounding");
   });
 
@@ -194,6 +192,8 @@ export default class PageManager_Map extends Observable {
         this.controls.zoomButtonSurroundings.classList.add('active');
         this.controls.zoomButtonPastina.classList.remove('active');
         myMapManager.flyTo(this.startCoords, 12);
+        break;
+      default:
         break;
     }
   }

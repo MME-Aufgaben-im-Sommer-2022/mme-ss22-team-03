@@ -1,4 +1,4 @@
-import { Event, Observable } from "../utils/Observable.js";
+import { Observable } from "../utils/Observable.js";
 
 /**
    * This function initializes every other init function

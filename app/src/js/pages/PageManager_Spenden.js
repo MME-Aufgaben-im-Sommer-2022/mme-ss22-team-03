@@ -1,4 +1,4 @@
-import { Event, Observable } from "../utils/Observable.js";
+import { Observable } from "../utils/Observable.js";
 
 
 function initManager(manager) {
@@ -6,7 +6,7 @@ function initManager(manager) {
     initControls(manager);
 }
 
-function initControls(manager) {
+function initControls() {
 
     // manager.controls = {
     //     jetztSpenden: document.getElementsByName('jetztSpendenID')[0],
