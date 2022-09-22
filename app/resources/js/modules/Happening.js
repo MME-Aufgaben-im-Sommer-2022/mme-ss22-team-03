@@ -61,8 +61,6 @@ class Happening_Request {
 
         this.header = header;
         this.subheader = subheader;
-
-        console.log(this.header + " / " + this.subheader);
     }
 }
 
