@@ -1,0 +1,157 @@
+
+#ProgressBarHolder {
+
+    height: 420px;
+    width: auto;
+    background-color: var(--green);
+    position: relative;
+    padding-top: 4%;
+
+}
+
+#_06shareText {
+
+
+    position: absolute;
+    /* width: 161px;
+    height: 24px; */
+
+    bottom: 20%;
+    left: 50%;
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    text-align: center;
+    color: white;
+
+}
+
+
+#_06Btn {
+
+
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+
+
+    width: auto;
+    height: auto;
+
+}
+
+#_06whatsAppBtn {
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
+#progress {
+
+    width: 70%;
+
+    float: left;
+    height: 31px;
+    background: #FFFFFF;
+    /* deleted "/"*/
+    background: -webkit-linear-gradient(-90deg, #FFFFFF, #FFFFFF);
+    /* For Safari 5.1 to 6.0 */
+    background: -moz-linear-gradient(-90deg, #FFFFFF, #FFFFFF);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, #FFFFFF, #FFFFFF);
+    /* Standard syntax */
+   /* z-index: 333;*/
+   
+  
+}
+
+#countdown-wrap {
+    width: 120%;
+    height: 160px;
+    padding: 20px;
+    font-family: 'Abel';
+    font-weight: 400;
+    color:#FFFFFF;
+    
+}
+
+
+#progressBarNoteText{
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 24px;
+}
+
+#progressBarHeader{
+
+    font-family: 'Fahkwang';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    color: #FFFFFF;
+    line-height: 50px;
+}
+
+
+#progressGoal {
+
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    right: 0%;
+    margin: 2%;
+}
+
+#progressCurrentValue {
+    
+    position: absolute;
+    
+    color: #FFFFFF;
+    line-height: 18px;
+    font-family: 'Abel';
+    font-size: 18px;
+    text-align: center;
+
+    left: 0%;
+    margin: 2%;
+    
+}
+
+@media only screen and (max-width: 540px) {
+    #progressGoal {
+        text-align: center;
+    
+    }
+}
+
+/* deleted background: #ee0e00;
+changed float from left to none */
+#glass {
+    width: 80%;
+    height: 31px;
+    float: none;
+    overflow: hidden;
+    background-color: transparent;
+    border: thin solid white;
+    
+}
+
+
+@media only screen and (max-width: 540px) {
+    #progressCurrentValue {
+        width: 40%;
+        text-align: center;
+    }
+}
