@@ -2,58 +2,61 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pastina</title>
-    <link rel="icon" type="image/x-icon" href="/app/resources/images/navigation-bar/Pastina_Tab_Logo.png">
-    <link rel="stylesheet" href="./resources/css/landing.css">
-    <link rel="stylesheet" href="./resources/css/navigation-bar.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pastina</title>
+        <link rel="icon" type="image/x-icon" href="/app/resources/images/navigation-bar/Pastina_Tab_Logo.png">
+        <link rel="stylesheet" href="./resources/css/landing.css">
+        <link rel="stylesheet" href="./resources/css/navigation-bar.css">
 
-    <div class="navigation-bar">
-        
-        <!-- Über Uns  -->
-        <left onclick="window.location.href = 'uber_uns.html';" style="cursor: pointer;">
-                Über uns
-        </left>
 
-        <!-- Spenden -->
-        <left onclick="window.location.href = 'Spenden.html';" style="cursor: pointer;">
-                Spenden
-        </left>
+        <!-- index  -->
+        <script type="module" src="./resources/js/index.js"></script>
 
-        <!-- Mitgliedschaft -->
-        <left onclick="window.location.href = 'Mitgliedschaft.html';" style="cursor: pointer;">
-                Mitglied werden
-        </left>
 
-        <!-- Logo -->
-        <logo onclick="window.location.href = 'index.html';" style="cursor: pointer;">
-                <img src="./resources/images/navigation-bar/logo.svg" />
-        </logo>
+        <div class="navigation-bar">
 
-        <!-- Mitmachen -->
-        <right onclick="window.location.href = 'Events.html';" style="cursor: pointer;">
-                Mitmachen
-        </right>
-  
-        <!-- Aktuelles -->
-        <right id="active" onclick="window.location.href = 'Aktuelles.html';" style="cursor: pointer;">
-                Aktuelles
-        </right>
+                <!-- Über Uns  -->
+                <left name="navBarPage" id="uber_uns" style="cursor: pointer;">
+                        Über uns
+                </left>
 
-        <!-- Gallerie | Map  -->
-        <right onclick="window.location.href = 'Map.html';" style="cursor: pointer;">
-                Gallerie | Map
-        </right>
-    </div>
+                <!-- Spenden -->
+                <left name="navBarPage" id="Spenden" style="cursor: pointer;">
+                        Spenden
+                </left>
+
+                <!-- Mitgliedschaft -->
+                <left name="navBarPage" id="Mitgliedschaft" style="cursor: pointer;">
+                        Mitglied werden
+                </left>
+
+                <!-- Logo -->
+                <logo class="active"  name="navBarPage" id="index" style="cursor: pointer;">
+                        <img src="./resources/images/navigation-bar/logo.svg" />
+                </logo>
+
+                <!-- Mitmachen -->
+                <right name="navBarPage" id="Events" style="cursor: pointer;">
+                        Mitmachen
+                </right>
+
+                <!-- Aktuelles -->
+                <right name="navBarPage" id="Aktuelles"  id="active" style="cursor: pointer;">
+                        Aktuelles
+                </right>
+
+                <!-- Gallerie | Map  -->
+                <right name="navBarPage" id="Map" style="cursor: pointer;">
+                        Gallerie | Map
+                </right>
+        </div>
 </head>
 
-<body>  <!-- PAGE: LANDING -->
-        <img class="logo_landing" src="./resources/images/landing_page_img/logo copy.svg" />
-        <img class="img_landing" src="./resources/images/landing_page_img/screenshot_2022_06_23_at_10_49_3.png" />
-=======
-    <title>MME: Projekte im SS 2022</title>
-    <link rel="stylesheet" href="./resources/css/style.css">
-</head>
+<body>
+        <!-- PAGE: LANDING -->
+        <img class="logo_landing" src="./resources/images/landing_page/logo copy.svg" />
+        <img class="img_landing" src="./resources/images/landing_page/IMG_landing_001.png" />
+</body>
 
 </html>

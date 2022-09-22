@@ -71,22 +71,37 @@ body {
 
 .Image {
     grid-area: Image;
-
+    margin-top: 6%;
     max-width: 100%;
     max-height: 100%;
     display: block;
     overflow: hidden;
 
     object-fit: cover;
+    padding-left: 25%;
 }
+
+.Image2 {
+    grid-area: Image;
+    margin-top: 6%;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    overflow: hidden;
+
+    object-fit: cover;
+    padding-right: 25%;
+}
+
+
 
 #Img {
     width: auto;
     height: auto;
-
+    
     overflow: hidden;
 }
-
+/*
 .Header {
     grid-area: Header;
     background-color: #2200ff00;
@@ -96,24 +111,45 @@ body {
     padding-top: 50px;
 
     font-family: Fahkwang;
-    font-size: 100px;
+    font-size: 90px;
     font-weight: 400;
     line-height: 90px;
     letter-spacing: 0em;
     text-align: left;
 }
+*/
 
+.Header {
+    background-color: #2200ff00;
+    padding-top: 60%;
+
+    font-family: Fahkwang;
+    font-size: 90px;
+    
+}
+
+/*
 .Subheader {
     grid-area: Subheader;
     background-color: #5cfff700;
 
     font-family: Fahkwang;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 400;
     line-height: 50px;
     letter-spacing: 0em;
     text-align: left;
+}
+*/
 
+.Subheader {
+    grid-area: Header;
+    background-color: #5cfff700;
+
+    font-family: Fahkwang;
+    font-size: 50px;
+
+    padding-top: 0%;
 }
 
 .Content {
@@ -123,16 +159,41 @@ body {
 
     padding-right: 50%;
 
-    grid-area: Content;
+    grid-area: Header;
     background-color: #bc2f1900;
 
-    font-family: Abel;
-    font-size: 18px;
+    font-family: Fahkwang;
+    font-size: 24px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
+}
 
+/*
+.Content {
+
+    grid-area: Header;
+    background-color: #5cfff700;
+
+    font-family: Fahkwang;
+    font-size: 24px;
+
+    padding-top: 20%;
+}   
+*/ 
+
+.overViewHeader{
+    padding-left: 40%;
+    font-family: Fahkwang;
+    font-size: 50px;
+}
+
+.overViewSubheader{
+    margin-top: 4%;
+    padding-left: 40%;
+    font-family: Fahkwang;
+    font-size: 20px;
 }
 
 .Share {
