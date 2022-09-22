@@ -24,7 +24,7 @@ function initPlaceList(manager) {
   manager.overViewList = document.getElementsByName("overViewEL");
 
   var Icon = L.icon({
-    iconUrl: './resources/images/map_page/marker.png',
+    iconUrl: './src/images/map_page/marker.png',
 
     iconSize: [35, 50], // size of the icon
     iconAnchor: [17.5,
