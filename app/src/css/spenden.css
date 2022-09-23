@@ -45,7 +45,7 @@ body {
 
 }
 
-.button {
+.buttonOLD {
     text-align: center;
 
     background: url(../images/buttons/button_IMG-Background-orange.svg);
@@ -60,7 +60,7 @@ body {
 
 }
 
-#donationBtn {
+#donationBtnOLD {
 
     position: absolute;
     width: 158px;
