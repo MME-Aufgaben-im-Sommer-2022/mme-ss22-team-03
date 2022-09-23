@@ -56,14 +56,14 @@ class Happening extends Observable {
     }
 }
 
-class Happening_Request {
-    constructor(header, subheader) {
+// class Happening_Request {
+//     constructor(header, subheader) {
 
-        this.header = header;
-        this.subheader = subheader;
+//         this.header = header;
+//         this.subheader = subheader;
 
-        console.log(this.header + " / " + this.subheader);
-    }
-}
+//         console.log(this.header + " / " + this.subheader);
+//     }
+// }
 
 export default Happening;
