@@ -1,10 +1,5 @@
 import { Observable } from "../utils/Observable.js";
 
-
-//TODO: 
-// - Add Event List Manager
-// - Connect Event List to SQL
-
 function initManager(manager) {
 
     initControls(manager);
