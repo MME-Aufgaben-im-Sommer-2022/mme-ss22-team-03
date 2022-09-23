@@ -89,6 +89,7 @@ function initPlaceList() {
 function initEventList() {
 
     var OlivenErnteData = {
+        id: "OE",
         header: "Oliven Ernte",
         subheader: "24.10. - 06.11.2022",
         content: "Thema Olivenernte. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",

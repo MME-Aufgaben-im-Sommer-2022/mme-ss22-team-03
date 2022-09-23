@@ -60,8 +60,9 @@ class PageManager_Events extends Observable {
         initManager(this);
     }
 
-    exampleFunction() {
-        console.log("example");
+    openRequest(id) {
+        console.log(id);
+        //TODO: Fetch correct Happening and call openRequest
     }
 }
 
