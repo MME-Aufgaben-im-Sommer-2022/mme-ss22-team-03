@@ -5,6 +5,7 @@ import PageManager_Events from "../js/pages/PageManager_Events.js";
 import PageManager_Mitgliedschaft from "../js/pages/PageManager_Mitgliedschaft.js";
 import PageManager_Spenden from "../js/pages/PageManager_Spenden.js";
 import NavBar from "../js/modules/NavBar.js";
+import { getHappeningDataList, getPlaceDataList } from "../js/utils/SQLHardoce.js";
 
 let myNavBar;
 
@@ -50,10 +51,10 @@ function initPage() {
             currentPage = new PageManager_Mitgliedschaft();
             break;
         case "Events":
-            currentPage = new PageManager_Events();
+            currentPage = new PageManager_Events(getHappeningDataList());
             break;
         case "Map":
-            currentPage = new PageManager_Map();
+            currentPage = new PageManager_Map(getPlaceDataList());
             break;
         case "index":
             //console.log("INDEX PAGE INSTANTIATED");

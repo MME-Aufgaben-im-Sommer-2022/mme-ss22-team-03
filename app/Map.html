@@ -78,26 +78,12 @@
 
         <div id="PlacesOverview">
 
-                <!-- TODO: Implement data-page for pastina // surrounding -->
-                <ul id="pastina">
-                        <li id="OG" name="overViewEL" class="active" style="cursor: pointer;">
-                                Obergeschoss - Matratzenlager
-                        </li>
-                        <li id="EG" name="overViewEL" style="cursor: pointer;">
-                                Erdgeschoss - Zimmer, Küche, Bad
-                        </li>
-                        <li id="OW" name="overViewEL" style="cursor: pointer;">
-                                Obstwiese
-                        </li>
-                        <li id="OP" name="overViewEL" style="cursor: pointer;">
-                                Olivenplantagen
-                        </li>
-                        <li id="YR" name="overViewEL" style="cursor: pointer;">
-                                Yoga Raum
-                        </li>
-                        <li id="H" name="overViewEL" style="cursor: pointer;">
-                                Hütte
-                        </li>
+                <ul class="overViewList">
+                </ul>
+        </div>
+
+        <div>
+                <ul class="contentList">
                 </ul>
         </div>
 
@@ -147,6 +133,16 @@
                         </div>
                 </div>
         </div>
+
+        <template id="placeTemplate">
+                <li name="placeOverViewElement" style="cursor: pointer;" id="">
+                </li>
+                <li class="placeContentElement">
+                        <div data-page="" class="placeContent">
+                        </div>
+                </li>
+        </template>
+
 </body>
 
 </html>
