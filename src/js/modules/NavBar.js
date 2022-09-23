@@ -11,7 +11,7 @@ function initListeners(navigationBar) {
 
     //  Adds EventListener to all Page Text in Navigation Bar
     navigationBar.navBarList.forEach(element => {
-        element.addEventListener('click', function () { navigationBar.pageClicked(element.id) })
+        element.addEventListener('click', function () { navigationBar.pageClicked(element.id); });
     });
 }
 

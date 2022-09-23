@@ -1,4 +1,4 @@
-import { Event, Observable } from "../utils/Observable.js";
+import { Observable } from "../utils/Observable.js";
 
 
 //TODO: 
@@ -10,7 +10,7 @@ function initManager(manager) {
     initControls(manager);
 }
 
-function initControls(manager) {
+function initControls() {
 
     // manager.controls = {
     //     exampleButton: document.getElementsByName('exampleID')[0],
