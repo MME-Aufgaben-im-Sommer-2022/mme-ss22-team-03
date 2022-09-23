@@ -1,6 +1,5 @@
 import { Observable } from "../utils/Observable.js";
 
-
 function initManager(manager) {
 
     initControls(manager);
