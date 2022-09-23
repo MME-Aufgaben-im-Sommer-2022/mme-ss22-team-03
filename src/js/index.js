@@ -48,12 +48,14 @@ function sendRequestCall(event) {
 
 function scroll(event) {
     console.log("Scroll " + event.data);
-    if (event.data === "Up") {
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
-    } else if (event.data === "Down") {
-        //TODO: Scroll to specific Element
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
-    }
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+    // if (event.data === "Up") {
+    //     document.body.scrollTop = document.documentElement.scrollTop = 0;
+    // } else if (event.data === "Down") {
+    //     //TODO: Scroll to specific Element
+    //     document.body.scrollTop = document.documentElement.scrollTop = 0;
+    // }
 }
 
 /**
