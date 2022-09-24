@@ -15,3 +15,10 @@ _Beschreiben Sie die zentralen Funktionen Ihrer Anwendung und deren Verwendung. 
 ## Team
 
 _Listen Sie tabelarisch alle Teammitglieder mit Name, E-Mail-Adresse und Foto auf. Halten Sie für jedes Mitglied kurz fest, welchen Teilbereich der Anwendung die jeweilige Person maßgeblich bearbeitet hat._
+
+
+| Samuel Huber                       | Kristina Neumüller                        | Dena Mehr                        |
+| -----------------------------------|:-----------------------------------------:| --------------------------------:|
+| samuel.huber@stud.uni-regensburg.de| kristina.neumueller@stud.uni-regensburg.de| dena.mehr@stud.uni-regensburg.de |
+| Foto      | Foto      |   Foto |
+| zebra stripes | are neat      |    $1 |
