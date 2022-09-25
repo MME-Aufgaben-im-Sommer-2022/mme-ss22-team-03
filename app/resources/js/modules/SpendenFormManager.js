@@ -1,6 +1,5 @@
 import { Event, Observable } from "../utils/Obervable.js";
 
-
 function init(manager) {
     initControls(manager);
     initEvents(manager);
@@ -33,8 +32,6 @@ function initControls(manager) {
         input_email: document.querySelector('[name="TextInput_Email"]'),
     }
 }
-
-
 
 function initEvents(manager) {
     manager.controls.next.addEventListener("click", manager.checkInput
@@ -136,7 +133,7 @@ class SpendenFormManager extends Observable {
                 FormData.city = this.data.input_city.value;
                 FormData.email = this.data.input_email.value;
 
-                this.switchPage("step3")
+                this.switchPage("step3");
                 console.log("prename: " + FormData.prename + " | surname: " + FormData.surname + " | street: " + FormData.street + " | plz: " + FormData.plz + " | city: " + FormData.city + FormData.surname + " | email: " + FormData.email);
 
                 break;
@@ -144,7 +141,7 @@ class SpendenFormManager extends Observable {
                 //TODO: Online Payment Plugin
                 break;
             case "none":
-                this.switchPage("none")
+                this.switchPage("none");
                 break;
             default:
                 break;
