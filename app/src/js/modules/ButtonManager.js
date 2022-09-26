@@ -41,7 +41,7 @@ class ButtonManager extends Observable {
             case "request":
                 event = new Event(id, name);
                 break;
-            case "scroll":
+            case "scroll": 
                 event = new Event(id, name);
                 break;
             default:
