@@ -15,12 +15,20 @@
     background-color: var(--snow);
 } */
 
+*{
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: var(--snow);
     font-family: 'Space Grotesk', sans-serif;
 
     width: 100%;
+}
+
+.navigation-bar {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 .group {
