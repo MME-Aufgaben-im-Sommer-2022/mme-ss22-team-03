@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable default-case */
-import PageManager_Map from "../js/pages/PageManager_Map.js";
-import PageManager_Events from "../js/pages/PageManager_Events.js";
-import PageManager_Mitgliedschaft from "../js/pages/PageManager_Mitgliedschaft.js";
-import PageManager_Spenden from "../js/pages/PageManager_Spenden.js";
+import PageManagerMap from "../js/pages/PageManagerMap.js";
+import PageManagerEvents from "../js/pages/PageManagerEvents.js";
+import PageManagerMitgliedschaft from "../js/pages/PageManagerMitgliedschaft.js";
+import PageManagerSpenden from "../js/pages/PageManagerSpenden.js";
 import NavBar from "../js/modules/NavBar.js";
 import { getHappeningDataList, getPlaceDataList } from "../js/utils/SQLHardoce.js";
 
@@ -45,16 +45,16 @@ function initPage() {
         case "Uber_uns":
             break;
         case "Spenden":
-            currentPage = new PageManager_Spenden();
+            currentPage = new PageManagerSpenden();
             break;
         case "Mitgliedschaft":
-            currentPage = new PageManager_Mitgliedschaft();
+            currentPage = new PageManagerMitgliedschaft();
             break;
         case "Events":
-            currentPage = new PageManager_Events(getHappeningDataList());
+            currentPage = new PageManagerEvents(getHappeningDataList());
             break;
         case "Map":
-            currentPage = new PageManager_Map(getPlaceDataList());
+            currentPage = new PageManagerMap(getPlaceDataList());
             break;
         case "index":
             //console.log("INDEX PAGE INSTANTIATED");
