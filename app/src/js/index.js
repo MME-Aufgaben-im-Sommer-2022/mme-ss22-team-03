@@ -11,17 +11,11 @@ import ButtonManager from "../js/modules/ButtonManager.js";
 let myNavBar,
     myButtonManager,
     currentPage;
- 
-const whatsappBtn = document.querySelector(".06whatsAppBtn");
 
-whatsappBtn.addEventListener("click",()=>{
-    console.log("Clicked");
-});
 function init() {
     initNavBar();
     initButtonManager();
     initPage();
-    iniDonateBtn();
 }
 
 /**
@@ -44,7 +38,7 @@ function initButtonManager() {
     myButtonManager.addEventListener("switchPage", switchPage);
     myButtonManager.addEventListener("request", sendRequestCall);
     myButtonManager.addEventListener("scroll", scroll);
-
+    myButtonManager.addEventListener("share", shareButtonClick);
 }
 
 function sendRequestCall(event) {
@@ -112,9 +106,22 @@ function switchPage(event) {
     window.location.replace(newPageString);
 }
 
-function iniDonateBtn(){
+function shareButtonClick(event) {
+    console.log(event.data);
+
     let postUrl = encodeURI(document.location.href);
     const postTitle = encodeURI("Hi everyone, please check this out: ");
+
+    switch (event.data) {
+        case "whatsapp":
+            break;
+        case "telegram":
+            break;
+        default:
+            break;
+    }
+
+    //TODO: Share function with href
 
 }
 init();

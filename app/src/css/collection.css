@@ -38,6 +38,10 @@
     background-color: var(--mint);
 }
 
+#share {
+    background-color: var(blue);
+}
+
 #switchPage {
     background-color: var(--green);
 }
