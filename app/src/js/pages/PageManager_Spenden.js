@@ -25,9 +25,6 @@ class PageManager_Spenden extends Observable {
         initManager(this);
     }
 
-    exampleFunction() {
-        console.log("example");
-    }
 }
 
 export default PageManager_Spenden;
