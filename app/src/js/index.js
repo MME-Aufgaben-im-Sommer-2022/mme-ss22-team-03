@@ -6,12 +6,15 @@ import PageManager_Mitgliedschaft from "../js/pages/PageManager_Mitgliedschaft.j
 import PageManager_Spenden from "../js/pages/PageManager_Spenden.js";
 import NavBar from "../js/modules/NavBar.js";
 import { getHappeningDataList, getPlaceDataList } from "../js/utils/SQLHardoce.js";
+import { sendTest } from "../js/utils/FireBaseDataHandler.js";
 
 let myNavBar;
 
 function init() {
     initNavBar();
     initPage();
+
+    sendTest();
 }
 
 /**
