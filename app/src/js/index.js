@@ -11,11 +11,17 @@ import ButtonManager from "../js/modules/ButtonManager.js";
 let myNavBar,
     myButtonManager,
     currentPage;
+ 
+const whatsappBtn = document.querySelector(".06whatsAppBtn");
 
+whatsappBtn.addEventListener("click",()=>{
+    console.log("Clicked");
+});
 function init() {
     initNavBar();
     initButtonManager();
     initPage();
+    iniDonateBtn();
 }
 
 /**
@@ -106,4 +112,9 @@ function switchPage(event) {
     window.location.replace(newPageString);
 }
 
+function iniDonateBtn(){
+    let postUrl = encodeURI(document.location.href);
+    const postTitle = encodeURI("Hi everyone, please check this out: ");
+
+}
 init();
