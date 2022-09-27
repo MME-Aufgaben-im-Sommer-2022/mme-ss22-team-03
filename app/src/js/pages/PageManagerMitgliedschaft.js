@@ -17,17 +17,11 @@ function initControls() {
     // });
 }
 
-class PageManager_Mitgliedschaft extends Observable {
+export default class PageManagerMitgliedschaft extends Observable {
 
     constructor() {
         super();
 
         initManager(this);
     }
-
-    exampleFunction() {
-        console.log("example");
-    }
 }
-
-export default PageManager_Mitgliedschaft;

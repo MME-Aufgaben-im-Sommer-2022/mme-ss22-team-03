@@ -10,15 +10,17 @@ function InitHappening(happening) {
     if (happening.index % 2 === 0) {
         htmlClone = happeningElement01.cloneNode(true);
         htmlClone.querySelector(".Image").src = happening.data.imageSrc;
+        htmlClone.querySelector(".Header").textContent = happening.data.header;
+        htmlClone.querySelector(".Subheader").textContent = happening.data.subheader;
+        htmlClone.querySelector(".Content").textContent = happening.data.content;
 
     } else {
         htmlClone = happeningElement02.cloneNode(true);
         htmlClone.querySelector(".Image2").src = happening.data.imageSrc;
+        htmlClone.querySelector(".Header2").textContent = happening.data.header;
+        htmlClone.querySelector(".Subheader2").textContent = happening.data.subheader;
+        htmlClone.querySelector(".Content2").textContent = happening.data.content;
     }
-
-    htmlClone.querySelector(".Header").textContent = happening.data.header;
-    htmlClone.querySelector(".Subheader").textContent = happening.data.subheader;
-    htmlClone.querySelector(".Content").textContent = happening.data.content;
 
     happening.htmlData = htmlClone;
 
