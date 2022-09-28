@@ -4,22 +4,22 @@ function init(manager) {
 
     initInputFields(manager);
 
-    manager.checkInput();
+    manager.readInput();
 }
 
 function initInputFields(manager) {
 
     manager.data = {
-        inputPrename: document.querySelector('[name="TextinputPrename"]'),
-        inputSurname: document.querySelector('[name="TextinputSurname"]'),
-        inputStreet: document.querySelector('[name="TextinputStreet"]'),
-        inputCity: document.querySelector('[name="TextinputCity"]'),
-        inputEmail: document.querySelector('[name="TextinputEmail"]'),
+        inputPrename: document.querySelector("[name=\"inputPrename\"]"),
+        inputSurname: document.querySelector("[name=\"inputSurname\"]"),
+        inputStreet: document.querySelector("[name=\"inputStreet\"]"),
+        inputCity: document.querySelector("[name=\"inputCity\"]"),
+        inputEmail: document.querySelector("[name=\"inputEmail\"]"),
     };
 
-    if (manager.myPageID === "mitgliedschaft") {
-        manager.data.inputMobile = document.querySelector('[name="TextinputEmail"]');
-        manager.data.inputBirthday = document.querySelector('[name="TextinputEmail"]');
+    if (manager.myPageID === "Mitgliedschaft") {
+        manager.data.inputMobile = document.querySelector("[name=\"inputMobile\"]");
+        manager.data.inputBirthday = document.querySelector("[name=\"inputBirthday\"]");
     }
 }
 
@@ -53,22 +53,22 @@ export default class FormReader extends Observable {
             this.isValid = true;
         }
 
-        if (this.myPageID === "mitgliedschaft") {
+        if (this.myPageID === "Mitgliedschaft") {
             if (this.data.inputMobile.value === "" || this.data.inputMobile.value === null || this.data.inputBirthday.value === "" || this.data.inputBirthday.value === null) {
                 this.isValid = false;
             }
         }
 
         if (this.isValid) {
-            FormData.prename = this.data.inputPrename.value;
-            FormData.surname = this.data.inputSurname.value;
-            FormData.street = this.data.inputStreet.value;
-            FormData.city = this.data.inputCity.value;
-            FormData.email = this.data.inputEmail.value;
+            this.FormData.prename = this.data.inputPrename.value;
+            this.FormData.surname = this.data.inputSurname.value;
+            this.FormData.street = this.data.inputStreet.value;
+            this.FormData.city = this.data.inputCity.value;
+            this.FormData.email = this.data.inputEmail.value;
 
-            if (this.myPageID === "mitgliedschaft") {
-                FormData.mobile = this.data.inputMobile.value;
-                FormData.birthday = this.data.inputBirthday.value;
+            if (this.myPageID === "Mitgliedschaft") {
+                this.FormData.mobile = this.data.inputMobile.value;
+                this.FormData.birthday = this.data.inputBirthday.value;
             }
         }
     }

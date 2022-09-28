@@ -4,25 +4,28 @@ import FormReader from "../modules/FormReader.js";
 function initManager(manager) {
 
     initControls(manager);
-
+    initListeners(manager);
 }
 
-function initControls() {
+function initControls(manager) {
 
-    // manager.controls = {
-    //     jetztSpenden: document.getElementsByName('jetztSpendenID')[0],
-    // }
+    manager.controls = {
+        Test: document.getElementById("TEST"),
+    };
+}
 
-    // manager.controls.jetztSpenden.addEventListener("click", function (
-    //     e) {
-    //     manager.exampleFunction("value"); // -> call index.jetztSpenden();
-    // });
+function initListeners(manager) {
+    manager.controls.Test.addEventListener("click", () => {
+        manager.checkInputData();
+    });
 }
 
 export default class PageManagerSpenden extends Observable {
 
-    constructor() {
+    constructor(pageID) {
         super();
+
+        this.myPageId = pageID;
 
         initManager(this);
     }
@@ -31,7 +34,7 @@ export default class PageManagerSpenden extends Observable {
         var myFormReader,
             inputData;
 
-        myFormReader = new FormReader();
+        myFormReader = new FormReader(this.myPageId);
 
         if (myFormReader.isValid) {
             inputData = myFormReader.getData();

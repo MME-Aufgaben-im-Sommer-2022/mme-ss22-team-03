@@ -45,7 +45,7 @@ function initPage() {
         case "Uber_uns":
             break;
         case "Spenden":
-            currentPage = new PageManagerSpenden();
+            currentPage = new PageManagerSpenden(pageID);
             break;
         case "Mitgliedschaft":
             currentPage = new PageManagerMitgliedschaft();
