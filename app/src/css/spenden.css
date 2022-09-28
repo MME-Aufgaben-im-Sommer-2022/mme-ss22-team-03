@@ -255,10 +255,23 @@ body {
 
 #SpendenFormHolder {
     position: relative;
-    height: 1432px;
+    height: 800px;
 
     margin: auto;
-    width: 50%;
+}
+
+#SpendenFormHeader {
+    position: relative;
+    height: 300px;
+
+    margin: auto;
+}
+
+#SpendenFormContent {
+    position: relative;
+    height: 500px;
+
+    margin: auto;
 }
 
 /* Only edit this if you know what you are doing! */
