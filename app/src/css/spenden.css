@@ -322,15 +322,15 @@ body {
     opacity: 100%;
 }
 
-#Step1::after {
+#step1Text::after {
     content: 'Betrag & Frequenz';
 }
 
-#Step2::after {
+#step2Text::after {
     content: 'Persönliche Angaben';
 }
 
-#Step3::after {
+#step3Text::after {
     content: 'Zahlungsart';
 }
 

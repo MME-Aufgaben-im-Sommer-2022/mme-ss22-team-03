@@ -11,9 +11,9 @@ function initControls(manager) {
 
     manager.controls = {
         NextButton: document.querySelector(".SFHeader_Btn"),
-        Step1: document.querySelector("[id='Step1']"),
-        Step2: document.querySelector("[id='Step2']"),
-        Step3: document.querySelector("[id='Step3']"),
+        Step1: document.querySelector("[id='step1Text']"),
+        Step2: document.querySelector("[id='step2Text']"),
+        Step3: document.querySelector("[id='step3Text']"),
 
         Test: document.getElementById("TEST"),
     };
@@ -72,11 +72,20 @@ export default class PageManagerSpenden extends Observable {
         if (step === "step3" && !this.checkInputData()) {
             return;
         }
-
         this.switchFormStep(step);
     }
 
     switchFormStep(step) {
+
+        // var tempStepList = document.querySelectorAll(".SFHeader_StepDiv");
+
+        // Array.from(tempStepList).forEach(element => {
+        //     element.classList.remove("active");
+        //     if (element.id === step + "Text") {
+        //         element.classList.add("active");
+        //     }
+        // });
+
         this.currentFormStep = step;
         Dage.update();
         Dage.navigate(step);
