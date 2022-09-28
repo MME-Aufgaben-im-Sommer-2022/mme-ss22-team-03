@@ -123,25 +123,29 @@
                                 in nur drei Schritten die Welt un po' verbessern
                         </div>
 
-                        <div class="SFHeader_StepDiv" id="Step">
-                                Schritt 1
+                        <div id="SFHeader_Steps">
+                                <button class="SFHeader_Btn" id="btn_prev" style="cursor: pointer;">
+                                        <span class="btn_text"> <img
+                                                        src="../app/src/images/buttons/Buton_Arrow_Left.png"></span>
+                                </button>
+                                <div class="SFHeader_StepDiv" id="Step1" style="cursor: pointer;">
+                                        Schritt 1
+                                </div>
+
+                                <div class="SFHeader_StepDiv" id="Step2" style="cursor: pointer;">
+                                        Schritt 2
+                                </div>
+
+                                <div class="SFHeader_StepDiv" id="Step3" style="cursor: pointer;">
+                                        Schritt 3
+                                </div>
+                                <button class="SFHeader_Btn" id="btn_next" style="cursor: pointer;">
+                                        <span class="btn_text"> <img
+                                                        src="../app/src/images/buttons/Buton_Arrow_Right.png"></span>
+                                </button>
                         </div>
 
-                        <div class="SFHeader_StepDiv" id="Step">
-                                Schritt 2
-                        </div>
-
-                        <div class="SFHeader_StepDiv" id="Step">
-                                Schritt 3
-                        </div>
-
-                        <div class="SFHeader_StepDiv" id="Button">
-
-                        </div>
-
-                        <div id="SFHeader_BorderBottom">
-
-                        </div>
+                        <div id="SFHeader_BorderBottom"></div>
 
                         <!-- <div id="in_nur_drei_schritten_die_welt_un_po__verbessern">
                                 in nur drei Schritten die Welt un po' verbessern
@@ -180,30 +184,24 @@
 
 
                         <div id="button_next" style="cursor: pointer;" class="buttonNext">
-                                <!-- <img src="src/images/buttons/button_IMG-Next-Right.svg" id="vector_172_ek1" /> -->
+                                <img src="src/images/buttons/button_IMG-Next-Right.svg" id="vector_172_ek1" /> -->
 
-                        </div>
-
-
-
-                        <img src="src/images/spenden_page/spenden_IMG_Line.png" id="vector_999" />
-
-
-
-                        <div id="button_backtotop" style="cursor: pointer;" class="buttonGoUp">
-                                <!-- <img src="src/images/buttons/button_IMG-Back-To-Top.svg" id="vector_172" /> -->
-
-                        </div>
-
-                        <div id="nach_oben">
-                                Nach oben
-                        </div> -->
                 </div>
 
-                <div id="SpendenFormContent">
+                <!-- <div id="button_backtotop" style="cursor: pointer;" class="buttonGoUp">
+                        <img src="src/images/buttons/button_IMG-Back-To-Top.svg" id="vector_172" />
 
-                        <!-- Step 1 -->
-                        <!-- <div data-page="step1">
+                </div>
+
+                <div id="nach_oben">
+                        Nach oben
+                </div> -->
+        </div>
+
+        <div id="SpendenFormContent">
+
+                <!-- Step 1 -->
+                <!-- <div data-page="step1">
 
                                 <div id="betrag_ek1">
                                         20
@@ -257,48 +255,48 @@
 
                         </div> -->
 
-                        <!-- Step 2 -->
-                        <div data-page="step2">
-                                <div class="user-details-input">
-                                        <span class="details-step2"> Vorname </span>
-                                        <input type="text" class="TextInput" name="inputPrename">
-                                </div>
-
-                                <div class="user-details-input">
-                                        <span class="details-step2"> Nachname </span>
-                                        <input type="text" class="TextInput" name="inputSurname">
-                                </div>
-
-                                <div class="user-details-input">
-                                        <span class="details-step2"> Straße, Nr. </span>
-                                        <input type="text" class="TextInput" name="inputStreet">
-                                </div>
-
-                                <div class="user-details-input">
-                                        <span class="details-step2"> PLZ, Ort </span>
-                                        <input type="text" class="TextInput" name="inputCity">
-                                </div>
-
-                                <div class="user-details-input">
-                                        <span class="details-step2"> E-mail </span>
-                                        <input type="email" class="EmailInput" name="inputEmail">
-                                </div>
-
-                                <div class="user-details-input">
-                                        <span class="details-step2"> Phone Number </span>
-                                        <input type="number" class="NumberInput" name="inputMobile">
-                                </div>
-
-                                <div class="user-details-input">
-                                        <span class="details-step2"> Birthday </span>
-                                        <input type="number" class="NumberInput" name="inputBirthday">
-                                </div>
-
-                                <button id="TEST">Test</button>
+                <!-- Step 2 -->
+                <div data-page="step2">
+                        <div class="user-details-input">
+                                <span class="details-step2"> Vorname </span>
+                                <input type="text" class="TextInput" name="inputPrename">
                         </div>
-                </div>
 
-                <!-- Step 3 TODO: Stripe Plugin div!
+                        <div class="user-details-input">
+                                <span class="details-step2"> Nachname </span>
+                                <input type="text" class="TextInput" name="inputSurname">
+                        </div>
+
+                        <div class="user-details-input">
+                                <span class="details-step2"> Straße, Nr. </span>
+                                <input type="text" class="TextInput" name="inputStreet">
+                        </div>
+
+                        <div class="user-details-input">
+                                <span class="details-step2"> PLZ, Ort </span>
+                                <input type="text" class="TextInput" name="inputCity">
+                        </div>
+
+                        <div class="user-details-input">
+                                <span class="details-step2"> E-mail </span>
+                                <input type="email" class="EmailInput" name="inputEmail">
+                        </div>
+
+                        <div class="user-details-input">
+                                <span class="details-step2"> Phone Number </span>
+                                <input type="number" class="NumberInput" name="inputMobile">
+                        </div>
+
+                        <div class="user-details-input">
+                                <span class="details-step2"> Birthday </span>
+                                <input type="number" class="NumberInput" name="inputBirthday">
+                        </div>
+
+                        <button id="TEST">Test</button>
+                </div>
+        </div>
+
+        <!-- Step 3 TODO: Stripe Plugin div!
                         <div data-page="step3">
 
                                 <div id="paypal">
@@ -327,8 +325,8 @@
                         </div> -->
 
 
-                <!-- Step 4 -->
-                <!-- <div data-page="step4" id="spenden_thank_you">
+        <!-- Step 4 -->
+        <!-- <div data-page="step4" id="spenden_thank_you">
                         <div id="thank_you_text">
                                 Spendenquittung kommt per Mail - Vielen Dank
                         </div>

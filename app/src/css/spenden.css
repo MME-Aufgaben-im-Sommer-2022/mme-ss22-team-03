@@ -262,7 +262,7 @@ body {
 
 #SpendenFormHeader {
     position: relative;
-    height: 300px;
+    height: auto;
 
     margin: auto;
 }
@@ -275,31 +275,97 @@ body {
 }
 
 #SFHeader_Header {
-    background-color: #d4d4d4;
 
     width: auto;
-    padding-top: 5%;
-    height: 45%;
+    padding-top: 100px;
+    height: auto;
 
     text-align: center;
-
 
     overflow: hidden;
     font-family: Abel;
     font-size: 18px;
     line-height: 24px;
     color: #303030;
+}
 
+#SFHeader_Steps {
+    height: 50%;
+    margin-bottom: 50px;
+    padding-top: 100px;
 }
 
 .SFHeader_StepDiv {
-    background-color: #EE6C4D;
     display: inline-block;
 
+    margin-left: 100px;
+    margin-right: 100px;
+
+    width: 150px;
+    height: 100px;
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    opacity: 50%;
+
+    text-align: left;
+}
+
+.SFHeader_StepDiv :hover {
+    opacity: 100%;
+}
+
+.SFHeader_StepDiv :active {
+    opacity: 100%;
+}
+
+#Step1::after {
+    content: 'Betrag & Frequenz';
+}
+
+#Step2::after {
+    content: 'Persönliche Angaben';
+}
+
+#Step3::after {
+    content: 'Zahlungsart';
+}
+
+.SFHeader_StepDiv::after {
+    text-align: left;
+
+    display: block;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    opacity: 50%;
+}
+
+.SFHeader_StepDiv::after :active {
+    opacity: 100%;
+}
+
+.SFHeader_Btn {
     width: 100px;
     height: 100px;
 
+    margin-left: 50px;
+    margin-right: 50px;
+
+    color: white;
+    border: none;
+
     text-align: center;
+    display: inline-block;
+
+    background-image: url('../images/buttons/Button-Background-Outline.png');
+    background-size: cover;
+    background-color: var(--red);
 }
 
 #SFHeader_BorderBottom {
