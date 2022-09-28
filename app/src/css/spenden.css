@@ -274,7 +274,30 @@ body {
     margin: auto;
 }
 
-/* Only edit this if you know what you are doing! */
+.step2{
+    width: 100%;
+    display: block;
+}
+/*margin-left: 2%;*/
+ .user-details-input{
+    width: 100%;
+    display: block;
+ }
+
+ .textfield__txt{
+    padding-right: 80%;
+    justify-items: left;
+    padding-left: 2%;
+ }
+.textField__input{
+    width: 80%;
+    display: block;
+    margin: 2%;
+    line-height: 24px;
+}
+
+/*
+Only edit this if you know what you are doing! */
 /* div { position: absolute; } */
 
 #background_group {
@@ -516,6 +539,7 @@ body {
     background: rgba(255, 255, 255, 0);
     position: absolute;
 }
+
 
 
 #betrag {
