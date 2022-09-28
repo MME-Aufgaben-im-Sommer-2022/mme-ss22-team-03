@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getDatabase, ref, set, child, update, remove } from "firebase/database";
+import { getDatabase, ref, set, child, update, remove, get } from "firebase/database";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -21,21 +20,16 @@ const firebaseConfig = {
 
     // Initialize Firebase
     app = initializeApp(firebaseConfig),
-    analytics = getAnalytics(app),
-    db = getDatabase();
+    db = getDatabase(),
+    dbRef = ref(db);
 
-// function SetData(data) {
-//     set(ref(db, ""))
-// }
-
-// function SendRequest(request) {
-
-// }
-
-function sendTest() {
-    set(ref(db, "Test/Value"), {
-        TestValue1: "001",
-        TestValue2: "002",
+function sendEventRequestData(requestDataEvent) {
+    set(ref(db, "data/requests/membership/" + requestDataEvent.id), {
+        Prename: requestDataEvent.prename,
+        Surname: requestDataEvent.surname,
+        Email: requestDataEvent.email,
+        MobileNumber: requestDataEvent.mobile,
+        Message: requestDataEvent.message,
     })
         .then(() => {
             console.log("data test stored successfully");
@@ -43,6 +37,38 @@ function sendTest() {
         .catch(() => {
             console.log("error storing data");
         });
+}
+
+function sendMembershipData(requestDataMembership) {
+    set(ref(db, "data/requests/membership/" + requestDataMembership.id), {
+        Prename: requestDataMembership.prename,
+        Surname: requestDataMembership.surname,
+        Email: requestDataMembership.email,
+        MobileNumber: requestDataMembership.mobile,
+        Street: requestDataMembership.street,
+        PLZ: requestDataMembership.plz,
+        City: requestDataMembership.city,
+        Birthday: requestDataMembership.birthday,
+    })
+        .then(() => {
+            console.log("data test stored successfully");
+        })
+        .catch(() => {
+            console.log("error storing data");
+        });
+}
+
+function getData(path) {
+
+    get(child(dbRef, path)).then((snapshot) => {
+        if (snapshot.exists()) {
+            console.log(snapshot.val());
+        } else {
+            console.log("No data available");
+        }
+    }).catch((error) => {
+        console.error(error);
+    });
 }
 
 export default sendTest;
