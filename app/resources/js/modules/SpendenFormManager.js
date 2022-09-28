@@ -21,16 +21,6 @@ function initControls(manager) {
         btn_eimalig: document.querySelector('[name="einmalig"]'),
     };
 
-    manager.data = {
-        input_amount: document.querySelector('[name="amountInput"]'),
-
-        input_prename: document.querySelector('[name="TextInput_Prename"]'),
-        input_surname: document.querySelector('[name="TextInput_Surname"]'),
-        input_street: document.querySelector('[name="TextInput_Street"]'),
-        input_plz: document.querySelector('[name="TextInput_Plz"]'),
-        input_city: document.querySelector('[name="TextInput_city"]'),
-        input_email: document.querySelector('[name="TextInput_Email"]'),
-    }
 }
 
 function initEvents(manager) {
@@ -92,7 +82,7 @@ class SpendenFormManager extends Observable {
                     isValid = true;
                 break;
             case "step2":
-                if (this.data.input_prename.value == "" || this.data.input_prename.value == null || this.data.input_surname.value == "" || this.data.input_surname.value == null || this.data.input_street.value == "" || this.data.input_street.value == null || this.data.input_street.value == "" || this.data.input_street.value == null || this.data.input_plz.value == "" || this.data.input_plz.value == null || this.data.input_email.value == "" || this.data.input_email.value == null) {
+                if (this.data.inputPrename.value == "" || this.data.inputPrename.value == null || this.data.inputSurname.value == "" || this.data.inputSurname.value == null || this.data.inputStreet.value == "" || this.data.inputStreet.value == null || this.data.inputStreet.value == "" || this.data.inputStreet.value == null || this.data.input_plz.value == "" || this.data.input_plz.value == null || this.data.inputEmail.value == "" || this.data.inputEmail.value == null) {
                     isValid = false;
                 } else
                     isValid = true;
@@ -126,12 +116,12 @@ class SpendenFormManager extends Observable {
                 break;
             case "step2":
 
-                FormData.prename = this.data.input_prename.value;
-                FormData.surname = this.data.input_surname.value;
-                FormData.street = this.data.input_street.value;
+                FormData.prename = this.data.inputPrename.value;
+                FormData.surname = this.data.inputSurname.value;
+                FormData.street = this.data.inputStreet.value;
                 FormData.plz = this.data.input_plz.value;
-                FormData.city = this.data.input_city.value;
-                FormData.email = this.data.input_email.value;
+                FormData.city = this.data.inputCity.value;
+                FormData.email = this.data.inputEmail.value;
 
                 this.switchPage("step3");
                 console.log("prename: " + FormData.prename + " | surname: " + FormData.surname + " | street: " + FormData.street + " | plz: " + FormData.plz + " | city: " + FormData.city + FormData.surname + " | email: " + FormData.email);

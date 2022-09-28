@@ -1,8 +1,10 @@
 import { Observable } from "../utils/Observable.js";
+import FormReader from "../modules/FormReader.js";
 
 function initManager(manager) {
 
     initControls(manager);
+
 }
 
 function initControls() {
@@ -23,5 +25,28 @@ export default class PageManagerSpenden extends Observable {
         super();
 
         initManager(this);
+    }
+
+    checkInputData() {
+        var myFormReader,
+            inputData;
+
+        myFormReader = new FormReader();
+
+        if (myFormReader.isValid) {
+            inputData = myFormReader.getData();
+            this.sendDonationData(inputData);
+        } else {
+            //TODO: Input missing -> Display message
+            alert("PLEASE FILL OUT ALL INFORMATION");
+        }
+    }
+
+    sendDonationData(data) {
+
+        console.log(data);
+        //TODO: Send Datat to Firebase database
+        // var personData;
+        // personData = myFormReader.getData();
     }
 }

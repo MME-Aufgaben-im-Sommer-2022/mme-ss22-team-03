@@ -90,10 +90,10 @@ Variables
 - Subheader
 --
 *HTML Elements*
-/- Input_Prename: text/
-/- Input_Surname: text/
+/- inputPrename: text/
+/- inputSurname: text/
 /- Input_Request: text/
-/- Input_Email: email/
+/- inputEmail: email/
 --
 Functions
 #Btn_SendRequest()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2758</x><y>1848</y><w>112</w><h>154</h></coordinates><panel_attributes>lt=&lt;.
@@ -155,12 +155,12 @@ contains List of</panel_attributes><additional_attributes>200;390;10;10</additio
 - Manage Stripe Plugin</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1330</x><y>1988</y><w>294</w><h>406</h></coordinates><panel_attributes>FormReader
 --
 *HTML Elements*
-/- Input_Prename/
+/- inputPrename/
 /- Input_Surame/
 /- Input_Adress/
 /- Input_PLZ/
-/- Input_City/
-/- Input_Email/
+/- inputCity/
+/- inputEmail/
 /- Input_Birthdate/
 
 --
