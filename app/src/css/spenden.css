@@ -274,6 +274,46 @@ body {
     margin: auto;
 }
 
+#SFHeader_Header {
+    background-color: #d4d4d4;
+
+    width: auto;
+    padding-top: 5%;
+    height: 45%;
+
+    text-align: center;
+
+
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    line-height: 24px;
+    color: #303030;
+
+}
+
+.SFHeader_StepDiv {
+    background-color: #EE6C4D;
+    display: inline-block;
+
+    width: 100px;
+    height: 100px;
+
+    text-align: center;
+}
+
+#SFHeader_BorderBottom {
+    width: 100%;
+    height: 2px;
+
+    background-color: #313131;
+}
+
+
+
+
+
+
 /* Only edit this if you know what you are doing! */
 /* div { position: absolute; } */
 
@@ -368,19 +408,6 @@ body {
 }
 
 
-#in_nur_drei_schritten_die_welt_un_po__verbessern {
-    top: 0px;
-    left: 534px;
-    width: 334px;
-    height: 37px;
-    overflow: hidden;
-    font-family: Abel;
-    font-size: 18px;
-    text-align: center;
-    line-height: 24px;
-    color: #303030;
-    position: absolute;
-}
 
 #spenden_text_schritt1 {
     top: 135px;
