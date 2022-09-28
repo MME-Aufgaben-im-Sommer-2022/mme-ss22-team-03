@@ -14,6 +14,9 @@
         <!-- index  -->
         <script type="module" src="./src/js/index.js"></script>
 
+        <!-- Dage Plugin -->
+        <script src="https://cdn.jsdelivr.net/gh/dlvdls18/Dage/src/dage.js"></script>
+
 
         <div class="navigation-bar">
 
@@ -124,10 +127,6 @@
                         </div>
 
                         <div id="SFHeader_Steps">
-                                <button class="SFHeader_Btn" id="btn_prev" style="cursor: pointer;">
-                                        <span class="btn_text"> <img
-                                                        src="../app/src/images/buttons/Buton_Arrow_Left.png"></span>
-                                </button>
                                 <div class="SFHeader_StepDiv" id="Step1" style="cursor: pointer;">
                                         Schritt 1
                                 </div>
@@ -146,62 +145,12 @@
                         </div>
 
                         <div id="SFHeader_BorderBottom"></div>
-
-                        <!-- <div id="in_nur_drei_schritten_die_welt_un_po__verbessern">
-                                in nur drei Schritten die Welt un po' verbessern
-                        </div>
-
-
-                        <div id="spenden_text_schritt1">
-                                <div id="schritt_1">
-                                        Schritt 1
-                                </div>
-                                <div id="betrag_und_frequenz">
-                                        Betrag und Frequenz
-                                </div>
-
-                        </div>
-
-                        <div id="spenden_text_schritt2">
-                                <div id="pers_nliche_angaben">
-                                        Persönliche Angaben
-                                </div>
-                                <div id="schritt_2">
-                                        Schritt 2
-                                </div>
-
-                        </div>
-
-                        <div id="spenden_text_schritt3">
-                                <div id="zahlungsart">
-                                        Zahlungsart
-                                </div>
-                                <div id="schritt_3">
-                                        Schritt 3
-                                </div>
-
-                        </div>
-
-
-                        <div id="button_next" style="cursor: pointer;" class="buttonNext">
-                                <img src="src/images/buttons/button_IMG-Next-Right.svg" id="vector_172_ek1" /> -->
-
                 </div>
 
-                <!-- <div id="button_backtotop" style="cursor: pointer;" class="buttonGoUp">
-                        <img src="src/images/buttons/button_IMG-Back-To-Top.svg" id="vector_172" />
+                <div id="SpendenFormContent">
 
-                </div>
-
-                <div id="nach_oben">
-                        Nach oben
-                </div> -->
-        </div>
-
-        <div id="SpendenFormContent">
-
-                <!-- Step 1 -->
-                <!-- <div data-page="step1">
+                        <!-- Step 1 -->
+                        <!-- <div data-page="step1">
 
                                 <div id="betrag_ek1">
                                         20
@@ -255,48 +204,48 @@
 
                         </div> -->
 
-                <!-- Step 2 -->
-                <div data-page="step2">
-                        <div class="user-details-input">
-                                <span class="details-step2"> Vorname </span>
-                                <input type="text" class="TextInput" name="inputPrename">
-                        </div>
+                        <!-- Step 2 -->
+                        <div data-page="step2">
+                                <div class="user-details-input">
+                                        <span class="details-step2"> Vorname </span>
+                                        <input type="text" class="TextInput" name="inputPrename">
+                                </div>
 
-                        <div class="user-details-input">
-                                <span class="details-step2"> Nachname </span>
-                                <input type="text" class="TextInput" name="inputSurname">
-                        </div>
+                                <div class="user-details-input">
+                                        <span class="details-step2"> Nachname </span>
+                                        <input type="text" class="TextInput" name="inputSurname">
+                                </div>
 
-                        <div class="user-details-input">
-                                <span class="details-step2"> Straße, Nr. </span>
-                                <input type="text" class="TextInput" name="inputStreet">
-                        </div>
+                                <div class="user-details-input">
+                                        <span class="details-step2"> Straße, Nr. </span>
+                                        <input type="text" class="TextInput" name="inputStreet">
+                                </div>
 
-                        <div class="user-details-input">
-                                <span class="details-step2"> PLZ, Ort </span>
-                                <input type="text" class="TextInput" name="inputCity">
-                        </div>
+                                <div class="user-details-input">
+                                        <span class="details-step2"> PLZ, Ort </span>
+                                        <input type="text" class="TextInput" name="inputCity">
+                                </div>
 
-                        <div class="user-details-input">
-                                <span class="details-step2"> E-mail </span>
-                                <input type="email" class="EmailInput" name="inputEmail">
-                        </div>
+                                <div class="user-details-input">
+                                        <span class="details-step2"> E-mail </span>
+                                        <input type="email" class="EmailInput" name="inputEmail">
+                                </div>
 
-                        <div class="user-details-input">
-                                <span class="details-step2"> Phone Number </span>
-                                <input type="number" class="NumberInput" name="inputMobile">
-                        </div>
+                                <div class="user-details-input">
+                                        <span class="details-step2"> Phone Number </span>
+                                        <input type="number" class="NumberInput" name="inputMobile">
+                                </div>
 
-                        <div class="user-details-input">
-                                <span class="details-step2"> Birthday </span>
-                                <input type="number" class="NumberInput" name="inputBirthday">
-                        </div>
+                                <div class="user-details-input">
+                                        <span class="details-step2"> Birthday </span>
+                                        <input type="number" class="NumberInput" name="inputBirthday">
+                                </div>
 
-                        <button id="TEST">Test</button>
+                                <button id="TEST">Test</button>
+                        </div>
                 </div>
-        </div>
 
-        <!-- Step 3 TODO: Stripe Plugin div!
+                <!-- Step 3 TODO: Stripe Plugin div!
                         <div data-page="step3">
 
                                 <div id="paypal">
@@ -324,12 +273,24 @@
 
                         </div> -->
 
+        </div>
+
 
         <!-- Step 4 -->
         <!-- <div data-page="step4" id="spenden_thank_you">
                         <div id="thank_you_text">
                                 Spendenquittung kommt per Mail - Vielen Dank
                         </div>
+                </div> -->
+
+
+        <!-- <div id="button_backtotop" style="cursor: pointer;" class="buttonGoUp">
+                        <img src="src/images/buttons/button_IMG-Back-To-Top.svg" id="vector_172" />
+
+                </div>
+
+                <div id="nach_oben">
+                        Nach oben
                 </div> -->
         </div>
 
