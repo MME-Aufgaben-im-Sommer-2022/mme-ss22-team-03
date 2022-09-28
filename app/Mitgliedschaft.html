@@ -2,56 +2,98 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mitgliedschaft</title>
-    <link rel="icon" type="image/x-icon" href="/app/resources/images/navigation-bar/Pastina_Tab_Logo.png">
-    <link rel="stylesheet" href="./resources/css/mitgliedschaft.css">
-    <link rel="stylesheet" href="./resources/css/navigation-bar.css">
-    
-    <div class="navigation-bar">
-        
-        <!-- Über Uns  -->
-        <left onclick="window.location.href = 'uber_uns.html';" style="cursor: pointer;">
-                Über uns
-        </left>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mitgliedschaft</title>
+        <link rel="icon" type="image/x-icon" href="/app/src/images/navigation-bar/Pastina_Tab_Logo.png">
+        <link rel="stylesheet" href="./src/css/mitgliedschaft.css">
+        <link rel="stylesheet" href="./src/css/navigation-bar.css">
+        <link rel="stylesheet" href="./src/css/progress-bar.css">
 
-        <!-- Spenden -->
-        <left onclick="window.location.href = 'Spenden.html';" style="cursor: pointer;">
-                Spenden
-        </left>
 
-        <!-- Mitgliedschaft -->
-        <left class="active" onclick="window.location.href = 'Mitgliedschaft.html';" style="cursor: pointer;">
-                Mitglied werden
-        </left>
+        <!-- index  -->
+        <script type="module" src="./src/js/index.js"></script>
 
-        <!-- Logo -->
-        <logo onclick="window.location.href = 'Landing.html';" style="cursor: pointer;">
-                <img src="./resources/images/navigation-bar/logo.svg" />
-        </logo>
 
-        <!-- Mitmachen -->
-        <right onclick="window.location.href = 'Events.html';" style="cursor: pointer;">
-                Mitmachen
-        </right>
+        <div class="navigation-bar">
 
-        <!-- Aktuelles -->
-        <right id="active" onclick="window.location.href = 'Aktuelles.html';" style="cursor: pointer;">
-                Aktuelles
-        </right>
+                <!-- Über Uns  -->
+                <left name="navBarPage" id="Uber_uns" style="cursor: pointer;">
+                        Über uns
+                </left>
 
-        <!-- Gallerie | Map  -->
-        <right onclick="window.location.href = 'Map.html';" style="cursor: pointer;">
-                Gallerie | Map
-        </right>
-    </div>
+                <!-- Spenden -->
+                <left name="navBarPage" id="Spenden" style="cursor: pointer;">
+                        Spenden
+                </left>
+
+                <!-- Mitgliedschaft -->
+                <left class="active" name="navBarPage" id="Mitgliedschaft" style="cursor: pointer;">
+                        Mitglied werden
+                </left>
+
+                <!-- Logo -->
+                <logo name="navBarPage" id="index" style="cursor: pointer;">
+                        <img src="./src/images/navigation-bar/logo.svg" />
+                </logo>
+
+                <!-- Mitmachen -->
+                <right name="navBarPage" id="Events" style="cursor: pointer;">
+                        Mitmachen
+                </right>
+
+                <!-- Aktuelles -->
+                <right name="navBarPage" id="Aktuelles" id="active" style="cursor: pointer;">
+                        Aktuelles
+                </right>
+
+                <!-- Gallerie | Map  -->
+                <right name="navBarPage" id="Map" style="cursor: pointer;">
+                        Gallerie | Map
+                </right>
+        </div>
 </head>
 
-<body>  <!-- PAGE: MITGLIEDSCHAFT -->
+<body>
 
-    Mitgliedschaft
-    
+        <div class="group" id="ProgressBarHolder">
+        </div>
+
+        <template id="progressBarTemplate">
+                <div id="ProgressBar">
+                        <div id="progressBarNoteText">Wir freuen uns auf deine Unterstützung!</div>
+
+                        <div id="progressBarHeader"></div>
+
+                        <!-- Share Button & text   -->
+                        <h1 id="_06shareText"> Jetzt aktiv werden </h1>
+
+                        <!-- Share Button images  -->
+                        <div id="_06Btn">
+                                <img id="_06linkedInBtn" src="./src/images/share-buttons/LinkedIn.svg">
+                                <img id="_06mailBtn " src="./src/images/share-buttons/Mail.svg">
+                                <img id="_06whatsAppBtn" src="./src/images/share-buttons/WhatsApp.svg">
+                                <img id="_06instagramBtn" src="./src/images/share-buttons/Instagram.svg">
+                                <img id="_06facebookBtn" src="./src/images/share-buttons/Facebook.svg">
+                        </div>
+
+                        <div id=countdown-wrap>
+                                <div id="glass">
+                                        <div id="progress"></div>
+                                </div>
+
+                                <div id="test">
+                                        <span id="progressCurrentValue"></span>
+                                        <span id="progressGoal"></span>
+                                </div>
+
+                        </div>
+
+                </div>
+        </template>
+
+        <script type="module" src="./src/js/modules/ProgressBar.js"></script>
+
 </body>
 
 </html>

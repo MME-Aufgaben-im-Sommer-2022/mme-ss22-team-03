@@ -5,58 +5,55 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Spenden</title>
-        <link rel="icon" type="image/x-icon" href="/app/resources/images/navigation-bar/Pastina_Tab_Logo.png">
-        <link rel="stylesheet" href="./resources/css/spenden.css">
-        <link rel="stylesheet" href="./resources/css/navigation-bar.css">
+        <link rel="icon" type="image/x-icon" href="/app/src/images/navigation-bar/Pastina_Tab_Logo.png">
+        <link rel="stylesheet" href="./src/css/spenden.css">
+        <link rel="stylesheet" href="./src/css/navigation-bar.css">
+        <link rel="stylesheet" href="./src/css/progress-bar.css">
 
-        <!--  Fastest Social Sharing -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+        <!-- index  -->
+        <script type="module" src="./src/js/index.js"></script>
 
-        <!-- Dage Plugin Script -->
-        <script src="https://cdn.jsdelivr.net/gh/dlvdls18/Dage/src/dage.js"></script>
 
         <div class="navigation-bar">
 
                 <!-- Über Uns  -->
-                <left onclick="window.location.href = 'uber_uns.html';" style="cursor: pointer;">
+                <left name="navBarPage" id="Uber_uns" style="cursor: pointer;">
                         Über uns
                 </left>
 
                 <!-- Spenden -->
-                <left class="active" onclick="window.location.href = 'Spenden.html';" style="cursor: pointer;">
+                <left class="active" name="navBarPage" id="Spenden" style="cursor: pointer;">
                         Spenden
                 </left>
 
                 <!-- Mitgliedschaft -->
-                <left onclick="window.location.href = 'Mitgliedschaft.html';" style="cursor: pointer;">
+                <left name="navBarPage" id="Mitgliedschaft" style="cursor: pointer;">
                         Mitglied werden
                 </left>
 
                 <!-- Logo -->
-                <logo onclick="window.location.href = 'Landing.html';" style="cursor: pointer;">
-                        <img src="./resources/images/navigation-bar/logo.svg" />
+                <logo name="navBarPage" id="index" style="cursor: pointer;">
+                        <img src="./src/images/navigation-bar/logo.svg" />
                 </logo>
 
                 <!-- Mitmachen -->
-                <right onclick="window.location.href = 'Events.html';" style="cursor: pointer;">
+                <right name="navBarPage" id="Events" style="cursor: pointer;">
                         Mitmachen
                 </right>
 
                 <!-- Aktuelles -->
-                <right id="active" onclick="window.location.href = 'Aktuelles.html';" style="cursor: pointer;">
+                <right name="navBarPage" id="Aktuelles" id="active" style="cursor: pointer;">
                         Aktuelles
                 </right>
 
                 <!-- Gallerie | Map  -->
-                <right onclick="window.location.href = 'Map.html';" style="cursor: pointer;">
+                <right name="navBarPage" id="Map" style="cursor: pointer;">
                         Gallerie | Map
                 </right>
         </div>
+</head>
 
 <body>
-        <!-- PAGE: SPENDEN -->
-
-
         <div class="group" id="_01">
                 Gemeinsam können wir die Natur und traumatisierte Kinder schützen.
                 <!-- <button id="donationBtn" onclick="donationFunction()"> Jetzt Spenden </button> -->
@@ -86,7 +83,7 @@
                         Chance, an einem fremden Ort wieder zusammenzuwachsen - in Umbrien. Vom Glück, ein neues Leben
                         beginnen zu dürfen.
                 </div>
-                <img id="_03img" src="./resources/images/spenden_page/spenden_IMG-002.png">
+                <img id="_03img" src="./src/images/spenden_page/spenden_IMG-002.png">
         </div>
 
 
@@ -98,11 +95,11 @@
                         voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
                         sea takimata sanctus est Lorem ipsum dolor sit amet.
                 </div>
-                <img id="_04img" src="./resources/images/spenden_page/spenden_IMG-003.png">
+                <img id="_04img" src="./src/images/spenden_page/spenden_IMG-003.png">
         </div>
 
         <div class="article" id="_05">
-                <img id="_05img" src="./resources/images/spenden_page/spenden_IMG-004.png">
+                <img id="_05img" src="./src/images/spenden_page/spenden_IMG-004.png">
                 <h1 id="_05h">"Von Natur aus entspricht der Ort den Permakulturprinzipien."</h1>
                 <div id="_05text">Thema Landwirtschaft und Permakultur von Volker. Lorem ipsum dolor sit amet,
                         consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
@@ -111,193 +108,230 @@
                 </div>
         </div>
 
-        <div class="group" id="_06">
-
-                <div id="_06text1">Wir freuen uns auf deine Unterstützung!</div>
-
-                <div id="_06text2">50% unseres Ziels erreicht</div>
-
-                <!-- Share Button images
-                <img src="./resources/images/share-buttons/WhatsApp.svg">   -->
-                <div id="_06Btn">
-
-                        
-                        <a href="#" class="linkedInBtn" >
-                                <img src="./resources/images/share-buttons/LinkedIn.svg"> 
-                        </a>
-                
-                        <a href="#" class="mailBtn" >
-                                <img src="./resources/images/share-buttons/Mail.svg"> 
-                        </a>
-
-                        <a href="#" class="whatsAppBtn">
-                                <i class ="fab fa-whatsapp"></i>
-                        </a>
-                        
-                        <a href="#" class="instagramBtn">
-                                <img src="./resources/images/share-buttons/Instagram.svg", alt=""> 
-                        </a>
-                
-                        <a href="#" class="facebookBtn">
-                                <img src="./resources/images/share-buttons/Facebook.svg"> 
-                        </a>
+        <div class="group" id="ProgressBarHolder">
+        </div>
 
 
-                        
+        <!-- three steps   -->
+
+        <div class="group" id="_07">
+
+                <div id="background_group">
+
+                        <div id="in_nur_drei_schritten_die_welt_un_po__verbessern">
+                                in nur drei Schritten die Welt un po' verbessern
+                        </div>
+
+
+                        <div id="spenden_text_schritt1">
+                                <div id="schritt_1">
+                                        Schritt 1
+                                </div>
+                                <div id="betrag_und_frequenz">
+                                        Betrag und Frequenz
+                                </div>
+
+                        </div>
+
+                        <div id="spenden_text_schritt2">
+                                <div id="pers_nliche_angaben">
+                                        Persönliche Angaben
+                                </div>
+                                <div id="schritt_2">
+                                        Schritt 2
+                                </div>
+
+                        </div>
+
+                        <div id="spenden_text_schritt3">
+                                <div id="zahlungsart">
+                                        Zahlungsart
+                                </div>
+                                <div id="schritt_3">
+                                        Schritt 3
+                                </div>
+
+                        </div>
+
+
+                        <div id="button_next" style="cursor: pointer;" class="buttonNext">
+                                <img src="src/images/buttons/button_IMG-Next-Right.svg" id="vector_172_ek1" />
+
+                        </div>
+
+
+
+                        <img src="src/images/spenden_page/spenden_IMG_Line.png" id="vector_999" />
+
+
+
+                        <div id="button_backtotop" style="cursor: pointer;" class="buttonGoUp">
+                                <img src="src/images/buttons/button_IMG-Back-To-Top.svg" id="vector_172" />
+
+                        </div>
+
+                        <div id="nach_oben">
+                                Nach oben
+                        </div>
+
+
+                        <!-- Step 1 -->
+                        <div data-page="step1">
+
+                                <div id="betrag_ek1">
+                                        20
+                                </div>
+
+                                <!-- <img src="skins/line.png" id="line" /> -->
+                                <div id="spenden_input_field"></div>
+
+                                <div id="betrag">
+                                        Betrag
+                                </div>
+                                <div id="frequenz">
+                                        Frequenz
+                                </div>
+                                <div id="euro">
+                                        Euro
+                                </div>
+
+                                <div id="spenden_button_monatlich">
+                                        <div id="rectangle_376"></div>
+                                        <div id="monatlich">
+                                                monatlich
+                                        </div>
+
+                                </div>
+
+                                <div id="spenden_button_halbj_hrlich">
+                                        <div id="rectangle_377"></div>
+                                        <div id="halbj_hrlich">
+                                                halbjährlich
+                                        </div>
+
+                                </div>
+
+                                <div id="spenden_button_j_hrlich">
+                                        <div id="rectangle_378"></div>
+                                        <div id="j_hrlich">
+                                                jährlich
+                                        </div>
+
+                                </div>
+
+                                <div id="spenden_button_einmalig">
+                                        <div id="rectangle_379"></div>
+                                        <div id="einmalig">
+                                                einmalig
+                                        </div>
+
+                                </div>
+
+
+                        </div>
+
+
+                        <!-- Step 2 -->
+                        <div data-page="step2">
+
+                                <div id="vorname">
+                                        Vorname
+                                </div>
+                                <div id="nachname">
+                                        Nachname
+                                </div>
+                                <div id="stra_e__nr_">
+                                        Straße, Nr.
+                                </div>
+                                <div id="plz__ort">
+                                        PLZ, Ort
+                                </div>
+                                <div id="e_mail">
+                                        E-Mail
+                                </div>
+                                <div id="rectangle_368"></div>
+                                <div id="rectangle_408"></div>
+                                <div id="rectangle_409"></div>
+                                <div id="rectangle_410"></div>
+                                <div id="rectangle_412"></div>
+                                <div id="rectangle_411"></div>
+                        </div>
+
+
+                        <!-- Step 3 -->
+                        <div data-page="step3">
+
+                                <div id="paypal">
+                                        Paypal
+                                </div>
+                                <div id="kreditkarte">
+                                        Kreditkarte
+                                </div>
+                                <div id="applepay">
+                                        ApplePay
+                                </div>
+                                <div id="bankeinzug">
+                                        Bankeinzug
+                                </div>
+                                <img src="src/images/spenden_page/spenden_IMG_Line.png" id="vector_320" />
+                                <img src="src/images/spenden_page/spenden_IMG_Line.png" id="vector_323" />
+                                <img src="src/images/spenden_page/spenden_IMG_Line.png" id="vector_324" />
+                                <img src="src/images/spenden_page/spenden_IMG_Line.png" id="vector_321" />
+                                <img src="src/images/spenden_page/spenden_IMG_Line.png" id="vector_322" />
+                                <img src="src/images/spenden_page/spenden_IMG_ApplePay-Logo.png" id="vector" />
+                                <div id="ellipse_497"></div>
+                                <div id="ellipse_498"></div>
+                                <div id="ellipse_499"></div>
+                                <div id="ellipse_500"></div>
+
+                        </div>
+
                 </div>
 
-                <div>
+                <!-- Step 4 -->
+                <div id="spenden_thank_you" data-page="step4">
+
+                        <div id="thank_you_text">
+                                Spendenquittung kommt per Mail - Vielen Dank
+                        </div>
+                </div>
+
+
+        </div>
+
+
+        <template id="progressBarTemplate">
+                <div id="ProgressBar">
+                        <div id="progressBarNoteText">Wir freuen uns auf deine Unterstützung!</div>
+
+                        <div id="progressBarHeader"></div>
+
+                        <!-- Share Button & text   -->
+                        <h1 id="_06shareText"> Jetzt aktiv werden </h1>
+
+                        <!-- Share Button images  -->
+                        <div id="_06Btn">
+                                <img id="_06linkedInBtn" src="./src/images/share-buttons/LinkedIn.svg">
+                                <img id="_06mailBtn " src="./src/images/share-buttons/Mail.svg">
+                                <img id="_06whatsAppBtn" src="./src/images/share-buttons/WhatsApp.svg">
+                                <img id="_06instagramBtn" src="./src/images/share-buttons/Instagram.svg">
+                                <img id="_06facebookBtn" src="./src/images/share-buttons/Facebook.svg">
+                        </div>
+
                         <div id=countdown-wrap>
                                 <div id="glass">
                                         <div id="progress"></div>
                                 </div>
 
                                 <div id="test">
-                                        <span id="goal-status">300.000 EUR gespendet</span>
-                                        <span id="goal">Ziel: 600.000 EUR</span>
+                                        <span id="progressCurrentValue"></span>
+                                        <span id="progressGoal"></span>
                                 </div>
 
                         </div>
 
                 </div>
+        </template>
 
-        </div>
-        <!-- three steps   -->
-
-        <div class="group" id="_07">
-
-                <div id="steps_header">
-
-                        <div id="in_nur_drei_schritten_die_welt_un_po__verbessern">
-                                in nur drei Schritten die Welt un po' verbessern
-                        </div>
-
-                        
-                        <div id="steps_header_container">
-
-                                <div id="spenden_text_schritt1">
-
-                                        <div id="schritt_1">
-                                                Schritt 1
-                                        </div>
-                               
-                                </div>
-        
-                                <div id="spenden_text_schritt2">
-                                        <div 
-                                         id="schritt_2">
-                                                Schritt 2
-                                        </div>
-        
-                                </div>
-        
-                                <div id="spenden_text_schritt3">
-                                
-                                        <div id="schritt_3">
-                                                Schritt 3
-                                        </div>
-        
-                                </div>
-
-                                <div id="button_next" style="cursor: pointer;" class="buttonNext">
-                                        <img src="resources/images/buttons/button_IMG-Next-Right.svg" id="vector_172_ek1" />
-        
-                                </div>
-
-                        </div>     
-                </div>
-
-
-
-                <div id="steps_content">
-                        <!-- Step 1 -->
-                        <div data-page="step1" id="step1">
-
-
-                                <div id="betrag">
-                                        Betrag
-                                </div>
-
-                                <div id="spenden_input_field">
-                                        <!-- <div id="euro">
-                                                Euro
-                                        </div> -->
-                                        <input type="number" class="AmountInput" name="amountInput"
-                                                placeholder="Wähle deinen Beitrag..." min="1">
-                                </div>
-
-                                <div id="frequenz">
-                                        Frequenz
-                                </div>
-
-                                <div id="frequency_buttons">
-
-                                        <div id="button_frequency" style="cursor: pointer;" name="monatlich">
-                                                <div id="frequencyText">
-                                                        monatlich
-                                                </div>
-                                        </div>
-
-                                        <div id="button_frequency" style="cursor: pointer;" name="halbjährlich">
-                                                <div id="frequencyText">
-                                                        halbjährlich
-                                                </div>
-                                        </div>
-
-                                        <div id="button_frequency" style="cursor: pointer;" name="jährlich">
-                                                <div id="frequencyText">
-                                                        jährlich
-                                                </div>
-                                        </div>
-
-                                        <div id="button_frequency" style="cursor: pointer;" name="einmalig">
-                                                <div id="frequencyText">
-                                                        einmalig
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
-
-
-                        <!-- Step 2 -->
-                        <div data-page="step2" class="step2" id="step2">
-
-                                 <form action="#">
-
-                                        <div class="user-details-step2">
-
-                                                <div class="user-details-input">
-                                                        <span class="details-step2"> Vorname </span>
-                                                        <input type="text" class="TextInput" name="TextInput_Prename">
-                                                </div>
-        
-                                                <div class="user-details-input">
-                                                        <span class="details-step2"> Nachname </span>
-                                                        <input type="text" class="TextInput" name="TextInput_Surname">
-                                                </div>
-                                                
-                                                <div class="user-details-input">
-                                                        <span class="details-step2"> Straße, Nr. </span>
-                                                        <input type="text" class="TextInput" name="TextInput_Street">
-                                                </div>
-        
-                                                <div class="user-details-input">
-                                                        <span class="details-step2"> PLZ, Ort </span>
-                                                        <input type="text" class="TextInput" name="TextInput_Plz">
-                                                </div>
-                                               
-                                                <div class="user-details-input">
-                                                        <span class="details-step2"> E-mail </span>
-                                                        <input type="email" class="TextInput" name="TextInput_Email">
-                                                </div>
-
-                                        </div>
-
-                                </form>    
-
-                        </div>
-                </div>
-        </div>
+        <script type="module" src="./src/js/modules/ProgressBar.js"></script>
 </body>
-<script> src="PageSpenden.js"</script>
-</html>

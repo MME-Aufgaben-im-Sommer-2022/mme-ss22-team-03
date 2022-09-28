@@ -1,0 +1,347 @@
+/* Beispiel für die Einbindung zusätzlicher Schriftarten via Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap');
+
+
+/* Beispiel für die einfache Einbindung eines Farbschema, generiert auf coolors.co */
+:root {
+    --mint: #D6E5CB;
+    --green: #3D7245;
+    --dark-grey: #313131;
+    --orange: #EE6C4D;
+    --red: #BC2E19;
+}
+
+/* example of color use {
+    background-color: var(--snow);
+} */
+
+
+body {
+    background-color: var(--snow);
+    font-family: 'Space Grotesk', sans-serif;
+
+    width: 100%;
+}
+
+.group {
+    width: 100%;
+    height: 800px;
+
+    margin-bottom: 5%;
+}
+
+.group_event_01 {
+
+    background-color: #5cfff700;
+
+    padding: 5%;
+
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.25fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "Image Image . ."
+        "Image Image Header Header"
+        "Image Image Subheader Subheader"
+        "Image Image Content Content"
+        "Image Image Button Share";
+}
+
+.group_event_02 {
+    background-color: #00615c00;
+
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.25fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . Image Image"
+        "Header Header Image Image"
+        "Subheader Subheader Image Image"
+        "Content Content Image Image"
+        "Button Share Image Image";
+}
+
+.Image {
+    grid-area: Image;
+    margin-top: 6%;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    overflow: hidden;
+
+    object-fit: cover;
+    padding-left: 25%;
+}
+
+.Image2 {
+    grid-area: Image;
+    margin-top: 16%;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    overflow: hidden;
+
+    object-fit: cover;
+    padding-right: 25%;
+}
+
+
+
+#Img {
+    width: auto;
+    height: auto;
+    
+    overflow: hidden;
+}
+/*
+.Header {
+    grid-area: Header;
+    background-color: #2200ff00;
+
+    height: auto;
+    
+    padding-top: 50px;
+
+    font-family: Fahkwang;
+    font-size: 90px;
+    font-weight: 400;
+    line-height: 90px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+*/
+
+.Header {
+    background-color: #2200ff00;
+    padding-top: 30%;
+
+    font-family: Fahkwang;
+    font-size: 90px;
+    
+}
+
+.Header2 {
+    background-color: #2200ff00;
+    padding-top: 50%;
+    padding-left: 70%;
+
+    font-family: Fahkwang;
+    font-size: 90px;
+    
+}
+
+/*
+.Subheader {
+    grid-area: Subheader;
+    background-color: #5cfff700;
+
+    font-family: Fahkwang;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+*/
+
+.Subheader {
+    grid-area: Header;
+    background-color: #5cfff700;
+
+    font-family: Fahkwang;
+    font-size: 50px;
+
+    padding-top: 0%;
+}
+
+.Subheader2 {
+    grid-area: Header;
+    background-color: #5cfff700;
+
+    font-family: Fahkwang;
+    font-size: 50px;
+
+    padding-top: 0%;
+    padding-left: 35%;
+}
+
+.Content {
+
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    padding-right: 50%;
+
+    grid-area: Header;
+    background-color: #bc2f1900;
+
+    font-family: Fahkwang;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.Content2 {
+
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    padding-right: 15%;
+
+    grid-area: Header;
+    background-color: #bc2f1900;
+
+    font-family: Fahkwang;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 35%;
+}
+
+/*
+.Content {
+
+    grid-area: Header;
+    background-color: #5cfff700;
+
+    font-family: Fahkwang;
+    font-size: 24px;
+
+    padding-top: 20%;
+}   
+*/ 
+
+.overViewHeader{
+    padding-left: 40%;
+    font-family: Fahkwang;
+    font-size: 50px;
+}
+
+.overViewSubheader{
+    margin-top: 4%;
+    padding-left: 40%;
+    font-family: Fahkwang;
+    font-size: 20px;
+}
+
+.Share {
+    grid-area: Share;
+    background-color: #cf6b5b00;
+}
+
+.Button {
+    grid-area: Button;
+    background-color: #eeb0a700;
+    margin-left: 10%;
+}
+
+#titleDiv {
+    background-image: url("../images/event_page/IMG_Event_Title.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    width: 100%;
+    height: 780px;
+
+    text-align: center;
+
+    padding-top: 40%;
+    padding-bottom: 40%;
+
+    font-family: Fahkwang;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+.eventOverview {
+    background-color: #3D7245;
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+ul {
+    list-style-type: none;
+
+    padding-left: 0%;
+    margin: 0%;
+}
+/*
+li {
+    width: 100%;
+    height: auto;
+}
+*/
+
+li {
+    list-style-type: none;
+
+    padding-left: 0%;
+    margin: 0%;
+
+}
+
+
+.titleItem {
+    height: auto;
+
+    background-image: url("../images/event_page/IMG_Event_Title.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    text-align: center;
+
+}
+
+.titleText {
+
+    display: flexbox;
+
+    width: 100%;
+    height: 100%;
+
+    padding-top: 241px;
+    padding-bottom: 390px;
+
+    font-family: Fahkwang;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+li.overView {
+    height: 400px;
+    text-align: center;
+}
+
+.happeningElement01 {
+    height: 1400px;
+    overflow: hidden;
+}
+
+.happeningElement02 {
+    height: 1400px;
+    overflow: hidden;
+}

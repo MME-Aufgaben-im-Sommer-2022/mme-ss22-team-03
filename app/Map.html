@@ -5,9 +5,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Interaktive Karte</title>
-        <link rel="icon" type="image/x-icon" href="/app/resources/images/navigation-bar/Pastina_Tab_Logo.png">
-        <link rel="stylesheet" href="./resources/css/map.css">
-        <link rel="stylesheet" href="./resources/css/navigation-bar.css">
+        <link rel="icon" type="image/x-icon" href="/app/src/images/navigation-bar/Pastina_Tab_Logo.png">
+        <link rel="stylesheet" href="./src/css/map.css">
+        <link rel="stylesheet" href="./src/css/navigation-bar.css">
 
         <!-- Leaflet Plugin -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
@@ -21,43 +21,43 @@
         <script src="https://cdn.jsdelivr.net/gh/dlvdls18/Dage/src/dage.js"></script>
 
         <!-- index  -->
-        <script type="module" src="./resources/js/index.js"></script>
+        <script type="module" src="./src/js/index.js"></script>
 
 
         <div class="navigation-bar">
 
                 <!-- Über Uns  -->
-                <left onclick="window.location.href = 'uber_uns.html';" style="cursor: pointer;">
+                <left name="navBarPage" id="Uber_uns" style="cursor: pointer;">
                         Über uns
                 </left>
 
                 <!-- Spenden -->
-                <left onclick="window.location.href = 'Spenden.html';" style="cursor: pointer;">
+                <left name="navBarPage" id="Spenden" style="cursor: pointer;">
                         Spenden
                 </left>
 
                 <!-- Mitgliedschaft -->
-                <left onclick="window.location.href = 'Mitgliedschaft.html';" style="cursor: pointer;">
+                <left name="navBarPage" id="Mitgliedschaft" style="cursor: pointer;">
                         Mitglied werden
                 </left>
 
                 <!-- Logo -->
-                <logo onclick="window.location.href = 'Landing.html';" style="cursor: pointer;">
-                        <img src="./resources/images/navigation-bar/logo.svg" />
+                <logo name="navBarPage" id="index" style="cursor: pointer;">
+                        <img src="./src/images/navigation-bar/logo.svg" />
                 </logo>
 
                 <!-- Mitmachen -->
-                <right onclick="window.location.href = 'Events.html';" style="cursor: pointer;">
+                <right name="navBarPage" id="Events" style="cursor: pointer;">
                         Mitmachen
                 </right>
 
                 <!-- Aktuelles -->
-                <right id="active" onclick="window.location.href = 'Aktuelles.html';" style="cursor: pointer;">
+                <right name="navBarPage" id="Aktuelles" id="active" style="cursor: pointer;">
                         Aktuelles
                 </right>
 
                 <!-- Gallerie | Map  -->
-                <right class="active" onclick="window.location.href = 'Map.html';" style="cursor: pointer;">
+                <right class="active" name="navBarPage" id="Map" style="cursor: pointer;">
                         Gallerie | Map
                 </right>
         </div>
@@ -66,44 +66,83 @@
 <body>
         <!-- PAGE: MAP -->
 
+        <div id="zoomButton" name="button_zoomPastina" style="cursor: pointer;">Pastina
+        </div>
+        <div id="zoomButton" name="button_zoomSurrounding" style="cursor: pointer;">
+                Umgebung
+        </div>
         <div class="map-container">
-                <div class="zoomButton" id="button_zoomPastina" style="cursor: pointer;">Pastina
-                </div>
-                <div class="zoomButton" id="button_zoomSurrounding" style="cursor: pointer;">
-                        Umgebung
-                </div>
                 <div id="map">
                 </div>
         </div>
 
         <div id="PlacesOverview">
 
-                <ul>
-                        <li id="active" style="cursor: pointer;">
-                                Obergeschoss - Matratzenlager
-                        </li>
-                        <li style="cursor: pointer;">
-                                Erdgeschoss - Zimmer, Küche, Bad
-                        </li>
-                        <li style="cursor: pointer;">
-                                Obstwiese
-                        </li>
-                        <li style="cursor: pointer;">
-                                Olivenplantagen
-                        </li>
-                        <li style="cursor: pointer;">
-                                Yoga Raum
-                        </li>
-                        <li style="cursor: pointer;">
-                                Hütte
-                        </li>
+                <ul class="overViewList">
                 </ul>
-
         </div>
 
-        <div class="SelectedElement">
-                div Container für Bildergalerie
+        <div>
+                <ul class="contentList">
+                </ul>
         </div>
+
+
+        <div class="placeContentHolder">
+                <div data-page="OG" id="placesPage">
+                        <div class="placeContent">
+                                <img id="contentImage" src="./src/images/map_page/IMG_4667.png">
+                                <img id="contentImage" src="./src/images/map_page/IMG_5786.png">
+                                <img id="contentImage" src="./src/images/map_page/IMG_5788.png">
+                        </div>
+                </div>
+                <div data-page="EG" class="placeContent">
+                        <div class="placeContent">
+                                <img id="contentImage" src="./src/images/example.png">
+                                <img id="contentImage" src="./src/images/example.png">
+                                <img id="contentImage" src="./src/images/example.png">
+                                <img id="contentImage" src="./src/images/example.png">
+                        </div>
+                </div>
+                <div data-page="OW" class="placeContent">
+                        <div class="placeContent">
+                                <img id="contentImage" src="./src/images/example.png">
+                                <img id="contentImage" src="./src/images/example.png">
+                        </div>
+                </div>
+                <div data-page="OP" class="placeContent">
+                        <div class="placeContent">
+                                <img id="contentImage" src="./src/images/example.png">
+                                <img id="contentImage" src="./src/images/example.png">
+                                <img id="contentImage" src="./src/images/example.png">
+                        </div>
+                </div>
+                <div data-page="YR" class="placeContent">
+                        <div class="placeContent">
+                                <img id="contentImage" src="./src/images/example.png">
+                                <img id="contentImage" src="./src/images/example.png">
+                                <img id="contentImage" src="./src/images/example.png">
+                                <img id="contentImage" src="./src/images/example.png">
+                                <img id="contentImage" src="./src/images/example.png">
+                                <img id="contentImage" src="./src/images/example.png">
+                        </div>
+                </div>
+                <div data-page="H" class="placeContent">
+                        <div class="placeContent">
+                                <img src="./src/images/map_page/IMG_1099_jpg.png">
+                        </div>
+                </div>
+        </div>
+
+        <template id="placeTemplate">
+                <li name="placeOverViewElement" style="cursor: pointer;" id="">
+                </li>
+                <li class="placeContentElement">
+                        <div data-page="" class="placeContent">
+                        </div>
+                </li>
+        </template>
+
 </body>
 
 </html>

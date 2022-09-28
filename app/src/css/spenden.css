@@ -1,0 +1,1035 @@
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+:root {
+
+    --mint: #D6E5CB;
+    --green: #3D7245;
+    --dark-grey: #313131;
+    --orange: #EE6C4D;
+    --red: #BC2E19;
+}
+
+.hidden {
+    display: none !important;
+}
+
+body {
+    background-color: white;
+    font-family: 'Fahkwang', sans-serif;
+}
+
+.group {
+    background-color: white;
+    text-align: center;
+    /* 
+    border-style: dashed;
+    border-width: 10px; */
+
+    width: 100%;
+    height: auto;
+}
+
+#_01 {
+    /* background-image: url(https://dreaminginyellow.com/diy-custom-design-yellow-strips/); */
+    background-image: url(../images/spenden_page/spenden_IMG-001.png);
+
+    padding-top: 120px;
+    padding-bottom: 511px;
+
+    width: 100%;
+    height: auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.button {
+    text-align: center;
+
+    background: url(../images/buttons/button_IMG-Background-orange.svg);
+
+    font-family: 'Abel', sans-serif;
+    font-size: 18.25;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#donationBtn {
+
+    position: absolute;
+    width: 158px;
+    height: 162px;
+    left: 1388.39px;
+    top: 460px;
+}
+
+#_02 {
+    background-color: var(--mint);
+    height: auto;
+
+    text-align: center;
+    color: var(--dark-grey);
+}
+
+#_02h {
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-size: 18px;
+
+    padding-top: 120px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+#_02text {
+
+    font-size: 40px;
+
+    padding-bottom: 10%;
+    padding-top: 120px;
+    padding-left: 6.9%;
+    padding-right: 6.9%;
+}
+
+.article {
+    background-color: white;
+
+    /* border-style: dashed;
+    border-width: 10px; */
+
+    width: auto;
+    height: auto;
+
+    position: relative;
+}
+
+#_03 {
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 200px;
+}
+
+#_03h {
+
+    font-family: 'Fahkwang';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 90px;
+
+    padding-right: 40%;
+
+    left: 0px;
+    top: 0px;
+}
+
+#_03text {
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    left: 0px;
+
+    padding-bottom: 400px;
+    padding-right: 71%;
+}
+
+#_03img {
+    background-color: #313131;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    bottom: 5%;
+
+    height: auto;
+    width: auto;
+}
+
+
+#_04 {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+#_04h {
+
+    font-family: 'Fahkwang';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 90px;
+
+    padding-left: 60%;
+    padding-right: 1%;
+    padding-top: 5%;
+
+    right: 0px;
+    top: 0px;
+}
+
+#_04text {
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    right: 0px;
+
+    padding-left: 60%;
+    padding-right: 3%;
+}
+
+#_04img {
+    background-color: #313131;
+    position: absolute;
+    top: -50%;
+    left: 0px;
+
+
+    height: auto;
+    width: auto;
+}
+
+
+
+#_05 {
+    margin-top: 400px;
+    /* 
+    border-style: dashed;
+    border-width: 10px; */
+}
+
+#_05h {
+
+    font-family: 'Fahkwang';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 90px;
+
+    padding-top: 40%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#_05text {
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    left: 0px;
+
+    padding-left: 3%;
+    padding-right: 67%;
+    padding-bottom: 10%;
+}
+
+#_05img {
+    background-color: #313131;
+    position: absolute;
+    top: 0px;
+
+    margin-bottom: 20%;
+
+    height: auto;
+    width: 100%;
+}
+
+
+/* step 1 css */
+
+#_07 {
+    position: relative;
+    height: 1432px;
+
+    margin: auto;
+    width: 50%;
+}
+
+/* Only edit this if you know what you are doing! */
+/* div { position: absolute; } */
+
+#background_group {
+    top: 190px;
+    left: 167px;
+    width: 1728px;
+    height: 1432px;
+
+    position: absolute;
+}
+
+#spenden_group_007_spendenmodul {
+    top: 190px;
+    left: 167px;
+    width: 1393px;
+    height: 1051.68px;
+
+    position: absolute;
+}
+
+
+
+#spenden_thank_you {
+    top: 190px;
+    left: 167px;
+    width: 1393px;
+    height: 1051.68px;
+
+    background-color: white;
+    position: absolute;
+}
+
+#thank_you_text {
+    position: absolute;
+    width: 1109px;
+    height: 84px;
+    left: 310px;
+    top: 674px;
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 62.6824px;
+    line-height: 84px;
+    /* identical to box height, or 133% */
+
+    text-align: center;
+
+    color: #313131;
+}
+
+#button_backtotop {
+    top: 929px;
+    left: 1210px;
+    width: 91.5px;
+    height: 88.97px;
+
+    position: absolute;
+}
+
+#vector_172 {
+    top: -1px;
+    left: 93px;
+    width: 88.97px;
+    height: 91.5px;
+    position: absolute;
+}
+
+
+#vector_314 {
+    top: 34px;
+    left: 28px;
+    width: 35.65px;
+    height: 22.23px;
+    position: absolute;
+}
+
+
+#nach_oben {
+    top: 1028px;
+    left: 1315px;
+    width: 95px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#in_nur_drei_schritten_die_welt_un_po__verbessern {
+    top: 0px;
+    left: 534px;
+    width: 334px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: center;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+#spenden_text_schritt1 {
+    top: 135px;
+    left: 0px;
+    width: 141px;
+    height: 75.45px;
+    position: absolute;
+}
+
+#schritt_1 {
+    top: 0px;
+    left: 0px;
+    width: 163px;
+    height: 70px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 36px;
+    text-align: left;
+    line-height: 45px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#betrag_und_frequenz {
+    top: 51px;
+    left: 0px;
+    width: 164px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+#spenden_text_schritt2 {
+    top: 135px;
+    left: 392px;
+    width: 142px;
+    height: 75.45px;
+
+    opacity: 50%;
+    position: absolute;
+}
+
+#pers_nliche_angaben {
+    top: 51px;
+    left: 0px;
+    width: 165px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#schritt_2 {
+    top: 0px;
+    left: 0px;
+    width: 162px;
+    height: 70px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 36px;
+    text-align: left;
+    line-height: 45px;
+    color: #303030;
+    position: absolute;
+}
+
+#spenden_text_schritt3 {
+    top: 135px;
+    left: 784px;
+    width: 122px;
+    height: 75.45px;
+
+    opacity: 50%;
+    position: absolute;
+}
+
+#zahlungsart {
+    top: 51px;
+    left: 0px;
+    width: 105px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#schritt_3 {
+    top: 0px;
+    left: 0px;
+    width: 163px;
+    height: 70px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 36px;
+    text-align: left;
+    line-height: 45px;
+    color: #303030;
+    position: absolute;
+}
+
+#button_next {
+    top: 130px;
+    left: 1216px;
+    width: 88.97px;
+    height: 91.5px;
+    position: absolute;
+}
+
+/* Step 1 */
+
+#spenden_input_field {
+    top: 458px;
+    left: 0px;
+    width: 936px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#betrag {
+    top: 363px;
+    left: 0px;
+    width: 132px;
+    height: 70px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 36px;
+    text-align: left;
+    line-height: 45px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#frequenz {
+    top: 595px;
+    left: 0px;
+    width: 166px;
+    height: 70px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 36px;
+    text-align: left;
+    line-height: 45px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#euro {
+    top: 466px;
+    left: 26px;
+    width: 54px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+#spenden_button_monatlich {
+    top: 690px;
+    left: 0px;
+    width: 174px;
+    height: 37px;
+    position: absolute;
+}
+
+#rectangle_376 {
+    top: 0px;
+    left: 0px;
+    width: 176px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#monatlich {
+    top: 6px;
+    left: 43px;
+    width: 91px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+#spenden_button_halbj_hrlich {
+    top: 690px;
+    left: 254px;
+    width: 173px;
+    height: 37px;
+    position: absolute;
+}
+
+#rectangle_377 {
+    top: 0px;
+    left: 0px;
+    width: 175px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#halbj_hrlich {
+    top: 6px;
+    left: 35px;
+    width: 102px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+#spenden_button_j_hrlich {
+    top: 690px;
+    left: 507px;
+    width: 173px;
+    height: 37px;
+    position: absolute;
+}
+
+#rectangle_378 {
+    top: 0px;
+    left: 0px;
+    width: 175px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#j_hrlich {
+    top: 6px;
+    left: 54px;
+    width: 73px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+#spenden_button_einmalig {
+    top: 690px;
+    left: 760px;
+    width: 174px;
+    height: 37px;
+    position: absolute;
+}
+
+#rectangle_379 {
+    top: 0px;
+    left: 0px;
+    width: 176px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#einmalig {
+    top: 6px;
+    left: 49px;
+    width: 81px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#betrag_ek1 {
+    top: 466px;
+    left: 364px;
+    width: 42px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+#vector_314_ek1 {
+    top: 35px;
+    left: 26px;
+    width: 35.65px;
+    height: 22.23px;
+    position: absolute;
+}
+
+/* Step 2 */
+
+
+#vorname {
+    top: 521px;
+    left: 167px;
+    width: 82px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#nachname {
+    top: 640px;
+    left: 167px;
+    width: 95px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#stra_e__nr_ {
+    top: 759px;
+    left: 167px;
+    width: 96px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#plz__ort {
+    top: 878px;
+    left: 167px;
+    width: 78px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#e_mail {
+    top: 997px;
+    left: 167px;
+    width: 66px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#rectangle_368 {
+    top: 563px;
+    left: 167px;
+    width: 936px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#rectangle_408 {
+    top: 682px;
+    left: 167px;
+    width: 936px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#rectangle_409 {
+    top: 801px;
+    left: 167px;
+    width: 936px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#rectangle_410 {
+    top: 920px;
+    left: 167px;
+    width: 936px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#rectangle_412 {
+    top: 920px;
+    left: 167px;
+    width: 282px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#rectangle_411 {
+    top: 1039px;
+    left: 167px;
+    width: 936px;
+    height: 39px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+/* Step 3 */
+
+#paypal {
+    top: 603px;
+    left: 271px;
+    width: 68px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#kreditkarte {
+    top: 705px;
+    left: 271px;
+    width: 101px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#applepay {
+    top: 807px;
+    left: 271px;
+    width: 85px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#bankeinzug {
+    top: 909px;
+    left: 271px;
+    width: 101px;
+    height: 37px;
+    overflow: hidden;
+    font-family: Abel;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    color: #303030;
+    position: absolute;
+}
+
+
+#vector_320 {
+    top: 767px;
+    left: 167px;
+    width: 1392px;
+    height: auto;
+    position: absolute;
+}
+
+
+#vector_323 {
+    top: 869px;
+    left: 167px;
+    width: 1392px;
+    height: auto;
+    position: absolute;
+}
+
+
+#vector_324 {
+    top: 971px;
+    left: 167px;
+    width: 1392px;
+    height: auto;
+    position: absolute;
+}
+
+
+#vector_321 {
+    top: 563px;
+    left: 168px;
+    width: 1392px;
+    height: auto;
+    position: absolute;
+}
+
+
+#vector_322 {
+    top: 665px;
+    left: 168px;
+    width: 1392px;
+    height: auto;
+    position: absolute;
+}
+
+
+#vector {
+    top: 794px;
+    left: 1361px;
+    width: 119px;
+    height: 49px;
+    position: absolute;
+}
+
+#vector_999 {
+    top: 250px;
+    left: 0px;
+    width: 1393px;
+    height: auto;
+    position: absolute;
+}
+
+#ellipse_497 {
+    top: 605px;
+    left: 218px;
+    width: 22px;
+    height: 22px;
+    -ms-border-radius: 10px / 10px;
+    -o-border-radius: 10px / 10px;
+    -moz-border-radius: 10px / 10px;
+    -webkit-border-radius: 10px / 10px;
+    border-radius: 10px / 10px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#ellipse_498 {
+    top: 707px;
+    left: 218px;
+    width: 22px;
+    height: 22px;
+    -ms-border-radius: 10px / 10px;
+    -o-border-radius: 10px / 10px;
+    -moz-border-radius: 10px / 10px;
+    -webkit-border-radius: 10px / 10px;
+    border-radius: 10px / 10px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#ellipse_499 {
+    top: 809px;
+    left: 218px;
+    width: 22px;
+    height: 22px;
+    -ms-border-radius: 10px / 10px;
+    -o-border-radius: 10px / 10px;
+    -moz-border-radius: 10px / 10px;
+    -webkit-border-radius: 10px / 10px;
+    border-radius: 10px / 10px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+#ellipse_500 {
+    top: 911px;
+    left: 218px;
+    width: 22px;
+    height: 22px;
+    -ms-border-radius: 10px / 10px;
+    -o-border-radius: 10px / 10px;
+    -moz-border-radius: 10px / 10px;
+    -webkit-border-radius: 10px / 10px;
+    border-radius: 10px / 10px;
+    border: 1px solid #313131;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
