@@ -97,7 +97,7 @@ function initPlaceOverview(manager) {
   manager.setMapState("pastina");
 }
 
-export default class PageManager_Map extends Observable {
+export default class PageManagerMap extends Observable {
 
   constructor(placeDataList) {
     super();

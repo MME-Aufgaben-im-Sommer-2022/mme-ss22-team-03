@@ -50,7 +50,7 @@ function UpdateHappeningList(manager) {
     });
 }
 
-class PageManager_Events extends Observable {
+class PageManagerEvents extends Observable {
 
     constructor(happeningDataList) {
         super();
@@ -59,11 +59,6 @@ class PageManager_Events extends Observable {
 
         initManager(this);
     }
-
-    openRequest(id) {
-        console.log(id);
-        //TODO: Fetch correct Happening and call openRequest
-    }
 }
 
-export default PageManager_Events;
+export default PageManagerEvents;

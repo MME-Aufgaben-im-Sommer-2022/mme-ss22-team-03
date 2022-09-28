@@ -17,17 +17,11 @@ function initControls() {
     // });
 }
 
-class PageManager_Spenden extends Observable {
+export default class PageManagerSpenden extends Observable {
 
     constructor() {
         super();
 
         initManager(this);
     }
-
-    exampleFunction() {
-        console.log("example");
-    }
 }
-
-export default PageManager_Spenden;

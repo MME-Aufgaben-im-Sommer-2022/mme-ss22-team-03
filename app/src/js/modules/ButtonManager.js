@@ -39,9 +39,8 @@ class ButtonManager extends Observable {
                 event = new Event("switchPage", name);
                 break;
             case "request":
-                event = new Event(id, name);
-                break;
             case "scroll":
+            case "share":
                 event = new Event(id, name);
                 break;
             default:
