@@ -28,19 +28,14 @@ function initListeners(manager) {
 
     //  Event Listeners for Step Buttons
     manager.controls.Step1.addEventListener("click", () => {
-        manager.switchFormStep("step1");
+        manager.stepButtonClick("step1");
     });
     manager.controls.Step2.addEventListener("click", () => {
-        manager.switchFormStep("step2");
+        manager.stepButtonClick("step2");
     });
 
     manager.controls.Step3.addEventListener("click", () => {
-        manager.switchFormStep("step3");
-    });
-
-
-    manager.controls.Test.addEventListener("click", () => {
-        manager.checkInputData();
+        manager.stepButtonClick("step3");
     });
 }
 
@@ -63,11 +58,22 @@ export default class PageManagerSpenden extends Observable {
                 this.switchFormStep("step2");
                 break;
             case "step2":
-                this.switchFormStep("step3");
+                if (this.checkInputData()) {
+                    this.switchFormStep("step3");
+                }
                 break;
             default:
                 break;
         }
+    }
+
+    stepButtonClick(step) {
+
+        if (step === "step3" && !this.checkInputData()) {
+            return;
+        }
+
+        this.switchFormStep(step);
     }
 
     switchFormStep(step) {
@@ -78,17 +84,21 @@ export default class PageManagerSpenden extends Observable {
 
     checkInputData() {
         var myFormReader,
-            inputData;
+            inputData,
+            goOn = false;
 
         myFormReader = new FormReader(this.myPageId);
 
         if (myFormReader.isValid) {
             inputData = myFormReader.getData();
             this.sendDonationData(inputData);
+            goOn = true;
         } else {
             //TODO: Input missing -> Display message
             alert("PLEASE FILL OUT ALL INFORMATION");
         }
+
+        return goOn;
     }
 
     sendDonationData(data) {

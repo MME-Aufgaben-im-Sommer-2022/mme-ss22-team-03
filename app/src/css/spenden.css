@@ -381,10 +381,11 @@ body {
     display: block;
 }
 
-/*margin-left: 2%;*/
 .user-details-input {
     width: 100%;
     display: block;
+
+    margin-top: 80px;
 }
 
 .textfield__txt {
@@ -399,9 +400,6 @@ body {
     margin: 2%;
     line-height: 24px;
 }
-
-
-
 
 /* Only edit this if you know what you are doing! */
 /* div { position: absolute; } */
@@ -423,8 +421,6 @@ body {
 
     position: absolute;
 }
-
-
 
 #spenden_thank_you {
     top: 190px;
