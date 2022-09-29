@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 function initManager(manager) {
 
-  manager.map = L.map("map").setView(manager.startCoords, manager.currentZoom);
+  manager.map = L.map("map").setView([manager.startCoords[0], manager.startCoords[1]], manager.currentZoom);
 
   L.tileLayer("http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}", {
     maxZoom: manager.maxMapZoom,
@@ -42,7 +42,6 @@ class MapManager {
   }
 
   hideMarkers() {
-
     this.MarkerList.forEach(marker => {
       this.map.removeLayer(marker.marker);
     });

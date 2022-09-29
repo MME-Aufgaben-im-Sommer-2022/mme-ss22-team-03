@@ -13,22 +13,22 @@ let myNavBar;
 async function init() {
 
     // FireBaseConnector.sendTestData();
-    var requestData = {
-        type: "membership",
-        id: "Huber_Samuel",
+    // var requestData = {
+    //     type: "membership",
+    //     id: "Huber_Samuel",
 
-        data: {
-            Prename: "Samuel",
-            Surname: "Huber",
-            Street: "Mozartstrasse 90",
-            City: "Pfaffenhofen a. d. Ilm",
-            Email: "hubsamu@hotmail.de",
-        },
-    };
-    FireBaseConnector.sendRequestDataTest(requestData);
+    //     data: {
+    //         Prename: "Samuel",
+    //         Surname: "Huber",
+    //         Street: "Mozartstrasse 90",
+    //         City: "Pfaffenhofen a. d. Ilm",
+    //         Email: "hubsamu@hotmail.de",
+    //     },
+    // };
+    // FireBaseConnector.sendRequestDataTest(requestData);
 
     // try {
-    //     let data = await FireBaseConnector.getData("data/test2");
+    //     let data = await FireBaseConnector.getData("data/pages/map/initData");
     //     console.log(data);
     // } catch (error) {
     //     console.error(error);
