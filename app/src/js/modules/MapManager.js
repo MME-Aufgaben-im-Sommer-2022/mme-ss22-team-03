@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 function initManager(manager) {
 
-  manager.map = L.map("map").setView([manager.startCoords[0], manager.startCoords[1]], manager.currentZoom);
+  manager.map = L.map("map").setView(manager.startCoords, manager.currentZoom);
 
   L.tileLayer("http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}", {
     maxZoom: manager.maxMapZoom,
@@ -11,9 +11,8 @@ function initManager(manager) {
 
 //TODO: Differate between Pastina Markes and Surrounding Markers
 function initMarkers(manager) {
-
-  // eslint-disable-next-line vars-on-top
-  for (var i = 0; i < manager.MarkerList.length; i += 1) {
+  var i;
+  for (i = 0; i < manager.MarkerList.length; i += 1) {
     manager.MarkerList[i].marker.addTo(manager.map);
   }
 }
@@ -25,7 +24,7 @@ class MapManager {
 
     this.maxMapZoom = maxZoom;
     this.currentZoom = startZoom;
-    this.startCoords = startCoords;
+    this.startCoords = [startCoords[0], startCoords[1]];
 
     this.MarkerList = MarkerList;
 
@@ -38,6 +37,7 @@ class MapManager {
   }
 
   flyTo(coords, zoom) {
+    console.log(coords);
     this.map.flyTo(coords, zoom);
   }
 
@@ -45,19 +45,14 @@ class MapManager {
     this.MarkerList.forEach(marker => {
       this.map.removeLayer(marker.marker);
     });
-    //console.log("Hide all Markers");
   }
 
   showMarkers(zoomLevel) {
-
     this.MarkerList.forEach(marker => {
       if (marker.zoomLevel === zoomLevel) {
-        // this.map.addLayer(marker.marker);
-        //console.log(marker.marker);
         marker.marker.addTo(this.map);
       }
     });
-    //console.log("Show all " + zoomLevel + " Markers");
   }
 
 }

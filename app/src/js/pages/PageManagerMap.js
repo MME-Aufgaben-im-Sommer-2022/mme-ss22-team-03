@@ -13,8 +13,12 @@ async function initManager(manager) {
   initIcons(manager);
   initPlaceLists(manager);
   initControls(manager);
+  initListeners(manager);
   initMapManager(manager);
-  initPlaceOverview(manager);
+  updateOverviewList(manager);
+
+  Dage.update();
+  manager.setMapState("pastina");
 }
 
 async function initData(manager) {
@@ -46,20 +50,8 @@ async function initData(manager) {
 
 function initIcons(manager) {
 
-  manager.activeIcon = L.icon({
-    iconUrl: "./src/images/map_page/marker.png",
-
-    iconSize: [manager.iconData.iconSizeX, manager.iconData.iconSizeY], // size of the icon
-    iconAnchor: [manager.iconData.iconAnchorX,
-    manager.iconData.iconAnchorY,
-    ], // point of the icon which will correspond to marker's location
-    popupAnchor: [manager.iconData.popupAnchorX, -
-      manager.iconData.popupAnchorY,
-    ], // point from which the popup should open relative to the iconAnchor
-  });
-
   manager.normalIcon = L.icon({
-    iconUrl: "./src/images/map_page/marker.png",
+    iconUrl: "./src/images/map_page/normalMarker.png",
 
     iconSize: [manager.iconData.iconSizeX, manager.iconData.iconSizeY], // size of the icon
     iconAnchor: [manager.iconData.iconAnchorX,
@@ -69,13 +61,15 @@ function initIcons(manager) {
       manager.iconData.popupAnchorY,
     ], // point from which the popup should open relative to the iconAnchor
   });
+
+  manager.activeIcon = manager.normalIcon;
+  manager.activeIcon.iconUrl = "./src/images/map_page/activeMarker.png";
 }
 
 function initPlaceLists(manager) {
 
   var entryList,
     keyList;
-
 
   entryList = Object.values(manager.allPlaceList);
   keyList = Object.keys(manager.allPlaceList);
@@ -103,8 +97,10 @@ function initMapManager(manager) {
     .maxZoom, manager.mapData.startZoom,
     manager.mapData.centerCoords);
 }
+
 function initControls(manager) {
 
+  //  Fetch all Control Elements needed
   manager.controls = {
     zoomButtonPastina: document.getElementsByName("button_zoomPastina")[0],
     zoomButtonSurroundings: document.getElementsByName(
@@ -117,6 +113,9 @@ function initControls(manager) {
   manager.clone = template.content.cloneNode(true);
   manager.overViewElement = manager.clone.querySelector("[name=\"placeOverViewElement\"]");
   manager.overViewContentElement = manager.clone.querySelector(".placeContentElement");
+}
+
+function initListeners(manager) {
 
   manager.controls.zoomButtonPastina.addEventListener("click", () => {
     manager.setMapState("pastina");
@@ -130,34 +129,34 @@ function initControls(manager) {
     manager.setActiveElement(e.target.id);
   });
 
-  manager.allPlaceList.forEach(element => {
-    element.marker.addEventListener("click", () => {
-      manager.setActiveElement(element.id);
-    });
-  });
+  // manager.allPlaceList.forEach(element => {
+  //   element.marker.addEventListener("click", () => {
+  //     manager.setActiveElement(element.id);
+  //   });
+  // });
+
 }
 
-function initPlaceOverview(manager) {
+function updateOverviewList(manager, zoomState) {
 
+  //  Empties overViewList
+  manager.controls.overViewList.innerHTML = "";
+
+  // Iterate through all PLaces
   manager.allPlaceList.forEach(place => {
 
-    let overViewClone = manager.overViewElement.cloneNode(true);
-    // overViewContentClone = manager.overViewContentElement.cloneNode(true);
+    //  Only add places, that fit to given zoomState
+    if (place.zoomLevel === zoomState) {
+      // Create Clone for OverView Element
+      let overViewClone = manager.overViewElement.cloneNode(true);
 
-    overViewClone.textContent = place.name;
-    overViewClone.id = place.id;
-    manager.controls.overViewList.append(overViewClone);
-
-    //TODO: Fetch Images from SQL
-    // place.imageList.forEach(image => {
-    //   overViewContentClone.append(image);
-    // });
-    // manager.controls.contentList.append(overViewContentClone);
+      // Set Element data
+      overViewClone.textContent = place.name;
+      overViewClone.id = place.id;
+      // Add Element to HTML-List
+      manager.controls.overViewList.append(overViewClone);
+    }
   });
-
-  // Set first Place of List to active Place
-  Dage.update();
-  manager.setMapState("pastina");
 }
 
 export default class PageManagerMap extends Observable {
@@ -166,14 +165,13 @@ export default class PageManagerMap extends Observable {
     super();
 
     this.allPlaceList = [];
-    this.pastinaMarkerList = [];
-    this.surroundingMarkerList = [];
 
     initManager(this);
   }
 
   setActiveElement(id) {
-    var newActivePlace;
+    var newActivePlace,
+      coords;
 
     if (id === null || id === undefined || id === "") {
       return;
@@ -188,10 +186,12 @@ export default class PageManagerMap extends Observable {
     });
 
     newActivePlace = this.shownPlaceList.find(x => x.id === id);
-    if (newActivePlace !== undefined) { myMapManager.flyTo([newActivePlace.coords.x, newActivePlace.coords.y], newActivePlace.zoomVal); }
+    coords = [newActivePlace.coords.x, newActivePlace.coords.y];
 
-    console.log(newActivePlace.marker);
-    //TODO: Set correct Marker color when active
+    if (newActivePlace !== undefined) {
+      myMapManager.flyTo(coords, newActivePlace.zoomVal);
+    }
+
     Dage.navigate(id);
   }
 
@@ -224,5 +224,7 @@ export default class PageManagerMap extends Observable {
       default:
         break;
     }
+
+    updateOverviewList(this, newZoomState);
   }
 }
