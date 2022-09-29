@@ -12,7 +12,7 @@ let myNavBar,
     myButtonManager,
     currentPage;
 
-function init() {
+async function init() {
     initNavBar();
     initButtonManager();
     initPage();
