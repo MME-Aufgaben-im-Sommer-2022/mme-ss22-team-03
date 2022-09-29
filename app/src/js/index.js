@@ -6,15 +6,14 @@ import PageManagerMitgliedschaft from "../js/pages/PageManagerMitgliedschaft.js"
 import PageManagerSpenden from "../js/pages/PageManagerSpenden.js";
 import NavBar from "../js/modules/NavBar.js";
 import { getHappeningDataList, getPlaceDataList } from "../js/utils/SQLHardoce.js";
-import { sendTest } from "../js/utils/FireBaseDataHandler.js";
+import FireBaseConnector from "./database/FireBaseConnector.js";
 
 let myNavBar;
 
-function init() {
+async function init() {
     initNavBar();
     initPage();
-
-    sendTest();
+    await FireBaseConnector.sendTest();
 }
 
 /**
