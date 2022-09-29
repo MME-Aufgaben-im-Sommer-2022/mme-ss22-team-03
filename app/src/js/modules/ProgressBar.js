@@ -1,12 +1,26 @@
 import { Observable } from "../utils/Observable.js";
+import FireBaseConnector from "../database/FireBaseConnector.js";
+
+const hundred = 100;
 
 /**
    * This function initializes every other init function
    * @param {ProgressBar} manager
    */
-function init(manager) {
+async function init(manager) {
 
+    await initData(manager);
     initHTML(manager);
+}
+
+async function initData(manager) {
+    try {
+        let data = await FireBaseConnector.getData("data/pages/spenden/progress");
+        manager.current = data.current;
+        manager.aim = data.aim;
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 function initHTML(manager) {
@@ -17,14 +31,16 @@ function initHTML(manager) {
     manager.clone = template.content.cloneNode(true);
     manager.ProgressBarElement = manager.clone.querySelector("#ProgressBar");
 
+    manager.percentage = (manager.current / manager.aim) * hundred;
+
     //  Fill Template Information with data
     let ProgressBarClone = manager.ProgressBarElement.cloneNode(true);
     ProgressBarClone.querySelector("#progressBarHeader").textContent = manager.percentage + "% unseres Ziels erreicht";
-    ProgressBarClone.querySelector("#progressCurrentValue").textContent = manager.currentValue + " EUR gespendet";
-    ProgressBarClone.querySelector("#progressGoal").textContent = "Ziel: " + manager.goal + " EUR";
+    ProgressBarClone.querySelector("#progressCurrentValue").textContent = manager.current + " EUR gespendet";
+    ProgressBarClone.querySelector("#progressGoal").textContent = "Ziel: " + manager.aim + " EUR";
 
     //  Calculate the width based on the percentage
-    width = "width:" + (manager.currentValue / manager.goal) * 100 + "%";
+    width = "width:" + manager.percentage + "%";
     ProgressBarClone.querySelector("#progress").setAttribute("style", width);
 
     //  Give ProgressGroup the Template HTML
@@ -39,16 +55,8 @@ class ProgressBar extends Observable {
     constructor() {
         super();
 
-        //TODO: Fetch Values from SQL
-        this.goal = 500.000;
-        this.currentValue = 200.000;
-        this.percentage = (this.currentValue / this.goal) * 100;
-
         init(this);
     }
 }
 
-// eslint-disable-next-line no-unused-vars
-let manager = new ProgressBar();
-
-export default ProgressBar;
+export default new ProgressBar();

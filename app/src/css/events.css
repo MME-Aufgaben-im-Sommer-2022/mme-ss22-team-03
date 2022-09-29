@@ -11,11 +11,6 @@
     --red: #BC2E19;
 }
 
-/* example of color use {
-    background-color: var(--snow);
-} */
-
-
 body {
     background-color: var(--snow);
     font-family: 'Space Grotesk', sans-serif;
@@ -83,7 +78,7 @@ body {
 
 .Image2 {
     grid-area: Image;
-    margin-top: 6%;
+    margin-top: 16%;
     max-width: 100%;
     max-height: 100%;
     display: block;
@@ -98,49 +93,28 @@ body {
 #Img {
     width: auto;
     height: auto;
-    
+
     overflow: hidden;
 }
-/*
-.Header {
-    grid-area: Header;
-    background-color: #2200ff00;
-
-    height: auto;
-    
-    padding-top: 50px;
-
-    font-family: Fahkwang;
-    font-size: 90px;
-    font-weight: 400;
-    line-height: 90px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-*/
 
 .Header {
     background-color: #2200ff00;
-    padding-top: 60%;
+    padding-top: 30%;
 
     font-family: Fahkwang;
     font-size: 90px;
-    
+
 }
 
-/*
-.Subheader {
-    grid-area: Subheader;
-    background-color: #5cfff700;
+.Header2 {
+    background-color: #2200ff00;
+    padding-top: 50%;
+    padding-left: 70%;
 
     font-family: Fahkwang;
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 50px;
-    letter-spacing: 0em;
-    text-align: left;
+    font-size: 90px;
+
 }
-*/
 
 .Subheader {
     grid-area: Header;
@@ -150,6 +124,17 @@ body {
     font-size: 50px;
 
     padding-top: 0%;
+}
+
+.Subheader2 {
+    grid-area: Header;
+    background-color: #5cfff700;
+
+    font-family: Fahkwang;
+    font-size: 50px;
+
+    padding-top: 0%;
+    padding-left: 35%;
 }
 
 .Content {
@@ -170,6 +155,25 @@ body {
     text-align: left;
 }
 
+.Content2 {
+
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    padding-right: 15%;
+
+    grid-area: Header;
+    background-color: #bc2f1900;
+
+    font-family: Fahkwang;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 35%;
+}
+
 /*
 .Content {
 
@@ -181,15 +185,22 @@ body {
 
     padding-top: 20%;
 }   
-*/ 
+*/
+.overViewElement {
+    color: #5e5e5e;
+}
 
-.overViewHeader{
+.overViewElement:hover {
+    color: #000000;
+}
+
+.overViewHeader {
     padding-left: 40%;
     font-family: Fahkwang;
     font-size: 50px;
 }
 
-.overViewSubheader{
+.overViewSubheader {
     margin-top: 4%;
     padding-left: 40%;
     font-family: Fahkwang;
@@ -230,14 +241,6 @@ body {
 
 }
 
-.eventOverview {
-    background-color: #3D7245;
-    width: 100%;
-    height: auto;
-}
-
-
-
 
 ul {
     list-style-type: none;
@@ -247,10 +250,13 @@ ul {
 }
 
 li {
-    width: 100%;
-    height: auto;
+    list-style-type: none;
+
+    padding-left: 0%;
+    margin: 0%;
 
 }
+
 
 .titleItem {
     height: auto;
@@ -282,7 +288,12 @@ li {
     text-align: center;
 }
 
-li.overView {
-    height: 400px;
-    text-align: center;
+.happeningElement01 {
+    height: 1400px;
+    overflow: hidden;
+}
+
+.happeningElement02 {
+    height: 1400px;
+    overflow: hidden;
 }
