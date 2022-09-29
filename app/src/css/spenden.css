@@ -273,10 +273,43 @@ body {
 
     margin: auto;
 }
+/* Step1*/
+.content{
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px; 
+    color: #313131;
+    margin: 2%;
+}
+.content__title{
+  
+    line-height: 45px; 
+    margin-bottom: 3%;
+    
+}
+.content__amount{
+  
+    line-height: 24px;
+    margin: 2%;
+  
+}
 
+.content__btn{
+    width: 15%;
+    height: 37px;
+    margin: 2%;
+    background: white;
+}
+
+.content__btn:hover{
+    background-color: lightgray;
+}
+/*Step2*/
 .step2{
-    width: 100%;
+    width: 80%;
     display: block;
+    border: 1px solid #313131;
 }
 /*margin-left: 2%;*/
  .user-details-input{
