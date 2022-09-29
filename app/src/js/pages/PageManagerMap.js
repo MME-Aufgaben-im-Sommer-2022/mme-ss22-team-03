@@ -76,7 +76,6 @@ function initPlaceLists(manager) {
   var entryList,
     keyList;
 
-
   entryList = Object.values(manager.allPlaceList);
   keyList = Object.keys(manager.allPlaceList);
 
