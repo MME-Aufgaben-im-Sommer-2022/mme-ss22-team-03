@@ -8,8 +8,8 @@ async function initManager(manager) {
 
     initControls(manager);
     initEventList(manager);
-
     UpdateHappeningList(manager);
+    initEventListeners(manager);
 }
 
 async function initData(manager) {
@@ -21,7 +21,6 @@ async function initData(manager) {
     try {
         let data = await FireBaseConnector.getData("data/pages/event/eventList");
         manager.happeningList = data;
-        console.log(manager.happeningList);
     } catch (error) {
         console.error(error);
     }
@@ -46,7 +45,7 @@ async function initData(manager) {
 
 function initControls(manager) {
 
-    manager.controls = {
+    manager.lists = {
         happeningList: document.querySelector(".happeningList"),
         overViewList: document.querySelector(".overViewList"),
     };
@@ -54,6 +53,7 @@ function initControls(manager) {
     const template = document.querySelector("#happeningTemplate");
     manager.clone = template.content.cloneNode(true);
     manager.overViewElement = manager.clone.querySelector(".overViewElement");
+
 }
 
 function initEventList(manager) {
@@ -74,11 +74,25 @@ function UpdateHappeningList(manager) {
 
         let overViewClone = manager.overViewElement.cloneNode(true);
         overViewClone.querySelector(".overViewHeader").textContent = happening.data.header;
+        overViewClone.querySelector(".overViewHeader").id = happening.data.header;
         overViewClone.querySelector(".overViewSubheader").textContent = happening.data.date;
+        overViewClone.id = happening.data.header;
 
-        manager.controls.overViewList.append(overViewClone);
-        manager.controls.happeningList.append(happening.htmlData);
+        manager.lists.overViewList.append(overViewClone);
+        happening.htmlData.id = happening.data.header + "_Happening";
+        manager.lists.happeningList.append(happening.htmlData);
     });
+}
+
+function initEventListeners(manager) {
+    const overViewElList = document.querySelectorAll(".overViewElement");
+
+    overViewElList.forEach(element => {
+        element.addEventListener("click", function (e) {
+            manager.scrollToEvent(e.target.id);
+        });
+    });
+
 }
 
 export default class PageManagerEvents extends Observable {
@@ -94,5 +108,11 @@ export default class PageManagerEvents extends Observable {
     openRequest(id) {
         console.log(id);
         //TODO: Fetch correct Happening and call openRequest
+    }
+
+    scrollToEvent(id) {
+        var element = document.getElementById(id + "_Happening");
+
+        element.scrollIntoView();
     }
 }
