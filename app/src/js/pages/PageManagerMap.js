@@ -2,44 +2,106 @@
 /* eslint-disable no-undef */
 import MapManager from "../modules/MapManager.js";
 import { Observable } from "../utils/Observable.js";
+import FireBaseConnector from "../database/FireBaseConnector.js";
 
 let myMapManager;
 
-function initManager(manager) {
+async function initManager(manager) {
 
-  initPlaceList(manager);
+  await initData(manager);
+
+  initIcons(manager);
+  initPlaceLists(manager);
   initControls(manager);
-
-  // Initializing MapManager
-  myMapManager = new MapManager(manager.placeList, manager
-    .maxMapZoom, manager.startZoom,
-    manager.startCoords);
-
+  initMapManager(manager);
   initPlaceOverview(manager);
 }
 
-function initPlaceList(manager) {
-  var Icon = L.icon({
+async function initData(manager) {
+
+  //  Fetch Data for MapManager
+  try {
+    let data = await FireBaseConnector.getData("data/pages/map/mapData");
+    manager.mapData = data;
+  } catch (error) {
+    console.error(error);
+  }
+
+  //  Fetch Data for Marker Icon
+  try {
+    let iconData = await FireBaseConnector.getData("data/pages/map/iconData");
+    manager.iconData = iconData;
+  } catch (error) {
+    console.error(error);
+  }
+
+  //  Fetch Marker List for PlaceList
+  try {
+    let markerList = await FireBaseConnector.getData("data/pages/map/MarkerList");
+    manager.allPlaceList = markerList;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function initIcons(manager) {
+
+  manager.activeIcon = L.icon({
     iconUrl: "./src/images/map_page/marker.png",
 
-    iconSize: [35, 50], // size of the icon
-    iconAnchor: [17.5,
-      50,
+    iconSize: [manager.iconData.iconSizeX, manager.iconData.iconSizeY], // size of the icon
+    iconAnchor: [manager.iconData.iconAnchorX,
+    manager.iconData.iconAnchorY,
     ], // point of the icon which will correspond to marker's location
-    popupAnchor: [-3, -
-      76,
+    popupAnchor: [manager.iconData.popupAnchorX, -
+      manager.iconData.popupAnchorY,
     ], // point from which the popup should open relative to the iconAnchor
   });
 
-  manager.placeList.forEach(placeData => {
-    placeData.marker = L.marker(placeData.coords, { icon: Icon });
-    if (placeData.zoomLevel === "pastina") { manager.pastinaMarkerList.push(placeData); }
-    else { manager.surroundingMarkerList.push(placeData); }
-  });
+  manager.normalIcon = L.icon({
+    iconUrl: "./src/images/map_page/marker.png",
 
-  manager.placeList = manager.pastinaMarkerList;
+    iconSize: [manager.iconData.iconSizeX, manager.iconData.iconSizeY], // size of the icon
+    iconAnchor: [manager.iconData.iconAnchorX,
+    manager.iconData.iconAnchorY,
+    ], // point of the icon which will correspond to marker's location
+    popupAnchor: [manager.iconData.popupAnchorX, -
+      manager.iconData.popupAnchorY,
+    ], // point from which the popup should open relative to the iconAnchor
+  });
 }
 
+function initPlaceLists(manager) {
+
+  var entryList,
+    keyList;
+
+  entryList = Object.values(manager.allPlaceList);
+  keyList = Object.keys(manager.allPlaceList);
+
+  manager.allPlaceList = [];
+
+  keyList.forEach(key => {
+    let idx = keyList.indexOf(key),
+      tempPlace = {
+        id: key,
+        name: entryList[idx].name,
+        coords: entryList[idx].coords,
+        zoomLevel: entryList[idx].zoomLevel,
+        zoomVal: entryList[idx].zoomVal,
+        marker: L.marker([entryList[idx].coords.x, entryList[idx].coords.y], { icon: manager.normalIcon }),
+      };
+    manager.allPlaceList.push(tempPlace);
+  });
+}
+
+function initMapManager(manager) {
+
+  // Initializing MapManager
+  myMapManager = new MapManager(manager.allPlaceList, manager.mapData
+    .maxZoom, manager.mapData.startZoom,
+    manager.mapData.centerCoords);
+}
 function initControls(manager) {
 
   manager.controls = {
@@ -67,7 +129,7 @@ function initControls(manager) {
     manager.setActiveElement(e.target.id);
   });
 
-  manager.placeList.forEach(element => {
+  manager.allPlaceList.forEach(element => {
     element.marker.addEventListener("click", () => {
       manager.setActiveElement(element.id);
     });
@@ -76,7 +138,7 @@ function initControls(manager) {
 
 function initPlaceOverview(manager) {
 
-  manager.placeList.forEach(place => {
+  manager.allPlaceList.forEach(place => {
 
     let overViewClone = manager.overViewElement.cloneNode(true);
     // overViewContentClone = manager.overViewContentElement.cloneNode(true);
@@ -99,14 +161,10 @@ function initPlaceOverview(manager) {
 
 export default class PageManagerMap extends Observable {
 
-  constructor(placeDataList) {
+  constructor() {
     super();
 
-    this.maxMapZoom = 20,
-      this.startZoom = 18;
-    this.startCoords = [43.624416, 11.884388];
-
-    this.placeList = placeDataList;
+    this.allPlaceList = [];
     this.pastinaMarkerList = [];
     this.surroundingMarkerList = [];
 
@@ -114,45 +172,53 @@ export default class PageManagerMap extends Observable {
   }
 
   setActiveElement(id) {
-    var newPlace,
-      tempOverViewList;
+    var newActivePlace;
 
     if (id === null || id === undefined || id === "") {
       return;
+    } else if (id === "PA") {
+      this.setMapState("pastina");
+      return;
     }
 
-    tempOverViewList = document.getElementsByName("placeOverViewElement");
-
-    Array.from(tempOverViewList).forEach(element => {
+    Array.from(document.getElementsByName("placeOverViewElement")).forEach(element => {
       element.classList.remove("active");
       document.getElementById(id).classList.add("active");
     });
 
-    newPlace = this.placeList.find(x => x.id === id);
-    if (newPlace !== undefined) { myMapManager.flyTo(newPlace.coords, newPlace.zoomVal); }
+    newActivePlace = this.shownPlaceList.find(x => x.id === id);
+    if (newActivePlace !== undefined) { myMapManager.flyTo([newActivePlace.coords.x, newActivePlace.coords.y], newActivePlace.zoomVal); }
 
+    console.log(newActivePlace.marker);
     //TODO: Set correct Marker color when active
     Dage.navigate(id);
   }
 
   setMapState(newZoomState) // pastina / surroundings
   {
+    var coords = [this.mapData.centerCoords[0], this.mapData.centerCoords[1]];
 
     myMapManager.hideMarkers();
     myMapManager.showMarkers(newZoomState);
 
+    this.shownPlaceList = [];
+
+    this.allPlaceList.forEach(place => {
+      if (place.zoomLevel === newZoomState) {
+        this.shownPlaceList.push(place);
+      }
+    });
+
     switch (newZoomState) {
       case "pastina":
-        this.placeList = this.pastinaMarkerList;
         this.controls.zoomButtonPastina.classList.add("active");
         this.controls.zoomButtonSurroundings.classList.remove("active");
-        myMapManager.flyTo(this.startCoords, 18);
+        myMapManager.flyTo(coords, this.mapData.mapStatePastinaZoom);
         break;
       case "surrounding":
-        this.placeList = this.surroundingMarkerList;
         this.controls.zoomButtonSurroundings.classList.add("active");
         this.controls.zoomButtonPastina.classList.remove("active");
-        myMapManager.flyTo(this.startCoords, 12);
+        myMapManager.flyTo(coords, this.mapData.mapStateSurroundingZoom);
         break;
       default:
         break;

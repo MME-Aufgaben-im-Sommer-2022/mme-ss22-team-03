@@ -1,4 +1,7 @@
 /* CSS for DonateButton & all omnipresent Elements */
+html {
+    scroll-behavior: smooth;
+}
 
 :root {
     --mint: #D6E5CB;
