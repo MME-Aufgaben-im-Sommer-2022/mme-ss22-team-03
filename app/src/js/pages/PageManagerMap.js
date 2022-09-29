@@ -10,7 +10,7 @@ async function initManager(manager) {
 
   await initData(manager);
 
-  initIcons(manager);
+  initMapUI(manager);
   initPlaceLists(manager);
   initControls(manager);
   initListeners(manager);
@@ -30,6 +30,7 @@ async function initData(manager) {
   } catch (error) {
     console.error(error);
   }
+  manager.mapData.centerCoords = [manager.mapData.centerCoords[0], manager.mapData.centerCoords[1]];
 
   //  Fetch Data for Marker Icon
   try {
@@ -46,11 +47,14 @@ async function initData(manager) {
   } catch (error) {
     console.error(error);
   }
+
 }
 
-function initIcons(manager) {
+function initMapUI(manager) {
 
-  manager.normalIcon = L.icon({
+  var icon;
+
+  icon = L.icon({
     iconUrl: "./src/images/map_page/normalMarker.png",
 
     iconSize: [manager.iconData.iconSizeX, manager.iconData.iconSizeY], // size of the icon
@@ -62,30 +66,45 @@ function initIcons(manager) {
     ], // point from which the popup should open relative to the iconAnchor
   });
 
-  manager.activeIcon = manager.normalIcon;
-  manager.activeIcon.iconUrl = "./src/images/map_page/activeMarker.png";
+  // MARKER-ICONS
+  manager.mapUI = {
+    normalIcon: icon,
+    activeIcon: icon,
+  };
+
+  manager.mapUI.activeIcon.iconUrl = "./src/images/map_page/activeMarker.png";
+
 }
 
 function initPlaceLists(manager) {
 
   var entryList,
-    keyList;
+    keyList,
+    popup;
 
+  //  Create temporary Lists
   entryList = Object.values(manager.allPlaceList);
   keyList = Object.keys(manager.allPlaceList);
 
   manager.allPlaceList = [];
 
   keyList.forEach(key => {
+
     let idx = keyList.indexOf(key),
       tempPlace = {
         id: key,
         name: entryList[idx].name,
-        coords: entryList[idx].coords,
+        coords: [entryList[idx].coords.x, entryList[idx].coords.y],
         zoomLevel: entryList[idx].zoomLevel,
         zoomVal: entryList[idx].zoomVal,
-        marker: L.marker([entryList[idx].coords.x, entryList[idx].coords.y], { icon: manager.normalIcon }),
+        marker: L.marker([entryList[idx].coords.x, entryList[idx].coords.y], { icon: manager.mapUI.normalIcon }),
       };
+
+    popup = L.popup()
+      .setContent(tempPlace.name)
+      .setLatLng(tempPlace.coords);
+
+    tempPlace.marker.bindPopup(popup);
     manager.allPlaceList.push(tempPlace);
   });
 }
@@ -170,8 +189,7 @@ export default class PageManagerMap extends Observable {
   }
 
   setActiveElement(id) {
-    var newActivePlace,
-      coords;
+    var newActivePlace;
 
     if (id === null || id === undefined || id === "") {
       return;
@@ -186,10 +204,9 @@ export default class PageManagerMap extends Observable {
     });
 
     newActivePlace = this.shownPlaceList.find(x => x.id === id);
-    coords = [newActivePlace.coords.x, newActivePlace.coords.y];
 
     if (newActivePlace !== undefined) {
-      myMapManager.flyTo(coords, newActivePlace.zoomVal);
+      myMapManager.flyTo(newActivePlace.coords, newActivePlace.zoomVal);
     }
 
     Dage.navigate(id);
@@ -197,8 +214,6 @@ export default class PageManagerMap extends Observable {
 
   setMapState(newZoomState) // pastina / surroundings
   {
-    var coords = [this.mapData.centerCoords[0], this.mapData.centerCoords[1]];
-
     myMapManager.hideMarkers();
     myMapManager.showMarkers(newZoomState);
 
@@ -214,12 +229,12 @@ export default class PageManagerMap extends Observable {
       case "pastina":
         this.controls.zoomButtonPastina.classList.add("active");
         this.controls.zoomButtonSurroundings.classList.remove("active");
-        myMapManager.flyTo(coords, this.mapData.mapStatePastinaZoom);
+        myMapManager.flyTo(this.mapData.centerCoords, this.mapData.mapStatePastinaZoom);
         break;
       case "surrounding":
         this.controls.zoomButtonSurroundings.classList.add("active");
         this.controls.zoomButtonPastina.classList.remove("active");
-        myMapManager.flyTo(coords, this.mapData.mapStateSurroundingZoom);
+        myMapManager.flyTo(this.mapData.centerCoords, this.mapData.mapStateSurroundingZoom);
         break;
       default:
         break;

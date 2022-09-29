@@ -37,7 +37,6 @@ class MapManager {
   }
 
   flyTo(coords, zoom) {
-    console.log(coords);
     this.map.flyTo(coords, zoom);
   }
 
