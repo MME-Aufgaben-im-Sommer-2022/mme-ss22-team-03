@@ -44,6 +44,17 @@ function sendRequestCall(event) {
     console.log(event.data);
 }
 
+function scroll(event) {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+    // if (event.data === "Up") {
+    //     document.body.scrollTop = document.documentElement.scrollTop = 0;
+    // } else if (event.data === "Down") {
+    //     //TODO: Scroll to specific Element
+    //     document.body.scrollTop = document.documentElement.scrollTop = 0;
+    // }
+}
+
 /**
    * Function for Instantiating PageManager from Current Page
    */
@@ -90,7 +101,6 @@ function initPage() {
    */
 function switchPage(event) {
     var newPageString = event.data + ".html";
-    console.log("test");
     window.location.replace(newPageString);
 }
 
