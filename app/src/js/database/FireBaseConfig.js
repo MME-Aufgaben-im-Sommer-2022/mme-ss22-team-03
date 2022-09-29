@@ -8,7 +8,7 @@ const FireBaseConfig = {
     storageBucket: "pastina-4ea63.appspot.com",
     messagingSenderId: "300140864700",
     appId: "1:300140864700:web:aac268cd7b04f452fbdcb9",
-    measurementId: "G-0NEKC8CFD9"
+    measurementId: "G-0NEKC8CFD9",
 };
 
 export default FireBaseConfig;

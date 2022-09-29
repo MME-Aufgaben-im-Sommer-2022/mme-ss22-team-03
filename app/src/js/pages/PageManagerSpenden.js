@@ -15,6 +15,8 @@ function initControls(manager) {
         Step2: document.querySelector("[id='step2Text']"),
         Step3: document.querySelector("[id='step3Text']"),
 
+        donateButton: document.getElementById("donateButton"),
+
         Test: document.getElementById("TEST"),
     };
 }
@@ -24,6 +26,11 @@ function initListeners(manager) {
     //  Event Listeners for Next Button
     manager.controls.NextButton.addEventListener("click", () => {
         manager.nextButtonClick();
+    });
+
+    //  Event Listeners for Next Button
+    manager.controls.donateButton.addEventListener("click", () => {
+        manager.donateButtonClick();
     });
 
     //  Event Listeners for Step Buttons
@@ -73,6 +80,11 @@ export default class PageManagerSpenden extends Observable {
             return;
         }
         this.switchFormStep(step);
+    }
+
+    donateButtonClick() {
+        var element = document.getElementById("SpendenFormHolder");
+        element.scrollIntoView();
     }
 
     switchFormStep(step) {

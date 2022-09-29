@@ -31,44 +31,6 @@ class FireBaseConnector {
         return undefined;
     }
 
-    //TODO: convert single list call to overall List call
-    // async getDataList(path) {
-    //     let snapshot,
-    //         rawList,
-    //         entryList,
-    //         keyList,
-    //         valueList,
-    //         resultList = [];
-
-    //     try {
-    //         snapshot = await get(child(this.dbRef, path));
-    //         if (snapshot.exists()) {
-    //             rawList = snapshot.val();
-
-    //             entryList = Object.values(rawList);
-    //             keyList = Object.keys(rawList);
-    //             valueList = Object.values(rawList);
-
-    //             console.log(entryList);
-    //             console.log("keyList: " + keyList);
-    //             console.log(valueList);
-
-    //             keyList.forEach(key => {
-    //                 let idx = keyList.indexOf(key),
-    //                     item = {
-    //                     };
-    //                 resultList.push(item);
-    //             });
-
-    //             return resultList;
-    //         }
-    //     } catch (error) {
-    //         console.error(error);
-    //         throw new Error("Could not retrieve snapshot from FireBase");
-    //     }
-    //     return undefined;
-    // }
-
     sendTestData() {
 
         set(ref(this.db, "data/test2/"), {

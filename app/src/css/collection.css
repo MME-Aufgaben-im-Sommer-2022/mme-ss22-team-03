@@ -1,4 +1,3 @@
-/* CSS for DonateButton & all omnipresent Elements */
 html {
     scroll-behavior: smooth;
 }
@@ -23,7 +22,6 @@ html {
 
     color: white;
     border: none;
-
 
     text-align: center;
     display: inline-block;

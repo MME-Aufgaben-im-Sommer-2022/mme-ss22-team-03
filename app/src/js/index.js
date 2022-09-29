@@ -46,7 +46,6 @@ function sendRequestCall(event) {
 }
 
 function scroll(event) {
-    console.log("Scroll " + event.data);
     document.body.scrollTop = document.documentElement.scrollTop = 0;
 
     // if (event.data === "Up") {
@@ -103,7 +102,6 @@ function initPage() {
    */
 function switchPage(event) {
     var newPageString = event.data + ".html";
-    console.log("test");
     window.location.replace(newPageString);
 }
 
