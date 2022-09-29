@@ -144,13 +144,51 @@
                                 </button>
                         </div>
 
-                        <div id="SFHeader_BorderBottom"></div>
+                        <<<<<<< HEAD <div id="SFHeader_BorderBottom">
+                </div>
+                =======
+
+                <div id="button_next" style="cursor: pointer;" class="buttonNext">
+                        <img src="src/images/buttons/button_IMG-Next-Right.svg" id="vector_172_ek1" />
+
                 </div>
 
-                <div id="SpendenFormContent">
 
-                        <!-- Step 1 -->
-                        <!-- <div data-page="step1">
+
+                <img src="src/images/spenden_page/spenden_IMG_Line.png" id="vector_999" />
+
+
+
+                <div id="button_backtotop" style="cursor: pointer;" class="buttonGoUp">
+                        <!-- <img src="src/images/buttons/button_IMG-Back-To-Top.svg" id="vector_172" /> -->
+
+                </div>
+
+                <div id="nach_oben">
+                        Nach oben
+                </div> -->
+                >>>>>>> Spenden-Form-Design-CONTENT
+        </div>
+
+        <div id="SpendenFormContent">
+
+                <!-- Step 1 -->
+
+                <div data-page="step1" class="contetns1">
+                        <div class="content">
+                                <h1 class="content__title">Betrag</h1>
+                                <input type="number" class="content__amount" id="amount" name="inputAmount"
+                                        placeholder="Eur0 20">
+                        </div>
+                        <div class="content">
+                                <h1 class="content__title">Frequenz</h1>
+                                <button class="content__btn">monatlich</button>
+                                <button class="content__btn">halbjährlich</button>
+                                <button class="content__btn">jährlich</button>
+                                <button class="content__btn">einmalig</button>
+                        </div>
+                </div>
+                <!-- <div data-page="step1">
 
                                 <div id="betrag_ek1">
                                         20
@@ -204,52 +242,54 @@
 
                         </div> -->
 
-                        <!-- Step 2 -->
-                        <div data-page="step2">
-                                <div class="user-details-input">
-                                        <div class="textField">
-                                                <span class="textfield__txt" id="prename"> Vorname </span>
-                                                <input type="text" class="textField__input" name="inputPrename"
-                                                        placeholder="Vorname">
-                                        </div>
-                                        <div class="textField">
-                                                <span class="textfield__txt" id="surname"> Nachname </span>
-                                                <input type="text" class="textField__input" name="inputSurname"
-                                                        placeholder="Nachname">
-                                        </div>
+                <!-- Step 2 -->
+                <div data-page="step2">
+                        <div class="user-details-input">
+                                <div class="textField">
+                                        <span class="textfield__txt" id="prename"> Vorname </span>
+                                        <input type="text" class="textField__input" name="inputPrename"
+                                                placeholder="Vorname">
+                                </div>
+                                <div class="textField">
+                                        <span class="textfield__txt" id="surname"> Nachname </span>
+                                        <input type="text" class="textField__input" name="inputSurname"
+                                                placeholder="Nachname">
+                                </div>
 
-                                        <div class="textField">
-                                                <span class="textfield__txt" id="street"> Straße, Nr. </span>
-                                                <input type="text" class="textField__input" name="inputStreet"
-                                                        placeholder="Straße, Nr">
-                                        </div>
-                                        <div class="textField">
-                                                <span class="textfield__txt" id="city"> PLZ, Ort </span>
-                                                <input type="text" class="textField__input" name="inputCity"
-                                                        placeholder="PLZ, Ort">
-                                        </div>
+                                <div class="textField">
+                                        <span class="textfield__txt" id="street"> Straße, Nr. </span>
+                                        <input type="text" class="textField__input" name="inputStreet"
+                                                placeholder="Straße, Nr">
+                                </div>
+                                <div class="textField">
+                                        <span class="textfield__txt" id="city"> PLZ, Ort </span>
+                                        <input type="text" class="textField__input" name="inputCity"
+                                                placeholder="PLZ, Ort">
+                                </div>
 
-                                        <div class="textField">
-                                                <span class="textfield__txt" id="email"> E-mail </span>
-                                                <input type="email" class="textField__input" name="inputEmail"
-                                                        placeholder="E-mail">
-                                        </div>
-                                        <div class="textField">
-                                                <span class="textfield__txt" id="phonenumber"> Phone Number </span>
-                                                <input type="number" class="textField__input" name="inputMobile"
-                                                        placeholder="Phone Number">
-                                        </div>
+                                <div class="textField">
+                                        <span class="textfield__txt" id="email"> E-mail </span>
+                                        <input type="email" class="textField__input" name="inputEmail"
+                                                placeholder="E-mail">
+                                </div>
+                                <div class="textField">
+                                        <span class="textfield__txt" id="phonenumber"> Phone Number </span>
+                                        <input type="number" class="textField__input" name="inputMobile"
+                                                placeholder="Phone Number">
+                                </div>
 
-                                        <div class="textField">
-                                                <span class="textfield__txt" id="bday"> Birthday </span>
-                                                <input type="number" class="textField__input" name="inputBirthday"
-                                                        placeholder="Birthday">
-                                        </div>
+                                <div class="textField">
+                                        <span class="textfield__txt" id="bday"> Birthday </span>
+                                        <input type="number" class="textField__input" name="inputBirthday"
+                                                placeholder="Birthday">
                                 </div>
                         </div>
-                </div>
 
-                <!-- Step 3 TODO: Stripe Plugin div!
+                        <button id="TEST">Test</button>
+                </div>
+        </div>
+
+        <!-- Step 3 TODO: Stripe Plugin div!
                         <div data-page="step3">
 
                                 <div id="paypal">

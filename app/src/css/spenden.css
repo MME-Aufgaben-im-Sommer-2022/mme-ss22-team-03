@@ -266,6 +266,30 @@ body {
     margin: auto;
 }
 
+/* Step1*/
+.content {
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    color: #313131;
+    margin: 2%;
+}
+
+.content__title {
+
+    line-height: 45px;
+    margin-bottom: 3%;
+
+}
+
+.content__amount {
+
+    line-height: 24px;
+    margin: 2%;
+
+}
+
 #SFHeader_Header {
 
     width: auto;
@@ -393,7 +417,12 @@ body {
     line-height: 24px;
 }
 
+<<<<<<< HEAD
 /* Only edit this if you know what you are doing! */
+=======
+/*
+Only edit this if you know what you are doing! */
+>>>>>>>Spenden-Form-Design-CONTENT
 /* div { position: absolute; } */
 
 #background_group {
@@ -620,6 +649,7 @@ body {
     background: rgba(255, 255, 255, 0);
     position: absolute;
 }
+
 
 
 #betrag {
