@@ -19,7 +19,7 @@ function initListeners(manager) {
     });
 
     if (manager.buttonUp !== null && manager.buttonUp !== undefined) {
-        manager.buttonUp.addEventListener("click", (e) => {
+        manager.buttonUp.addEventListener("click", () => {
             manager.scrollUp();
         });
     }

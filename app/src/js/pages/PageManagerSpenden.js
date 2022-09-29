@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { Observable } from "../utils/Observable.js";
 import FormReader from "../modules/FormReader.js";
 
@@ -116,6 +117,7 @@ export default class PageManagerSpenden extends Observable {
             goOn = true;
         } else {
             //TODO: Input missing -> Display message
+            // eslint-disable-next-line no-alert
             alert("PLEASE FILL OUT ALL INFORMATION");
         }
 
