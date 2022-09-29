@@ -63,11 +63,17 @@ button {
     width: 100px;
     height: 100px;
 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    overflow: visible;
     border: none;
     padding: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 
     text-align: center;
-    display: inline-block;
 
     background-image: url('../images/buttons/Button-Outline-Black.png');
     background-size: cover;
