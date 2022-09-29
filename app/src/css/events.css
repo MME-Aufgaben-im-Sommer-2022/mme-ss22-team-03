@@ -11,11 +11,6 @@
     --red: #BC2E19;
 }
 
-/* example of color use {
-    background-color: var(--snow);
-} */
-
-
 body {
     background-color: var(--snow);
     font-family: 'Space Grotesk', sans-serif;
@@ -98,26 +93,9 @@ body {
 #Img {
     width: auto;
     height: auto;
-    
+
     overflow: hidden;
 }
-/*
-.Header {
-    grid-area: Header;
-    background-color: #2200ff00;
-
-    height: auto;
-    
-    padding-top: 50px;
-
-    font-family: Fahkwang;
-    font-size: 90px;
-    font-weight: 400;
-    line-height: 90px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-*/
 
 .Header {
     background-color: #2200ff00;
@@ -125,7 +103,7 @@ body {
 
     font-family: Fahkwang;
     font-size: 90px;
-    
+
 }
 
 .Header2 {
@@ -135,22 +113,8 @@ body {
 
     font-family: Fahkwang;
     font-size: 90px;
-    
-}
 
-/*
-.Subheader {
-    grid-area: Subheader;
-    background-color: #5cfff700;
-
-    font-family: Fahkwang;
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 50px;
-    letter-spacing: 0em;
-    text-align: left;
 }
-*/
 
 .Subheader {
     grid-area: Header;
@@ -221,15 +185,22 @@ body {
 
     padding-top: 20%;
 }   
-*/ 
+*/
+.overViewElement {
+    color: #5e5e5e;
+}
 
-.overViewHeader{
+.overViewElement:hover {
+    color: #000000;
+}
+
+.overViewHeader {
     padding-left: 40%;
     font-family: Fahkwang;
     font-size: 50px;
 }
 
-.overViewSubheader{
+.overViewSubheader {
     margin-top: 4%;
     padding-left: 40%;
     font-family: Fahkwang;
@@ -270,14 +241,6 @@ body {
 
 }
 
-.eventOverview {
-    background-color: #3D7245;
-    width: 100%;
-    height: auto;
-}
-
-
-
 
 ul {
     list-style-type: none;
@@ -285,12 +248,6 @@ ul {
     padding-left: 0%;
     margin: 0%;
 }
-/*
-li {
-    width: 100%;
-    height: auto;
-}
-*/
 
 li {
     list-style-type: none;
@@ -328,11 +285,6 @@ li {
     font-weight: 400;
     line-height: 50px;
     letter-spacing: 0em;
-    text-align: center;
-}
-
-li.overView {
-    height: 400px;
     text-align: center;
 }
 

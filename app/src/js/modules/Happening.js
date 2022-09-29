@@ -11,14 +11,14 @@ function InitHappening(happening) {
         htmlClone = happeningElement01.cloneNode(true);
         htmlClone.querySelector(".Image").src = happening.data.imageSrc;
         htmlClone.querySelector(".Header").textContent = happening.data.header;
-        htmlClone.querySelector(".Subheader").textContent = happening.data.subheader;
+        htmlClone.querySelector(".Subheader").textContent = happening.data.date;
         htmlClone.querySelector(".Content").textContent = happening.data.content;
 
     } else {
         htmlClone = happeningElement02.cloneNode(true);
         htmlClone.querySelector(".Image2").src = happening.data.imageSrc;
         htmlClone.querySelector(".Header2").textContent = happening.data.header;
-        htmlClone.querySelector(".Subheader2").textContent = happening.data.subheader;
+        htmlClone.querySelector(".Subheader2").textContent = happening.data.date;
         htmlClone.querySelector(".Content2").textContent = happening.data.content;
     }
 

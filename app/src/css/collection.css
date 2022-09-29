@@ -1,1 +1,79 @@
 /* CSS for DonateButton & all omnipresent Elements */
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --mint: #D6E5CB;
+    --green: #3D7245;
+    --green-light: #73cd81;
+    --dark-grey: #313131;
+    --orange: #EE6C4D;
+    --red: #BC2E19;
+
+    --btn_red: #BC2E19;
+    --btn_red_hover: #e93e24;
+}
+
+/* CSS for different Buttons */
+
+.button {
+    width: 150px;
+    height: 150px;
+
+    color: white;
+    border: none;
+
+
+    text-align: center;
+    display: inline-block;
+
+    background-image: url('../images/buttons/Button-Background-Outline.png');
+    background-size: cover;
+
+}
+
+#donate {
+    background-color: var(--btn_red);
+}
+
+#participate {
+    background-color: var(--mint);
+}
+
+#switchPage {
+    background-color: var(--green);
+}
+
+#request {
+    background-color: var(--green-light);
+}
+
+#scrollUp {
+    background-color: var(--dark-grey);
+    color: #D6E5CB;
+}
+
+.button:hover {
+    background-color: var(--btn_red_hover);
+    cursor: pointer;
+}
+
+.btn_content {
+
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+    background-color: #313131;
+}
+
+.btn_text {
+    width: max-content;
+    height: max-content;
+
+    text-align: center;
+    padding-top: 50%;
+}

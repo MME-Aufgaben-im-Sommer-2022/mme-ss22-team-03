@@ -8,6 +8,7 @@
         <link rel="icon" type="image/x-icon" href="/app/src/images/navigation-bar/Pastina_Tab_Logo.png">
         <link rel="stylesheet" href="./src/css/events.css">
         <link rel="stylesheet" href="./src/css/navigation-bar.css">
+        <link rel="stylesheet" href="./src/css/collection.css">
 
 
         <!-- index  -->
@@ -67,9 +68,13 @@
         <ul class="overViewList" id="overViewList">
         </ul>
 
+
         <ul class="happeningList" id="happeningList">
         </ul>
 
+        <button class="button" id="scroll" name="up">
+                <span class="btn_text">Scroll Up</span>
+        </button>
 
         <template id="happeningTemplate">
                 <li class="happeningElement01">
@@ -96,7 +101,7 @@
 
                 <li class="overViewElement">
                         <div class="overViewSubheader"></div>
-                        <div class="overViewHeader"></div>
+                        <div class="overViewHeader" style="cursor: pointer;"></div>
                 </li>
         </template>
 </body>

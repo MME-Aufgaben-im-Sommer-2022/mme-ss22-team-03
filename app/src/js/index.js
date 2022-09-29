@@ -5,12 +5,15 @@ import PageManagerEvents from "../js/pages/PageManagerEvents.js";
 import PageManagerMitgliedschaft from "../js/pages/PageManagerMitgliedschaft.js";
 import PageManagerSpenden from "../js/pages/PageManagerSpenden.js";
 import NavBar from "../js/modules/NavBar.js";
-import { getHappeningDataList, getPlaceDataList } from "../js/utils/SQLHardoce.js";
+import ButtonManager from "../js/modules/ButtonManager.js";
 
-let myNavBar;
+let myNavBar,
+    myButtonManager,
+    currentPage;
 
-function init() {
+async function init() {
     initNavBar();
+    initButtonManager();
     initPage();
 }
 
@@ -26,12 +29,40 @@ function initNavBar() {
 }
 
 /**
+   * Function for Instantiating NavBar
+   */
+function initButtonManager() {
+    myButtonManager = new ButtonManager();
+
+    myButtonManager.addEventListener("switchPage", switchPage);
+    myButtonManager.addEventListener("request", sendRequestCall);
+    myButtonManager.addEventListener("scroll", scroll);
+
+}
+
+function sendRequestCall(event) {
+    //currentPage.openRequest(event.data);
+    console.log(event.data);
+}
+
+function scroll(event) {
+    console.log("Scroll " + event.data);
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+    // if (event.data === "Up") {
+    //     document.body.scrollTop = document.documentElement.scrollTop = 0;
+    // } else if (event.data === "Down") {
+    //     //TODO: Scroll to specific Element
+    //     document.body.scrollTop = document.documentElement.scrollTop = 0;
+    // }
+}
+
+/**
    * Function for Instantiating PageManager from Current Page
    */
 function initPage() {
 
-    var currentPage,
-        pageID = "notfound";
+    var pageID = "notfound";
 
     //  Gets the current active page by class="active"
     myNavBar.navBarList.forEach(element => {
@@ -51,10 +82,10 @@ function initPage() {
             currentPage = new PageManagerMitgliedschaft();
             break;
         case "Events":
-            currentPage = new PageManagerEvents(getHappeningDataList());
+            currentPage = new PageManagerEvents();
             break;
         case "Map":
-            currentPage = new PageManagerMap(getPlaceDataList());
+            currentPage = new PageManagerMap();
             break;
         case "index":
             //console.log("INDEX PAGE INSTANTIATED");
@@ -72,6 +103,7 @@ function initPage() {
    */
 function switchPage(event) {
     var newPageString = event.data + ".html";
+    console.log("test");
     window.location.replace(newPageString);
 }
 
