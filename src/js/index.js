@@ -1,18 +1,17 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable default-case */
-import PageManager_Map from "../js/pages/PageManager_Map.js";
-import PageManager_Events from "../js/pages/PageManager_Events.js";
-import PageManager_Mitgliedschaft from "../js/pages/PageManager_Mitgliedschaft.js";
-import PageManager_Spenden from "../js/pages/PageManager_Spenden.js";
+import PageManagerMap from "../js/pages/PageManagerMap.js";
+import PageManagerEvents from "../js/pages/PageManagerEvents.js";
+import PageManagerMitgliedschaft from "../js/pages/PageManagerMitgliedschaft.js";
+import PageManagerSpenden from "../js/pages/PageManagerSpenden.js";
 import NavBar from "../js/modules/NavBar.js";
-import { getHappeningDataList, getPlaceDataList } from "../js/utils/SQLHardoce.js";
 import ButtonManager from "../js/modules/ButtonManager.js";
 
 let myNavBar,
     myButtonManager,
     currentPage;
 
-function init() {
+async function init() {
     initNavBar();
     initButtonManager();
     initPage();
@@ -37,7 +36,6 @@ function initButtonManager() {
 
     myButtonManager.addEventListener("switchPage", switchPage);
     myButtonManager.addEventListener("request", sendRequestCall);
-    myButtonManager.addEventListener("scroll", scroll);
 
 }
 
@@ -47,7 +45,6 @@ function sendRequestCall(event) {
 }
 
 function scroll(event) {
-    console.log("Scroll " + event.data);
     document.body.scrollTop = document.documentElement.scrollTop = 0;
 
     // if (event.data === "Up") {
@@ -77,16 +74,16 @@ function initPage() {
         case "Uber_uns":
             break;
         case "Spenden":
-            currentPage = new PageManager_Spenden();
+            currentPage = new PageManagerSpenden(pageID);
             break;
         case "Mitgliedschaft":
-            currentPage = new PageManager_Mitgliedschaft();
+            currentPage = new PageManagerMitgliedschaft();
             break;
         case "Events":
-            currentPage = new PageManager_Events(getHappeningDataList());
+            currentPage = new PageManagerEvents();
             break;
         case "Map":
-            currentPage = new PageManager_Map(getPlaceDataList());
+            currentPage = new PageManagerMap();
             break;
         case "index":
             //console.log("INDEX PAGE INSTANTIATED");
@@ -104,7 +101,6 @@ function initPage() {
    */
 function switchPage(event) {
     var newPageString = event.data + ".html";
-    console.log("test");
     window.location.replace(newPageString);
 }
 

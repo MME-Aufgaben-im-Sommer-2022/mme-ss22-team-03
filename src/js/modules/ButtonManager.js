@@ -8,6 +8,7 @@ function init(manager) {
 
 function initButtonList(manager) {
     manager.buttonHTMLList = document.querySelectorAll(".button");
+    manager.buttonUp = document.querySelector(".buttonUp");
 }
 
 function initListeners(manager) {
@@ -16,6 +17,13 @@ function initListeners(manager) {
             manager.buttonClick(e.target.id, e.target.name);
         });
     });
+
+    if (manager.buttonUp !== null && manager.buttonUp !== undefined) {
+        manager.buttonUp.addEventListener("click", () => {
+            manager.scrollUp();
+        });
+    }
+
 }
 
 class ButtonManager extends Observable {
@@ -49,6 +57,10 @@ class ButtonManager extends Observable {
         }
 
         this.notifyAll(event);
+    }
+
+    scrollUp() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
 }
 
