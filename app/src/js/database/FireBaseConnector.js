@@ -15,58 +15,65 @@ class FireBaseConnector {
         this.dbRef = ref(this.db);
     }
 
-    sendEventRequestData(requestDataEvent) {
-        set(ref(this.db, "data/requests/membership/" + requestDataEvent.id), {
-            Prename: requestDataEvent.prename,
-            Surname: requestDataEvent.surname,
-            Email: requestDataEvent.email,
-            MobileNumber: requestDataEvent.mobile,
-            Message: requestDataEvent.message,
-        })
-            .then(() => {
-                console.log("data test stored successfully");
-            })
-            .catch(() => {
-                console.log("error storing data");
-            });
-    }
+    async getData(path) {
+        let snapshot;
 
-    sendMembershipData(requestDataMembership) {
-        set(ref(this.db, "data/requests/membership/" + requestDataMembership.id), {
-            Prename: requestDataMembership.prename,
-            Surname: requestDataMembership.surname,
-            Email: requestDataMembership.email,
-            MobileNumber: requestDataMembership.mobile,
-            Street: requestDataMembership.street,
-            PLZ: requestDataMembership.plz,
-            City: requestDataMembership.city,
-            Birthday: requestDataMembership.birthday,
-        })
-            .then(() => {
-                console.log("data test stored successfully");
-            })
-            .catch(() => {
-                console.log("error storing data");
-            });
-    }
-
-    getData(path) {
-
-        get(child(this.dbRef, path)).then((snapshot) => {
+        try {
+            snapshot = await get(child(this.dbRef, path));
             if (snapshot.exists()) {
-                console.log(snapshot.val());
-            } else {
-                console.log("No data available");
+                return snapshot.val();
             }
-        }).catch((error) => {
+        } catch (error) {
             console.error(error);
-        });
+            throw new Error("Could not retrieve snapshot from FireBase");
+        }
+        return undefined;
     }
 
-    async sendTest() {
-        // TODO Implement dummy request to test firebase connection
+    sendTestData() {
+
+        set(ref(this.db, "data/test2/"), {
+            Prename: "TestPrename",
+            Surname: "TestSurname2",
+        })
+            .then(() => {
+                console.log("data test stored successfully");
+            })
+            .catch(() => {
+                console.log("error storing data");
+            });
     }
-    
+
+    sendRequestDataTest(request) {
+
+        set(ref(this.db, "data/requests/" + request.type + "/" + request.id), request.data)
+            .then(() => {
+                console.log("data test stored successfully");
+            })
+            .catch(() => {
+                console.log("error storing data");
+            });
+    }
+
+    sendRequestData(requestData) {
+
+        var data = {
+            // Prename: requestDataEvent.prename,
+            // Surname: requestDataEvent.surname,
+            // Email: requestDataEvent.email,
+            // MobileNumber: requestDataEvent.mobile,
+            // Message: requestDataEvent.message,
+        };
+
+        set(ref(this.db, "data/requests/" + requestData.type + requestData.id), data)
+            .then(() => {
+                console.log("data test stored successfully");
+            })
+            .catch(() => {
+                console.log("error storing data");
+            });
+    }
+
 }
 
 export default new FireBaseConnector();

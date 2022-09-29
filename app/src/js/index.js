@@ -11,9 +11,31 @@ import FireBaseConnector from "./database/FireBaseConnector.js";
 let myNavBar;
 
 async function init() {
+
+    // FireBaseConnector.sendTestData();
+    var requestData = {
+        type: "membership",
+        id: "Huber_Samuel",
+
+        data: {
+            Prename: "Samuel",
+            Surname: "Huber",
+            Street: "Mozartstrasse 90",
+            City: "Pfaffenhofen a. d. Ilm",
+            Email: "hubsamu@hotmail.de",
+        },
+    };
+    FireBaseConnector.sendRequestDataTest(requestData);
+
+    // try {
+    //     let data = await FireBaseConnector.getData("data/test2");
+    //     console.log(data);
+    // } catch (error) {
+    //     console.error(error);
+    // }
+
     initNavBar();
     initPage();
-    await FireBaseConnector.sendTest();
 }
 
 /**
