@@ -36,25 +36,12 @@ function initButtonManager() {
 
     myButtonManager.addEventListener("switchPage", switchPage);
     myButtonManager.addEventListener("request", sendRequestCall);
-    myButtonManager.addEventListener("scroll", scroll);
 
 }
 
 function sendRequestCall(event) {
     //currentPage.openRequest(event.data);
     console.log(event.data);
-}
-
-function scroll(event) {
-    console.log("Scroll " + event.data);
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
-
-    // if (event.data === "Up") {
-    //     document.body.scrollTop = document.documentElement.scrollTop = 0;
-    // } else if (event.data === "Down") {
-    //     //TODO: Scroll to specific Element
-    //     document.body.scrollTop = document.documentElement.scrollTop = 0;
-    // }
 }
 
 /**
