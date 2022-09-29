@@ -148,12 +148,11 @@ function initListeners(manager) {
     manager.setActiveElement(e.target.id);
   });
 
-  // manager.allPlaceList.forEach(element => {
-  //   element.marker.addEventListener("click", () => {
-  //     manager.setActiveElement(element.id);
-  //   });
-  // });
-
+  manager.allPlaceList.forEach(element => {
+    element.marker.addEventListener("click", () => {
+      manager.setActiveElement(element.id);
+    });
+  });
 }
 
 function updateOverviewList(manager, zoomState) {
