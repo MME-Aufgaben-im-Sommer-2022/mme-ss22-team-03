@@ -6,34 +6,10 @@ import PageManagerMitgliedschaft from "../js/pages/PageManagerMitgliedschaft.js"
 import PageManagerSpenden from "../js/pages/PageManagerSpenden.js";
 import NavBar from "../js/modules/NavBar.js";
 import { getHappeningDataList, getPlaceDataList } from "../js/utils/SQLHardoce.js";
-import FireBaseConnector from "./database/FireBaseConnector.js";
 
 let myNavBar;
 
 async function init() {
-
-    // FireBaseConnector.sendTestData();
-    // var requestData = {
-    //     type: "membership",
-    //     id: "Huber_Samuel",
-
-    //     data: {
-    //         Prename: "Samuel",
-    //         Surname: "Huber",
-    //         Street: "Mozartstrasse 90",
-    //         City: "Pfaffenhofen a. d. Ilm",
-    //         Email: "hubsamu@hotmail.de",
-    //     },
-    // };
-    // FireBaseConnector.sendRequestDataTest(requestData);
-
-    // try {
-    //     let data = await FireBaseConnector.getData("data/pages/map/initData");
-    //     console.log(data);
-    // } catch (error) {
-    //     console.error(error);
-    // }
-
     initNavBar();
     initPage();
 }
