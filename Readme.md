@@ -44,11 +44,15 @@ Außerdem ist ein Spendenbalken zu sehen, der den bereits gespendeten Betrag und
 **3. Event-Page:**
 Auf der Event-Page sollen aktuelle Kurse und Veranstaltungen in Pastina in einer Liste dargestellt werden. Diese Liste ist mit einer Datenbank (Firebase) verbunden, um Termine zu aktualisieren oder hinzuzufügen. 
 
+![image](https://user-images.githubusercontent.com/86771721/193352940-855fd91e-3c19-4799-bf64-437e49c32827.png)
+
+![image](https://user-images.githubusercontent.com/86771721/193353076-3c761615-f27b-4356-80e5-cbaf77d584b8.png)
+
 ![image](https://user-images.githubusercontent.com/86771721/193352099-2e089a7e-49a2-48d1-a970-4ede211ff4b0.png)
 
 **4. Map-Page:**
-Auf der Map-Page wird mithilfe eines Leaflet PlugIns der Grundriss von Pastina und eine Karte der Umgebung angezeigt. Auf dem Grundriss befinden sich Marker, die mit einer Bildergalerie verbunden sind. Mit Klick auf die Marker gewinnt der Nutzer einen Einblick in die Verteilung der Räumlichkeiten und Außenbereiche. Auf der Karte der Umgebung werden dem Nutzer Sehenswürdigkeiten im näheren Umkreis Pastinas angezeigt. Um das Probleme mit Magic-Numbers zu umgehen, 
-haben wir die Koordinaten auf der Firebase gespeichert, 
+Auf der Map-Page wird mithilfe eines Leaflet PlugIns der Grundriss von Pastina und eine Karte der Umgebung angezeigt. Auf dem Grundriss befinden sich Marker, die mit einer Bildergalerie verbunden sind. Mit Klick auf die Marker gewinnt der Nutzer einen Einblick in die Verteilung der Räumlichkeiten und Außenbereiche. Auf der Karte der Umgebung werden dem Nutzer Sehenswürdigkeiten im näheren Umkreis Pastinas angezeigt. Um das Problem mit den Magic-Numbers zu umgehen, 
+haben wir die Koordinaten auf der Firebase gespeichert.
 
 ![image](https://user-images.githubusercontent.com/86771721/193351127-0a42906b-21e7-4006-83ee-7ddc374c2bf9.png)
 
