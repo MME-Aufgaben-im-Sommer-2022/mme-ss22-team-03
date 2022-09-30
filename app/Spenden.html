@@ -140,174 +140,161 @@
         <div class="group" id="ProgressBarHolder">
         </div>
 
-        <!-- Spenden Formular  -->
+        <div class="group" id="FormHolder">
 
-        <div class="group" id="SpendenFormHolder">
+        </div>
+        <button class="buttonUp" id="scrollUp" style="cursor: pointer;">
+                <img src="./src/images/buttons/Buton_Arrow_up_Black.png">
+        </button>
 
-                <div id="SpendenFormHeader">
 
-                        <div id="SFHeader_Header">
-                                in nur drei Schritten die Welt un po' verbessern
-                        </div>
+        <template id="formTemplate">
+                <div id="Form">
+                        <div class="_SpendenHolder">
+                                <div class="_spendenSteps">
+                                        <div class="_membership_StepDiv active" id="step1Text" style="cursor: pointer;">
+                                                Schritt 1
+                                        </div>
 
-                        <div id="SFHeader_Steps">
-                                <div class="SFHeader_StepDiv" id="step1Text" style="cursor: pointer;">
-                                        Schritt 1
+                                        <div class="_membership_StepDiv" id="step2Text" style="cursor: pointer;">
+                                                Schritt 2
+                                        </div>
+
+                                        <div class="_membership_StepDiv" id="step3Text" style="cursor: pointer;">
+                                                Schritt 3
+                                        </div>
+
+                                        <button class="_membership_Btn" id="btn_next" style="cursor: pointer;">
+                                                <img src="../app/src/images/buttons/Button-Background-Red.png"
+                                                        id="btn_nextImg">
+                                                <img src="../app/src/images/buttons/Buton_Arrow_Right.png"
+                                                        id="btn_nextImg_Arrow">
+                                        </button>
                                 </div>
+                                <div class="_spendenContent">
+                                        <div class="form_content">
 
-                                <div class="SFHeader_StepDiv" id="step2Text" style="cursor: pointer;">
-                                        Schritt 2
-                                </div>
+                                                <div data-page="step1">
+                                                        <div class="contents1">
+                                                                <div class="content">
+                                                                        <h1 class="content__title">Betrag</h1>
+                                                                        <input type="number" class="content__amount"
+                                                                                id="amount" name="inputAmount"
+                                                                                placeholder="Eur0 20">
+                                                                </div>
+                                                                <div class="content">
+                                                                        <h1 class="content__title">Frequenz</h1>
+                                                                        <button class="content__btn">monatlich</button>
+                                                                        <button
+                                                                                class="content__btn">halbjährlich</button>
+                                                                        <button class="content__btn">jährlich</button>
+                                                                        <button class="content__btn">einmalig</button>
+                                                                </div>
 
-                                <div class="SFHeader_StepDiv" id="step3Text" style="cursor: pointer;">
-                                        Schritt 3
-                                </div>
-
-                                <button class="SFHeader_Btn" id="btn_next" style="cursor: pointer;">
-                                        <span class="btn_text"> <img
-                                                        src="../app/src/images/buttons/Buton_Arrow_Right.png"></span>
-                                </button>
-                        </div>
-                        <div id="button_next" style="cursor: pointer;" class="buttonNext">
-                                <div id="SFHeader_BorderBottom"></div>
-                        </div>
-                </div>
-
-                <div id="SpendenFormContent">
-
-                        <!-- Step 1 -->
-
-                        <div data-page="step1">
-                                <div class="contents1">
-                                        <div class="content">
-                                                <h1 class="content__title">Betrag</h1>
-                                                <input type="number" class="content__amount" id="amount"
-                                                        name="inputAmount" placeholder="Eur0 20">
-                                        </div>
-                                        <div class="content">
-                                                <h1 class="content__title">Frequenz</h1>
-                                                <button class="content__btn">monatlich</button>
-                                                <button class="content__btn">halbjährlich</button>
-                                                <button class="content__btn">jährlich</button>
-                                                <button class="content__btn">einmalig</button>
-                                        </div>
-
-                                </div>
-                        </div>
-
-                        <!-- Step 2 -->
-                        <div data-page="step2">
-                                <div class="user-details-input">
-                                        <div class="textField">
-                                                <span class="textfield__txt" id="prename"> Vorname </span>
-                                                <input type="text" class="textField__input" name="inputPrename"
-                                                        placeholder="Vorname">
-                                        </div>
-                                        <div class="textField">
-                                                <span class="textfield__txt" id="surname"> Nachname </span>
-                                                <input type="text" class="textField__input" name="inputSurname"
-                                                        placeholder="Nachname">
-                                        </div>
-
-                                        <div class="textField">
-                                                <span class="textfield__txt" id="street"> Straße, Nr. </span>
-                                                <input type="text" class="textField__input" name="inputStreet"
-                                                        placeholder="Straße, Nr">
-                                        </div>
-                                        <div class="textField">
-                                                <span class="textfield__txt" id="city"> PLZ, Ort </span>
-                                                <input type="text" class="textField__input" name="inputCity"
-                                                        placeholder="PLZ, Ort">
-                                        </div>
-
-                                        <div class="textField">
-                                                <span class="textfield__txt" id="email"> E-mail </span>
-                                                <input type="email" class="textField__input" name="inputEmail"
-                                                        placeholder="E-mail">
-                                        </div>
-                                        <div class="textField">
-                                                <span class="textfield__txt" id="phonenumber"> Phone Number </span>
-                                                <input type="number" class="textField__input" name="inputMobile"
-                                                        placeholder="Phone Number">
-                                        </div>
-
-                                        <div class="textField">
-                                                <span class="textfield__txt" id="bday"> Birthday </span>
-                                                <input type="number" class="textField__input" name="inputBirthday"
-                                                        placeholder="Birthday">
-                                        </div>
-                                </div>
-
-                                <button id="TEST">Test</button>
-                        </div>
-
-                        <!-- Step 3 TODO: Stripe Plugin div! -->
-                </div>
-
-
-                <<<<<<< HEAD <!-- Step 4 -->
-                        <!-- <div data-page="step4" id="spenden_thank_you">
-=======
-                <!-- Step 4 -->
-                        <!-- <div data-page="step4" id="spenden_thank_you">
->>>>>>> dev
-                <div id="thank_you_text">
-                        Spendenquittung kommt per Mail - Vielen Dank
-                </div> -->
-
-                        <button class="buttonUp" id="scrollUp" style="cursor: pointer;">
-                                <img src="./src/images/buttons/Buton_Arrow_up_Black.png">
-                        </button>
-
-                        <template id="progressBarTemplate">
-                                <div id="ProgressBar">
-                                        <div id="progressBarNoteText">Wir freuen uns auf deine Unterstützung!</div>
-
-                                        <div id="progressBarHeader"></div>
-
-                                        <!-- Share Button & text   -->
-                                        <h1 id="_06shareText"> Jetzt aktiv werden </h1>
-
-                                        <<<<<<< HEAD <div id=countdown-wrap>
-                                                <div id="glass">
-                                                        <div id="progress"></div>
-                                                        =======
-                                                        <!-- Share Button images  -->
-                                                        <div id="_06Btn">
-                                                                <img id="_06linkedInBtn"
-                                                                        src="./src/images/share-buttons/LinkedIn.svg">
-                                                                <img id="_06mailBtn "
-                                                                        src="./src/images/share-buttons/Mail.svg">
-                                                                <img id="_06whatsAppBtn"
-                                                                        src="./src/images/share-buttons/WhatsApp.svg">
-                                                                <img id="_06instagramBtn"
-                                                                        src="./src/images/share-buttons/Instagram.svg">
-                                                                <img id="_06facebookBtn"
-                                                                        src="./src/images/share-buttons/Facebook.svg">
-                                                                >>>>>>> dev
                                                         </div>
+                                                </div>
 
-                                                        <div id=countdown-wrap>
-                                                                <div id="glass">
-                                                                        <div id="progress"></div>
-                                                                </div>
-
-                                                                <div id="test">
-                                                                        <span id="progressCurrentValue"></span>
-                                                                        <span id="progressGoal"></span>
-                                                                </div>
-
+                                                <div data-page="step2">
+                                                        <div class="formbuilder-text form-group field-input_prename">
+                                                                <label for="input_prename"
+                                                                        class="formbuilder-text-label"></label>
+                                                                <input type="text" placeholder="Vorname"
+                                                                        class="form-input" name="input_prename"
+                                                                        access="false" id="input_prename">
+                                                        </div>
+                                                        <div class="formbuilder-text form-group field-input_surname">
+                                                                <label for="input_surname"
+                                                                        class="formbuilder-text-label"></label>
+                                                                <input type="text" placeholder="Nachname"
+                                                                        class="form-input" name="input_surname"
+                                                                        access="false" id="input_surname">
+                                                        </div>
+                                                        <div class="formbuilder-text form-group field-input_street">
+                                                                <label for="input_street"
+                                                                        class="formbuilder-text-label"></label>
+                                                                <input type="text" placeholder="Straße, Hausnummer"
+                                                                        class="form-input" name="input_street"
+                                                                        access="false" id="input_street">
+                                                        </div>
+                                                        <div class="formbuilder-text form-group field-input_city">
+                                                                <label for="input_city"
+                                                                        class="formbuilder-text-label"></label>
+                                                                <input type="text" placeholder="PLZ, Wohnort"
+                                                                        class="form-input" name="input_city"
+                                                                        access="false" id="input_city">
+                                                        </div>
+                                                        <div class="formbuilder-text form-group field-input_email">
+                                                                <label for="input_email"
+                                                                        class="formbuilder-text-label"></label>
+                                                                <input type="email" placeholder="Email"
+                                                                        class="form-input" name="input_email"
+                                                                        access="false" id="input_email">
+                                                        </div>
+                                                        <div class="formbuilder-date form-group field-input_birthday">
+                                                                <label for="input_birthday"
+                                                                        class="formbuilder-date-label"><span
+                                                                                data-metadata="!--(figmeta)eyJmaWxlS2V5IjoienZldDAwZEo0V1p3N0t5S1MwVWZxdSIsInBhc3RlSUQiOjE2NDc0NTY0MDQsImRhdGFUeXBlIjoic2NlbmUifQo=(/figmeta)-->"></span>Geburtsdatum
+                                                                        <br>
+                                                                </label>
+                                                                <input type="date" class="form-date"
+                                                                        name="input_birthday" access="false"
+                                                                        id="input_birthday">
+                                                        </div>
+                                                        <div class="formbuilder-text form-group field-input_mobile">
+                                                                <label for="input_mobile"
+                                                                        class="formbuilder-text-label"></label>
+                                                                <input type="tel" placeholder="Telefon"
+                                                                        class="form-input" name="input_mobile"
+                                                                        access="false" id="input_mobile">
                                                         </div>
 
                                                 </div>
-                        </template>
+                                        </div>
 
-                        <<<<<<< HEAD </div>
-                                </template>
+                                        <div data-page="step3">
+                                                Lastschriftmandat coming soon...
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </template>
 
 
-                                <script type="module" src="./src/js/modules/ProgressBar.js"></script>
-                                =======
-                                <script type="module" src="./src/js/modules/ProgressBar.js"></script>
-                                >>>>>>> dev
+        <template id="progressBarTemplate">
+                <div id="ProgressBar">
+                        <div id="progressBarNoteText">Wir freuen uns auf deine Unterstützung!</div>
+
+                        <div id="progressBarHeader"></div>
+
+                        <!-- Share Button & text   -->
+                        <h1 id="_06shareText"> Jetzt aktiv werden </h1>
+                        <div id=countdown-wrap>
+                                <div id="glass">
+                                        <div id="progress"></div>
+                                        <!-- Share Button images  -->
+                                        <div id="_06Btn">
+                                                <img id="_06linkedInBtn" src="./src/images/share-buttons/LinkedIn.svg">
+                                                <img id="_06mailBtn " src="./src/images/share-buttons/Mail.svg">
+                                                <img id="_06whatsAppBtn" src="./src/images/share-buttons/WhatsApp.svg">
+                                                <img id="_06instagramBtn"
+                                                        src="./src/images/share-buttons/Instagram.svg">
+                                                <img id="_06facebookBtn" src="./src/images/share-buttons/Facebook.svg">
+                                                >>>>>>> dev
+                                        </div>
+
+                                        <div id=countdown-wrap>
+                                                <div id="glass">
+                                                        <div id="progress"></div>
+                                                </div>
+
+                                                <div id="test">
+                                                        <span id="progressCurrentValue"></span>
+                                                        <span id="progressGoal"></span>
+                                                </div>
+
+                                        </div>
+
+                                </div>
+        </template>
+        <script type="module" src="./src/js/modules/ProgressBar.js"></script>
 </body>

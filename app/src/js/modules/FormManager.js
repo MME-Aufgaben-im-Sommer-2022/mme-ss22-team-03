@@ -12,6 +12,22 @@ function init(manager) {
     Dage.navigate("step1");
 }
 
+function initHTML(manager) {
+
+    const template = document.querySelector("#formTemplate");
+    manager.clone = template.content.cloneNode(true);
+    manager.formElement = manager.clone.querySelector("#Form");
+
+    //  Fill Template Information with data
+    let FormClone = manager.formElement.cloneNode(true);
+    // ProgressBarClone.querySelector("#progressBarHeader").textContent = manager.percentage + "% unseres Ziels erreicht";
+    // ProgressBarClone.querySelector("#progressCurrentValue").textContent = manager.current + " EUR gespendet";
+    // ProgressBarClone.querySelector("#progressGoal").textContent = "Ziel: " + manager.aim + " EUR";
+
+    //  Give ProgressGroup the Template HTML
+    document.getElementById("FormHolder").append(FormClone);
+}
+
 function initControls(manager) {
 
     manager.controls = {
@@ -62,26 +78,6 @@ function initInputFields(manager) {
     }
 }
 
-function initHTML(manager) {
-
-    const template = document.querySelector("#formTemplate");
-    manager.clone = template.content.cloneNode(true);
-    if (manager.currentPageID === "mitgliedschaft") {
-        manager.formElement = manager.clone.querySelector("#membershipForm");
-    } else {
-        manager.formElement = manager.clone.querySelector("#spendenForm");
-    }
-
-    //  Fill Template Information with data
-    let FormClone = manager.formElement.cloneNode(true);
-    // ProgressBarClone.querySelector("#progressBarHeader").textContent = manager.percentage + "% unseres Ziels erreicht";
-    // ProgressBarClone.querySelector("#progressCurrentValue").textContent = manager.current + " EUR gespendet";
-    // ProgressBarClone.querySelector("#progressGoal").textContent = "Ziel: " + manager.aim + " EUR";
-
-    //  Give ProgressGroup the Template HTML
-    document.getElementById("FormHolder").append(FormClone);
-}
-
 export default class FormManager extends Observable {
 
     constructor(pageID) {
@@ -113,20 +109,15 @@ export default class FormManager extends Observable {
                 this.switchFormStep(step);
                 break;
             case "step3":
-                break;
             case "step2":
             case "nextStep":
                 if (this.currentPageID === "mitgliedschaft") {
-                    if (this.isValid) {
-                        await FireBaseConnector.sendRequestData(this.FormData, "membership");
-                        //TODO:Beautify Message
-                        alert("Wir haben deine Daten erhalten!");
+                    if (this.checkInputData) {
                         this.switchFormStep("step2");
-                    } else {
-                        alert("Please Fill out all Information!");
                     }
                 } else if (this.currentPageID === "spenden") {
-                    console.log("nextButtonClick");
+
+                    this.switchFormStep(step);
                 }
                 break;
             default:
@@ -134,15 +125,25 @@ export default class FormManager extends Observable {
         }
     }
 
+    async checkInputData() {
+        if (this.isValid) {
+            await FireBaseConnector.sendRequestData(this.FormData, "membership");
+            //TODO:Beautify Message
+            alert("Wir haben deine Daten erhalten!");
+            return true;
+        }
+        alert("Please Fill out all Information!");
+        return false;
+    }
+
     switchFormStep(step) {
 
         var tempStepList = document.querySelectorAll("._membership_StepDiv"),
             idString = step + "Text";
-        console.log(idString);
 
         Array.from(tempStepList).forEach(element => {
             element.classList.remove("active");
-            if (element.id === step + "Text") {
+            if (element.id === idString) {
                 element.classList.add("active");
             }
         });

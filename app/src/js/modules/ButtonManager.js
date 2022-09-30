@@ -12,11 +12,7 @@ function init(manager) {
 
 function initButtonList(manager) {
     manager.buttonHTMLList = document.querySelectorAll(".button");
-<<<<<<< HEAD
-    console.log(manager.buttonHTMLList);
-=======
     manager.buttonUp = document.querySelector(".buttonUp");
->>>>>>> dev
 }
 
 function initListeners(manager) {
