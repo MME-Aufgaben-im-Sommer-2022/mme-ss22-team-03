@@ -31,42 +31,16 @@ class FireBaseConnector {
         return undefined;
     }
 
-    sendTestData() {
+    sendRequestData(requestData, type) {
 
-        set(ref(this.db, "data/test2/"), {
-            Prename: "TestPrename",
-            Surname: "TestSurname2",
-        })
-            .then(() => {
-                console.log("data test stored successfully");
-            })
-            .catch(() => {
-                console.log("error storing data");
-            });
-    }
-
-    sendRequestDataTest(request) {
-
-        set(ref(this.db, "data/requests/" + request.type + "/" + request.id), request.data)
-            .then(() => {
-                console.log("data test stored successfully");
-            })
-            .catch(() => {
-                console.log("error storing data");
-            });
-    }
-
-    sendRequestData(requestData) {
-
-        var data = {
-            // Prename: requestDataEvent.prename,
-            // Surname: requestDataEvent.surname,
-            // Email: requestDataEvent.email,
-            // MobileNumber: requestDataEvent.mobile,
-            // Message: requestDataEvent.message,
+        var request = {
+            id: "unknown",
+            data: requestData,
         };
 
-        set(ref(this.db, "data/requests/" + requestData.type + requestData.id), data)
+        request.id = requestData.surname + "_" + requestData.prename + "_" + requestData.birthday;
+
+        set(ref(this.db, "data/requests/" + type + "/" + request.id), request.data)
             .then(() => {
                 console.log("data test stored successfully");
             })
@@ -74,7 +48,6 @@ class FireBaseConnector {
                 console.log("error storing data");
             });
     }
-
 }
 
 export default new FireBaseConnector();

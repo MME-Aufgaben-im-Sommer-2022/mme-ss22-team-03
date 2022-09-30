@@ -1,4 +1,5 @@
 import Observable from "../utils/Observable.js";
+import FireBaseConnector from "../database/FireBaseConnector.js";
 
 function init(manager) {
 
@@ -7,6 +8,8 @@ function init(manager) {
     initListeners(manager);
     initInputFields(manager);
 
+    Dage.update();
+    Dage.navigate("step1");
 }
 
 function initControls(manager) {
@@ -69,7 +72,6 @@ function initHTML(manager) {
         manager.formElement = manager.clone.querySelector("#spendenForm");
     }
 
-
     //  Fill Template Information with data
     let FormClone = manager.formElement.cloneNode(true);
     // ProgressBarClone.querySelector("#progressBarHeader").textContent = manager.percentage + "% unseres Ziels erreicht";
@@ -102,17 +104,30 @@ export default class FormManager extends Observable {
         init(this);
     }
 
-    stepButtonClick(step) {
+    async stepButtonClick(step) {
 
-        console.log("Step Button Click: " + step);
+        this.readInput();
+
         switch (step) {
             case "step1":
-                break;
-            case "step2":
+                this.switchFormStep(step);
                 break;
             case "step3":
                 break;
+            case "step2":
             case "nextStep":
+                if (this.currentPageID === "mitgliedschaft") {
+                    if (this.isValid) {
+                        await FireBaseConnector.sendRequestData(this.FormData, "membership");
+                        //TODO:Beautify Message
+                        alert("Wir haben deine Daten erhalten!");
+                        this.switchFormStep("step2");
+                    } else {
+                        alert("Please Fill out all Information!");
+                    }
+                } else if (this.currentPageID === "spenden") {
+                    console.log("nextButtonClick");
+                }
                 break;
             default:
                 break;
@@ -121,14 +136,16 @@ export default class FormManager extends Observable {
 
     switchFormStep(step) {
 
-        // var tempStepList = document.querySelectorAll(".SFHeader_StepDiv");
+        var tempStepList = document.querySelectorAll("._membership_StepDiv"),
+            idString = step + "Text";
+        console.log(idString);
 
-        // Array.from(tempStepList).forEach(element => {
-        //     element.classList.remove("active");
-        //     if (element.id === step + "Text") {
-        //         element.classList.add("active");
-        //     }
-        // });
+        Array.from(tempStepList).forEach(element => {
+            element.classList.remove("active");
+            if (element.id === step + "Text") {
+                element.classList.add("active");
+            }
+        });
 
         this.currentFormStep = step;
         Dage.update();
@@ -143,7 +160,7 @@ export default class FormManager extends Observable {
             this.isValid = true;
         }
 
-        if (this.currentPageID === "Mitgliedschaft") {
+        if (this.currentPageID === "mitgliedschaft") {
             if (this.data.inputMobile.value === "" || this.data.inputMobile.value === null || this.data.inputBirthday.value === "" || this.data.inputBirthday.value === null) {
                 this.isValid = false;
             }
@@ -156,7 +173,7 @@ export default class FormManager extends Observable {
             this.FormData.city = this.data.inputCity.value;
             this.FormData.email = this.data.inputEmail.value;
 
-            if (this.currentPageID === "Mitgliedschaft") {
+            if (this.currentPageID === "mitgliedschaft") {
                 this.FormData.mobile = this.data.inputMobile.value;
                 this.FormData.birthday = this.data.inputBirthday.value;
             }

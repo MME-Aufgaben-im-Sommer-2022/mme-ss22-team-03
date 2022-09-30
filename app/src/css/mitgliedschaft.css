@@ -318,6 +318,10 @@
     opacity: 100%;
 }
 
+#step2Text.active {
+    opacity: 100%;
+}
+
 
 #step2Text::after {
     content: "SEPA-Lastschriftmandat";
