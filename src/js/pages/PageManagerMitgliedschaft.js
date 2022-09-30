@@ -1,20 +1,8 @@
 import { Observable } from "../utils/Observable.js";
+import FormManager from "../modules/FormManager.js";
 
 function initManager(manager) {
-
-    initControls(manager);
-}
-
-function initControls() {
-
-    // manager.controls = {
-    //     exampleButton: document.getElementsByName('exampleID')[0],
-    // }
-
-    // manager.controls.exampleButton.addEventListener("click", function (
-    //     e) {
-    //     manager.exampleFunction("value");
-    // });
+    manager.myFormManager = new FormManager("mitgliedschaft");
 }
 
 export default class PageManagerMitgliedschaft extends Observable {

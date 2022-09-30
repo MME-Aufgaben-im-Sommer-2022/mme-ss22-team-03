@@ -44,17 +44,38 @@ body {
     background-position: center;
 }
 
+#dateButtonPseudo {
+    position: relative;
+    bottom: -40%;
+    width: 25%;
+    height: auto;
+}
+
+#dateButtonPseudo::before {
+    content: 'Jetzt Spenden';
+    font-size: 10px;
+    color: black;
+    display: block;
+    position: relative;
+    bottom: 5%;
+
+
+}
+
 .donateButton {
     text-align: center;
 
     width: 100px;
     height: 100px;
 
-    overflow: hidden;
     border: none;
 
     padding: 0px;
+    background: transparent;
+    color: white;
+
 }
+
 
 #btn_donateImg {
     max-width: 100%;
@@ -242,6 +263,21 @@ body {
     width: 100%;
 }
 
+.shareButton06 {
+    background: var(--green);
+    position: relative;
+    bottom: 40%;
+}
+
+#share {
+    background-color: var(--green);
+    margin: 3%;
+    width: 10%;
+    height: 10%;
+    position: relative;
+
+}
+
 
 /* step 1 css */
 
@@ -266,29 +302,7 @@ body {
     margin: auto;
 }
 
-/* Step1*/
-.content {
-    font-family: 'Abel';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    color: #313131;
-    margin: 2%;
-}
 
-.content__title {
-
-    line-height: 45px;
-    margin-bottom: 3%;
-
-}
-
-.content__amount {
-
-    line-height: 24px;
-    margin: 2%;
-
-}
 
 #SFHeader_Header {
 
@@ -391,9 +405,34 @@ body {
     background-color: #313131;
 }
 
+/*content Step1 */
+
+.contents1 {
+    width: 80%;
+
+}
+
+.content__title {
+
+    line-height: 45px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    text-align: left;
+
+}
+
+.content__amount {
+
+    line-height: 24px;
+    position: relative;
+    left: -45%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
 
 .content__btn {
-    width: 15%;
+    display: inline-block;
+    width: 20%;
     height: 37px;
     margin: 2%;
     background: white;
@@ -408,11 +447,14 @@ body {
     width: 80%;
     display: block;
     border: 1px solid #313131;
+    margin-top: 5%;
 }
 
 .user-details-input {
+    margin-top: 5%;
     width: 100%;
     display: block;
+    text-align: left;
 }
 
 .textfield__txt {
@@ -471,6 +513,255 @@ body {
     /* identical to box height, or 133% */
 
     text-align: center;
+
+    color: #313131;
+}
+
+
+/* CSS for Spenden form */
+
+#FormHolder {
+    height: 1250px;
+    background-color: white;
+
+    margin-top: 200px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+._SpendenHolder {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    grid-template-rows: 150px 700px;
+    gap: 0% 0%;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "_spendenSteps _spendenSteps"
+        "_spendenContent .";
+}
+
+._spendenSteps {
+    grid-area: _spendenSteps;
+    margin-right: 200px;
+    text-align: left;
+
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #313131;
+
+}
+
+._spendenContent {
+    grid-area: _spendenContent;
+}
+
+._membership_StepDiv {
+    display: inline-block;
+
+    margin-right: 100px;
+
+    width: auto;
+    height: 100px;
+    padding-top: 50px;
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    opacity: 50%;
+
+    text-align: left;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    /* identical to box height, or 125% */
+
+
+    /* dark grey */
+
+    color: #313131;
+}
+
+#step1Text::after {
+    content: "Betrag & Frequenz";
+    display: block;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+
+    /* white */
+
+    color: #313131;
+}
+
+
+#step2Text::after {
+    content: "Persönliche Daten";
+    display: block;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+
+    /* white */
+
+    color: #313131;
+}
+
+#step3Text::after {
+    content: "Zahlungsart";
+    display: block;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+
+    /* white */
+
+    color: #313131;
+}
+
+#step1Text.active {
+    opacity: 100%;
+}
+
+#step2Text.active {
+    opacity: 100%;
+}
+
+#step3Text.active {
+    opacity: 100%;
+}
+
+
+._membership_Btn {
+    width: 100px;
+    height: 100px;
+
+    margin-left: 50px;
+
+    color: var(--orange);
+    border: none;
+
+    text-align: center;
+    display: inline-block;
+    background-color: white;
+
+    float: right;
+}
+
+#btn_nextImg {
+    height: 100%;
+    float: right;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#btn_nextImg_Arrow {
+    position: absolute;
+    display: block;
+    margin: auto;
+
+    padding-top: 40px;
+    padding-left: 25px;
+}
+
+
+._membershipContent {
+    grid-area: _membershipContent;
+    margin-right: 100px;
+}
+
+
+.form-group {
+    text-align: left;
+
+    width: 100%;
+    height: 50px;
+
+    margin-top: 50px;
+    color: #313131;
+}
+
+.form-input {
+    height: 100%;
+    width: 100%;
+
+    border: none;
+
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #313131;
+
+    background-color: white;
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+
+    /* white */
+
+    color: #313131;
+}
+
+.form-input:focus {
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: #313131;
+}
+
+.form-date {
+    height: 100%;
+    width: 100%;
+
+    border: none;
+
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #313131;
+
+    background-color: white;
+    color: #313131;
+}
+
+#FormHolder {
+    background-color: white;
+}
+
+input {
+    caret-color: #313131;
+}
+
+input,
+select,
+textarea {
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+
+    /* white */
 
     color: #313131;
 }

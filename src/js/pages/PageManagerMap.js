@@ -28,7 +28,7 @@ async function initData(manager) {
     let data = await FireBaseConnector.getData("data/pages/map/mapData");
     manager.mapData = data;
   } catch (error) {
-    console.error(error);
+    // console.error(error);
   }
   manager.mapData.centerCoords = [manager.mapData.centerCoords[0], manager.mapData.centerCoords[1]];
 
@@ -37,7 +37,7 @@ async function initData(manager) {
     let iconData = await FireBaseConnector.getData("data/pages/map/iconData");
     manager.iconData = iconData;
   } catch (error) {
-    console.error(error);
+    // console.error(error);
   }
 
   //  Fetch Marker List for PlaceList
@@ -45,7 +45,7 @@ async function initData(manager) {
     let markerList = await FireBaseConnector.getData("data/pages/map/MarkerList");
     manager.allPlaceList = markerList;
   } catch (error) {
-    console.error(error);
+    //console.error(error);
   }
 
 }
