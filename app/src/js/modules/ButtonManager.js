@@ -86,6 +86,10 @@ class ButtonManager extends Observable {
                 break;
         }
     }
+
+    scrollUp() {
+        document.documentElement.scrollTop = 0;
+    }
 }
 
 export default ButtonManager;

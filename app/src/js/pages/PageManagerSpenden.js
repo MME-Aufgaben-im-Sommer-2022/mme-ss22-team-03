@@ -4,25 +4,25 @@ import FormManager from "../modules/FormManager.js";
 
 function initManager(manager) {
 
-    initControls(manager);
-    initListeners(manager);
+    // initControls(manager);
+    // initListeners(manager);
 
     manager.myFormManager = new FormManager("spenden");
 }
 
-function initControls(manager) {
+// function initControls(manager) {
 
-    manager.controls = {
-        donateButton: document.getElementById("donateButton"),
-    };
-}
+//     manager.controls = {
+//         donateButton: document.getElementById("donateButton"),
+//     };
+// }
 
-function initListeners(manager) {
-    //  Event Listeners for Next Button
-    manager.controls.donateButton.addEventListener("click", () => {
-        manager.donateButtonClick();
-    });
-}
+// function initListeners(manager) {
+//     //  Event Listeners for Next Button
+//     manager.controls.donateButton.addEventListener("click", () => {
+//         //     manager.donateButtonClick();
+//         // });
+//     }
 
 export default class PageManagerSpenden extends Observable {
 
