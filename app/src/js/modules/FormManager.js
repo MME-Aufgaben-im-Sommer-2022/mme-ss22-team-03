@@ -107,7 +107,6 @@ export default class FormManager extends Observable {
         console.log("Step Button Click: " + step);
         switch (step) {
             case "step1":
-
                 break;
             case "step2":
                 break;
