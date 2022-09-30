@@ -38,7 +38,7 @@ function initControls(manager) {
         Step2: document.querySelector("[id='step2Text']"),
     };
 
-    if (manager.currentPageID === "spenden") {
+    if (manager.pageID === "spenden") {
         manager.controls.Step3 = document.querySelector("[id='step3Text']");
     }
 }
@@ -57,7 +57,7 @@ function initListeners(manager) {
     manager.controls.Step2.addEventListener("click", () => {
         manager.stepButtonClick("step2");
     });
-    if (manager.currentPageID === "spenden") {
+    if (manager.pageID === "spenden") {
         manager.controls.Step3.addEventListener("click", () => {
             manager.stepButtonClick("step3");
         });
@@ -74,7 +74,7 @@ function initInputFields(manager) {
         inputEmail: document.querySelector("[name=\"input_email\"]"),
     };
 
-    if (manager.currentPageID === "mitgliedschaft") {
+    if (manager.pageID === "mitgliedschaft") {
         manager.data.inputMobile = document.querySelector("[name=\"input_mobile\"]");
         manager.data.inputBirthday = document.querySelector("[name=\"input_birthday\"]");
     }
@@ -107,29 +107,22 @@ export default class FormManager extends Observable {
         this.readInput();
 
         if (step === "nextStep" && this.pageID === "mitgliedschaft") {
-            FireBaseConnector.sendRequestData(this.FormData, "membership");
+            if (this.isValid) {
+                await FireBaseConnector.sendRequestData(this.FormData, "membership");
+                alert("You successfully sent your data!");
+            } else {
+                alert("Please fill out all Information!");
+            }
         } else if (step === "nextStep" && this.pageID === "spenden") {
-            FireBaseConnector.sendRequestData(this.FormData, "donation");
+            if (this.isValid) {
+                await FireBaseConnector.sendRequestData(this.FormData, "donation");
+                alert("You successfully sent your data!");
+            } else {
+                alert("Please fill out all Information!");
+            }
         } else {
             this.switchFormStep(step);
         }
-
-        // switch (step) {
-        //     case "step1":
-        //         this.switchFormStep(step);
-        //         break;
-        //     case "step3":
-        //     case "step2":
-        //     case "nextStep":
-        //         if (this.currentPageID === "mitgliedschaft" && this.checkInputData("membership")) {
-        //             this.switchFormStep("step2");
-        //         } else if (this.currentPageID === "spenden" && this.checkInputData("donation")) {
-        //             this.switchFormStep("step3");
-        //         }
-        //         break;
-        //     default:
-        //         break;
-        // }
     }
 
     switchFormStep(step) {
@@ -157,7 +150,7 @@ export default class FormManager extends Observable {
             this.isValid = true;
         }
 
-        if (this.currentPageID === "mitgliedschaft") {
+        if (this.pageID === "mitgliedschaft") {
             if (this.data.inputMobile.value === "" || this.data.inputMobile.value === null || this.data.inputBirthday.value === "" || this.data.inputBirthday.value === null) {
                 this.isValid = false;
             }
@@ -170,7 +163,7 @@ export default class FormManager extends Observable {
             this.FormData.city = this.data.inputCity.value;
             this.FormData.email = this.data.inputEmail.value;
 
-            if (this.currentPageID === "mitgliedschaft") {
+            if (this.pageID === "mitgliedschaft") {
                 this.FormData.mobile = this.data.inputMobile.value;
                 this.FormData.birthday = this.data.inputBirthday.value;
             }
