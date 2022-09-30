@@ -348,16 +348,24 @@
     text-align: center;
     display: inline-block;
     background-color: var(--orange);
-}
 
-#btn_next {
-    height: 100%;
     float: right;
 }
 
 #btn_nextImg {
+    height: 100%;
+    float: right;
     max-width: 100%;
     max-height: 100%;
+}
+
+#btn_nextImg_Arrow {
+    position: absolute;
+    display: block;
+    margin: auto;
+
+    padding-top: 40px;
+    padding-left: 25px;
 }
 
 
@@ -388,6 +396,18 @@
     border-bottom-color: white;
 
     background-color: var(--orange);
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+
+    /* white */
+
+    color: #FFFFFF;
 }
 
 .form-input:focus {
@@ -414,4 +434,24 @@
 
 #FormHolder {
     background-color: var(--orange);
+}
+
+input {
+    caret-color: white;
+}
+
+input,
+select,
+textarea {
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+
+    /* white */
+
+    color: #FFFFFF;
 }
