@@ -14,32 +14,42 @@ Pastina ist ein gemeinnütziger Verin, der mit Maßnahmen und Dienstleistungen t
 
 _Beschreiben Sie die zentralen Funktionen Ihrer Anwendung und deren Verwendung. Nutzen Sie dazu Screenshots und/oder Videos. Verlinken Sie ein min. 60-sekündiges Demo-Video, das die Verwendung aller wichtigen Funktionen zeigt und in Form eines Audio-Kommentars beschreibt._
 
+**1.MitgliederPage:**
+Hier hat der Nutzer die Möglichkeit in nur 2 Schritten Mitglied zuwerden. Diese Seite ist mit einer Datenbank (Firebase) verbunden. So werden die ausgefüllten Felder nicht verloren gegangen :) .
+![image](https://user-images.githubusercontent.com/86771721/193351776-ebb6a749-d15f-4dde-913e-7fb67f62e964.png)
+
+
 **1. Spenden-Page:**
 Hier kann der Nutzer Erfahrungsberichte von Mitgliedern in Pastina lesen und hat die Möglichkeit, den Verein durch eine Spende zu unterstützen.
 
-(Bild)
+
 
 In drei Schritten kann der Nutzer das Spendenformular ausfüllen. Nachdem Betrag und Frequenz der Spende angegeben wurden, werden die persönlichen Daten abgefragt, bevor zuletzt die Zahlungsarten angegeben werden können. Der Nutzer bekommt im Anschluss eine E-Mail als Bestätigung für die Spende.
+![image](https://user-images.githubusercontent.com/86771721/193350958-7532746b-a1a3-4ddf-b481-20a9f9e49438.png)
 
-(3 Bilder)
+![image](https://user-images.githubusercontent.com/86771721/193350911-2280b242-c899-4bc1-b244-f4b9ae4646ae.png)
+
+
 
 Außerdem ist ein Spendenbalken zu sehen, der den bereits gespendeten Betrag und das Spendenziel anzeigt.
 
-(Bild)
+![image](https://user-images.githubusercontent.com/86771721/193351058-cd78ae89-dec8-42a2-870f-fa483f9df869.png)
+
 
 **2. Event-Page:**
-Auf der Event-Page sollen aktuelle Kurse und Veranstaltungen in Pastina in einer Liste dargestellt werden. Diese Liste ist mit einer Datenbank (Firebase) verbunden, um Termine zu aktualisieren oder hinzuzufügen. Die Veranstaltungen werden dabei nach Datum sortiert. 
-
-(Bild)
-
-Durch den "Jetzt anfragen" Button öffnet sich ein Pop-up Fenster. Der Nutzer hat die Möglichkeit, sich vorzustellen und per E-Mail eine Anfrage zu verschicken.
+Auf der Event-Page sollen aktuelle Kurse und Veranstaltungen in Pastina in einer Liste dargestellt werden. Diese Liste ist mit einer Datenbank (Firebase) verbunden, um Termine zu aktualisieren oder hinzuzufügen. 
 
 (Bild)
 
 **3. Map-Page:**
 Auf der Map-Page wird mithilfe eines Leaflet PlugIns der Grundriss von Pastina und eine Karte der Umgebung angezeigt. Auf dem Grundriss befinden sich Marker, die mit einer Bildergalerie verbunden sind. Mit Klick auf die Marker gewinnt der Nutzer einen Einblick in die Verteilung der Räumlichkeiten und Außenbereiche. Auf der Karte der Umgebung werden dem Nutzer Sehenswürdigkeiten im näheren Umkreis Pastinas angezeigt.
 
-(3 Bilder)
+![image](https://user-images.githubusercontent.com/86771721/193351127-0a42906b-21e7-4006-83ee-7ddc374c2bf9.png)
+
+![image](https://user-images.githubusercontent.com/86771721/193351162-02f80a7b-a116-4b37-9e9c-8b759280b722.png)
+
+![image](https://user-images.githubusercontent.com/86771721/193351182-111a92e4-773b-4bcd-ae3c-f0a9bc22475e.png)
+
 
 
 (Video)
