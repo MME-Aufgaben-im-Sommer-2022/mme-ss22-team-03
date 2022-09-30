@@ -60,11 +60,14 @@
 <body>
         <div class="group" id="_01">
                 Gemeinsam können wir die Natur und traumatisierte Kinder schützen.
-                <button class="donateButton" id="donateButton" style="cursor: pointer;">
-                        <img src="../app/src/images/buttons/Button-Background-Red.png" id="btn_donateImg">
-                        Jetzt Spenden
-                </button>
+                
+                <div id="dateButtonPseudo">
+                        <button class="donateButton" id="donateButton" style="cursor: pointer;">
 
+                                <img src="../app/src/images/buttons/Button-Background-Red.png" id="btn_donateImg">
+                                
+                        </button>    
+                </div>
         </div>
 
         <div class="group" id="_02">
@@ -111,9 +114,31 @@
                 </div>
         </div>
 
-        <div class="group" id="ProgressBarHolder">
+        <div class="shareButton06" id="_06Btn">
+                <button class="button" id="share" name="whatsapp"> 
+                        <img id="_06whatsAppBtn" src="./src/images/share-buttons/WhatsApp.svg">
+                </button>
+ 
+                <button class="shareButton" id="share" name="mailBtn">
+                        <img id="_06mailBtn " src="./src/images/share-buttons/Mail.svg">
+                </button>
+ 
+                <button class="shareButton" id="share" name="facebook">
+                        <img id="_06facebookBtn" src="./src/images/share-buttons/Facebook.svg">
+                </button>
+        
+                <button class="shareButton" id="share" name="linkedInBtn">
+                        <img id="_06linkedInBtn" src="./src/images/share-buttons/LinkedIn.svg">
+                </button>
+ 
+                <button class="shareButton" id="share" name="instagramBtn">
+                        <img id="_06instagramBtn" src="./src/images/share-buttons/Instagram.svg">
+                </button>
         </div>
 
+        
+         <div class="group" id="ProgressBarHolder">
+        </div>
 
         <!-- Spenden Formular  -->
 
@@ -150,18 +175,21 @@
 
                         <!-- Step 1 -->
 
-                        <div data-page="step1" class="contetns1">
-                                <div class="content">
-                                        <h1 class="content__title">Betrag</h1>
-                                        <input type="number" class="content__amount" id="amount" name="inputAmount"
-                                                placeholder="Eur0 20">
-                                </div>
-                                <div class="content">
-                                        <h1 class="content__title">Frequenz</h1>
-                                        <button class="content__btn">monatlich</button>
-                                        <button class="content__btn">halbjährlich</button>
-                                        <button class="content__btn">jährlich</button>
-                                        <button class="content__btn">einmalig</button>
+                        <div data-page="step1">
+                                <div class="contents1">
+                                        <div class="content">
+                                                <h1 class="content__title">Betrag</h1>
+                                                <input type="number" class="content__amount" id="amount" name="inputAmount"
+                                                        placeholder="Eur0 20">
+                                        </div>
+                                        <div class="content">
+                                                <h1 class="content__title">Frequenz</h1>
+                                                <button class="content__btn">monatlich</button>
+                                                <button class="content__btn">halbjährlich</button>
+                                                <button class="content__btn">jährlich</button>
+                                                <button class="content__btn">einmalig</button>
+                                        </div>
+
                                 </div>
                         </div>
 
@@ -216,6 +244,7 @@
         </div>
 
 
+
         <!-- Step 4 -->
         <!-- <div data-page="step4" id="spenden_thank_you">
                 <div id="thank_you_text">
@@ -233,15 +262,6 @@
                         <!-- Share Button & text   -->
                         <h1 id="_06shareText"> Jetzt aktiv werden </h1>
 
-                        <!-- Share Button images  -->
-                        <div id="_06Btn">
-                                <img id="_06linkedInBtn" src="./src/images/share-buttons/LinkedIn.svg">
-                                <img id="_06mailBtn " src="./src/images/share-buttons/Mail.svg">
-                                <img id="_06whatsAppBtn" src="./src/images/share-buttons/WhatsApp.svg">
-                                <img id="_06instagramBtn" src="./src/images/share-buttons/Instagram.svg">
-                                <img id="_06facebookBtn" src="./src/images/share-buttons/Facebook.svg">
-                        </div>
-
                         <div id=countdown-wrap>
                                 <div id="glass">
                                         <div id="progress"></div>
@@ -256,6 +276,7 @@
 
                 </div>
         </template>
+
 
         <script type="module" src="./src/js/modules/ProgressBar.js"></script>
 </body>

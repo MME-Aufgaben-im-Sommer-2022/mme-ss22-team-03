@@ -44,17 +44,38 @@ body {
     background-position: center;
 }
 
+#dateButtonPseudo{
+    position: relative;
+    bottom: -40%;
+    width: 25%;
+    height: auto;
+}
+
+#dateButtonPseudo::before{
+    content:'Jetzt Spenden';
+    font-size: 10px;
+    color: black;
+    display: block;
+    position: relative;
+    bottom: 5%;
+   
+    
+}
+
 .donateButton {
     text-align: center;
 
     width: 100px;
     height: 100px;
 
-    overflow: hidden;
     border: none;
 
     padding: 0px;
+    background: transparent;
+    color: white;
+    
 }
+
 
 #btn_donateImg {
     max-width: 100%;
@@ -242,6 +263,20 @@ body {
     width: 100%;
 }
 
+.shareButton06{
+    background: var(--green);
+   position: relative;
+   bottom: 40%;
+}
+#share {
+    background-color: var(--green);
+    margin: 3%;
+    width: 10%;
+    height: 10%;
+    position: relative;
+    
+}
+
 
 /* step 1 css */
 
@@ -266,29 +301,7 @@ body {
     margin: auto;
 }
 
-/* Step1*/
-.content {
-    font-family: 'Abel';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    color: #313131;
-    margin: 2%;
-}
 
-.content__title {
-
-    line-height: 45px;
-    margin-bottom: 3%;
-
-}
-
-.content__amount {
-
-    line-height: 24px;
-    margin: 2%;
-
-}
 
 #SFHeader_Header {
 
@@ -391,28 +404,54 @@ body {
     background-color: #313131;
 }
 
+/*content Step1 */
 
-.content__btn {
-    width: 15%;
+.contents1{
+    width: 80%;
+   
+}
+
+.content__title{
+  
+    line-height: 45px; 
+    margin-bottom: 5%;
+    margin-left: 5%;
+    text-align: left;
+    
+}
+.content__amount{
+  
+    line-height: 24px;
+    position: relative;
+    left: -45%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+.content__btn{
+    display: inline-block;
+    width: 20%;
     height: 37px;
     margin: 2%;
     background: white;
 }
 
-.content__btn:hover {
+.content__btn:hover{
     background-color: lightgray;
 }
-
 /*Step2*/
 .step2 {
     width: 80%;
     display: block;
     border: 1px solid #313131;
+    margin-top: 5%;
 }
 
 .user-details-input {
+    margin-top: 5%;
     width: 100%;
     display: block;
+    text-align: left;
 }
 
 .textfield__txt {
@@ -474,3 +513,4 @@ body {
 
     color: #313131;
 }
+
