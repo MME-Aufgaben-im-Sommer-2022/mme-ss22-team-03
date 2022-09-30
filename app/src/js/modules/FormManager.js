@@ -85,7 +85,7 @@ export default class FormManager extends Observable {
     constructor(pageID) {
         super();
 
-        this.currentPageID = pageID;
+        this.pageID = pageID;
         this.isValid = false;
 
         this.FormData = {
@@ -105,7 +105,14 @@ export default class FormManager extends Observable {
     async stepButtonClick(step) {
 
         this.readInput();
-        this.switchFormStep(step);
+
+        if (step === "nextStep" && this.pageID === "mitgliedschaft") {
+            FireBaseConnector.sendRequestData(this.FormData, "membership");
+        } else if (step === "nextStep" && this.pageID === "spenden") {
+            FireBaseConnector.sendRequestData(this.FormData, "donation");
+        } else {
+            this.switchFormStep(step);
+        }
 
         // switch (step) {
         //     case "step1":
@@ -123,18 +130,6 @@ export default class FormManager extends Observable {
         //     default:
         //         break;
         // }
-    }
-
-    async checkInputData(requestType) {
-        if (this.isValid) {
-            await FireBaseConnector.sendRequestData(this.FormData, requestType);
-            //TODO:Beautify Message
-            alert("Wir haben deine Daten erhalten!");
-            return true;
-        }
-        alert("Please Fill out all Information!");
-        return false;
-
     }
 
     switchFormStep(step) {
