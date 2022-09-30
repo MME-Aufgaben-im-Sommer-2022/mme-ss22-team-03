@@ -2,7 +2,7 @@ import { Event, Observable } from "../utils/Observable.js";
 
 const postTitle = ("Hi schau dir mal die coole Seite an :D ");
 
- let postUrl = document.location.href;
+let postUrl = document.location.href;
 
 function init(manager) {
 
@@ -12,7 +12,11 @@ function init(manager) {
 
 function initButtonList(manager) {
     manager.buttonHTMLList = document.querySelectorAll(".button");
+<<<<<<< HEAD
     console.log(manager.buttonHTMLList);
+=======
+    manager.buttonUp = document.querySelector(".buttonUp");
+>>>>>>> dev
 }
 
 function initListeners(manager) {
@@ -21,6 +25,13 @@ function initListeners(manager) {
             manager.buttonClick(e.target.id, e.target.name);
         });
     });
+
+    if (manager.buttonUp !== null && manager.buttonUp !== undefined) {
+        manager.buttonUp.addEventListener("click", () => {
+            manager.scrollUp();
+        });
+    }
+
 }
 
 class ButtonManager extends Observable {
@@ -62,10 +73,10 @@ class ButtonManager extends Observable {
 
     shareButton(name) {
         console.log(name);
-        switch(name) {
-            
+        switch (name) {
+
             case "whatsapp":
-                
+
                 window.location = "https://wa.me/?text=${postTitle} ${postUrl}";
                 //TODO: hier auf eine url verweisen -> weiterleiten
                 break;

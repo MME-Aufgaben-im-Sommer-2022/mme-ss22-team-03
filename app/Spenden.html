@@ -60,13 +60,13 @@
 <body>
         <div class="group" id="_01">
                 Gemeinsam können wir die Natur und traumatisierte Kinder schützen.
-                
+
                 <div id="dateButtonPseudo">
                         <button class="donateButton" id="donateButton" style="cursor: pointer;">
 
                                 <img src="../app/src/images/buttons/Button-Background-Red.png" id="btn_donateImg">
-                                
-                        </button>    
+
+                        </button>
                 </div>
         </div>
 
@@ -115,29 +115,29 @@
         </div>
 
         <div class="shareButton06" id="_06Btn">
-                <button class="button" id="share" name="whatsapp"> 
+                <button class="button" id="share" name="whatsapp">
                         <img id="_06whatsAppBtn" src="./src/images/share-buttons/WhatsApp.svg">
                 </button>
- 
+
                 <button class="shareButton" id="share" name="mailBtn">
                         <img id="_06mailBtn " src="./src/images/share-buttons/Mail.svg">
                 </button>
- 
+
                 <button class="shareButton" id="share" name="facebook">
                         <img id="_06facebookBtn" src="./src/images/share-buttons/Facebook.svg">
                 </button>
-        
+
                 <button class="shareButton" id="share" name="linkedInBtn">
                         <img id="_06linkedInBtn" src="./src/images/share-buttons/LinkedIn.svg">
                 </button>
- 
+
                 <button class="shareButton" id="share" name="instagramBtn">
                         <img id="_06instagramBtn" src="./src/images/share-buttons/Instagram.svg">
                 </button>
         </div>
 
-        
-         <div class="group" id="ProgressBarHolder">
+
+        <div class="group" id="ProgressBarHolder">
         </div>
 
         <!-- Spenden Formular  -->
@@ -168,7 +168,9 @@
                                                         src="../app/src/images/buttons/Buton_Arrow_Right.png"></span>
                                 </button>
                         </div>
-                        <div id="SFHeader_BorderBottom"></div>
+                        <div id="button_next" style="cursor: pointer;" class="buttonNext">
+                                <div id="SFHeader_BorderBottom"></div>
+                        </div>
                 </div>
 
                 <div id="SpendenFormContent">
@@ -179,8 +181,8 @@
                                 <div class="contents1">
                                         <div class="content">
                                                 <h1 class="content__title">Betrag</h1>
-                                                <input type="number" class="content__amount" id="amount" name="inputAmount"
-                                                        placeholder="Eur0 20">
+                                                <input type="number" class="content__amount" id="amount"
+                                                        name="inputAmount" placeholder="Eur0 20">
                                         </div>
                                         <div class="content">
                                                 <h1 class="content__title">Frequenz</h1>
@@ -238,45 +240,74 @@
 
                                 <button id="TEST">Test</button>
                         </div>
+
+                        <!-- Step 3 TODO: Stripe Plugin div! -->
                 </div>
 
-                <!-- Step 3 TODO: Stripe Plugin div! -->
-        </div>
 
-
-
-        <!-- Step 4 -->
-        <!-- <div data-page="step4" id="spenden_thank_you">
+                <<<<<<< HEAD <!-- Step 4 -->
+                        <!-- <div data-page="step4" id="spenden_thank_you">
+=======
+                <!-- Step 4 -->
+                        <!-- <div data-page="step4" id="spenden_thank_you">
+>>>>>>> dev
                 <div id="thank_you_text">
                         Spendenquittung kommt per Mail - Vielen Dank
-                </div>
-        </div> -->
+                </div> -->
+
+                        <button class="buttonUp" id="scrollUp" style="cursor: pointer;">
+                                <img src="./src/images/buttons/Buton_Arrow_up_Black.png">
+                        </button>
+
+                        <template id="progressBarTemplate">
+                                <div id="ProgressBar">
+                                        <div id="progressBarNoteText">Wir freuen uns auf deine Unterstützung!</div>
+
+                                        <div id="progressBarHeader"></div>
+
+                                        <!-- Share Button & text   -->
+                                        <h1 id="_06shareText"> Jetzt aktiv werden </h1>
+
+                                        <<<<<<< HEAD <div id=countdown-wrap>
+                                                <div id="glass">
+                                                        <div id="progress"></div>
+                                                        =======
+                                                        <!-- Share Button images  -->
+                                                        <div id="_06Btn">
+                                                                <img id="_06linkedInBtn"
+                                                                        src="./src/images/share-buttons/LinkedIn.svg">
+                                                                <img id="_06mailBtn "
+                                                                        src="./src/images/share-buttons/Mail.svg">
+                                                                <img id="_06whatsAppBtn"
+                                                                        src="./src/images/share-buttons/WhatsApp.svg">
+                                                                <img id="_06instagramBtn"
+                                                                        src="./src/images/share-buttons/Instagram.svg">
+                                                                <img id="_06facebookBtn"
+                                                                        src="./src/images/share-buttons/Facebook.svg">
+                                                                >>>>>>> dev
+                                                        </div>
+
+                                                        <div id=countdown-wrap>
+                                                                <div id="glass">
+                                                                        <div id="progress"></div>
+                                                                </div>
+
+                                                                <div id="test">
+                                                                        <span id="progressCurrentValue"></span>
+                                                                        <span id="progressGoal"></span>
+                                                                </div>
+
+                                                        </div>
+
+                                                </div>
+                        </template>
+
+                        <<<<<<< HEAD </div>
+                                </template>
 
 
-        <template id="progressBarTemplate">
-                <div id="ProgressBar">
-                        <div id="progressBarNoteText">Wir freuen uns auf deine Unterstützung!</div>
-
-                        <div id="progressBarHeader"></div>
-
-                        <!-- Share Button & text   -->
-                        <h1 id="_06shareText"> Jetzt aktiv werden </h1>
-
-                        <div id=countdown-wrap>
-                                <div id="glass">
-                                        <div id="progress"></div>
-                                </div>
-
-                                <div id="test">
-                                        <span id="progressCurrentValue"></span>
-                                        <span id="progressGoal"></span>
-                                </div>
-
-                        </div>
-
-                </div>
-        </template>
-
-
-        <script type="module" src="./src/js/modules/ProgressBar.js"></script>
+                                <script type="module" src="./src/js/modules/ProgressBar.js"></script>
+                                =======
+                                <script type="module" src="./src/js/modules/ProgressBar.js"></script>
+                                >>>>>>> dev
 </body>

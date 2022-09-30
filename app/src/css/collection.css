@@ -14,21 +14,24 @@ html {
     --btn_red_hover: #e93e24;
 }
 
+button {
+    background-color: white;
+}
+
 /* CSS for different Buttons */
 
 .button {
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
 
     color: white;
     border: none;
-
+    padding: 0px;
     text-align: center;
     display: inline-block;
 
     background-image: url('../images/buttons/Button-Background-Outline.png');
     background-size: cover;
-
 }
 
 #donate {
@@ -48,8 +51,36 @@ html {
 }
 
 #scrollUp {
-    background-color: var(--dark-grey);
-    color: #D6E5CB;
+    max-width: 100%;
+    max-height: 100%;
+
+    background-color: none;
+}
+
+.buttonUp {
+    width: 100px;
+    height: 100px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    overflow: visible;
+    border: none;
+    padding: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    text-align: center;
+
+    background-image: url('../images/buttons/Button-Outline-Black.png');
+    background-size: cover;
+    background-color: white;
+}
+
+.buttonUp::after {
+    content: "Nach Oben";
+    display: block;
 }
 
 .button:hover {

@@ -36,7 +36,6 @@ function initButtonManager() {
 
     myButtonManager.addEventListener("switchPage", switchPage);
     myButtonManager.addEventListener("request", sendRequestCall);
-    myButtonManager.addEventListener("scroll", scroll);
 
 }
 
