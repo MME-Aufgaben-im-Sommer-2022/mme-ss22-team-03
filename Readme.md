@@ -61,9 +61,9 @@ haben wir die Koordinaten auf der Firebase gespeichert.
 
 
 
-
-
-(Video)
+Vorstellungsvideo:
+(WeTransfer)
+https://wetransfer.com/downloads/32d0be96df174fb51a9a5353aef2a44e20220930212627/008f047eccb9600b91ff411200fe127b20220930212642/016fbb 
 
 
 ## Team
