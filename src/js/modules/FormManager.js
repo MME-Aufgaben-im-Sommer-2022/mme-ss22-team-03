@@ -85,7 +85,7 @@ export default class FormManager extends Observable {
     constructor(pageID) {
         super();
 
-        this.currentPageID = pageID;
+        this.pageID = pageID;
         this.isValid = false;
 
         this.FormData = {
@@ -106,34 +106,30 @@ export default class FormManager extends Observable {
 
         this.readInput();
 
-        switch (step) {
-            case "step1":
-                this.switchFormStep(step);
-                break;
-            case "step3":
-            case "step2":
-            case "nextStep":
-                if (this.currentPageID === "mitgliedschaft" && this.checkInputData("membership")) {
-                    this.switchFormStep("step2");
-                } else if (this.currentPageID === "spenden" && this.checkInputData("donation")) {
-                    this.switchFormStep("step3");
-                }
-                break;
-            default:
-                break;
+        if (step === "nextStep" && this.pageID === "mitgliedschaft") {
+            FireBaseConnector.sendRequestData(this.FormData, "membership");
+        } else if (step === "nextStep" && this.pageID === "spenden") {
+            FireBaseConnector.sendRequestData(this.FormData, "donation");
+        } else {
+            this.switchFormStep(step);
         }
-    }
 
-    async checkInputData(requestType) {
-        if (this.isValid) {
-            await FireBaseConnector.sendRequestData(this.FormData, requestType);
-            //TODO:Beautify Message
-            alert("Wir haben deine Daten erhalten!");
-            return true;
-        }
-        alert("Please Fill out all Information!");
-        return false;
-
+        // switch (step) {
+        //     case "step1":
+        //         this.switchFormStep(step);
+        //         break;
+        //     case "step3":
+        //     case "step2":
+        //     case "nextStep":
+        //         if (this.currentPageID === "mitgliedschaft" && this.checkInputData("membership")) {
+        //             this.switchFormStep("step2");
+        //         } else if (this.currentPageID === "spenden" && this.checkInputData("donation")) {
+        //             this.switchFormStep("step3");
+        //         }
+        //         break;
+        //     default:
+        //         break;
+        // }
     }
 
     switchFormStep(step) {
