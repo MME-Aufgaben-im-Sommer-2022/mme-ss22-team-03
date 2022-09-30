@@ -105,23 +105,24 @@ export default class FormManager extends Observable {
     async stepButtonClick(step) {
 
         this.readInput();
+        this.switchFormStep(step);
 
-        switch (step) {
-            case "step1":
-                this.switchFormStep(step);
-                break;
-            case "step3":
-            case "step2":
-            case "nextStep":
-                if (this.currentPageID === "mitgliedschaft" && this.checkInputData("membership")) {
-                    this.switchFormStep("step2");
-                } else if (this.currentPageID === "spenden" && this.checkInputData("donation")) {
-                    this.switchFormStep("step3");
-                }
-                break;
-            default:
-                break;
-        }
+        // switch (step) {
+        //     case "step1":
+        //         this.switchFormStep(step);
+        //         break;
+        //     case "step3":
+        //     case "step2":
+        //     case "nextStep":
+        //         if (this.currentPageID === "mitgliedschaft" && this.checkInputData("membership")) {
+        //             this.switchFormStep("step2");
+        //         } else if (this.currentPageID === "spenden" && this.checkInputData("donation")) {
+        //             this.switchFormStep("step3");
+        //         }
+        //         break;
+        //     default:
+        //         break;
+        // }
     }
 
     async checkInputData(requestType) {
