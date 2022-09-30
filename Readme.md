@@ -18,8 +18,10 @@ _Beschreiben Sie die zentralen Funktionen Ihrer Anwendung und deren Verwendung. 
 Hier hat der Nutzer die Möglichkeit in nur 2 Schritten Mitglied zuwerden. Diese Seite ist mit einer Datenbank (Firebase) verbunden. So werden die ausgefüllten Felder nicht verloren gegangen :) .
 ![image](https://user-images.githubusercontent.com/86771721/193351776-ebb6a749-d15f-4dde-913e-7fb67f62e964.png)
 
+![image](https://user-images.githubusercontent.com/86771721/193351882-3ec8e24a-1a93-4e19-9245-89f825fba1a3.png)
 
-**1. Spenden-Page:**
+
+**2. Spenden-Page:**
 Hier kann der Nutzer Erfahrungsberichte von Mitgliedern in Pastina lesen und hat die Möglichkeit, den Verein durch eine Spende zu unterstützen.
 
 
@@ -35,20 +37,32 @@ Außerdem ist ein Spendenbalken zu sehen, der den bereits gespendeten Betrag und
 
 ![image](https://user-images.githubusercontent.com/86771721/193351058-cd78ae89-dec8-42a2-870f-fa483f9df869.png)
 
+![image](https://user-images.githubusercontent.com/86771721/193352037-8c35e9b8-3da5-4076-b756-4a6f5dfbe1e2.png)
 
-**2. Event-Page:**
+
+
+**3. Event-Page:**
 Auf der Event-Page sollen aktuelle Kurse und Veranstaltungen in Pastina in einer Liste dargestellt werden. Diese Liste ist mit einer Datenbank (Firebase) verbunden, um Termine zu aktualisieren oder hinzuzufügen. 
 
-(Bild)
+![image](https://user-images.githubusercontent.com/86771721/193352099-2e089a7e-49a2-48d1-a970-4ede211ff4b0.png)
 
-**3. Map-Page:**
-Auf der Map-Page wird mithilfe eines Leaflet PlugIns der Grundriss von Pastina und eine Karte der Umgebung angezeigt. Auf dem Grundriss befinden sich Marker, die mit einer Bildergalerie verbunden sind. Mit Klick auf die Marker gewinnt der Nutzer einen Einblick in die Verteilung der Räumlichkeiten und Außenbereiche. Auf der Karte der Umgebung werden dem Nutzer Sehenswürdigkeiten im näheren Umkreis Pastinas angezeigt.
+**4. Map-Page:**
+Auf der Map-Page wird mithilfe eines Leaflet PlugIns der Grundriss von Pastina und eine Karte der Umgebung angezeigt. Auf dem Grundriss befinden sich Marker, die mit einer Bildergalerie verbunden sind. Mit Klick auf die Marker gewinnt der Nutzer einen Einblick in die Verteilung der Räumlichkeiten und Außenbereiche. Auf der Karte der Umgebung werden dem Nutzer Sehenswürdigkeiten im näheren Umkreis Pastinas angezeigt. Um das Probleme mit Magic-Numbers zu umgehen, 
+haben wir die Koordinaten auf der Firebase gespeichert, 
 
 ![image](https://user-images.githubusercontent.com/86771721/193351127-0a42906b-21e7-4006-83ee-7ddc374c2bf9.png)
 
 ![image](https://user-images.githubusercontent.com/86771721/193351162-02f80a7b-a116-4b37-9e9c-8b759280b722.png)
 
 ![image](https://user-images.githubusercontent.com/86771721/193351182-111a92e4-773b-4bcd-ae3c-f0a9bc22475e.png)
+
+![image](https://user-images.githubusercontent.com/86771721/193351968-018593c6-7dec-427a-b5bf-1e8f9afdd863.png)
+
+![image](https://user-images.githubusercontent.com/86771721/193352171-bd224898-c553-4009-90c3-1005eac4e448.png)
+
+![image](https://user-images.githubusercontent.com/86771721/193352413-c5595279-d5e5-46eb-a5ef-d3e72c8c47ca.png)
+
+
 
 
 
