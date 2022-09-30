@@ -1,21 +1,14 @@
-# Vorlage für MME-Projekte
 
-Dieses Repository bildet die Grundlage für Ihre Projektarbeit und wurde über die Annahme der _Classroom_-Aufgabe automatisch erstellt. Hinweise zum Aufbau der vorgegebenen Struktur und Hilfswerkzeuge finden Sie im [Dev Guide](./DevGuide.md). **Achten Sie während der Entwicklung stets darauf, dass der Code in Ihrem Repository zu jeder Zeit über `npm run build` fehlerfrei gebaut und veröffentlicht werden kann.**
-
-**Ergänzen Sie im Laufe der Entwicklung die folgenden Punkte in dieser Readme-Datei!**
 
 ## Projekt
 
-_Fassen Sie kurz die wichtigsten Features, die intendierte Zielgruppe und die grundlegende Motivation des Projekts zusammen. Nennen Sie die aktuell bereits implementierten Funktionen und verlinken Sie den aktuellsten Release._
-
-Pastina ist ein gemeinnütziger Verin, der mit Maßnahmen und Dienstleistungen traumatisierte Kinder, Jugendliche und Erwachsene unterstützen möchte. Veranstaltungen, Workshops und  Kurse zur nachhaltigen Landwirtschaft sollen zur Verbesserung der Umweltbedingungen und zur umsichtigen und vernünftigen Nutzung der natürlichen Ressourcen beitragen. Der Standort des Vereins ist in der Toskana in Italien und beläuft sich auf einen Hof mit Schlaf- und Aufenthaltsräumen inklusive landwirtschaftlich genutztem Grund. Die Website wird benötigt um schneller und einfacher neue Mitglieder zu gewinnen und finanzielle Unterstützung durch Spenden zu bekommen. Außerdem sollen sich Mitglieder über aktuelle Events informieren und anmelden können. Hierbei stellt die Zielgruppe Menschen dar, die Interesse haben, hilfesuchende Familien zu unterstützen und/oder sich nachhaltig mit der Umwelt zu beschäftigen.
+Pastina ist ein gemeinnütziger Verein, der mit Maßnahmen und Dienstleistungen traumatisierte Kinder, Jugendliche und Erwachsene unterstützen möchte. Veranstaltungen, Workshops und  Kurse zur nachhaltigen Landwirtschaft sollen zur Verbesserung der Umweltbedingungen und zur umsichtigen und vernünftigen Nutzung der natürlichen Ressourcen beitragen. Der Standort des Vereins ist in der Toskana in Italien und beläuft sich auf einen Hof mit Schlaf- und Aufenthaltsräumen inklusive landwirtschaftlich genutztem Grund. Die Website wird benötigt um schneller und einfacher neue Mitglieder zu gewinnen und finanzielle Unterstützung durch Spenden zu bekommen. Außerdem sollen sich Mitglieder über aktuelle Events informieren und anmelden können. Hierbei stellt die Zielgruppe Menschen dar, die Interesse haben, hilfesuchende Familien zu unterstützen und/oder sich nachhaltig mit der Umwelt zu beschäftigen.
 
 ## Beschreibung & Anleitung
 
-_Beschreiben Sie die zentralen Funktionen Ihrer Anwendung und deren Verwendung. Nutzen Sie dazu Screenshots und/oder Videos. Verlinken Sie ein min. 60-sekündiges Demo-Video, das die Verwendung aller wichtigen Funktionen zeigt und in Form eines Audio-Kommentars beschreibt._
+**1.Mitglieder-Page:**
 
-**1.MitgliederPage:**
-Hier hat der Nutzer die Möglichkeit in nur 2 Schritten Mitglied zuwerden. Diese Seite ist mit einer Datenbank (Firebase) verbunden. So werden die ausgefüllten Felder nicht verloren gegangen :) .
+Hier hat der Nutzer die Möglichkeit in nur 2 Schritten Mitglied zu werden. Diese Seite ist mit einer Datenbank (Firebase) verbunden. So werden die ausgefüllten Felder nicht verloren gegangen :) .
 ![image](https://user-images.githubusercontent.com/86771721/193351776-ebb6a749-d15f-4dde-913e-7fb67f62e964.png)
 
 ![image](https://user-images.githubusercontent.com/86771721/193351882-3ec8e24a-1a93-4e19-9245-89f825fba1a3.png)
