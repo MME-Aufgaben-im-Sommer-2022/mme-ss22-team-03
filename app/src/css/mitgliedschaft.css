@@ -2,45 +2,414 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap');
 
 
-/* Beispiel für die einfache Einbindung eines Farbschema, generiert auf coolors.co */
-:root {
-    --mint: #D6E5CB;
-    --green: #3D7245;
-    --dark-grey: #313131;
-    --orange: #EE6C4D;
-    --red: #BC2E19;
-}
+#_Header {
+    background-image: url("../images/mitgliedschaft_page/Img_Header.png");
 
-/* example of color use {
-    background-color: var(--snow);
-} */
+    padding-top: 200px;
 
-.attachment-full {
-    position: fixed;
-    top: 0;
-    left: 0;
-}
+    width: 100%;
+    height: auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 
-.hidden {
-    display: none !important;
-}
+    /* Fahkwang regular, 40 */
 
-body {
-    background-color: var(--snow);
-    font-family: 'Space Grotesk', sans-serif;
-    margin: 0;
-    padding: 0;
-}
+    font-family: 'Fahkwang';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+    /* or 125% */
 
-.ui {
-    display: flex;
-    flex-direction: column;
-    width: 90vw;
-    margin: 0 auto;
-    padding: 0;
-}
-
-.ui h1 {
     text-align: center;
-    color: var(--jet);
+
+    color: #FFFFFF;
+
 }
+
+._Header_Arrow {
+
+    height: 75px;
+    width: 50px;
+
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.group {
+    background-color: white;
+    text-align: center;
+
+    width: 100%;
+    height: auto;
+}
+
+#_001 {
+    background-color: var(--red);
+    height: 1000px;
+}
+
+._001_img {
+    margin-top: 200px;
+}
+
+._001_content {
+
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#_002 {
+    background-color: white;
+    height: 1000px;
+}
+
+._002_header {
+
+    margin-top: 80px;
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+    text-align: center;
+
+    /* dark grey */
+
+    color: #313131;
+}
+
+._002_content {
+
+    height: 800px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0% 0%;
+    grid-template-areas:
+        "Img_1 Img_2 Img_3"
+        "text_1 text_2 text_3";
+}
+
+.Img_1 {
+    grid-area: Img_1;
+    background-image: url("../images/mitgliedschaft_page/Img_group002_1.png");
+    background-repeat: no-repeat;
+    max-width: 100%;
+    max-height: 100%;
+
+    text-align: center;
+    background-position: center;
+
+    padding-top: 50px;
+}
+
+.Img_2 {
+    grid-area: Img_2;
+    background-image: url("../images/mitgliedschaft_page/Img_group002_2.png");
+    background-repeat: no-repeat;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    background-position: center;
+    padding-top: 50px;
+}
+
+.Img_3 {
+    grid-area: Img_3;
+    background-image: url("../images/mitgliedschaft_page/Img_group002_3.png");
+    background-repeat: no-repeat;
+
+    max-width: 100%;
+    max-height: 100%;
+    background-position: center;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.text_1 {
+    grid-area: text_1;
+
+    padding-top: 150px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    color: #313131;
+}
+
+.text_2 {
+    grid-area: text_2;
+
+    padding-top: 150px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    color: #313131;
+}
+
+.text_3 {
+    grid-area: text_3;
+    padding-top: 150px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    color: #313131;
+}
+
+/* CSS for Membership form */
+
+#_MembershipGroup {
+    height: 1250px;
+    background-color: var(--orange);
+
+    padding-left: 150px;
+}
+
+._MembershipHolder {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    grid-template-rows: 300px 150px 700px;
+    gap: 0% 0%;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "_membershipHeader _membershipImg"
+        "_membershipSteps _membershipImg"
+        "_membershipContent _membershipImg";
+}
+
+._membershipImg {
+    grid-area: _membershipImg;
+    background-image: url("../images/mitgliedschaft_page/img_mitgliedsformular.png");
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-size: cover;
+}
+
+
+._membershipHeader {
+    grid-area: _membershipHeader;
+    /* Fahkwang regular, 40 */
+
+    font-family: 'Fahkwang';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: left;
+
+    color: #FFFFFF;
+
+    padding-top: 150px;
+}
+
+._membershipHeader::after {
+    content: "Hiermit beantrage ich meine Aufnahme / die Aufnahme meines Kindes als aktives Mitglied des Pastina e.V.";
+    display: block;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
+
+    /* white */
+
+    color: #FFFFFF;
+    padding-top: 30px;
+}
+
+
+._membershipSteps {
+    grid-area: _membershipSteps;
+    margin-right: 100px;
+    text-align: left;
+
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+}
+
+._membership_StepDiv {
+    display: inline-block;
+
+    margin-right: 250px;
+
+    width: auto;
+    height: 100px;
+    padding-top: 50px;
+
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    opacity: 50%;
+
+    text-align: left;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    /* identical to box height, or 125% */
+
+
+    /* dark grey */
+
+    color: white;
+}
+
+#step1Text::after {
+    content: "Persönliche Angaben";
+    display: block;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+
+    /* white */
+
+    color: #FFFFFF;
+}
+
+#step1Text.active {
+    opacity: 100%;
+}
+
+
+#step2Text::after {
+    content: "SEPA-Lastschriftmandat";
+    display: block;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+
+    /* white */
+
+    color: #FFFFFF;
+}
+
+
+._membership_Btn {
+    width: 100px;
+    height: 100px;
+
+    margin-left: 50px;
+
+    color: var(--orange);
+    border: none;
+
+    text-align: center;
+    display: inline-block;
+    background-color: var(--orange);
+}
+
+#btn_next {
+    height: 100%;
+    float: right;
+}
+
+#btn_nextImg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+._membershipContent {
+    grid-area: _membershipContent;
+    margin-right: 100px;
+}
+
+
+.form-group {
+    text-align: left;
+
+    width: 100%;
+    height: 50px;
+
+    margin-top: 50px;
+    color: white;
+}
+
+.form-input {
+    height: 100%;
+    width: 100%;
+
+    border: none;
+
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+
+    background-color: var(--orange);
+}
+
+.form-input:focus {
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: #FFFFFF;
+}
+
+.form-date {
+    height: 100%;
+    width: 100%;
+
+    border: none;
+
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+
+    background-color: var(--orange);
+    color: white;
+}
+
+.formbuilder-text-label {}
