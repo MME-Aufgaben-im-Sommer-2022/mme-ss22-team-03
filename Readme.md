@@ -53,5 +53,7 @@ _Listen Sie tabelarisch alle Teammitglieder mit Name, E-Mail-Adresse und Foto au
 | Samuel Huber | Kristina Neumüller| Dena Mehr |
 | --------------|:--------------:| -------------------:|
 | samuel.huber@stud.uni-regensburg.de| kristina.neumueller@stud.uni-regensburg.de| dena.mehr@stud.uni-regensburg.de |
-| ![IMG_3813](https://user-images.githubusercontent.com/86771852/193328770-43eac394-b0ec-450c-ba1f-f0c36ab3e7fa.jpg)     |   ![IMG_3814](https://user-images.githubusercontent.com/86771852/193328703-bb3026f9-81a3-4d5e-a32d-32fc73703cc5.jpg) |![IMG_3812](https://user-images.githubusercontent.com/86771852/193328869-229e4695-b904-4c88-8260-a0bec175c118.jpg)
+|   ![IMG_3815](https://user-images.githubusercontent.com/86771852/193329680-f1aa9420-46af-48e7-b1cb-cb87af0ade79.jpg)
+  |   ![IMG_3814](https://user-images.githubusercontent.com/86771852/193328703-bb3026f9-81a3-4d5e-a32d-32fc73703cc5.jpg) |![Uploading IMG_3812 2.jpg…]()
+
 | Maps & Event| Event & Design     | Spenden & Design |
