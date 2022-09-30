@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { Observable } from "../utils/Observable.js";
-import FormReader from "../modules/FormReader.js";
+import FormReader from "../modules/FormManager.js";
 
 function initManager(manager) {
 
