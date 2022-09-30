@@ -111,12 +111,9 @@ export default class FormManager extends Observable {
             case "step3":
             case "step2":
             case "nextStep":
-                if (this.currentPageID === "mitgliedschaft") {
-                    if (this.checkInputData) {
-                        this.switchFormStep("step2");
-                    }
-                } else if (this.currentPageID === "spenden") {
-
+                if (this.currentPageID === "mitgliedschaft" && this.checkInputData()) {
+                    this.switchFormStep("step2");
+                } else if (this.currentPageID === "spenden" && this.checkInputData()) {
                     this.switchFormStep(step);
                 }
                 break;
