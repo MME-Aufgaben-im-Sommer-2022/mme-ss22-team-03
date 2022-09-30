@@ -1,9 +1,5 @@
 import { Event, Observable } from "../utils/Observable.js";
 
-const postTitle = ("Hi schau dir mal die coole Seite an :D ");
-
-let postUrl = document.location.href;
-
 function init(manager) {
 
     initButtonList(manager);
@@ -40,7 +36,6 @@ class ButtonManager extends Observable {
     buttonClick(id, name) {
         let event;
 
-        console.log(id);
         switch (id) {
             case "donate":
                 // eslint-disable-next-line no-case-declarations
@@ -68,7 +63,6 @@ class ButtonManager extends Observable {
     }
 
     shareButton(name) {
-        console.log(name);
         switch (name) {
 
             case "whatsapp":

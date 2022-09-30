@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-alert */
 import Observable from "../utils/Observable.js";
 import FireBaseConnector from "../database/FireBaseConnector.js";
 
@@ -111,10 +113,10 @@ export default class FormManager extends Observable {
             case "step3":
             case "step2":
             case "nextStep":
-                if (this.currentPageID === "mitgliedschaft" && this.checkInputData()) {
+                if (this.currentPageID === "mitgliedschaft" && this.checkInputData("membership")) {
                     this.switchFormStep("step2");
-                } else if (this.currentPageID === "spenden" && this.checkInputData()) {
-                    this.switchFormStep(step);
+                } else if (this.currentPageID === "spenden" && this.checkInputData("donation")) {
+                    this.switchFormStep("step3");
                 }
                 break;
             default:
@@ -122,15 +124,16 @@ export default class FormManager extends Observable {
         }
     }
 
-    async checkInputData() {
+    async checkInputData(requestType) {
         if (this.isValid) {
-            await FireBaseConnector.sendRequestData(this.FormData, "membership");
+            await FireBaseConnector.sendRequestData(this.FormData, requestType);
             //TODO:Beautify Message
             alert("Wir haben deine Daten erhalten!");
             return true;
         }
         alert("Please Fill out all Information!");
         return false;
+
     }
 
     switchFormStep(step) {

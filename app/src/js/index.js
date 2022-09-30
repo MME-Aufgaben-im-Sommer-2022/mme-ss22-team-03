@@ -41,7 +41,6 @@ function initButtonManager() {
 
 function sendRequestCall(event) {
     //currentPage.openRequest(event.data);
-    console.log(event.data);
 }
 
 function scroll(event) {
