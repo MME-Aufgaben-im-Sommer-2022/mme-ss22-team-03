@@ -1,3 +1,4 @@
+/* eslint-disable no-magic-numbers */
 import Observable from "../utils/Observable.js";
 
 function InitHappening(happening) {

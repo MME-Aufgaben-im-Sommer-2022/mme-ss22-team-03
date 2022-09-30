@@ -22,7 +22,7 @@ async function initData(manager) {
         let data = await FireBaseConnector.getData("data/pages/event/eventList");
         manager.happeningList = data;
     } catch (error) {
-        console.error(error);
+        //console.error(error);
     }
 
     entryList = Object.values(manager.happeningList);
@@ -103,11 +103,6 @@ export default class PageManagerEvents extends Observable {
         this.happeningList = [];
 
         initManager(this);
-    }
-
-    openRequest(id) {
-        console.log(id);
-        //TODO: Fetch correct Happening and call openRequest
     }
 
     scrollToEvent(id) {

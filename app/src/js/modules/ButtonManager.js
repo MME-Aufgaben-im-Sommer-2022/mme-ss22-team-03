@@ -52,6 +52,9 @@ class ButtonManager extends Observable {
             case "scroll":
                 event = new Event(id, name);
                 break;
+            case "share":
+                this.shareButton(name);
+                break;
             default:
                 break;
         }
@@ -59,8 +62,33 @@ class ButtonManager extends Observable {
         this.notifyAll(event);
     }
 
+    shareButton(name) {
+        switch (name) {
+
+            case "whatsapp":
+
+                window.location = "https://wa.me/?text=${postTitle} ${postUrl}";
+                //TODO: hier auf eine url verweisen -> weiterleiten
+                break;
+            case "mailBtn":
+                window.location = "https://plus.google.com/share?url=[post-url]";
+                break;
+            case "facebook":
+                window.location = "https://www.facebook.com/sharer.php?u=[post-url]";
+                break;
+            case "linkedInBtn":
+                window.location = "https://www.linkedin.com/shareArticle?url=[post-url]&title=[post-title]";
+                break;
+            case "instagram":
+                window.location = "https://ig.me/m/";
+                break;
+            default:
+                break;
+        }
+    }
+
     scrollUp() {
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 }
 

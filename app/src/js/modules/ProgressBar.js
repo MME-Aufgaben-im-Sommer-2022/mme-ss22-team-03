@@ -19,7 +19,7 @@ async function initData(manager) {
         manager.current = data.current;
         manager.aim = data.aim;
     } catch (error) {
-        console.error(error);
+        // console.error(error);
     }
 }
 

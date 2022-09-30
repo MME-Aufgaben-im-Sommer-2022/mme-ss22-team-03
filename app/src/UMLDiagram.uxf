@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.0.0"><zoom_level>6</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>90</x><y>132</y><w>126</w><h>114</h></coordinates><panel_attributes>index.js
+<diagram program="umletino" version="15.0.0"><zoom_level>19</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>285</x><y>19</y><w>399</w><h>361</h></coordinates><panel_attributes>index.js
 --
 - example
 
@@ -9,7 +9,7 @@
 Responsibilities
 - Manage Page Instances
 - Bridge between Pages
-- Switch between Pages</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>672</x><y>162</y><w>126</w><h>114</h></coordinates><panel_attributes>PageManager
+- Switch between Pages</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2128</x><y>114</y><w>399</w><h>361</h></coordinates><panel_attributes>PageManager
 --
 *Variables*
 - example
@@ -22,20 +22,27 @@ Responsibilities
 #Btn_Share()
 
 --
-*Responsibilities*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>348</x><y>390</y><w>126</w><h>120</h></coordinates><panel_attributes>_PageManager: Spenden_
+*Responsibilities*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1102</x><y>836</y><w>399</w><h>570</h></coordinates><panel_attributes>_PageManager: Spenden_
 --
 *Variables*
 - PageID: "Spenden"
 
 --
 *HTML Elements*
-- Btn_Donate
+- NextButton
+- Step1
+- Step2
+- Step3
+- donateButton
 
 --
 *Functions*
-#Btn_Donate()
-#Btn_ReadMore()
-#Btn_goUp()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>276</x><y>702</y><w>126</w><h>162</h></coordinates><panel_attributes>ProgressBar
+nextButtonClick()
+stepButtonClick(step): string
+donateButtonClick()
+switchFormStep(step): string
+checkInputData()
+sendDonationData()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>874</x><y>1824</y><w>399</w><h>513</h></coordinates><panel_attributes>ProgressBar
 --
 *HTML Elements*
 - ProgressBar-DivContainer: div
@@ -52,7 +59,7 @@ Responsibilities
 - Manage Progress Bar
 - Update Values
 - Update Bar Progress
-- Update Text</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1014</x><y>390</y><w>126</w><h>102</h></coordinates><panel_attributes>_PageManager: Events_
+- Update Text</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>3211</x><y>836</y><w>399</w><h>323</h></coordinates><panel_attributes>_PageManager: Events_
 --
 *Variables*
 - PageID: "Events"
@@ -62,7 +69,7 @@ Responsibilities
 *Functions*
 #Btn_ReadMore()
 #Btn_goUp()
-#LoadList()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1128</x><y>720</y><w>126</w><h>204</h></coordinates><panel_attributes>Happening
+#LoadList()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>3572</x><y>1881</y><w>399</w><h>646</h></coordinates><panel_attributes>Happening
 --
 *HTML Elements*
 /- Btn_Participate/
@@ -83,7 +90,7 @@ Responsibilities
 #Btn_ReadMore()
 #Btn_Share()
 
-#FillInformation()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1128</x><y>972</y><w>126</w><h>114</h></coordinates><panel_attributes>Happening_Request
+#FillInformation()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>3572</x><y>2679</y><w>399</w><h>361</h></coordinates><panel_attributes>Happening_Request
 --
 Variables
 - Header
@@ -96,8 +103,8 @@ Variables
 /- inputEmail: email/
 --
 Functions
-#Btn_SendRequest()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1182</x><y>918</y><w>48</w><h>66</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>558</x><y>390</y><w>126</w><h>114</h></coordinates><panel_attributes>_PageManager: Mitgliedschaft_
+#Btn_SendRequest()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>3743</x><y>2508</y><w>152</w><h>209</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1767</x><y>836</y><w>399</w><h>361</h></coordinates><panel_attributes>_PageManager: Mitgliedschaft_
 --
 *Variables*
 - PageID: "Mitgliedschaft"
@@ -109,7 +116,7 @@ Functions
 *Functions*
 #Btn_Donate()
 #Btn_ReadMore()
-#Btn_goUp()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>780</x><y>390</y><w>126</w><h>108</h></coordinates><panel_attributes>_PageManager: Map_
+#Btn_goUp()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2470</x><y>836</y><w>399</w><h>342</h></coordinates><panel_attributes>_PageManager: Map_
 --
 *Variables*
 - PageID: "Map"
@@ -121,12 +128,12 @@ Functions
 *Functions*
 #Btn_Donate()
 #SwitchPlace()
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1068</x><y>486</y><w>132</w><h>246</h></coordinates><panel_attributes>lt=&lt;&lt;-
-contains List of</panel_attributes><additional_attributes>200;390;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>396</x><y>270</y><w>324</w><h>132</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>520;10;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>612</x><y>270</y><w>126</w><h>132</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>190;10;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>738</x><y>270</y><w>120</w><h>132</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>10;10;180;200</additional_attributes></element><element><id>Relation</id><coordinates><x>762</x><y>270</y><w>324</w><h>132</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>10;10;520;200</additional_attributes></element><element><id>UMLClass</id><coordinates><x>894</x><y>726</y><w>126</w><h>114</h></coordinates><panel_attributes>MapManager
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>3382</x><y>1140</y><w>418</w><h>779</h></coordinates><panel_attributes>lt=&lt;&lt;-
+contains List of</panel_attributes><additional_attributes>200;390;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1254</x><y>456</y><w>1026</w><h>418</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>520;10;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>1938</x><y>456</y><w>399</w><h>418</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>190;10;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>2337</x><y>456</y><w>380</w><h>418</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>10;10;180;200</additional_attributes></element><element><id>Relation</id><coordinates><x>2413</x><y>456</y><w>1026</w><h>418</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>10;10;520;200</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2831</x><y>1900</y><w>399</w><h>361</h></coordinates><panel_attributes>MapManager
 --
 *Variables*
 - startCoords: [X, Y]
@@ -134,8 +141,8 @@ contains List of</panel_attributes><additional_attributes>200;390;10;10</additio
 *Functions*
 
 --
-*Responsibilities*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>834</x><y>492</y><w>132</w><h>246</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>200;390;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>780</y><w>126</w><h>156</h></coordinates><panel_attributes>FormManager
+*Responsibilities*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2641</x><y>1159</y><w>418</w><h>779</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>200;390;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1805</x><y>2071</y><w>399</w><h>494</h></coordinates><panel_attributes>FormManager
 --
 *HTML Elements*
 /- Btn_Next()/
@@ -152,7 +159,7 @@ contains List of</panel_attributes><additional_attributes>200;390;10;10</additio
 *Responsibilities*
 - Manage Form Pages
 - Manage Input Data
-- Manage Stripe Plugin</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>978</y><w>126</w><h>174</h></coordinates><panel_attributes>FormReader
+- Manage Stripe Plugin</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1805</x><y>2698</y><w>399</w><h>551</h></coordinates><panel_attributes>FormReader
 --
 *HTML Elements*
 /- inputPrename/
@@ -171,31 +178,31 @@ contains List of</panel_attributes><additional_attributes>200;390;10;10</additio
 --
 *Responsibilities*
 - Read Input Fields
-- Check if Input is empty</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>618</x><y>498</y><w>96</w><h>294</h></coordinates><panel_attributes>lt=&lt;&lt;-
-Mitgliedschaftsantrag</panel_attributes><additional_attributes>20;470;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>624</x><y>930</y><w>66</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-
-gets data from</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>408</x><y>504</y><w>234</w><h>288</h></coordinates><panel_attributes>lt=&lt;&lt;-
-Spendenformular</panel_attributes><additional_attributes>370;460;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>504</y><w>54</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-
-creates</panel_attributes><additional_attributes>10;330;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>336</x><y>498</y><w>252</w><h>216</h></coordinates><panel_attributes>lt=&lt;&lt;-
-creates</panel_attributes><additional_attributes>10;340;400;10</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>906</y><w>54</w><h>18</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>948</x><y>834</y><w>18</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>240</y><w>18</w><h>66</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>918</x><y>870</y><w>84</w><h>42</h></coordinates><panel_attributes>Plugin
+- Check if Input is empty</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1957</x><y>1178</y><w>304</w><h>931</h></coordinates><panel_attributes>lt=&lt;&lt;-
+Mitgliedschaftsantrag</panel_attributes><additional_attributes>20;470;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1976</x><y>2546</y><w>209</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;-
+gets data from</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1292</x><y>1387</y><w>741</w><h>722</h></coordinates><panel_attributes>lt=&lt;&lt;-
+Spendenformular</panel_attributes><additional_attributes>370;360;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1045</x><y>1387</y><w>171</w><h>475</h></coordinates><panel_attributes>lt=&lt;&lt;-
+creates</panel_attributes><additional_attributes>10;230;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1064</x><y>1178</y><w>798</w><h>684</h></coordinates><panel_attributes>lt=&lt;&lt;-
+creates</panel_attributes><additional_attributes>10;340;400;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2185</x><y>2470</y><w>171</w><h>57</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>3002</x><y>2242</y><w>57</w><h>152</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>475</x><y>361</y><w>57</w><h>209</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>2907</x><y>2356</y><w>266</w><h>133</h></coordinates><panel_attributes>Plugin
 --
 /Leaflet/
 Manages Map
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>732</x><y>888</y><w>84</w><h>42</h></coordinates><panel_attributes>Plugin
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>2318</x><y>2413</y><w>266</w><h>133</h></coordinates><panel_attributes>Plugin
 --
 /Stripe/
 Manages Donatione &amp;
 Paymanet
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>120</x><y>294</y><w>84</w><h>42</h></coordinates><panel_attributes>Plugin
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>380</x><y>532</y><w>266</w><h>133</h></coordinates><panel_attributes>Plugin
 --
 /DeepL/
 Translates all Text
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>336</x><y>126</y><w>852</w><h>396</h></coordinates><panel_attributes>pages
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1064</x><y>0</y><w>2698</w><h>1425</h></coordinates><panel_attributes>pages
 --
-fg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>252</x><y>660</y><w>1032</w><h>546</h></coordinates><panel_attributes>modules
+fg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>798</x><y>1691</y><w>3268</w><h>1729</h></coordinates><panel_attributes>modules
 --
-fg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>0</x><y>660</y><w>192</w><h>120</h></coordinates><panel_attributes>utils
+fg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>0</x><y>1691</y><w>608</w><h>380</h></coordinates><panel_attributes>utils
 --
-fg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>24</x><y>690</y><w>126</w><h>48</h></coordinates><panel_attributes>Observable
+fg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>76</x><y>1786</y><w>399</w><h>152</h></coordinates><panel_attributes>Observable
 --
 *Functions*
 #addEventListener
